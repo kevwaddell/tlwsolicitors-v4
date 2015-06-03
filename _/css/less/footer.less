@@ -1,0 +1,110 @@
+#footer-info {
+.bg-col(@grayDk);
+.pad(3;0;4;0);
+.bg-img("bg-icon-logo.png?v=3");
+.bg-repeat(no-repeat);
+background-position: right bottom;
+background-attachment: fixed;
+
+	.container {
+	.pad-left(1.5);
+	}
+
+	h3 {
+	.col(lighten(@red, 10%));
+	.font-size(1.6);
+	.normal;
+	.mag-top(0);	
+	}
+	
+	a {
+	.col(white);
+	.no-text-dec;	
+		&:hover, &:active, &:focus {
+		.col(lighten(@red, 10%));	
+		}	
+	}	
+	
+	p {
+	.col(white);	
+	.mag-bot(0);
+	.font-size(1.4);
+	}
+	
+	.footer-nav {
+		ul {
+		list-style: none;
+		.pad-left(0);
+		.mag-bot(2);	
+		}	
+	}
+	
+	.social-links {
+	.mag-bot(1);	
+		
+		ul {
+		list-style: none;
+		.pad-left(0);
+		.fright;
+		}	
+		
+		li {
+		.fleft;	
+		.mag-left(1);
+		.mag-right(0);
+		}
+		
+		a {
+		.bg-col(white);
+		.col(@grayDk);
+		.block;
+		.w(4);
+		.h(4);
+		.rounded(20px);
+		.no-text-dec;
+			
+			span {
+			.none;	
+			}
+			
+			i {
+			.block;
+			.w(4);
+			.h(4);	
+			.line-h(4);
+			font-size: 1.8em;
+			text-align: center;
+			}	
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@red);
+			.col(white);
+			}
+		}
+	}
+	
+	#footer-logo {
+	.fright;
+	.w(30);
+	.h(7);
+	.mag-top(3);
+	.mag-bot(1);
+	.bg-img("tlw-logo-white.png");
+	.bg-repeat(no-repeat);
+	background-position: right center;	
+	}
+	
+	.compliance-notice {	
+	clear: both;
+	text-align: right;
+	.w(30);
+	.fright;
+	.mag-bot(0);
+	}
+	
+	.copyright {
+	.fleft;
+	.mag-top(-3.4);
+	}
+	
+}
