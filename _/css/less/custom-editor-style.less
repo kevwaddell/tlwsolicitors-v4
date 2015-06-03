@@ -2,6 +2,8 @@
 
 @import url('mixins.less');
 
+@import url('elements.less');
+
 body {
 .font-normal;	
 }
@@ -61,6 +63,9 @@ list-style: none;
 	.mag-right(1);
 	}
 	
+	&.cols-2 {
+	.columns(50%, 2, 30px, @trans, none, 0px);
+	}
 }
 
 //Ordered list
