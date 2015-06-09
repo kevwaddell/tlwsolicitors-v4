@@ -1,82 +1,58 @@
-<div id="start" class="step">
+<?php foreach ($processes as $panel) { ?>
+
+<div id="<?php echo ($process_counter == 0) ? 'start': 'slide'.$process_counter ; ?>" class="step"<?php echo ($panel['hiw_data_x']) ? ' data-x="'.$panel['hiw_data_x'].'"': ''; ?><?php echo ($panel['hiw_data_y']) ? ' data-y="'.$panel['hiw_data_y'].'"': ''; ?>>
 	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-exclamation-circle fa-4x"></i></div>
-    <p class="header">Was Your pension invested in an unregulated scheme?</p>
-    <p class="text">You may have been advised to invest into an unsuitable product such as carbon credits, store pods, forestry projects or green oil.</p>
-    <a href="#slide1" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Yes</span></a>
+	<?php if ($panel['icon']) { ?>
+	<div class="icon"><i class="fa <?php echo $panel['icon']; ?> fa-4x"></i></div>
+	<?php } ?>
+	
+	<?php if ($panel['hiw-back-link']) { ?>
+	<a href="<?php echo $panel['hiw-back-link']; ?>" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<?php } ?>
+	
+    <p class="header"><?php echo $panel['title']; ?></p>
+    <p class="text"><?php echo $panel['hiw_text']; ?></p>
+    
+    <?php if ($panel['hiw_links'] == 1 && $process_counter < ($process_total-1) ) { ?>
+	<a href="#slide<?php echo $panel['hiw_link_1_target'] ; ?>" class="step-link link-mid">
+		<span>
+			<?php if ($panel['hiw_link_1_icon']) { ?>
+	   		<i class="fa <?php echo $panel['hiw_link_1_icon']; ?> fa-lg"></i>
+	   		<?php } ?>
+	   		<?php echo $panel['hiw_link_1_label'] ; ?>
+	   	</span>
+	 </a>
+    <?php } ?>
+     <?php if ($panel['hiw_links'] == 2 && $process_counter < ($process_total-1) ) { ?>
+    <a href="#slide<?php echo $panel['hiw_link_1_target'] ; ?>" class="step-link link-left">
+		<span>
+			<?php if ($panel['hiw_link_1_icon']) { ?>
+	   		<i class="fa <?php echo $panel['hiw_link_1_icon']; ?> fa-lg"></i>
+	   		<?php } ?>
+	   		<?php echo $panel['hiw_link_1_label'] ; ?>
+	   	</span>
+	 </a>
+    <a href="#slide<?php echo $panel['hiw_link_2_target'] ; ?>" class="step-link link-right">
+	    <span>
+	    <?php if ($panel['hiw_link_2_icon']) { ?>
+	    	<i class="fa <?php echo $panel['hiw_link_2_icon']; ?> fa-lg"></i>
+	    	<?php } ?>
+			<?php echo $panel['hiw_link_2_label'] ; ?>
+	    </span>
+	</a>
+    <?php } ?>
+    <?php if (($process_counter + 1) == $process_total ) { ?>
+    <a id="end-slide-link" href="#" class="end-link link-mid link-enquiry">
+	    <span>
+	    	<?php if ($panel['hiw_link_1_icon']) { ?>
+	   		<i class="fa <?php echo $panel['hiw_link_1_icon']; ?> fa-lg"></i>
+	   		<?php } ?>
+			<?php echo $panel['hiw_link_1_label'] ; ?>
+	    </span>
+	</a>
+    <?php } ?>
 </div>
 
-<div id="slide1" class="step" data-y="1000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-building-o fa-4x"></i></div>
-	<a href="#start" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Is the company still in business?</p>
-    <p class="text">You may have taken advice from a reputable established company or a business that is no longer trading.</p>
-	<a href="#slide2" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Yes</span></a>
-	<a href="#slide3" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>No</span></a>
-</div>
-
-<div id="slide2" class="step" data-x="-2000" data-y="2000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-phone-square fa-4x"></i></div>
-	<a href="#slide1" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Call us and we can help you</p>
-    <p class="text">Our team will investigate your case and contact the parties involved.<br>We will propose a settlement and they may accept or reject the offer.</p>
-    <a href="#slide4" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Offer accepted</span></a>
-	<a href="#slide5" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>Offer rejected</span></a>
-</div>
-
-<div id="slide3" class="step" data-x="2000" data-y="2000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-life-ring fa-4x"></i></div>
-	<a href="#slide1" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">We may still be able to help you</p>
-    <p class="text">Our team will investigate your case and contact the FSCS.<br>We will propose a settlement and they may accept or reject the offer.</p>
-    <a href="#slide6" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Offer accepted</span></a>
-	<a href="#slide7" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>Offer rejected</span></a>
-</div>
-
-<div id="slide4" class="step" data-x="-3000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-up fa-4x"></i></div>
-	<a href="#slide2" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Your offer has been accepted</p>
-    <p class="text">We will start the process of reclaiming your money and can refer you to a recommended tax adviser to help you with your future investments.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide5" class="step" data-x="-1000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-down fa-4x"></i></div>
-	<a href="#slide2" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-  	<p class="header">Your offer has been rejected</p>
-    <p class="text">We will report your complaint to the Financial Ombudsman who will investigate your case further. We will keep you upto date with the progress.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide6" class="step" data-x="1000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-up fa-4x"></i></div>
-	<a href="#slide3" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Your offer has been accepted</p>
-    <p class="text">We will start the process of reclaiming your money and can refer you to a recommended tax adviser to help you with your future investments.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide7" class="step" data-x="3000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-down fa-4x"></i></div>
-	<a href="#slide3" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-  	<p class="header">Your offer has been rejected</p>
-    <p class="text">We will report your complaint to the Financial Ombudsman who will investigate your case further. We will keep you upto date with the progress.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide8" class="step" data-y="4000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-group fa-4x"></i></div>
-	<a href="#start" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Now is the time for TLW to help</p>
-    <p class="text">Our team act on the best interests of our clients and will always try to get a positive outcome. We operate on a <span>No Win No Fee</span> basis.</p>
-    <a id="end-slide-link" href="#" class="end-link link-mid link-enquiry"><span><i class="fa fa-comments fa-lg"></i>Start your enuiry</span></a>
-</div>
+<?php 
+$process_counter++;
+} ?>

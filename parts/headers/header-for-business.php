@@ -1,6 +1,17 @@
 <?php include (STYLESHEETPATH . '/_/inc/for-business-global/head-html.php'); ?>	
 
 <body id="<?php echo $dir ?>" <?php body_class($font_size); ?>>
+<?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLBR4F');</script>
+<!-- End Google Tag Manager -->
+<?php } ?>
 	
 <?php if (in_array("page", $active_scripts)) {
 $op_script = get_field('on_page_script', $post->ID);	

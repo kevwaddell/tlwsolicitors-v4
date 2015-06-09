@@ -77,6 +77,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 
 add_theme_support( 'post-thumbnails', array( 'page', 'post', 'tlw_landing_page' ) );
 add_post_type_support( 'page', 'excerpt' );
+add_theme_support( 'custom-background' );
 
 /* POST THUMBNAIL FUNCTIONS */
 
@@ -214,6 +215,9 @@ include (STYLESHEETPATH . '/_/functions/tlw_team_cpt.php');
 
 /* REGISTER LANDING PAGE CPT */
 include (STYLESHEETPATH . '/_/functions/tlw_landing_pages_cpt.php');
+
+/* REGISTER HOW IT WORKS */
+include (STYLESHEETPATH . '/_/functions/tlw_how_it_works_cpt.php');
 
 /* REGISTER POSITIONS TAX */
 include (STYLESHEETPATH . '/_/functions/tlw_positions_tax.php');
