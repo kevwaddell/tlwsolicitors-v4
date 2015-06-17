@@ -14,7 +14,7 @@ Template Name: Newsletter sign up template
 			$form = get_field('form');
 			$hide_title = get_field('hide_title'); 
 			 ?>	
-			 <main class="page-col-red animated fadeIn">
+			 <main class="page-col-red animated fadeInUp">
 				 
 				 <div class="row">
 					 	 

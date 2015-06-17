@@ -20,9 +20,9 @@
 			
 			<!-- PAGE TOP SECTION -->
 			
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red">
 			
-				<article class="page animated fadeIn">
+				<article class="page">
 					
 					<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.php'); ?>	
 					

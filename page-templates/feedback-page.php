@@ -34,7 +34,7 @@ Template Name: Feedback page template
 		<div class="content">
 			
 			<a name="main-content" id="main-content"></a>	
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red animated fadeInUp">
 				
 					<article <?php post_class(); ?>>
 					

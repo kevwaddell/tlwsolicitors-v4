@@ -4,7 +4,7 @@ $facebook_url = get_field('facebook_page', 'options');
 $google_url = get_field('google_page', 'options');	
 ?>
 
-<section class="social-feed-lrg">
+<section class="social-feed-lrg wow fadeInUp">
 	<h3 class="icon-header">TLW Social <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
 	
 	<div class="social-feed-inner">

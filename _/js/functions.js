@@ -13,6 +13,8 @@
 	 event_type = 'click';	
 	 
 	}
+	
+	new WOW().init();
 
 	var service_select = $('select#service-select');
 	var service_area_select = $('select.service-area-select');

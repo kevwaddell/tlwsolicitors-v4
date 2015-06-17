@@ -7,7 +7,7 @@ $radio_stations = get_field('radio_stations', 'option');
 //echo '<pre>';print_r($campaigns);echo '</pre>';
 ?>
 <!-- OUR LATEST CAMPAIGNS -->
-<section id="hp-campaigns">
+<section id="hp-campaigns" class="wow fadeInRightBig">
 	
 	<h3 class="text-center"><i class="fa fa-comment"></i> Our Latest Campaigns</h3>
 	
@@ -67,6 +67,8 @@ $radio_stations = get_field('radio_stations', 'option');
 		
 	</div>
 	<?php } ?>	
+	
+<div class="rule"></div>
 	
 </section>
 <?php } ?>

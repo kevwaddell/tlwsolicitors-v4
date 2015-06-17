@@ -2,7 +2,7 @@
 		<!-- FOOTER START -->
 		<section id="footer-info">
 		
-			<footer class="container">
+			<footer class="container wow fadeInUp">
 				
 				<div class="row">
 				

@@ -16,13 +16,10 @@
 				
 				<?php include (STYLESHEETPATH . '/_/inc/home-page/home-intro.php'); ?>
 				
-				<div class="rule"></div>
-				
 				<?php if ($services_4u) { 	?>
 				
 				<?php include (STYLESHEETPATH . '/_/inc/home-page/start-enquiry-form.php'); ?>
 				
-				<div class="rule"></div>
 				<?php }  ?>
 								
 				</article>

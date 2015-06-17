@@ -21,7 +21,7 @@
 			$feat_img_options = get_field('feat_img_options');
 			}
 			?>	
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red animated fadeInUp">
 				
 				<article <?php post_class(); ?>>
 					

@@ -35,7 +35,7 @@ Template Name: Company page template
 			<?php } ?>
 
 			<a name="main-content" id="main-content"></a>
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red animated fadeInUp">
 				
 					<article <?php post_class(); ?>>
 					

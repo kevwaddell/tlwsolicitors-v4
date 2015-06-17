@@ -1,7 +1,7 @@
 <?php 
 $newsletter_pg = get_page_by_title("Join our mailing list");
 ?>
-<div class="posts-top-bar">
+<div class="posts-top-bar animated fadeInLeft">
 		
 	<div id="search-form">
 		<?php get_search_form(); ?>

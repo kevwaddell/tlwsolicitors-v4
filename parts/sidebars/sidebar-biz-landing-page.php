@@ -55,11 +55,11 @@ $children = get_pages($child_args);
 	</div>
 	
 	<?php if ($number_pos == 'sidebar') { ?>
-	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
+	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?> wow fadeInUp">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
 	
 	<?php if ($how_it_works_active) { ?>	
-	<div class="how-it-works-link">
+	<div class="how-it-works-link wow fadeInUp">
 		<a href="#how-it-works" class="hiw-link">
 			<span class="txt-mid">The Claims Process</span>
 			<span class="txt-lg">How it Works</span>
@@ -69,7 +69,7 @@ $children = get_pages($child_args);
 	<?php } ?>
 	
 	<?php if (!empty($children)) { ?>
-	<div class="menu-collapse closed">
+	<div class="menu-collapse closed wow fadeInUp">
 	<a name="sb-menu-collapse" id="sb-menu-collapse"></a>
 	<button class="sb-menu-btn btn btn-default btn-block">Services Menu</button>
 		<ul class="list-unstyled menu-links">

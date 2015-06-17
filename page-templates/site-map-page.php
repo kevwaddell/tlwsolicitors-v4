@@ -11,7 +11,7 @@ Template Name: Sitemap page
 	
 		<div class="content">
 			 
-			 <main class="page-col-red animated fadeIn">
+			 <main class="page-col-red">
 
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 					
@@ -27,7 +27,7 @@ Template Name: Sitemap page
 						
 						<?php include (STYLESHEETPATH . '/_/inc/site-map/vars.php'); ?> 
 				
-						<section id="site-map-lists">
+						<section id="site-map-lists" class="animated fadeInUp">
 				
 							<div class="row">
 						

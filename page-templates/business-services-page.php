@@ -44,7 +44,7 @@ Template Name: Business Services page template
 
 			<a name="main-content" id="main-content"></a>
 			<!-- PAGE TOP SECTION -->
-			<main class="<?php echo (!empty($color)) ? 'page-col-'.$color : 'red'; ?> animated fadeIn">
+			<main class="<?php echo (!empty($color)) ? 'page-col-'.$color : 'red'; ?> animated fadeInUp">
 				
 					<article <?php post_class(); ?>>
 

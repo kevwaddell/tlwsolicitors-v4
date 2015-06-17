@@ -1,6 +1,7 @@
 <?php 
 $hp_banner_active = get_field('hp_banner_active', 'option');	
-$banner_links = get_field('banner_links', 'option');	
+$banner_links = get_field('banner_links', 'option');
+$counter = 0;	
 ?>
 
 <?php if ($hp_banner_active && !empty($banner_links)) { ?>
@@ -15,7 +16,7 @@ $banner_links = get_field('banner_links', 'option');
 	$img = get_bloginfo('stylesheet_directory')."/_/img/banner-img-" .$pg->post_name. ".png";
 	//echo '<pre>';print_r($icon);echo '</pre>';
 	?>
-		<div class="banner-item col-<?php echo $col; ?>">
+		<div class="banner-item col-<?php echo $col; ?> animated fadeInLeftBig">
 			<a href="<?php echo get_permalink($pg_id); ?>" title="<?php echo $pg->post_title; ?>">
 				<span class="img" style="background-image: url(<?php echo $img; ?>)"><span class="col-overlay"></span><span class="img-overlay"></span></span>
 				<span class="icon"><i class="fa <?php echo $icon; ?> fa-2x"></i></span>
@@ -23,7 +24,9 @@ $banner_links = get_field('banner_links', 'option');
 				<span class="pointer"><i class="fa fa-arrow-circle-o-right fa-lg"></i></span>
 			</a>
 		</div>
-	<?php } ?>
+	<?php 
+	$counter++;	
+		} ?>
 </section>
 
 <?php }  ?>

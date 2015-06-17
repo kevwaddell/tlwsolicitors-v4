@@ -1,4 +1,4 @@
-<figure class="feat-img-wide ex-wide for-biz feat-img-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<figure class="feat-img-wide ex-wide for-biz feat-img-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInLeft">
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	<?php add_extra_wide_feat_img($post) ; ?>
 	<div class="col-overlay"></div><div class="striped-overlay"></div>

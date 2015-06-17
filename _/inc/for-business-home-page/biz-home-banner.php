@@ -12,7 +12,7 @@ $bblinks_counter = 0;
 
 <section id="business-home-banner">
 	<div class="striped-overlay"></div>
-	<div id="business-carousel" class="carousel carousel-fade" data-ride="carousel">
+	<div id="business-carousel" class="carousel carousel-fade animated fadeInLeftBig" data-ride="carousel">
 		<div class="carousel-inner">
 			
 			<?php if ($first_slide_active) { 
@@ -43,7 +43,7 @@ $bblinks_counter = 0;
 		</div>
 	</div>
 	
-	<div class="links">
+	<div class="links animated fadeInRightBig">
 	<?php foreach ($biz_banner_links as $link) { 
 	$pg_id = $link['page_link'];
 	$pg_title = $link['link_title'];

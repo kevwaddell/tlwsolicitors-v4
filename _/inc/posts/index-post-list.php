@@ -1,4 +1,4 @@
-<section class="page-content post-grid">
+<section class="page-content post-grid animated fadeInRight">
 			
 	<h3 class="icon-header red mag-bot-0">Latest from <?php bloginfo('name'); ?><i class="fa fa-bullhorn fa-lg"></i></h3>
 	

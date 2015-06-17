@@ -22,18 +22,14 @@ Template Name: TLW Personal home page
 				
 				<?php include (STYLESHEETPATH . '/_/inc/for-you-home-page/home-intro.php'); ?>
 				
-				<div class="rule"></div>
-				
 				<?php if ($services_selects) { 	?>
 				
 				<?php include (STYLESHEETPATH . '/_/inc/for-you-home-page/start-enquiry-form.php'); ?>
 				
-				<div class="rule"></div>
 				<?php }  ?>
 				
 				<?php include (STYLESHEETPATH . '/_/inc/for-you-home-page/latest-campaigns.php'); ?>		
-				
-				<div class="rule"></div>
+			
 				
 				<?php if ($feedback_active) { ?>
 				<?php include (STYLESHEETPATH . '/_/inc/for-you-home-page/quotes.php'); ?>

@@ -43,7 +43,7 @@ Template Name: Personal Services page template
 
 			<a name="main-content" id="main-content"></a>
 			<!-- PAGE TOP SECTION -->
-			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeIn">
+			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInUp">
 				
 					<article <?php post_class(); ?>>
 					

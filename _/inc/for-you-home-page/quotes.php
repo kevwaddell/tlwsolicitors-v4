@@ -6,7 +6,7 @@ $feedback_qts = get_field('hp_testimonials', 'options');
 <!-- CUSTOMER FEEDBACK -->
 <div id="feedback-section">
 	
-	<div id="feedback-carousel" class="carousel slide">
+	<div id="feedback-carousel" class="carousel slide wow fadeInLeftBig">
 			
 		<div class="carousel-inner">
 		
