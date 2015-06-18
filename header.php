@@ -1,6 +1,6 @@
 <?php include (STYLESHEETPATH . '/_/inc/global/head-html.php'); ?>	
 
-<body <?php body_class($font_size); ?>>
+<body <?php body_class(array($font_size, 'loading')); ?>>
 <?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F"

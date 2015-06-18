@@ -17,6 +17,19 @@ Template Name: Personal Services page template
 	$parent = get_page($post->post_parent);
 	$how_it_works_active = get_field('hiw_active');
 	
+	if ( has_post_thumbnail() ) {
+	$img_post = get_the_ID();
+	} else {
+	$img_post = $post->post_parent;
+	$parent = get_post($img_post);	
+	
+		if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
+		$img_post = $parent->post_parent;
+		}
+	}
+	
+	//echo '<pre>';print_r($img_post);echo '</pre>';
+	
 	if (empty($number_pos)) {
 	$number_pos = "bottom";	
 	}
@@ -32,18 +45,18 @@ Template Name: Personal Services page template
 		}
 	}
 	?>	
+	<?php if ( has_post_thumbnail($img_post) ) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/service-page/feat-img-slim.php'); ?>
+	<?php } ?>
+	
 	<!-- MAIN CONTENT START -->
 	<div class="container">
 	
-		<div class="content">
-			
-			<?php if ( has_post_thumbnail() ) { ?>
-			<?php include (STYLESHEETPATH . '/_/inc/service-page/extra-wide-feat-img.php'); ?>
-			<?php } ?>
+		<div class="content no-pad-top">
 
 			<a name="main-content" id="main-content"></a>
 			<!-- PAGE TOP SECTION -->
-			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInUp">
+			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 				
 					<article <?php post_class(); ?>>
 					

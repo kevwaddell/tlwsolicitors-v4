@@ -22,6 +22,17 @@ Template Name: Business Services page template
 	$number_pos = "bottom";	
 	}
 	
+	if ( has_post_thumbnail() ) {
+	$img_post = get_the_ID();
+	} else {
+	$img_post = $post->post_parent;
+		$parent = get_post($img_post);	
+	
+		if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
+		$img_post = $parent->post_parent;
+		}
+	}
+	
 	//echo '<pre>';print_r($page_icon);echo '</pre>';
 	
 	if ($page_icon == 'null' || !$page_icon) {
@@ -33,18 +44,18 @@ Template Name: Business Services page template
 		}
 	}
 	?>	
+															
+	<?php if ( has_post_thumbnail($img_post) ) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/business-service-page/feat-img-slim.php'); ?>
+	<?php } ?>
 	
 	<div class="container">
 	
-		<div class="content">
-																
-			<?php if ( has_post_thumbnail() ) { ?>
-			<?php include (STYLESHEETPATH . '/_/inc/business-service-page/extra-wide-feat-img.php'); ?>
-			<?php } ?>
+		<div class="content no-pad-top">
 
 			<a name="main-content" id="main-content"></a>
 			<!-- PAGE TOP SECTION -->
-			<main class="<?php echo (!empty($color)) ? 'page-col-'.$color : 'red'; ?> animated fadeInUp">
+			<main class="<?php echo (!empty($color)) ? 'page-col-'.$color : 'red'; ?>">
 				
 					<article <?php post_class(); ?>>
 

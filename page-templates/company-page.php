@@ -19,23 +19,30 @@ Template Name: Company page template
 	if (empty($number_pos)) {
 	$number_pos = "bottom";	
 	}
+	
+	if ( has_post_thumbnail() ) {
+	$img_post = get_the_ID();
+	} else {
+	$img_post = $post->post_parent;
+	}
+	
 	//echo '<pre>';print_r($brochure);echo '</pre>';
 	if ($page_icon == 'null' || !$page_icon) {
 	$page_icon = get_field('page_icon', $post->post_parent);
 	}
 	?>	
 	
+	<?php if ( has_post_thumbnail($img_post) ) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/pages/feat-img-slim.php'); ?>
+	<?php } ?>
+	
 	<!-- MAIN CONTENT START -->
 	<div class="container">
 	
-		<div class="content">
-			
-			<?php if ( has_post_thumbnail() ) { ?>
-			<?php include (STYLESHEETPATH . '/_/inc/service-page/extra-wide-feat-img.php'); ?>
-			<?php } ?>
+		<div class="content no-pad-top">
 
 			<a name="main-content" id="main-content"></a>
-			<main class="page-col-red animated fadeInUp">
+			<main class="page-col-red">
 				
 					<article <?php post_class(); ?>>
 					

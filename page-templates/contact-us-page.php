@@ -17,7 +17,7 @@ Template Name: Contact Us Page
 			//echo '<pre>';print_r($_GET);echo '</pre>';
 			 ?>	
 			
-			<main <?php post_class('page-col-red animated fadeInUp'); ?>>
+			<main <?php post_class('page-col-red'); ?>>
 			 
 			<?php the_content(); ?>
 			 	

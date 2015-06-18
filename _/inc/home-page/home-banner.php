@@ -9,7 +9,7 @@ $banner_item_counter = 0;
 $banner_items_total = count($banner_links);
 ?>
 
-<section id="main-home-banner" class="animated fadeInLeftBig">
+<section id="main-home-banner">
 	<?php foreach ($banner_links as $link) { 
 	$pg_id = $link['page_link'];
 	$pg_title = $link['page_title'];

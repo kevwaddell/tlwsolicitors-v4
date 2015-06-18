@@ -32,14 +32,14 @@ Template Name: Service Landing page template
 				}
 			}
 			?>	
-	<div class="title-banner bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInLeft">
+	<div class="title-banner bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			<?php the_title(); ?>
 		</div>
 	</div>
 				
 	<?php if ( has_post_thumbnail() ) { ?>
-	<div class="banner-img banner-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInRight">
+	<div class="banner-img banner-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<?php include (STYLESHEETPATH . '/_/inc/service-page/banner-feat-img.php'); ?>
 		
 		<?php if ($main_title) { ?>
@@ -78,7 +78,7 @@ Template Name: Service Landing page template
 	
 	<div class="container">
 	
-		<div class="content pad-bot-none animated fadeInUp">
+		<div class="content pad-bot-none">
 
 			<?php if (!empty($on_page_script)) { ?>
 			<?php echo $on_page_script; ?>

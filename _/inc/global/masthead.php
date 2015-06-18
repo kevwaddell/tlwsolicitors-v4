@@ -1,4 +1,4 @@
-<header class="header animated fadeInDown" role="banner">
+<header class="header" role="banner">
 <?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	<?php 
 	$freephone_num = get_field('freephone_num', 'option');

@@ -66,7 +66,7 @@ $radio_stations = get_field('radio_stations', 'option');
 	<?php } ?>
 	
 	<?php if (!empty($feedback_quote)) { ?>
-	<div class="sb-quote wow fadeInUp">
+	<div class="sb-quote">
 		<?php foreach ($feedback_quote as $quote) { 
 		$quote_txt = get_field('quote', $quote->ID);	
 		$client_name = get_field('client_name', $quote->ID);
@@ -79,7 +79,7 @@ $radio_stations = get_field('radio_stations', 'option');
 	<?php } ?>
 	
 	<?php if ($how_it_works_active) { ?>	
-	<div class="how-it-works-link wow fadeInUp">
+	<div class="how-it-works-link">
 		<a href="#how-it-works" class="hiw-link">
 			<span class="txt-mid">The Claims Process</span>
 			<span class="txt-lg">How it Works</span>
@@ -89,7 +89,7 @@ $radio_stations = get_field('radio_stations', 'option');
 	<?php } ?>
 	
 	<?php if (!empty($children)) { ?>
-	<div class="menu-collapse closed wow fadeInUp">
+	<div class="menu-collapse closed">
 	<a name="sb-menu-collapse" id="sb-menu-collapse"></a>
 	<button class="sb-menu-btn btn btn-default btn-block">Services Menu</button>
 		<ul class="list-unstyled menu-links">
@@ -126,7 +126,7 @@ $radio_stations = get_field('radio_stations', 'option');
 	<?php } ?>
 			
 	<?php if ($radio_ads_active && !empty($r_ads)) : ?>
-	<div class="sb-radio-adverts wow fadeInUp">
+	<div class="sb-radio-adverts">
 		<h4 class="icon-header"><i class="fa fa-microphone fa-lg"></i><?php echo $radio_ads_title; ?></h4>
 		
 		<div class="sb-audio-player">

@@ -27,7 +27,7 @@ Template Name: Sitemap page
 						
 						<?php include (STYLESHEETPATH . '/_/inc/site-map/vars.php'); ?> 
 				
-						<section id="site-map-lists" class="animated fadeInUp">
+						<section id="site-map-lists">
 				
 							<div class="row">
 						

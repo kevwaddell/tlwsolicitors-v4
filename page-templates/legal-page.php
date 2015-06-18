@@ -32,7 +32,7 @@ Template Name: Legal pages template
 			//echo '<pre>';print_r($children);echo '</pre>';
 			
 			?>	
-			<main class="page-col-red animated fadeInUp">
+			<main class="page-col-red">
 				
 			 	<div class="row">
 				 	

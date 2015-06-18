@@ -13,6 +13,10 @@
 	&.pad-bot-30 {
 	.pad-bot(3);	
 	}
+	
+	&.no-pad-top {
+	.pad-top(0);	
+	}
 }
 
 .title-banner {
@@ -154,6 +158,15 @@ time.date-today {
 	&.ex-wide {
 	.min-h(4);	
 	}
+	
+	&.slim {
+	.h(20);
+	.min-h(20);
+	.bg-size;
+	.bg-repeat(no-repeat);
+	background-position: center center;	
+	.inner-shadow(0px, -10px, 10px, 0.5);
+	}
 
 	.striped-overlay {
 	.opacity(0.2);	
@@ -185,12 +198,18 @@ time.date-today {
 	.h(4);
 	.line-h(4);	
 	.font-size(2);
+		
 		span {
 		.in-block;
 		.line-h(4);	
 		.pad(0;2;0;2);	
 		.col(white);
-		.bg-col(@redMid);
+		.bg-col(@redMid);	
+		}
+		
+		span.caption-inner {
+		.mag-left(-3);	
+		.pad-all(0);
 		}
 		
 		i {

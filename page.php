@@ -9,7 +9,7 @@
 			$related_pages = get_field('page_links'); 
 			$hide_title = get_field('hide_title'); 
 			?>	
-			 <main class="page-col-red animated fadeIn">
+			 <main class="page-col-red">
 			 	<div class="row">
 			 	 		 	
 				 	<?php include (STYLESHEETPATH . '/_/inc/global/access-btns.php'); ?>

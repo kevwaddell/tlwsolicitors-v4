@@ -8,7 +8,7 @@
 	<?php
 	$site_map_page = get_page_by_title('Site map');
 	?>	
-	<main class="page-col-red animated fadeIn">
+	<main class="page-col-red">
 		
 			<div class="row">
 								 	

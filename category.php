@@ -15,7 +15,7 @@ $news_page_intro = get_field('intro', $news_page->ID);
 $page_icon = get_field('page_icon', $news_page->ID);
 ?>
 <!-- PAGE TOP SECTION -->
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red">
 				
 				<article class="page">
 					

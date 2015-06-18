@@ -11,7 +11,7 @@
 			$search_query = get_search_query(); 
 			//echo '<pre>';print_r($posts);echo '</pre>';
 			?>
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red">
 			 
 					<article class="page">
 						<h1 class="text-center">Search Results</h1>

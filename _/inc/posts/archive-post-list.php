@@ -3,7 +3,7 @@ $found_posts = $wp_query->found_posts;
 $posts_per_page = get_query_var('posts_per_page');
 ?>
 
-<section class="page-content post-grid animated fadeInRight">
+<section class="page-content post-grid">
 
 	<h3 class="icon-header red mag-bot-0">
 	<?php

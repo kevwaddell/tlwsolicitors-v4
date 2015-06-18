@@ -50,11 +50,11 @@ $children = get_pages($child_args);
 	
 			
 	<?php if ($number_pos == 'sidebar') { ?>
-		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?> wow fadeInUp">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
+		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
 	
 	<?php if (!empty($feedback_quote)) { ?>
-	<div class="sb-quote wow fadeInUp">
+	<div class="sb-quote">
 		<?php foreach ($feedback_quote as $quote) { 
 		$quote_txt = get_field('quote', $quote->ID);
 		$client_name = get_field('client_name', $quote->ID);		
@@ -67,7 +67,7 @@ $children = get_pages($child_args);
 	<?php } ?>
 	
 	<?php if ($how_it_works_active) { ?>	
-	<div class="how-it-works-link wow fadeInUp">
+	<div class="how-it-works-link">
 		<a href="#how-it-works" class="hiw-link">
 			<span class="txt-mid">The Claims Process</span>
 			<span class="txt-lg">How it Works</span>
@@ -77,7 +77,7 @@ $children = get_pages($child_args);
 	<?php } ?>
 	
 	<?php if (!empty($children)) { ?>
-	<div class="menu-collapse closed wow fadeInUp">
+	<div class="menu-collapse closed">
 	<a name="sb-menu-collapse" id="sb-menu-collapse"></a>
 	<button class="sb-menu-btn btn btn-default btn-block">Services Menu</button>
 		<ul class="list-unstyled menu-links">

@@ -13,8 +13,6 @@
 	 event_type = 'click';	
 	 
 	}
-	
-	new WOW().init();
 
 	var service_select = $('select#service-select');
 	var service_area_select = $('select.service-area-select');
@@ -420,6 +418,18 @@
 			$('#call-2-action-radio').removeAttr('disabled');
 			$('i.fa-spinner').hide();
 		}
+		
+		if ($('body').hasClass('loading') && $('#site-loader').length == 1) {
+			$('body').removeClass('loading').addClass('loaded');	
+		
+			$('#site-loader').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$(this).hide();	
+				new WOW().init();
+			});
+
+		}
+		
+		new WOW().init();
 	
 	});
 	

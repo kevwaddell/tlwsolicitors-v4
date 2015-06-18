@@ -1,4 +1,4 @@
-<section id="enqiry-start-form" class="wow fadeInLeftBig" style="display: none;">
+<section id="enqiry-start-form" style="display: none;">
 			
 		<h2 class="text-center"><i class="fa fa-check-square-o"></i> Start your enquiry today</h2>
 		

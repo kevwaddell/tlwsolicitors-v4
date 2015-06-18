@@ -1,4 +1,4 @@
-<div class="hp-intro wow fadeInLeftBig">
+<div class="hp-intro">
 <?php the_content(); ?>	
 
 <div class="rule"></div>

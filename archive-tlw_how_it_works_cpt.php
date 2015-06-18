@@ -6,7 +6,7 @@
 <?php ?>
 
 <!-- PAGE TOP SECTION -->
-		<main class="page-col-red animated fadeIn">
+		<main class="page-col-red">
 			
 			<article class="page">
 				

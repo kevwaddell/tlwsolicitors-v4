@@ -35,14 +35,14 @@ Template Name: Business Service Landing page template
 			
 			//echo '<pre>';print_r($number_pos);echo '</pre>';
 			?>	
-	<div class="title-banner bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInLeftBig">
+	<div class="title-banner bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			Services for <span class="bold"><?php the_title(); ?></span>
 		</div>
 	</div>
 				
 	<?php if ( has_post_thumbnail() ) { ?>
-	<div class="banner-img banner-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeInRight">
+	<div class="banner-img banner-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<?php include (STYLESHEETPATH . '/_/inc/service-page/banner-feat-img.php'); ?>
 		
 		<?php if ($main_title) { ?>
@@ -81,13 +81,13 @@ Template Name: Business Service Landing page template
 
 	<div class="container">
 	
-		<div class="content pad-bot-none animated fadeInUp">
+		<div class="content pad-bot-none">
 
 			<?php if (!empty($on_page_script)) { ?>
 			<?php echo $on_page_script; ?>
 			<?php } ?>
 			<a name="main-content" id="main-content"></a>
-			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?> animated fadeIn">
+			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 					 	
 			 	<article <?php post_class(); ?>>
 				 	

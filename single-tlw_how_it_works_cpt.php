@@ -7,7 +7,7 @@
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); 
 			$freephone_num = get_field('freephone_num', 'option');
 			?>	
-			<main class="page-col-red animated fadeIn">
+			<main class="page-col-red">
 				
 				<article <?php post_class(); ?>>
 					

@@ -39,7 +39,7 @@
 			//echo '<pre>';print_r($departments);echo '</pre>';
 			?>
 			
-			<div class="team-list-box wow fadeInUp">
+			<div class="team-list-box">
 				
 				<div class="row">
 				

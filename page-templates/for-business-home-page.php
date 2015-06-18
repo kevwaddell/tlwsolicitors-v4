@@ -15,7 +15,7 @@ Template Name: TLW Business home page
 
 			<?php include (STYLESHEETPATH . '/_/inc/for-business-home-page/vars.php'); ?>	
 			
-			<main class="animated fadeIn">
+			<main>
 			
 				<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 				<article <?php post_class(); ?>>

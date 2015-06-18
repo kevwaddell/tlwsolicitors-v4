@@ -38,14 +38,14 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 	<?php endif; ?>
 	
 	<?php if ($number_pos == 'sidebar') { ?>
-	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?> wow fadeInUp">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
+	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
 	
 	<?php if ($custom_sat_active && in_array($post->ID, $custom_sat_active_pgs)) {
 	$custom_sat_year = get_field('custom_sat_year', 'option');	
 	$custom_sat_download = get_field('custom_sat_download', 'option');		
 	?>
-	<div class="striped-box wow fadeInUp">
+	<div class="striped-box">
 		<div class="customer-sat-header">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/_/css/img/customer-satisfaction-header.png" alt="Customer satisfaction Client Care Feedback">
 		</div>
@@ -57,7 +57,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 	<?php } ?>
 
 	<?php if (!empty($children)) { ?>
-	<div class="menu-collapse closed wow fadeInUp">
+	<div class="menu-collapse closed">
 	<a name="sb-menu-collapse" id="sb-menu-collapse"></a>
 	<button class="sb-menu-btn btn btn-default btn-block"><?php echo get_the_title($post_ID); ?> Menu</button>
 		<ul class="list-unstyled menu-links">

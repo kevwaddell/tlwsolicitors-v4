@@ -1,4 +1,4 @@
-<div class="hp-intro animated fadeInRightBig">
+<div class="hp-intro">
 <?php the_content(); ?>	
 
 <div class="rule"></div>

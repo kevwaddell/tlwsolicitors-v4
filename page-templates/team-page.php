@@ -32,7 +32,7 @@ Template Name: Team Page
 			}
 			 ?>	
 			<a name="main-content" id="main-content"></a>
-			<main class="page-col-red animated fadeInUp">
+			<main class="page-col-red">
 					
 					<article <?php post_class(); ?>>
 					

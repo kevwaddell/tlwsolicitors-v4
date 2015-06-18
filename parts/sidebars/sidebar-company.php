@@ -53,7 +53,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 	<?php } ?>
 	
 	<?php if (!empty($feedback_quote)) { ?>
-	<div class="sb-quote wow fadeInUp">
+	<div class="sb-quote">
 		<?php foreach ($feedback_quote as $quote) { 
 		$quote_txt = get_field('quote', $quote->ID);	
 		$client_name = get_field('client_name', $quote->ID);
@@ -69,7 +69,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 	$custom_sat_year = get_field('custom_sat_year', 'option');	
 	$custom_sat_download = get_field('custom_sat_download', 'option');		
 	?>
-	<div class="striped-box wow fadeInUp">
+	<div class="striped-box">
 		<div class="customer-sat-header">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/_/css/img/customer-satisfaction-header.png" alt="Customer satisfaction Client Care Feedback">
 		</div>
@@ -81,7 +81,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 	<?php } ?>
 
 	<?php if (!empty($children)) { ?>
-	<div class="menu-collapse closed wow fadeInUp">
+	<div class="menu-collapse closed">
 	<a name="sb-menu-collapse" id="sb-menu-collapse"></a>
 	<button class="sb-menu-btn btn btn-default btn-block"><?php echo get_the_title($post_ID); ?> Menu</button>
 		<ul class="list-unstyled menu-links">

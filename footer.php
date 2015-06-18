@@ -2,7 +2,7 @@
 		<!-- FOOTER START -->
 		<section id="footer-info">
 		
-			<footer class="container wow fadeInUp">
+			<footer class="container">
 				
 				<div class="row">
 				
@@ -57,6 +57,8 @@
 		<?php if (!is_home() && !is_single() && !is_archive()) { ?>	
 		<?php include (STYLESHEETPATH . '/_/inc/global/search-pop-up.php'); ?>
 		<?php } ?>
+		
+		<?php include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
 		
 		<?php wp_footer(); ?>
 
