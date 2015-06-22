@@ -1,5 +1,5 @@
 <figure class="feat-img-wide slim feat-img-col-<?php echo (!empty($color)) ? $color : 'red'; ?>" style="background-image: url(<?php add_slim_feat_img($img_post);?>)">
-	<div class="col-overlay"></div><div class="striped-overlay"></div>
+	<div class="striped-overlay"></div>
 	<?php if ($post->post_parent != 0 ) { ?>
 	<figcaption class="img-caption">
 		<div class="container">

@@ -174,7 +174,7 @@ function add_extra_wide_feat_img ( $post, $classes = "" ) {
 function add_slim_feat_img( $post ) {	
 		
 	$post_thumbnail_id = get_post_thumbnail_id( $post );
-	$slim_feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'feat-img-slim' );
+	$slim_feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 	
 	echo $slim_feat_img[0];
 	
