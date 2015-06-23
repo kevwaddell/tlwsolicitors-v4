@@ -399,6 +399,20 @@ border-radius: 0px;
 			}
 		}	
 		
+		button.service-menu-btn {
+			.bg-col(darken(@col, 20%));	
+			&:after {
+			.col(@col);	
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@col);	
+				&:after {
+				.col(darken(@col, 20%));	
+				}
+			}
+		}
+		
 		.menu-collapse {
 			
 			button.sb-menu-btn {
@@ -872,4 +886,41 @@ background-blend-mode: multiply;
 		.col(darken(@col, 20%));
 		}
 	}
+}
+
+.link-col(@col) {
+	a {
+	.bg-col(@col);	
+		i {
+		.bg-col(darken(@col, 20%));	
+		}
+		&:hover, &:active, &:focus {
+		.bg-col(darken(@col, 20%));
+			i {
+			.bg-col(white);	
+			.col(@col);
+			}
+		}
+	}
+	&.open {
+		a {
+		.bg-col(darken(@col, 20%));	
+			i {
+			.bg-col(white);
+			.col(@col);		
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@col);
+			}
+		}
+		.children {
+			a {
+			.bg-col(@col);	
+				&:hover, &:active, &:focus {
+				.bg-col(darken(@col, 20%));	
+				}
+			}
+		}
+	}	
 }

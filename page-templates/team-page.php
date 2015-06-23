@@ -5,11 +5,12 @@ Template Name: Team Page
  ?>
 
 <?php get_header(); ?>
+
+	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<!-- MAIN CONTENT START -->
 	<div class="container">
 	
 		<div class="content">
-			
 			<?php
 			$position_args = array(
 				'orderby'       => 'meta_value', 
@@ -21,11 +22,24 @@ Template Name: Team Page
 			$freephone_num = get_field('freephone_num', 'option');
 			?>
 			
-			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+
 			<?php 
 			$hide_title = get_field('hide_title'); 
 			$page_icon = get_field('page_icon');
 			$color = get_field('page_colour');
+			
+			if ($post->post_parent == 0) {
+			$post_ID = $post->ID;
+			} else {
+			$post_ID = $post->post_parent;	
+			}		
+				
+			$links_args = array(
+			'sort_column' => 'menu_order',
+			'parent'	=> $post_ID
+			); 
+		
+			$links = get_pages($links_args);	
 			
 			if (!$page_icon) {
 			$page_icon = get_field('page_icon', $post->post_parent);
@@ -75,12 +89,15 @@ Template Name: Team Page
 					</article>
 					
 			</main>
-					
-			<?php endwhile; ?>
-			<?php endif; ?>
-
-		</div><!-- CONTENT END -->
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+			</div><!-- CONTENT END -->
+		
+		</div><!-- MAIN CONTENT CONTAINER END -->	
+		
+		<?php include (STYLESHEETPATH . '/_/inc/pages/links-menu.php'); ?>	
+					
+		<?php endwhile; ?>
+		<?php endif; ?>
+
 
 <?php get_footer(); ?>

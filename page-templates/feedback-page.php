@@ -23,6 +23,20 @@ Template Name: Feedback page template
 		$number_pos = "bottom";	
 		}
 		
+		if ($post->post_parent == 0) {
+		$post_ID = $post->ID;
+		} else {
+		$post_ID = $post->post_parent;	
+		$color = get_field('page_colour', $post_ID);
+		}		
+			
+		$links_args = array(
+		'sort_column' => 'menu_order',
+		'parent'	=> $post_ID
+		); 
+	
+		$links = get_pages($links_args);	
+
 		if (!$page_icon) {
 		$page_icon = get_field('page_icon', $post->post_parent);
 		}
@@ -80,6 +94,9 @@ Template Name: Feedback page template
 		</div><!-- CONTENT END -->
 		
 	</div><!-- MAIN CONTENT CONTAINER END -->
+	
+	<?php include (STYLESHEETPATH . '/_/inc/pages/links-menu.php'); ?>
+	
 <?php endwhile; ?>
 <?php endif; ?>
 

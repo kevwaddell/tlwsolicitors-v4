@@ -20,6 +20,19 @@ Template Name: Company page template
 	$number_pos = "bottom";	
 	}
 	
+	if ($post->post_parent == 0) {
+	$post_ID = $post->ID;
+	} else {
+	$post_ID = $post->post_parent;	
+	}		
+		
+	$links_args = array(
+	'sort_column' => 'menu_order',
+	'parent'	=> $post_ID
+	); 
+
+	$links = get_pages($links_args);	
+	
 	if ( has_post_thumbnail() ) {
 	$img_post = get_the_ID();
 	} else {
@@ -88,6 +101,8 @@ Template Name: Company page template
 		</div><!-- CONTENT END -->
 		
 	</div><!-- MAIN CONTENT CONTAINER END -->
+	
+	<?php include (STYLESHEETPATH . '/_/inc/pages/links-menu.php'); ?>
 	
 	<?php endwhile; ?>
 	<?php endif; ?>

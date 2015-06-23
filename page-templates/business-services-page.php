@@ -8,6 +8,8 @@ Template Name: Business Services page template
 	<!-- MAIN CONTENT START -->
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
+	$links = get_field('biz_banner_links', 'option');
+	//echo '<pre>';print_r($links);echo '</pre>';
 	$freephone_num = get_field('freephone_num', 'option');
 	$number_pos = get_field('tel_num_position');
 	$page_icon = get_field('page_icon');
@@ -102,6 +104,8 @@ Template Name: Business Services page template
 		</div><!-- CONTENT END -->
 		
 	</div><!-- MAIN CONTENT CONTAINER END -->
+	
+	<?php include (STYLESHEETPATH . '/_/inc/business-service-page/links-menu.php'); ?>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
 	

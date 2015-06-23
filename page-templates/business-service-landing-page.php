@@ -9,6 +9,7 @@ Template Name: Business Service Landing page template
 	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 			<?php 
+			$links = get_field('biz_banner_links', 'option');
 			$freephone_num = get_field('freephone_num', 'option');
 			$number_pos = get_field('tel_num_position');
 			$form_active = get_field('form_activated');
@@ -120,6 +121,8 @@ Template Name: Business Service Landing page template
 	</div><!-- CONTENT END -->
 		
 	</div><!-- MAIN CONTENT CONTAINER END -->
+	
+	<?php include (STYLESHEETPATH . '/_/inc/business-service-page/links-menu.php'); ?>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
 						
