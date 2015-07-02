@@ -68,7 +68,7 @@ Template Name: Company page template
 								
 									<header class="pg-header">
 										
-										<?php if ($hide_title == 1) { ?>
+										<?php if ($hide_title == 1 && $post->post_parent != 0) { ?>
 										<div class="service-tag"><?php the_title(); ?></div>
 										<?php } ?>	
 				

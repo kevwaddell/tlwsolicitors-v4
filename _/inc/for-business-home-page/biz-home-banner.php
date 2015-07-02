@@ -43,7 +43,7 @@ $bblinks_counter = 0;
 		</div>
 	</div>
 	
-	<div class="links animated fadeInDown">
+	<div class="links">
 	<?php foreach ($biz_banner_links as $link) { 
 	$pg_id = $link['page_link'];
 	$pg_title = $link['link_title'];

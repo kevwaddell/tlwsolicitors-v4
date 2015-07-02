@@ -93,11 +93,15 @@ header[role="banner"] {
 		.pad-all(0);
 		
 			&.in-active {
-			.bg-col(@gray);	
+			.bg-col(@red);	
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@redMid);
 			}
 		
 			&.active {
-			.bg-col(darken(@grayDk, 10%));
+			.bg-col(@redMid);
 			}
 		}
 

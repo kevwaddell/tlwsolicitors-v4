@@ -343,6 +343,8 @@
 	
 		if ( $('.tlw-wrapper').hasClass('nav-closed') ) {
 			
+			$(this).toggleClass('in-active active');
+			
 			$('.tlw-wrapper').removeClass('nav-closed').addClass('nav-open');
 		} 
 		
@@ -355,6 +357,7 @@
 		if ( $('.tlw-wrapper').hasClass('nav-open') ) {
 			$('.tlw-wrapper').removeClass('nav-open').addClass('nav-closed');
 			$('li.with-sub-nav').removeClass('sl-tl-open').addClass('sl-tl-closed');
+			$('button#nav-btn').toggleClass('active in-active');
 		} 
 		
 		return false;
