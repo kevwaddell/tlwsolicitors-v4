@@ -8,7 +8,7 @@ update_option('home','http://tlwsolicitors.dev');
 if ( !function_exists(core_mods) ) {
 	function core_mods() {
 		if ( !is_admin() ) {
-			wp_register_style( 'select-css', 'http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css', null );
+			wp_register_style( 'select-css', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css', null );
 			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('select-css'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 			wp_register_script( 'jquery-cookie', get_stylesheet_directory_uri() . '/_/js/jquery.cookie.js', array('jquery'), '1.0.0', true );
 			wp_register_script( 'slim-scroll', get_stylesheet_directory_uri() . '/_/js/jquery.slimscroll.min.js', array('jquery'), '1.0.0', true );
