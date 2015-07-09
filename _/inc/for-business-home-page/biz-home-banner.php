@@ -22,11 +22,6 @@ $bblinks_counter = 0;
 				<div class="img" style="background-image: url(<?php echo $img; ?>);"></div>
 				<div class="slider-tag animated slideInUp"><?php echo $slide_tag; ?></div>
 			</div>
-			<?php } else { ?>
-			<div id="item-start" class="item active">
-				<div class="img" style="background-image: url('http://tlwsolicitors_v3.dev/wp-content/uploads/2015/04/bussiness-2000x490-1427904575.jpg?3d6ce');"></div>
-				<div class="slider-tag animated slideInUp">Helping businesses through out the UK</div>
-			</div>
 			<?php } ?>
 			<?php foreach ($biz_banner_links as $banner_link) { 
 			$pg_id = $banner_link['page_link'];

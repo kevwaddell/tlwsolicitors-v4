@@ -16,7 +16,7 @@ $banner_items_total = count($banner_links);
 	$pg = get_post($pg_id);
 	$col = get_field('page_colour', $pg_id);
 	$icon = get_field('page_icon', $pg_id);
-	$img = get_bloginfo('stylesheet_directory')."/_/img/banner-img-" .$pg->post_name. ".png";
+	$img = get_bloginfo('stylesheet_directory')."/_/img/banner-img-" .$pg->post_name. ".jpg";
 	$banner_item_counter++;
 	//echo '<pre>';print_r($icon);echo '</pre>';
 	?>

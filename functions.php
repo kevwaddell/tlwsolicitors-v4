@@ -9,12 +9,12 @@ if ( !function_exists(core_mods) ) {
 	function core_mods() {
 		if ( !is_admin() ) {
 			wp_register_style( 'select-css', 'http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css', null );
-			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', null, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
+			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('select-css'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 			wp_register_script( 'jquery-cookie', get_stylesheet_directory_uri() . '/_/js/jquery.cookie.js', array('jquery'), '1.0.0', true );
 			wp_register_script( 'slim-scroll', get_stylesheet_directory_uri() . '/_/js/jquery.slimscroll.min.js', array('jquery'), '1.0.0', true );
 			wp_register_script( 'bootstrap-select', 'http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js', array('jquery', 'bootstrap-all-min'), '1.0.0', true );
-			wp_register_script( 'wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', '1.0.0', true );
-			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll'), '1.0.1', true );
+			wp_register_script( 'wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', false, '1.0.0', true );
+			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'wow-js'), '1.0.1', true );
 			wp_enqueue_style('select-css');
 			wp_enqueue_style('styles');
 			wp_enqueue_script('jquery-cookie');
@@ -251,9 +251,6 @@ include (STYLESHEETPATH . '/_/functions/submit_newsletter.php');
 
 /* NEXT PREVIOUS ADMIN POST/PAGES LINKS FUNCTION */
 //include (STYLESHEETPATH . '/_/functions/next-prev-post-admin.php');
-
-//holder_add_theme( 'wordpress', '333333', 'eeeeee' );
-holder_add_theme( 'lite-gray', '888888', 'eeeeee' );
 
 function add_gf_cap() {	
    $id = 2;
