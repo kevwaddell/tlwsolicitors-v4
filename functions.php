@@ -400,7 +400,7 @@ function tlw_theme_get_archives_link ( $link_html ) {
 add_filter('get_archives_link', 'tlw_theme_get_archives_link');
 
 add_filter( 'script_loader_tag', function ( $tag, $handle ) {
-	return str_replace( ' src', ' defer="defer" src', $tag );
+	return str_replace( ' src', ' defer src', $tag );
 }, 10, 2 );
 
  ?>
