@@ -27,6 +27,17 @@ if ( !function_exists(core_mods) ) {
 	core_mods();
 }
 
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+function remove_jquery_migrate( &$scripts)
+{
+    if(!is_admin())
+    {
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+    }
+}
+
 add_action( 'after_setup_theme', 'editor_styles' );
 
 function editor_styles() {
