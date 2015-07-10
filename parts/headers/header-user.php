@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
+<html <?php language_attributes(); ?> class="no-js">
 <head id="www-wordpress-test-dev" data-template-set="tlw-base-theme">
 
 	<meta charset="<?php bloginfo('charset'); ?>">
