@@ -399,5 +399,4 @@ function tlw_theme_get_archives_link ( $link_html ) {
 }
 add_filter('get_archives_link', 'tlw_theme_get_archives_link');
 
-
  ?>
