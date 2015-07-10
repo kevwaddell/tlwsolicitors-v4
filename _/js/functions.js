@@ -1,5 +1,7 @@
 (function($){
-
+		
+	$(document).ready(function (){
+		
 	var event_type;
 	var url = document.location.toString();
 	var window_width = $(window).width(); 
@@ -437,8 +439,6 @@
 		return false;
 		
 	});
-	
-	$(document).ready(function (){
 	
 		$('#feedback-carousel').carousel({
 			pause: false,
