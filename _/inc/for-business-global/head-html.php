@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
+<html <?php language_attributes(); ?> class="no-js">
 <head id="www-tlwsolicitors-co-uk" data-template-set="tlw-solicitors-theme">
 	
 	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
