@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head id="www-wordpress-test-dev" data-template-set="tlw-base-theme">
-
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	<meta name="robots" content="noindex, nofollow" /> 
@@ -20,8 +19,9 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	
+	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
 	<?php wp_head(); ?>
-	
+	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>
 
 <body id="login" <?php body_class(); ?>>
