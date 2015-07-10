@@ -5,9 +5,9 @@ update_option('siteurl','http://tlwsolicitors.dev');
 update_option('home','http://tlwsolicitors.dev');
 */
 
-if ( !function_exists(core_mods) ) {
-	function core_mods() {
-		if ( !is_admin() ) {
+add_action('init', 'enqueue_files');
+	
+function enqueue_files() {
 			wp_register_style( 'select-css', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css', null );
 			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('select-css'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 			wp_register_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
@@ -22,9 +22,6 @@ if ( !function_exists(core_mods) ) {
 			wp_enqueue_script('bootstrap-select');
 			wp_enqueue_script('wow-js');
 			wp_enqueue_script('functions');
-		}
-	}
-	core_mods();
 }
 
 add_action( 'after_setup_theme', 'editor_styles' );
