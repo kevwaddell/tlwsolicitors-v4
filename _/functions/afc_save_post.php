@@ -7,16 +7,21 @@ function my_acf_save_post( $post_id )
 	
 	if ($current_screen->id == 'tlw_testimonial_cpt') {
 		
-		//echo '<pre>';print_r($_POST['acf']);echo '</pre>';	
-		
 		 $name = $_POST['acf']['field_52e8d46ec7946'];
 		 $name_slug = sanitize_title($name);
 		 
 		 $location = $_POST['acf']['field_52e8d48ac7947'];
 		 $location_slug = sanitize_title($location);
 		 
-		 $slug = $name_slug."-".$location_slug;
-		 $title = wp_strip_all_tags($name." - ".$location);
+		 if (!empty($_POST['acf']['field_55a39a35be16c'])) {
+		 $company = $_POST['acf']['field_55a39a35be16c'];
+		 $company_slug = sanitize_title($company);
+			  $slug = $name_slug."-".$company_slug."-".$location_slug;
+			  $title = wp_strip_all_tags($name." - ".$company. " - ".$location);
+		 } else {
+			 $slug = $name_slug."-".$location_slug;
+			 $title = wp_strip_all_tags($name." - ".$location); 
+		 };
 		 
 		//echo '<pre>';print_r($slug);echo '</pre>';
 		//echo '<pre>';print_r($title);echo '</pre>';
