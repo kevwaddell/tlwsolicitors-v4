@@ -4,6 +4,7 @@
 	<?php 
 	$hide_title = get_field('hide_title'); 
 	$form_active = get_field('form_activated');
+	$img_post = get_the_ID();
 	?>	
 	
 	<?php if ( has_post_thumbnail($img_post) ) { ?>
@@ -12,7 +13,7 @@
 	<!-- MAIN CONTENT START -->
 	<div class="container">
 	
-		<div class="content">
+		<div class="content<?php echo (has_post_thumbnail($img_post)) ? ' no-pad-top':''; ?>">
 
 			 <main class="page-col-red">
 			 	<div class="row">
