@@ -13,8 +13,8 @@ function my_acf_save_post( $post_id )
 		 $location = $_POST['acf']['field_52e8d48ac7947'];
 		 $location_slug = sanitize_title($location);
 		 
-		 if (!empty($_POST['acf']['field_55a39a6a76844'])) {
-		 $company = $_POST['acf']['field_55a39a6a76844'];
+		 if (!empty($_POST['acf']['field_55a39a35be16c'])) {
+		 $company = $_POST['acf']['field_55a39a35be16c'];
 		 $company_slug = sanitize_title($company);
 			  $slug = $name_slug."-".$company_slug."-".$location_slug;
 			  $title = wp_strip_all_tags($name." - ".$company. " - ".$location);
