@@ -29,7 +29,8 @@
 							
 								<div class="main-txt">
 								<?php the_content(); ?>
-									
+								</div>
+								
 								<?php if ($form_active) : 
 								$form = get_field('form');	
 								?>
@@ -38,10 +39,8 @@
 								</div>	
 								
 								<?php endif; ?>
-
-								</div>
 							
-							</article>
+						</article>
 						
 				 	</div>
 					
