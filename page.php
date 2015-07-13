@@ -36,7 +36,7 @@
 								?>
 								<div class="contact-form">
 									<div class="well">
-									<?php gravity_form($form->id, false, true, false, null, true); ?>	
+									<?php gravity_form($form->id, false, false, false, null, true); ?>	
 									</div>		
 								</div>	
 								
