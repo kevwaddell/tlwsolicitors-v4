@@ -9,12 +9,25 @@ global $links;
 
 $form_active = get_field('form_activated');
 
-$feedback_args = array(
+if ($feedback_active) {
+	$feedback_id = get_field('client_feedback');
+} else {
+	$feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
 	'orderby'          => 'rand',
-); 
-$feedback_quote = get_posts($feedback_args); 
+	'meta_key'	=> 'area',
+	'meta_value'	=> 'business'
+	); 
+	$feedback_quote = get_posts($feedback_args); 	
+	
+	$feedback_id = $feedback_quote[0]->ID;
+}
+
+	$quote_txt = get_field('quote', $feedback_id);
+	$client_name = get_field('client_name', $feedback_id);
+	$location = get_field('location', $feedback_id);
+	$company = get_field('company', $feedback_id);
 ?>
 <aside class="sidebar col-xs-4">
 
@@ -43,7 +56,7 @@ $feedback_quote = get_posts($feedback_args);
 		$location = get_field('location', $quote->ID);			
 		?>
 		<blockquote><?php echo $quote_txt; ?></blockquote>
-		<p class="text-center"><?php echo $client_name; ?>, <?php echo $location; ?></p>
+		<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
 		<?php } ?>
 	</div>
 	<?php } ?>

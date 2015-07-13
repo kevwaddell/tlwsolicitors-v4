@@ -8,22 +8,24 @@ global $freephone_num;
 global $links;
 
 if ($feedback_active) {
-	$client_feedback = get_field('client_feedback');
-	$quote_txt = get_field('quote', $client_feedback);	
-	$client_name = get_field('client_name', $client_feedback);
-	$location = get_field('location', $client_feedback);	
+	$feedback_id = get_field('client_feedback');
 } else {
 	$feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
 	'orderby'          => 'rand',
+	'meta_key'	=> 'area',
+	'meta_value'	=> 'business'
 	); 
 	$feedback_quote = get_posts($feedback_args); 	
 	
-	$quote_txt = get_field('quote', $feedback_quote[0]->ID);
-	$client_name = get_field('client_name', $feedback_quote[0]->ID);
-	$location = get_field('location', $feedback_quote[0]->ID);	
+	$feedback_id = $feedback_quote[0]->ID;
 }
+
+$quote_txt = get_field('quote', $feedback_id);
+$client_name = get_field('client_name', $feedback_id);
+$location = get_field('location', $feedback_id);
+$company = get_field('company', $feedback_id);
 ?>
 <aside class="sidebar col-xs-4">
 	
@@ -38,7 +40,7 @@ if ($feedback_active) {
 		</div>
 		<div class="sb-head-bot text-center">
 			<blockquote><?php echo $quote_txt; ?></blockquote>
-			<p class="text-center quote-name"><?php echo $client_name; ?>, <?php echo $location; ?></p>
+			<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
 		</div>
 	</div>
 	
