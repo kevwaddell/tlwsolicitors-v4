@@ -5,6 +5,7 @@
 	$hide_title = get_field('hide_title'); 
 	$form_active = get_field('form_activated');
 	$img_post = get_the_ID();
+	$page_icon = get_field('page_icon');
 	?>	
 	
 	<?php if ( has_post_thumbnail($img_post) ) { ?>
