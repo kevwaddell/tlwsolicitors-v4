@@ -36,7 +36,7 @@
 								$form = get_field('form');	
 								?>
 								<div class="contact-form">
-									<div class="well">
+									<div class="well well-lg">
 									<?php gravity_form($form->id, false, false, false, null, true); ?>	
 									</div>		
 								</div>	
