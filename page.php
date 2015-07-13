@@ -14,7 +14,7 @@
 			 	 		 	
 				 	<?php include (STYLESHEETPATH . '/_/inc/global/access-btns.php'); ?>
 				 	
-				 	<div class="col-xs-10 col-xs-offset-1">
+				 	<div class="col-xs-11">
 				 	
 						<article <?php post_class(); ?>>
 							
