@@ -48,16 +48,10 @@ if ($feedback_active) {
 		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
 	
-	<?php if (!empty($feedback_quote)) { ?>
+	<?php if ($feedback_id) { ?>
 	<div class="sb-quote">
-		<?php foreach ($feedback_quote as $quote) { 
-		$quote_txt = get_field('quote', $quote->ID);
-		$client_name = get_field('client_name', $quote->ID);		
-		$location = get_field('location', $quote->ID);			
-		?>
 		<blockquote><?php echo $quote_txt; ?></blockquote>
 		<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
-		<?php } ?>
 	</div>
 	<?php } ?>
 	

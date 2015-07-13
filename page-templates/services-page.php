@@ -16,6 +16,7 @@ Template Name: Personal Services page template
 	$color = get_field('page_colour');
 	$hide_title = get_field('hide_title'); 
 	$parent = get_page($post->post_parent);
+	$feedback_active = get_field('feedback_active'); 
 	$how_it_works_active = get_field('hiw_active');
 	
 	if ( has_post_thumbnail() ) {

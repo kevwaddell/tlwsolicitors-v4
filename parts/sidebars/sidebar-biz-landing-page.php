@@ -38,10 +38,12 @@ $company = get_field('company', $feedback_id);
 			<?php } ?>
 			
 		</div>
+		<?php if ($feedback_id) { ?>
 		<div class="sb-head-bot text-center">
 			<blockquote><?php echo $quote_txt; ?></blockquote>
 			<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
 		</div>
+		<?php } ?>
 	</div>
 	
 	<?php if ($number_pos == 'sidebar') { ?>

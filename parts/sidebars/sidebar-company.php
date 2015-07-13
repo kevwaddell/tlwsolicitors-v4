@@ -11,6 +11,8 @@ $feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
 	'orderby'          => 'rand',
+	'meta_key'	=> 'area',
+	'meta_value'	=> 'personal'
 ); 
 $feedback_quote = get_posts($feedback_args); 
 
