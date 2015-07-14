@@ -1,7 +1,9 @@
 <?php 
 ?>
-<aside class="sidebar col-xs-4">
-	
-	<?php include (STYLESHEETPATH . '/_/inc/sidebar/social-feed.php'); ?>
-	
-</aside>
+<div class="col-xs-4">
+	<aside class="sidebar">
+		
+		<?php include (STYLESHEETPATH . '/_/inc/sidebar/social-feed.php'); ?>
+		
+	</aside>
+</div>

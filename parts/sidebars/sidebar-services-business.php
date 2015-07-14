@@ -29,44 +29,46 @@ if ($feedback_active) {
 	$location = get_field('location', $feedback_id);
 	$company = get_field('company', $feedback_id);
 ?>
-<aside class="sidebar col-xs-4">
-
-	<?php if ($form_active) : 
-	$form = get_field('form');	
-	?>
-	<div class="contact-form sb-form-right">
-		<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
-		<h3 class="icon-header">Make an enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
-		
-		<?php gravity_form($form->id, false, true, false, false, true); ?>
-					
-	</div>	
-	<?php endif; ?>
+<div class="col-xs-4">
+	<aside class="sidebar">
 	
+		<?php if ($form_active) : 
+		$form = get_field('form');	
+		?>
+		<div class="contact-form sb-form-right">
+			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
+			<h3 class="icon-header">Make an enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
 			
-	<?php if ($number_pos == 'sidebar') { ?>
-		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
-	<?php } ?>
-	
-	<?php if ($feedback_id) { ?>
-	<div class="sb-quote">
-		<blockquote><?php echo $quote_txt; ?></blockquote>
-		<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
-	</div>
-	<?php } ?>
-	
-	<?php if ($how_it_works_active) { ?>	
-	<div class="how-it-works-link">
-		<a href="#how-it-works" class="hiw-link">
-			<span class="txt-mid">The Claims Process</span>
-			<span class="txt-lg">How it Works</span>
-			<span class="txt-sml">Click here for more information</span>
-		</a>
-	</div>
-	<?php } ?>
-	
-	<?php if (!empty($links)) { ?>
-	<button class="service-menu-btn btn btn-default btn-block">Services Menu</button>
-	<?php } ?>
-							
-</aside>
+			<?php gravity_form($form->id, false, true, false, false, true); ?>
+						
+		</div>	
+		<?php endif; ?>
+		
+				
+		<?php if ($number_pos == 'sidebar') { ?>
+			<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
+		<?php } ?>
+		
+		<?php if ($feedback_id) { ?>
+		<div class="sb-quote">
+			<blockquote><?php echo $quote_txt; ?></blockquote>
+			<p class="text-center quote-name"><?php echo $client_name; ?><?php echo($company) ? '<br>'.$company:''; ?> - <?php echo $location; ?></p>
+		</div>
+		<?php } ?>
+		
+		<?php if ($how_it_works_active) { ?>	
+		<div class="how-it-works-link">
+			<a href="#how-it-works" class="hiw-link">
+				<span class="txt-mid">The Claims Process</span>
+				<span class="txt-lg">How it Works</span>
+				<span class="txt-sml">Click here for more information</span>
+			</a>
+		</div>
+		<?php } ?>
+		
+		<?php if (!empty($links)) { ?>
+		<button class="service-menu-btn btn btn-default btn-block">Services Menu</button>
+		<?php } ?>
+								
+	</aside>
+</div>

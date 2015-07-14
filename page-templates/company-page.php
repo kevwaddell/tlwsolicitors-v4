@@ -54,8 +54,8 @@ Template Name: Company page template
 	
 		<div class="content no-pad-top">
 
-			<a name="main-content" id="main-content"></a>
-			<main class="page-col-red">
+			<a name="main-content"></a>
+			<main id="main-content" class="page-col-red">
 				
 					<article <?php post_class(); ?>>
 					

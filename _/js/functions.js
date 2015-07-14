@@ -1,10 +1,13 @@
 (function($){
-		
+	//var previousScroll = 0;
 	$(document).ready(function (){
 		
 	var event_type;
 	var url = document.location.toString();
-	var window_width = $(window).width(); 
+	var window_width = $(window).width();
+	var sb_top = $('.sidebar').offset().top;
+	
+	//console.log(sb_top);
 	
 	if (Modernizr.touch){
 	
@@ -20,7 +23,7 @@
 	var service_area_select = $('select.service-area-select');
 	var child_service_area_select = $('select.child-service-area-select');
 	var start_enquiry_btn = $('a#start-enquiry-btn');
-	
+
 	 $(".selectpicker").selectpicker({
       style: 'btn-lg hp-select',
       size: 5
@@ -471,7 +474,7 @@
 	});
 	
 	$(window).load(function(e){
-	
+		
 		if ($('a#call-2-action-radio').length == 1) {
 			$('#call-2-action-radio').removeAttr('disabled');
 			$('i.fa-spinner').hide();
@@ -488,13 +491,26 @@
 		}
 		
 		new WOW().init();
-	
+		
+		if ($('.scroll-sidebar').length == 1) {
+		
+			$('.sidebar').hcSticky({
+			top: 20,
+			bottom: 0,
+			stickTo: '.content',
+			followScroll: false
+			});
+		}
+
 	});
 	
 	$(window).scroll(function(e){
 	var scroll = $(window).scrollTop();
 	var header_h = $('.header').outerHeight();
 	var h = $(window).height();
+	var sb_top = $('.sidebar').offset().top;
+	var sb_width = $('.sidebar').outerWidth();
+	
 		if ( scroll > Math.ceil(h/2) ) {
 		$('button#back-2-top').removeClass('hidden').addClass('visible fadeIn');	
 		}
@@ -509,6 +525,38 @@
 			});
 			
 		}
+		
+	   //Sticky sidebar function
+/*
+	   var currentScroll = $(this).scrollTop();
+	   var direction;
+       
+       if (currentScroll > previousScroll){
+       direction = "down";
+       } else {
+       direction = "up";
+       }
+       previousScroll = currentScroll;
+		
+		console.log(previousScroll);
+		
+		if (currentScroll > sb_top) {
+		$('.sidebar').addClass('stuck').css({width: sb_width+"px"});	
+		}
+		
+		if (currentScroll < sb_orig_top) {
+		$('.sidebar').removeClass('stuck').removeAttr("style");	
+		}
+		
+		if (direction == "down") {
+		$('.stuck').css({top: currentScroll+"px"});		
+		}
+		
+		if (direction == "up") {
+		$('.stuck').css({top: previousScroll +"px"});		
+		}
+*/
+		
 	});
 	
 	

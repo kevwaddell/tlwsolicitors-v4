@@ -44,59 +44,61 @@ $radio_stations = get_field('radio_stations', 'option');
 	} 
 }
 ?>
-<aside class="sidebar col-xs-4">
-	
-	<?php if ($form_active) : 
-	$form = get_field('form');	
-	?>
-	<a name="sb-form" id="sb-form"></a>
-	<div class="contact-form sb-form-right">
-		<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
-		<h3 class="icon-header">Make a claim enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
+<div class="col-xs-4">
+	<aside class="sidebar">
 		
-		<?php gravity_form($form->id, false, true, false, $form_array, true); ?>
-					
-	</div>	
-	<?php endif; ?>
-		
-	<?php if ($number_pos == 'sidebar') { ?>
-	<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
-	<?php } ?>
-	
-	<?php if ($feedback_id) { ?>
-	<div class="sb-quote">
-		<blockquote><?php echo $quote_txt; ?></blockquote>
-		<p class="text-center quote-name"><?php echo $client_name; ?> - <?php echo $location; ?></p>
-	</div>
-	<?php } ?>
-	
-	<?php if ($how_it_works_active) { ?>	
-	<div class="how-it-works-link">
-		<a href="#how-it-works" class="hiw-link">
-			<span class="txt-mid">The Claims Process</span>
-			<span class="txt-lg">How it Works</span>
-			<span class="txt-sml">Click here for more information</span>
-		</a>
-	</div>
-	<?php } ?>
-	
-	<?php if (!empty($links)) { ?>
-	<button class="sb-menu-btn service-menu-btn btn btn-default btn-block">Services Menu</button>
-	<?php } ?>
+		<?php if ($form_active) : 
+		$form = get_field('form');	
+		?>
+		<a name="sb-form" id="sb-form"></a>
+		<div class="contact-form sb-form-right">
+			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
+			<h3 class="icon-header">Make a claim enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
 			
-	<?php if ($radio_ads_active && !empty($r_ads)) : ?>
-	<div class="sb-radio-adverts">
-		<h4 class="icon-header"><i class="fa fa-microphone fa-lg"></i><?php echo $radio_ads_title; ?></h4>
+			<?php gravity_form($form->id, false, true, false, $form_array, true); ?>
+						
+		</div>	
+		<?php endif; ?>
+			
+		<?php if ($number_pos == 'sidebar') { ?>
+		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
+		<?php } ?>
 		
-		<div class="sb-audio-player">
-			<?php foreach ($r_ads as $radio_ad) { ?>
-			<dl>
-				<dt><?php echo $radio_ad['advert_title']; ?></dt>
-				<dd><?php echo do_shortcode('[sc_embed_player_template1 fileurl="'.$radio_ad['advert_file']  .'"]'); ?></dd>
-			</dl>
-			<?php } ?>
+		<?php if ($feedback_id) { ?>
+		<div class="sb-quote">
+			<blockquote><?php echo $quote_txt; ?></blockquote>
+			<p class="text-center quote-name"><?php echo $client_name; ?> - <?php echo $location; ?></p>
 		</div>
-	</div>
-	<?php endif; ?>
-	
-</aside>
+		<?php } ?>
+		
+		<?php if ($how_it_works_active) { ?>	
+		<div class="how-it-works-link">
+			<a href="#how-it-works" class="hiw-link">
+				<span class="txt-mid">The Claims Process</span>
+				<span class="txt-lg">How it Works</span>
+				<span class="txt-sml">Click here for more information</span>
+			</a>
+		</div>
+		<?php } ?>
+		
+		<?php if (!empty($links)) { ?>
+		<button class="sb-menu-btn service-menu-btn btn btn-default btn-block">Services Menu</button>
+		<?php } ?>
+				
+		<?php if ($radio_ads_active && !empty($r_ads)) : ?>
+		<div class="sb-radio-adverts">
+			<h4 class="icon-header"><i class="fa fa-microphone fa-lg"></i><?php echo $radio_ads_title; ?></h4>
+			
+			<div class="sb-audio-player">
+				<?php foreach ($r_ads as $radio_ad) { ?>
+				<dl>
+					<dt><?php echo $radio_ad['advert_title']; ?></dt>
+					<dd><?php echo do_shortcode('[sc_embed_player_template1 fileurl="'.$radio_ad['advert_file']  .'"]'); ?></dd>
+				</dl>
+				<?php } ?>
+			</div>
+		</div>
+		<?php endif; ?>
+		
+	</aside>
+</div>

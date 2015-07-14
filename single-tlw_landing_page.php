@@ -18,7 +18,7 @@ $hide_title = get_field('hide_title');
 <?php echo $on_page_script; ?>
 <?php } ?>
 
-<main class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		 	
  	<article <?php post_class(); ?>>
 	 	
@@ -39,10 +39,8 @@ $hide_title = get_field('hide_title');
 			 	</div>
 			
 		 	</div>
-		 	
-		 	<div class="col-xs-4">
+		 
 			 <?php get_template_part( 'parts/sidebars/sidebar', 'landing-page' ); ?>			 	
-		 	</div>
 		 			
 	</div>
 	

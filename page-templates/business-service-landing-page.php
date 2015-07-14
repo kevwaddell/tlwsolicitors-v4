@@ -87,8 +87,8 @@ Template Name: Business Service Landing page template
 			<?php if (!empty($on_page_script)) { ?>
 			<?php echo $on_page_script; ?>
 			<?php } ?>
-			<a name="main-content" id="main-content"></a>
-			<main class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+			<a name="main-content"></a>
+			<main id="main-content" class="page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 					 	
 			 	<article <?php post_class(); ?>>
 				 	
