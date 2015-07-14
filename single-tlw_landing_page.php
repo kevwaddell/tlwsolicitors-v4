@@ -31,9 +31,11 @@ $hide_title = get_field('hide_title');
 				 	<?php if ($hide_title != 1) { ?>
 					<h2><?php the_title(); ?></h2>
 					<?php } ?>
-				
+					
+					<div class="main-txt">
 					<?php the_content(); ?>
-				
+					</div>
+					
 			 	</div>
 			
 		 	</div>
