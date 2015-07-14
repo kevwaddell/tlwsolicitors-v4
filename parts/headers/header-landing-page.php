@@ -21,7 +21,7 @@ $op_script = get_field('on_page_script', $post->ID);
 
 
 <div class="tlw-wrapper">
-	<div class="lp-bg-img hidden-xs hidden-sm" style="background-image: url(<?php echo $bg_img_url; ?>)"></div><div class="col-overlay hidden-xs hidden-sm bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"></div><div class="striped-overlay hidden-xs hidden-sm"></div>
+	<div class="lp-bg-img" style="background-image: url(<?php echo $bg_img_url; ?>)"></div><div class="col-overlay  bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"></div><div class="striped-overlay"></div>
 	
 	<!-- HEADER LOGO AND NAVIGATION -->
 	<header class="header" role="banner">
@@ -42,7 +42,5 @@ $op_script = get_field('on_page_script', $post->ID);
 		
 	<!-- MAIN CONTENT START -->
 	<div class="container">
-		
-	<div class="lp-bg-img hidden-md hidden-lg" style="background-image: url(<?php echo $bg_img_url; ?>)"></div>
 	
 	<div class="content">
