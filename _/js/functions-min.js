@@ -1,5 +1,5 @@
 
-(function($){$(document).ready(function(){var event_type;var url=document.location.toString();var window_width=$(window).width();var sb_top=$('.sidebar').offset().top;if(Modernizr.touch){event_type='touchstart';}else{event_type='click';}
+(function($){$(document).ready(function(){var event_type;var url=document.location.toString();var window_width=$(window).width();if(Modernizr.touch){event_type='touchstart';}else{event_type='click';}
 var service_select=$('select#service-select');var service_area_select=$('select.service-area-select');var child_service_area_select=$('select.child-service-area-select');var start_enquiry_btn=$('a#start-enquiry-btn');$(".selectpicker").selectpicker({style:'btn-lg hp-select',size:5});$(service_area_select).selectpicker('hide');$(child_service_area_select).selectpicker('hide');$(service_select).on("change",function(){var selected_id="#"+$(this).find('option:selected').html().replace(/\s+/g,'-').replace(/&nbsp;/g,'-').toLowerCase()+"-select";var val=$(this).val();$(service_area_select).selectpicker('hide');if($('.submit-btn').hasClass('hidden')){$('.submit-btn').removeClass('hidden').addClass('animated fadeIn');}
 if($(this).attr("name")=="main-service-area"&&val!=0){$(start_enquiry_btn).attr('href',val);}
 if($(this).attr("name")=="service"&&val!=0){$(start_enquiry_btn).attr('href',val);}

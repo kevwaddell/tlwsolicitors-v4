@@ -5,7 +5,6 @@
 	var event_type;
 	var url = document.location.toString();
 	var window_width = $(window).width();
-	var sb_top = $('.sidebar').offset().top;
 	
 	//console.log(sb_top);
 	
