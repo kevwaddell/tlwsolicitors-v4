@@ -26,14 +26,23 @@ Template Name: Newsletter sign up template
 							<?php if ($hide_title != 1) { ?>
 								<h1><?php the_title(); ?></h1>
 							<?php } ?>
-	
-							<?php the_content(); ?>
+							<div class="main-text">
+								<?php the_content(); ?>
 							
 							<?php if ($form) { ?>
 							
-							<?php gravity_form($form->id, false, false, false, null, true); ?>
+							<?php if ($form->is_active == 1) { ?>
+								<?php gravity_form($form->id, false, false, false, null, true); ?>
+							<?php } else { ?>
+								<br>
+								<div class="alert alert-danger text-center">
+								<h4>Sorry our newsletter sign up form is off-line at the moment</h4>
+								<p>Please contact us on <a href="mailto:info@tlwsolicitors.co.uk">info@tlwsolicitors.co.uk</a> or call <strong>0800 169 5925</strong></p>
+								</div>
+							<?php } ?>
 							
 							<?php }  ?>
+							</div>
 							
 						</article>
 					 

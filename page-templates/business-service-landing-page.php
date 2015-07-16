@@ -57,14 +57,15 @@ Template Name: Business Service Landing page template
 			</div>
 		</div>
 		<?php } ?>
-		
+		<?php if ($form_active) : 
+		$form = get_field('form');	
+		?>
+		<?php if ($form->is_active == 1) { ?>
 		<div class="banner-form">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-4 col-xs-offset-8">
-						<?php if ($form_active) : 
-						$form = get_field('form');	
-						?>
+
 						<a name="banner-form" id="banner-form"></a>
 						<div class="contact-form">
 							<h3 class="icon-header">Request a callback <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
@@ -72,11 +73,14 @@ Template Name: Business Service Landing page template
 							<?php gravity_form($form->id, false, true, false, $form_array, true); ?>
 										
 						</div>	
-						<?php endif; ?>
+						
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php } ?>
+		<?php endif; ?>
+		
 	</div>
 	<?php } ?>
 

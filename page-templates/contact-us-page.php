@@ -28,9 +28,18 @@ Template Name: Contact Us Page
 						<a id="make-a-claim" name="make-a-claim"></a>
 						
 						<div class="contact-form">
-						<?php if ($form) { ?>
+						<?php if ($form) { 
+						//echo '<pre>';print_r($form->is_active);echo '</pre>';	
+						?>
 						<h3 class="icon-header" style="margin-bottom: 0px;"><?php echo $form->title; ?> <i class="fa fa-cog fa-lg"></i></h3>
+					
+						<?php if ($form->is_active == 0) { ?>
+						<br>
+						<?php include (STYLESHEETPATH . '/_/inc/global/contact-form-offline.php'); ?>	
+						
+						<?php } else { ?>
 						<?php gravity_form($form->id, false, true, false, null, true); ?>
+						<?php } ?>
 						
 						<?php }  ?>
 						</div>

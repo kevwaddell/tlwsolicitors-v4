@@ -1,5 +1,3 @@
-<?php 
-?>
 <div class="col-xs-4">
 	<aside class="sidebar">
 		

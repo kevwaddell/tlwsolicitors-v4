@@ -28,6 +28,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 		<?php if ($form_active) : 
 		$form = get_field('form');	
 		?>
+		<?php if ($form->is_active == 1) { ?>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 			<h3 class="icon-header">Make a claim enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
@@ -35,6 +36,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 			<?php gravity_form($form->id, false, true, false, null, true); ?>
 						
 		</div>	
+		<?php } ?>
 		
 		<?php endif; ?>
 		

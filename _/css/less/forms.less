@@ -101,6 +101,10 @@ max-width: 100% !important;
 		}	
 	}
 	
+	input.small {
+	width: 50% !important;	
+	}
+	
 	textarea {
 	.font-size(1.4)!important;
 	.border(@gray, 0.1);
@@ -116,6 +120,12 @@ max-width: 100% !important;
 		&:focus {
 		.border-col(@red);	
 		}
+	}
+	
+	.gfield_radio input[type=radio] {
+	height: auto;
+	.mag-left(0.1);
+	.mag-top(0.6) !important;
 	}
 
 	hr {
@@ -169,6 +179,28 @@ max-width: 100% !important;
 	.col(@gray);
 	.font-size(1.4);	
 	.mag(0;0;0;0) !important;
+	}
+	
+	.gfield_radio li {
+	.mag-bot(0);	
+	}
+	
+	.gsurvey-survey-field .gfield_label {
+	.col(@gray);
+	.font-size(1.8);
+	.pad-bot(1);	
+	font-weight: bold !important;	
+	}
+	
+	.gsection.no-mag-bottom {
+	.mag-bot(0);
+	.pad-bot(0);
+		.gsection_description {
+		.pad-bot(0);	
+		}
+		&.no-border {
+		border-bottom: none;	
+		}
 	}
 	
 	.gfield_error {

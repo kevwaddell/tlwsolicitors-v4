@@ -50,6 +50,7 @@ $radio_stations = get_field('radio_stations', 'option');
 		<?php if ($form_active) : 
 		$form = get_field('form');	
 		?>
+		<?php if ($form->is_active == 1) { ?>
 		<a name="sb-form" id="sb-form"></a>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
@@ -58,6 +59,7 @@ $radio_stations = get_field('radio_stations', 'option');
 			<?php gravity_form($form->id, false, true, false, $form_array, true); ?>
 						
 		</div>	
+		<?php } ?>
 		<?php endif; ?>
 			
 		<?php if ($number_pos == 'sidebar') { ?>

@@ -35,13 +35,15 @@ if ($feedback_active) {
 		<?php if ($form_active) : 
 		$form = get_field('form');	
 		?>
+		<?php if ($form->is_active == 1) { ?>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
 			<h3 class="icon-header">Make an enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
 			
 			<?php gravity_form($form->id, false, true, false, false, true); ?>
 						
-		</div>	
+		</div>
+		<?php } ?>	
 		<?php endif; ?>
 		
 				
