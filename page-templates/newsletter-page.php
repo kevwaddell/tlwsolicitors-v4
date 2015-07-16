@@ -13,6 +13,7 @@ Template Name: Newsletter sign up template
 			<?php 
 			$form = get_field('form');
 			$hide_title = get_field('hide_title'); 
+			$all_forms_active = get_field('all_forms_active', 'option');
 			 ?>	
 			 <main class="page-col-red">
 				 
@@ -31,7 +32,7 @@ Template Name: Newsletter sign up template
 							
 							<?php if ($form) { ?>
 							
-							<?php if ($form->is_active == 1) { ?>
+							<?php if ($form->is_active == 1 && $all_forms_active) { ?>
 								<?php gravity_form($form->id, false, false, false, null, true); ?>
 							<?php } else { ?>
 								<br>

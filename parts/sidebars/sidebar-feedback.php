@@ -5,6 +5,7 @@ global $freephone_num;
 global $links;
 
 $form_active = get_field('form_activated');
+$all_forms_active = get_field('all_forms_active', 'option');
 
 $custom_sat_active = get_field('custom_sat_active', 'option');
 $custom_sat_active_pgs = get_field('active_pages', 'option');
@@ -12,7 +13,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 <div class="col-xs-4">
 	<aside class="sidebar">
 		
-		<?php if ($form_active) : 
+		<?php if ($form_active && $all_forms_active) : 
 		$form = get_field('form');	
 		?>
 		<?php if ($form->is_active == 1) { ?>

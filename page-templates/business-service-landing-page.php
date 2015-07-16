@@ -20,6 +20,7 @@ Template Name: Business Service Landing page template
 			$main_title = get_field('main_title');
 			$feedback_active = get_field('feedback_active'); 
 			$how_it_works_active = get_field('hiw_active');
+			$all_forms_active = get_field('all_forms_active', 'option');
 			
 			if (empty($number_pos)) {
 			$number_pos = "bottom";	
@@ -57,7 +58,7 @@ Template Name: Business Service Landing page template
 			</div>
 		</div>
 		<?php } ?>
-		<?php if ($form_active) : 
+		<?php if ($form_active && $all_forms_active) : 
 		$form = get_field('form');	
 		?>
 		<?php if ($form->is_active == 1) { ?>

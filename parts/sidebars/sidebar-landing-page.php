@@ -4,10 +4,11 @@ global $form;
 global $number_pos;
 global $color;
 global $freephone_num;
+$all_forms_active = get_field('all_forms_active', 'option');
 ?>
 <div class="col-xs-4">
 	<aside class="scroll-sidebar sidebar lp-sidebar">
-		<?php if ($form_active) : ?>
+		<?php if ($form_active && $all_forms_active) : ?>
 		<?php if ($form->is_active == 1) { ?>
 	 	<div class="lp-form lp-form-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	

@@ -14,6 +14,7 @@ Template Name: Contact Us Page
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 			<?php 
 			$form = get_field('form');
+			$all_forms_active = get_field('all_forms_active', 'option');
 			//echo '<pre>';print_r($_GET);echo '</pre>';
 			 ?>	
 			
@@ -33,12 +34,13 @@ Template Name: Contact Us Page
 						?>
 						<h3 class="icon-header" style="margin-bottom: 0px;"><?php echo $form->title; ?> <i class="fa fa-cog fa-lg"></i></h3>
 					
-						<?php if ($form->is_active == 0) { ?>
-						<br>
-						<?php include (STYLESHEETPATH . '/_/inc/global/contact-form-offline.php'); ?>	
+						<?php if ($form->is_active == 1 && $all_forms_active) { ?>
+						
+						<?php gravity_form($form->id, false, true, false, null, true); ?>
 						
 						<?php } else { ?>
-						<?php gravity_form($form->id, false, true, false, null, true); ?>
+						<br>
+						<?php include (STYLESHEETPATH . '/_/inc/global/contact-form-offline.php'); ?>	
 						<?php } ?>
 						
 						<?php }  ?>
