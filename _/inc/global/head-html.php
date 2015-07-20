@@ -10,7 +10,6 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
 	<?php wp_head(); ?>
 	
 	<?php 
@@ -35,5 +34,4 @@
 	<?php if (!empty($global_scripts)) { ?>
 	<?php echo $global_scripts; ?>
 	<?php } ?>
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>

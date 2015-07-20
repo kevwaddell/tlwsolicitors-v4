@@ -9,9 +9,7 @@
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
 	<?php wp_head(); ?>
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>
 
 <body id="login" <?php body_class(); ?>>
