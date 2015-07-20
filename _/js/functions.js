@@ -507,8 +507,6 @@
 	var scroll = $(window).scrollTop();
 	var header_h = $('.header').outerHeight();
 	var h = $(window).height();
-	var sb_top = $('.sidebar').offset().top;
-	var sb_width = $('.sidebar').outerWidth();
 	
 		if ( scroll > Math.ceil(h/2) ) {
 		$('button#back-2-top').removeClass('hidden').addClass('visible fadeIn');	
@@ -524,37 +522,6 @@
 			});
 			
 		}
-		
-	   //Sticky sidebar function
-/*
-	   var currentScroll = $(this).scrollTop();
-	   var direction;
-       
-       if (currentScroll > previousScroll){
-       direction = "down";
-       } else {
-       direction = "up";
-       }
-       previousScroll = currentScroll;
-		
-		console.log(previousScroll);
-		
-		if (currentScroll > sb_top) {
-		$('.sidebar').addClass('stuck').css({width: sb_width+"px"});	
-		}
-		
-		if (currentScroll < sb_orig_top) {
-		$('.sidebar').removeClass('stuck').removeAttr("style");	
-		}
-		
-		if (direction == "down") {
-		$('.stuck').css({top: currentScroll+"px"});		
-		}
-		
-		if (direction == "up") {
-		$('.stuck').css({top: previousScroll +"px"});		
-		}
-*/
 		
 	});
 	
