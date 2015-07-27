@@ -1,4 +1,5 @@
 <?php 
+global $freephone_active;
 global $freephone_num;
 global $number_pos;
 global $show_feat_img;
