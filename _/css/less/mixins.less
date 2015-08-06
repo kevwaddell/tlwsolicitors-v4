@@ -71,6 +71,15 @@ list-style: none;
 .bg-col(@col) {
 background-color: @col;
 }
+.bg-col-gray {
+.bg-col(@gray);	
+}
+.bg-col-grayDk {
+.bg-col(@grayDk);	
+}
+.bg-col-grayLt {
+.bg-col(@grayLt);	
+}
 .bg-col-red {
 .bg-col(@red);	
 }
@@ -762,43 +771,30 @@ background-blend-mode: multiply;
 .how-it-works-cols(@col) {
 @changeCol: @col;
 @changeColDk: darken(@changeCol, 20%);
+@changeColLt: lighten(@changeCol, 20%);
 //.bg-col( @changeColDk );
 
-	.step {
-	.bg-col(@changeCol);
-	
-		.icon {
-		
-			i {
-			.col(@changeCol);	
-			}	
-			
-			&:after {
-			.bg-col(darken(@changeCol, 20%));
-			}
+		.number {
+		.bg-col(@changeColDk);
 		}
-		
-		p.text {
-		.col(lighten(@changeCol, 30%));
-			span {
-			.col(white);
-			.caps;	
-			}
-		}
-		
-		a {
-			span {
-			.col(@changeCol);
-			}
-			&:hover, &:active, &:focus {
-			
-				span {
+
+		.icons {
+			.icon {
+			.bg-col(@changeColLt);
+				&:first-child {
 				.bg-col(@changeCol);
-				.col(white);	
 				}
-			}
-		}	
-	}
+				
+				&:last-child {
+				.border-left(white; 0.4);	
+				.bg-col(@changeColDk);
+				}	
+			}	
+		}
+		
+		p.header {
+		.col(@changeCol);	
+		}
 
 }
 

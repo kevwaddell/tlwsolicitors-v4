@@ -1,82 +1,61 @@
-<div id="start" class="step">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-exclamation-circle fa-4x"></i></div>
-    <p class="header">Was Your pension invested in an unregulated scheme?</p>
-    <p class="text">You may have been advised to invest into an unsuitable product such as carbon credits, store pods, forestry projects or green oil.</p>
-    <a href="#slide1" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Yes</span></a>
+<div id="start" class="step col-purple">
+	<div class="number">1</div>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">First contact</p>
+    <p class="text">After initial contact with our team we will be able to extablish whether you have been mis-sold PPI. We will send you out our client care welcome pack for you to complete and return to us.</p>
+    <a href="#slide1" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide1" class="step" data-y="1000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-building-o fa-4x"></i></div>
-	<a href="#start" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Is the company still in business?</p>
-    <p class="text">You may have taken advice from a reputable established company or a business that is no longer trading.</p>
-	<a href="#slide2" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Yes</span></a>
-	<a href="#slide3" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>No</span></a>
+<div id="slide1" class="step col-green" data-y="1000">
+	<a href="#start" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="number">2</div>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">Complete and sign</p>
+    <p class="text">When you recieve our client welcome pack you must complete and sign all relevant parts and return the pack back to us with any copies of extra documents we require.</p>
+	<a href="#slide2" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide2" class="step" data-x="-2000" data-y="2000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-phone-square fa-4x"></i></div>
-	<a href="#slide1" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Call us and we can help you</p>
-    <p class="text">Our team will investigate your case and contact the parties involved.<br>We will propose a settlement and they may accept or reject the offer.</p>
-    <a href="#slide4" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Offer accepted</span></a>
-	<a href="#slide5" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>Offer rejected</span></a>
+<div id="slide2" class="step col-pink" data-y="2000">
+	<a href="#slide1" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="number">3</div>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">Establishing your complaint</p>
+    <p class="text">Our team will review your documents before contacting you to further discuss your potential claim. We will obtain a credit report and contact the relevant finance providers to check for PPI.</p>
+    <a href="#slide3" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide3" class="step" data-x="2000" data-y="2000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-life-ring fa-4x"></i></div>
-	<a href="#slide1" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">We may still be able to help you</p>
-    <p class="text">Our team will investigate your case and contact the FSCS.<br>We will propose a settlement and they may accept or reject the offer.</p>
-    <a href="#slide6" class="step-link link-left link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Offer accepted</span></a>
-	<a href="#slide7" class="step-link link-right link-no"><span><i class="fa fa-times-circle fa-lg"></i>Offer rejected</span></a>
+<div id="slide3" class="step col-orange" data-y="3000">
+	<a href="#slide2" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="number">4</div>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">Submitting your complaint</p>
+    <p class="text">If we believe that the PPI was mis-sold we will make a complaint to the finance provider. We would expect a reply within 56 days and will actively chase the Provider should this not be the case.</p>
+	<a href="#slide4" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide4" class="step" data-x="-3000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-up fa-4x"></i></div>
-	<a href="#slide2" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Your offer has been accepted</p>
-    <p class="text">We will start the process of reclaiming your money and can refer you to a recommended tax adviser to help you with your future investments.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
+<div id="slide4" class="step col-blue" data-y="4000">
+	<a href="#slide3" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="number">5</div>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">Response from the bank</p>
+    <p class="text">Once the bank has responded we will contact you to discuss the next steps. If the bank accepts your complaint we will advise you as to whether any offer made is reasonable and fully assess the value of your claim.</p>
+    <a href="#slide5" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide5" class="step" data-x="-1000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-down fa-4x"></i></div>
-	<a href="#slide2" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-  	<p class="header">Your offer has been rejected</p>
-    <p class="text">We will report your complaint to the Financial Ombudsman who will investigate your case further. We will keep you upto date with the progress.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
+<div id="slide5" class="step" data-y="5000">
+	<div class="number">6</div>
+	<a href="#slide4" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+  	<p class="header">Case conclusion & closure</p>
+    <p class="text">If you accept an offer in conclusion of your complaint the redress would be paid to you, via TLW Solicitors in accordance with our agreed 
+fees with you.</p>
+    <a href="#slide6" class="nav-link next-link"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 </div>
 
-<div id="slide6" class="step" data-x="1000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-up fa-4x"></i></div>
-	<a href="#slide3" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Your offer has been accepted</p>
-    <p class="text">We will start the process of reclaiming your money and can refer you to a recommended tax adviser to help you with your future investments.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide7" class="step" data-x="3000" data-y="3000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-thumbs-down fa-4x"></i></div>
-	<a href="#slide3" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-  	<p class="header">Your offer has been rejected</p>
-    <p class="text">We will report your complaint to the Financial Ombudsman who will investigate your case further. We will keep you upto date with the progress.</p>
-    <a href="#slide8" class="step-link link-mid link-yes"><span><i class="fa fa-check-circle fa-lg"></i>Final Outcome</span></a>
-</div>
-
-<div id="slide8" class="step" data-y="4000">
-	<button class="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
-	<div class="icon"><i class="fa fa-group fa-4x"></i></div>
-	<a href="#start" class="back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
-    <p class="header">Now is the time for TLW to help</p>
-    <p class="text">Our team act on the best interests of our clients and will always try to get a positive outcome. We operate on a <span>No Win No Fee</span> basis.</p>
-    <a id="end-slide-link" href="#" class="end-link link-mid link-enquiry"><span><i class="fa fa-comments fa-lg"></i>Start your enuiry</span></a>
+<div id="slide6" class="step" data-y="6000">
+	<a href="#slide5" class="nav-link back-link"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+	<div class="icons"><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+    <p class="header">Contact <span>TLW Solicitors</span> today and get back what you deserver</p>
+    <p class="text">Call us <strong>FREE</strong> on <strong>0800 169 5925</strong><br>Use our <strong>online form</strong> and request a callback<br>Email us on <a href="mailto:info@tlwsolicitors.co.uk">info@tlwsolicitors.co.uk</a>
+	</p>
 </div>

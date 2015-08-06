@@ -95,14 +95,21 @@
 			
 			$(how_it_works_id).removeClass('hidden').addClass('animated fadeIn');
 			$('.tlw-wrapper').addClass('how-it-works-on');
-			$('#jmpress').jmpress('init');
+			$('#jmpress').jmpress('init', {
+				
+				beforeChange: function(element, eventData) {
+				$('.hiw-nav a').removeClass('active');
+				$('.hiw-nav a').eq($(element).index()).addClass('active');
+				}
+				
+			});
 		} 
 				
 		return false;
 		
 	});
 	
-	$('body').on(event_type,'button.close-how-it-works', function(e){
+	$('body').on(event_type,'button#close-how-it-works', function(e){
 		
 		var how_it_works_panel = $('#how-it-works');
 	
@@ -119,50 +126,6 @@
 				
 		return false;
 		
-	});
-	
-	
-	$('body').on(event_type,'.step > a.step-link', function(e){
-		var href = $(this).attr('href');
-		var index = $(href).index();
-		
-		$('#jmpress').jmpress({stepTo: index});
-		
-		return false;
-	});
-
-	
-	$('body').on(event_type,'#end-slide-link', function(e){
-		var how_it_works_panel = $('#how-it-works');
-		var sb_form = $('a#sb-form');
-		var banner_form = $('a#banner-form');
-		
-		if (sb_form.length == 1) {
-		var form = $(sb_form);
-		}
-		
-		if (banner_form.length == 1) {
-		var form = $(banner_form);
-		}
-		
-		if ( $(how_it_works_panel).hasClass('fadeIn') ) {
-			$(how_it_works_panel).removeClass('fadeIn').addClass('fadeOut');
-			
-			$(how_it_works_panel).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-		
-			$(this).removeClass('animated fadeOut').addClass('hidden');	
-			$('.tlw-wrapper').removeClass('how-it-works-on');
-			$('#jmpress').jmpress('deinit');
-				
-			$('html, body').animate({scrollTop: ($(form).offset().top - 30)}, 500, function(){
-				$("input[name='input_1']").focus();
-			});
-				
-			});
-		} 
-				
-		return false;
-
 	});
 	
 	//BUSINESS CAROUSEL FUNCTIONS

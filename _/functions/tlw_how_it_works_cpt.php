@@ -22,8 +22,7 @@ function register_cpt_tlw_how_it_works_cpt() {
         'labels' => $labels,
         'hierarchical' => true,
         'description' => 'How it works CPT for service processes.',
-        'supports' => array( 'title', 'page-attributes' ),
-        
+        'supports' => array( 'title', 'page-attributes', 'editor'),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
