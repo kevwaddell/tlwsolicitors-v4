@@ -12,7 +12,7 @@ $process_total = count($processes);
 				<div class="col-xs-3">
 			<h3><span>The Claims Process</span>How it works</h3>
 				</div>
-				<div class="col-xs-8">
+				<div class="col-xs-6">
 					<nav class="hiw-nav">
 						
 						<?php for ($i = 0; $i < ($process_total-1); $i++) { ?>
@@ -22,7 +22,7 @@ $process_total = count($processes);
 						<?php } ?>
 					</nav>
 				</div>
-				<div class="col-xs-1">
+				<div class="col-xs-3">
 					<button id="close-how-it-works"><span class="sr-only">Close</span><i class="fa fa-times fa-2x"></i></button>
 				</div>
 			</div>
