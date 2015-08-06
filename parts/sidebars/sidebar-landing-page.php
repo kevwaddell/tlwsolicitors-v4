@@ -4,6 +4,7 @@ global $form;
 global $number_pos;
 global $color;
 global $freephone_num;
+global $how_it_works_active;
 $all_forms_active = get_field('all_forms_active', 'option');
 ?>
 <div class="col-xs-4">
@@ -22,5 +23,15 @@ $all_forms_active = get_field('all_forms_active', 'option');
 			<?php if ($number_pos == 'sidebar') { ?>
 			<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
+	
+		<?php if ($how_it_works_active) { ?>	
+		<div class="how-it-works-link">
+			<a href="#how-it-works" class="hiw-link">
+				<span class="txt-mid">The Claims Process</span>
+				<span class="txt-lg">How it Works</span>
+				<span class="txt-sml">Click here for more information</span>
+			</a>
+		</div>
+		<?php } ?>
 	</aside>
 </div>

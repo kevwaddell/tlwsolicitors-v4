@@ -11,6 +11,7 @@ $color = get_field('page_colour');
 $page_icon = get_field('page_icon');
 $on_page_script = get_field('on_page_script');
 $hide_title = get_field('hide_title'); 
+$how_it_works_active = get_field('hiw_active');
 //echo '<pre>';print_r($color);echo '</pre>';
  ?>	
  
@@ -62,5 +63,7 @@ $hide_title = get_field('hide_title');
 <!-- MAIN CONTENT END -->
 
 </div>
+
+<?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
 
 <?php get_template_part( 'parts/footers/footer', 'landing-page' ); ?>
