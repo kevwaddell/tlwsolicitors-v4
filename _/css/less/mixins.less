@@ -785,8 +785,36 @@ background-blend-mode: multiply;
 				.bg-col(@changeCol);
 				}
 				
+				&:last-child {	
+				.bg-col(@changeColDk);
+				}	
+			}	
+		}
+		
+		p.header {
+		.col(@changeCol);	
+		}
+
+}
+
+.how-it-works-single-cols(@col) {
+@changeCol: @col;
+@changeColDk: darken(@changeCol, 20%);
+@changeColLt: lighten(@changeCol, 20%);
+//.bg-col( @changeColDk );
+
+		.number {
+		.bg-col(@changeColDk);
+		}
+
+		.icons {
+			.icon {
+			.bg-col(@changeColLt);
+				&:first-child {
+				.bg-col(@changeCol);
+				}
+				
 				&:last-child {
-				.border-left(white; 0.4);	
 				.bg-col(@changeColDk);
 				}	
 			}	

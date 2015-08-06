@@ -245,3 +245,152 @@ animation-duration: 0.5s;
 	} //End step block
 	
 }
+
+.how-it-works-single {
+.mag-top(6);
+.rounded(8px);
+.bg-col-grayDk;
+.pad-all(3);	
+	
+	h3.icon-header {
+	.rounded(8px);
+	.mag-top(-5.5);
+	.bg-col-gray;
+	}
+	
+	.step {
+	.bg-col(white);
+	.pad-all(2);
+	.rounded(8px);	
+	.mag-bot(5);
+	text-align: center;
+	.rel;
+
+		&:after {
+		.abs;
+		left: 50%;
+		.mag-left(-1.5);
+		.bottom(-1.5);
+		content: "\f0ab";	
+		font-family: FontAwesome;
+		.col(@red);
+		.font-size(2);	
+		.line-h(3);
+		.w(3);
+		.h(3);
+		.bg-col(white);
+		.rounded(100%);
+		}
+		
+		.icons {
+		.h(10);
+		text-align: center;
+		.mag-top(-3);
+		.mag-bot(2);
+			.icon {
+			height: 100%;
+			.w(10);
+			.rounded(100%);
+			.in-block;
+			.bg-col-grayLt;
+			.bg-repeat(no-repeat);
+			background-position: center center;
+			.bg-size(80%);
+			.mag(0;1;0;1);
+			.drop-shadow(0, 0, 20px, 0.5);
+				&:first-child {
+				.bg-col-gray;
+				}
+				
+				&:last-child {
+				.bg-col-grayDk;
+				}	
+			}	
+		}
+		
+		.number {
+		.abs;
+		.top(-1);
+		.left(-2);
+		.w(8);
+		.h(8);
+		.font-slab-serif;
+		.bold;	
+		text-align: center;
+		.font-size(5);
+		.line-h(7.2);
+		.bg-col(@gray);
+		.col(white);
+		.rounded(100%);
+		.drop-shadow(0, 0, 20px, 0.5);
+		.border(white; 0.4);
+		}
+		
+		p.header {
+			.col(@gray);
+			.caps;	
+			.font-size(3.5);
+			.line-h(3.5);
+			.mag-bot(1);
+			.bold;
+			span {
+			.col(@red);	
+			}
+		}
+		
+		p.text {
+		.col(@grayDk);
+		.font-size(2);
+		.line-h(2.6);	
+		.mag-bot(0);
+			
+			strong {
+			.col(@red);	
+			.bold;
+			}
+			
+			a {
+			.col(@red);	
+			.bold;
+			}
+		}
+		
+		&.col-purple {
+		.how-it-works-single-cols(@purple);
+		}
+		
+		&.col-green {
+		.how-it-works-single-cols(@green);
+		}
+		
+		&.col-pink {
+		.how-it-works-single-cols(@pink);
+		}
+		
+		&.col-orange {
+		.how-it-works-single-cols(@orange);
+		}
+		
+		&.col-blue {
+		.how-it-works-single-cols(@blue);
+		}
+		
+		&.col-red {
+		.how-it-works-single-cols(@red);
+		}
+		
+		&:last-child {
+		.mag-bot(0);	
+			&:after {
+			.none;	
+			}
+			
+			.number {
+			.none;	
+			}
+		}
+
+
+	} //End step block
+	
+}

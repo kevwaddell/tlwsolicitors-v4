@@ -447,7 +447,6 @@
 		
 			$('#site-loader').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 				$(this).hide();	
-				new WOW().init();
 			});
 
 		}
