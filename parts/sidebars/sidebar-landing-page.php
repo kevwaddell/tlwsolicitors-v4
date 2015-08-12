@@ -11,6 +11,7 @@ $all_forms_active = get_field('all_forms_active', 'option');
 	<aside class="scroll-sidebar sidebar lp-sidebar">
 		<?php if ($form_active && $all_forms_active) : ?>
 		<?php if ($form->is_active == 1) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
 	 	<div class="lp-form lp-form-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 	
 		 	<h3>Make your claim today <i class="fa fa-arrow-circle-down fa-lg"></i></h3>

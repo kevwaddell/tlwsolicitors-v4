@@ -36,6 +36,8 @@ Template Name: Contact Us Page
 					
 						<?php if ($form->is_active == 1 && $all_forms_active) { ?>
 						
+						<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
+						
 						<?php gravity_form($form->id, false, true, false, null, true); ?>
 						
 						<?php } else { ?>

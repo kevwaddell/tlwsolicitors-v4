@@ -5,6 +5,7 @@ global $number_pos;
 global $show_feat_img;
 global $feat_img_options;
 $add_form = get_field('add_form');
+$all_forms_active = get_field('all_forms_active', 'option');
 //echo '<pre>';print_r($cats);echo '</pre>';
 ?>
 <div class="col-xs-4">
@@ -82,13 +83,13 @@ $add_form = get_field('add_form');
 		
 		<?php include (STYLESHEETPATH . '/_/inc/sidebar/sb-btns.php'); ?>
 		
-		<?php if ($add_form) { 
+		<?php if ($add_form && $all_forms_active) { 
 		$form = get_field('form');
 		?>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 			<h3 class="icon-header">Make a claim enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
-			
+			<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
 			<?php gravity_form($form->id, false, true, false, null, true); ?>
 						
 		</div>	

@@ -30,6 +30,7 @@ $custom_sat_active_pgs = get_field('active_pages', 'option');
 		$form = get_field('form');	
 		?>
 		<?php if ($form->is_active == 1) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 			<h3 class="icon-header">Make a claim enquiry <i class="fa fa-arrow-circle-down fa-lg"></i></h3>

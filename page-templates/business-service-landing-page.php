@@ -62,6 +62,7 @@ Template Name: Business Service Landing page template
 		$form = get_field('form');	
 		?>
 		<?php if ($form->is_active == 1) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
 		<div class="banner-form">
 			<div class="container">
 				<div class="row">

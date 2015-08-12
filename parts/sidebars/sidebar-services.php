@@ -52,6 +52,7 @@ $radio_stations = get_field('radio_stations', 'option');
 		$form = get_field('form');	
 		?>
 		<?php if ($form->is_active == 1) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
 		<a name="sb-form" id="sb-form"></a>
 		<div class="contact-form sb-form-right">
 			<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
