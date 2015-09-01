@@ -25,8 +25,6 @@
 						
 						<?php if ($processes) { ?>
 						
-						
-
 						<div class="how-it-works-single">
 							<h3 class="icon-header text-center">How it Works<i class="fa fa-cogs fa-lg"></i></h3>
 							
