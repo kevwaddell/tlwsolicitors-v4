@@ -332,7 +332,6 @@
 	});
 	
 	// 	FAQ's
-	// FAQ's section
 	$('body').on(event_type,'div.faq-question', function(e){
 		
 		var parent = $(this).parent();
