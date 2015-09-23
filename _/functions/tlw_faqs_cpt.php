@@ -22,8 +22,7 @@ function register_cpt_tlw_faq_cpt() {
         'labels' => $labels,
         'hierarchical' => false,
         'description' => 'Frequently asked questions CPT.',
-        'supports' => array( 'title' ),
-        
+        'supports' => array( 'title', 'editor' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -32,11 +31,11 @@ function register_cpt_tlw_faq_cpt() {
         'show_in_nav_menus' => false,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
-        'has_archive' => false,
+        'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
         'rewrite' => array( 
-            'slug' => 'faq', 
+            'slug' => 'faqs', 
             'with_front' => false,
             'feeds' => false,
             'pages' => false
