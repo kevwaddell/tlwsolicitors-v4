@@ -31,7 +31,7 @@ function register_cpt_tlw_faq_cpt() {
         'show_in_nav_menus' => false,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
-        'has_archive' => true,
+        'has_archive' => false,
         'query_var' => true,
         'can_export' => true,
         'rewrite' => array( 

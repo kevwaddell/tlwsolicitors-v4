@@ -349,6 +349,22 @@
 		
 	});
 	
+	$('body').on(event_type,'div.faq-header', function(e){
+		
+		var next = $(this).next();
+		
+		if ($('div.faq-header').not(this).hasClass('faqs-open')) {
+		$('div.faq-header').removeClass('faqs-open').addClass('faqs-closed');	
+		$('div.faqs-sub-pgs').removeClass('faqs-sub-open').addClass('faqs-sub-closed');	
+		}
+		
+		$(this).toggleClass('faqs-closed faqs-open');
+		next.toggleClass('faqs-sub-closed faqs-sub-open');
+		
+		return false;
+		
+	});
+	
 	// 	HEADER SEARCH BUTTON
 	
 	$('body').on(event_type,'a#search-btn', function(e){

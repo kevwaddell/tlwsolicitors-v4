@@ -67,8 +67,8 @@
 						</section>
 						<div class="faq-message text-center wow slideInUp">
 							<h3 class="txt-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">Can't find an answer to your question?</h3>
-							<a href="<?php echo get_permalink($contact_us_pg->ID); ?>" class="icon-btn btn btn-default">Contact us today</a>
-							<p>And we will help you in any way we can.</p>
+							<p><a href="<?php echo get_permalink($contact_us_pg->ID); ?>">Contact us today</a>
+							And we will help you in any way we can</p>
 						</div>
 						<?php } ?>
 						

@@ -8,7 +8,7 @@ $google_url = get_field('google_page', 'options');
 $linkedin_url = get_field('linkedin_page', 'options');
 ?>
 <div class="header-links">
-	<?php if (!is_home() && !is_single() && !is_archive()) { ?>
+	<?php if (!is_home() && !is_singular('post') && !is_archive()) { ?>
 	<span class="quick-links">
 	<a href="#search-pop-up" id="search-btn" class="btn btn-default"><span>Search</span><i class="fa fa-search fa-lg"></i></button>
 	<a href="<?php echo get_permalink($news_page_id); ?>" class="btn btn-default" title="<?php echo $news_page->post_title; ?>"><span><?php echo $news_page->post_title; ?></span><i class="fa <?php echo $np_page_icon; ?> fa-lg"></i></a>
