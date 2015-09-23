@@ -30,18 +30,17 @@ function my_acf_save_post( $post_id )
 		 
 	}	
 	
-	if ($current_screen->id == 'page') {
+	if ($current_screen->id == 'tlw_faq_cpt') {
+		//echo '<pre>';print_r($_POST);echo '</pre>';
+		$page_id = $_POST['acf']['field_56015524e21ae'];
+		$page = get_page($page_id);
 		
-		//echo '<pre>';print_r($_POST['fields']);echo '</pre>';
+		$slug = $page->post_name. "-questions";
+		$title = $page->post_title. " FAQ's";
 		
-		if (!empty($_POST['fields']['field_52e7b4aab5b09']) ) {
-		$into = $_POST['fields']['field_52e7b4aab5b09'];
-		
-		wp_update_post( array( 'ID' => $post_id, 'post_excerpt' => $into ) );
-		}	
-		 
-	}	
+		wp_update_post( array( 'ID' => $post_id, 'post_title' => $title, 'post_name' => $slug) );
 
+	}
 	
 }
  

@@ -331,6 +331,25 @@
 		
 	});
 	
+	// 	FAQ's
+	// FAQ's section
+	$('body').on(event_type,'div.faq-question', function(e){
+		
+		var parent = $(this).parent();
+		var siblings = $(parent).siblings();
+		
+		//console.log(siblings);
+		
+		if (siblings.hasClass('item-open')) {
+		siblings.removeClass('item-open').addClass('item-closed');	
+		}
+		
+		parent.toggleClass('item-closed item-open');
+		
+		return false;
+		
+	});
+	
 	// 	HEADER SEARCH BUTTON
 	
 	$('body').on(event_type,'a#search-btn', function(e){

@@ -234,8 +234,11 @@ include (STYLESHEETPATH . '/_/functions/tlw_team_cpt.php');
 /* REGISTER LANDING PAGE CPT */
 include (STYLESHEETPATH . '/_/functions/tlw_landing_pages_cpt.php');
 
-/* REGISTER HOW IT WORKS */
+/* REGISTER HOW IT WORKS CPT */
 include (STYLESHEETPATH . '/_/functions/tlw_how_it_works_cpt.php');
+
+/* REGISTER FAQ's CPT */
+include (STYLESHEETPATH . '/_/functions/tlw_faqs_cpt.php');
 
 /* REGISTER POSITIONS TAX */
 include (STYLESHEETPATH . '/_/functions/tlw_positions_tax.php');

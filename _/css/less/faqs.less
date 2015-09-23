@@ -1,0 +1,65 @@
+section#faqs {
+	.mag-top(3);
+	.mag-bot(3);
+	
+	h3 {
+	.mag-bot(0);	
+	.border-bot(white; 0.3);	
+	}
+	
+	.faq-question {
+		.bg-col-gray;
+		.pad(1;5;1;2);	
+		.col(white);
+		.rel;
+		.font-slab-serif;
+		.font-size(1.8);
+			&:after {
+			.abs;
+			.right(0);
+			.top(0);
+			content: "\f0fe";	
+			font-family: FontAwesome;		
+			.line-h(4.5);
+			.pad-right(1);
+			.font-size(2);
+			.col(@grayDk);
+			}
+			
+		&:hover, &:active, &:focus {
+		.bg-col-grayDk;
+		cursor: pointer;
+			&:after {
+			.col(@gray);
+			}
+		}
+	}
+	
+	.faq-answer {
+	.pad(1;0;1;0);	
+	.italic;
+	}
+	
+	.item-closed {
+		.faq-answer {
+		.h(0.3);	
+		.over-hide;
+		.pad-all(0);	
+		}
+	}
+	
+	.item-open {
+		.faq-answer {	
+		height: auto;
+		//.transition(0.5s);
+		}
+		
+		.faq-question {
+			&:after {
+			content: "\f146";	
+			}
+		}
+	}
+	
+	
+}
