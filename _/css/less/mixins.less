@@ -43,6 +43,30 @@ line-height: ~"@{pxValue}px";
 .col(@col) {
 color: @col;
 }
+.txt-col-red {
+.col(@red);
+}
+.txt-col-gray {
+.col(@gray);
+}
+.txt-col-grayDk {
+.col(@grayDk);
+}
+.txt-col-purple {
+.col(@purple);	
+}
+.txt-col-green {
+.col(@green);	
+}
+.txt-col-pink {
+.col(@pink);	
+}
+.txt-col-orange {
+.col(@orange);	
+}
+.txt-col-blue {
+.col(@blue);	
+}
 .caps {
 text-transform: uppercase;
 }
@@ -597,8 +621,13 @@ border-radius: 0px;
 		
 		a.icon-btn {
 		.bg-col(@col);
+		.col(white);
 			i.fa-angle-right {	
 				.bg-col(@gray);	
+			}
+			
+			&:after {
+			.col(darken(@col, 20%));	
 			}
 			
 			i.icon {	

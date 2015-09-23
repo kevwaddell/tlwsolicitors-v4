@@ -2,11 +2,14 @@
 	<!-- MAIN CONTENT START -->
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
+	$freephone_num = get_field('freephone_num', 'option');
 	$faq_qestions = get_field('faq_qestions');	
 	$faq_page_id = get_field('faq_page');
 	$faq_page = get_page($faq_page_id);
 	$color = get_field('page_colour', $faq_page_id);
 	$page_icon = get_field('page_icon', $faq_page_id);
+	$contact_us_pg = get_page_by_title("Contact us");
+	//echo '<pre>';print_r($contact_us_pg);echo '</pre>';
 	
 	if ( has_post_thumbnail($faq_page_id) ) {
 	$img_post = $faq_page_id;
@@ -62,6 +65,11 @@
 						<?php } ?>
 
 						</section>
+						<div class="faq-message text-center wow slideInUp">
+							<h3 class="txt-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">Can't find an answer to your question?</h3>
+							<a href="<?php echo get_permalink($contact_us_pg->ID); ?>" class="icon-btn btn btn-default">Contact us today</a>
+							<p>And we will help you in any way we can.</p>
+						</div>
 						<?php } ?>
 						
 					</div>
