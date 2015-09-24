@@ -45,10 +45,14 @@ Template Name: FAQ's page template
 	}
 ?>	
 
+	<?php if ( has_post_thumbnail($img_post) ) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/faqs/feat-img-slim.php'); ?>
+	<?php } ?>
+
 	<!-- MAIN CONTENT START -->
 	<div class="container">
 	
-		<div class="content">
+		<div class="content no-pad-top">
 <?php ?>
 
 <!-- PAGE TOP SECTION -->
