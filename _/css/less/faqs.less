@@ -53,15 +53,17 @@ section#faqs {
 		.faq-answer {	
 		height: auto;
 		//.transition(0.5s);
-			&:last-child {
-			.border-bot(@gray, 0.3);
-			}
 		}
 		
 		.faq-question:after {
 		content: "\f146";	
 		}
+		
+		&.last-item .faq-answer {
+		.border-bot(lighten(@gray, 30%), 0.3)
+		}
 	}
+	
 	
 }
 
