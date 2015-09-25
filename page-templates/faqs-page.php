@@ -98,7 +98,7 @@ Template Name: FAQ's page template
 							$faq_page_id = get_field('faq_page', $sb->ID);
 							?>
 							<div class="faq-list-item col-<?php echo $col; ?>">
-								<a href="<?php echo get_permalink($sb->ID); ?>"><?php echo get_the_title($faq_page_id); ?></a>
+								<a href="<?php echo get_permalink($sb->ID); ?>"><span><?php echo get_the_title($faq_page_id); ?></span></a>
 							</div>
 							<?php } ?>
 						</div>

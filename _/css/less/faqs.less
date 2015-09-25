@@ -227,7 +227,8 @@ section#faqs-single {
 		a {
 		.block;
 		.h(10);
-		.pad-top(3.5);
+		.pad(0;1;0;1);
+		.line-h(10);
 		.col(white);
 		.bg-col(@redMid);	
 		.no-text-dec;
@@ -237,6 +238,11 @@ section#faqs-single {
 		.bg-size(auto 80%);
 			&:hover, &:active, &:focus {
 			.bg-col(@red);
+			}
+			span {
+			.in-block;
+			vertical-align: middle;	
+			.line-h(2);
 			}
 		}
 		
