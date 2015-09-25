@@ -258,8 +258,8 @@ include (STYLESHEETPATH . '/_/functions/afc_save_post.php');
 /* SEND NEWSLETTER TO DOTMAILER */
 include (STYLESHEETPATH . '/_/functions/submit_newsletter.php');
 
-/* NEXT PREVIOUS ADMIN POST/PAGES LINKS FUNCTION */
-//include (STYLESHEETPATH . '/_/functions/next-prev-post-admin.php');
+/* YOUST ADD TO CONTENT FUNCTION */
+include (STYLESHEETPATH . '/_/functions/yoast_functions.php');
 
 function add_gf_cap() {	
    $id = 2;
