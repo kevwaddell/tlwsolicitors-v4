@@ -86,9 +86,12 @@ Template Name: FAQ's page template
 					'order'	=> 'ASC'
 					);
 					$sub_pages = get_posts($sub_pages_args);
-					//echo '<pre>';print_r($sub_pages);echo '</pre>';
 					?>
-						<?php if ($sub_pages) { ?>
+						<?php if ($sub_pages) { 
+						$total_pgs = count($sub_pages);
+						$place_holders = 4 - ($total_pgs % 4);
+						//echo '<pre>';print_r($place_holders);echo '</pre>';
+						?>
 						<div class="faq-header faqs-open col-<?php echo $col; ?>">
 							<i class="fa <?php echo $icon; ?> fa-lg"></i>
 							<?php echo str_replace('<br>', ' ', $pg_title) ; ?>
@@ -100,6 +103,11 @@ Template Name: FAQ's page template
 							<div class="faq-list-item col-<?php echo $col; ?>">
 								<a href="<?php echo get_permalink($sb->ID); ?>"><span><?php echo get_the_title($faq_page_id); ?></span></a>
 							</div>
+							<?php } ?>
+							<?php if ($place_holders > 0) { ?>
+								<?php for ($i = 0; $i < $place_holders; $i++) { ?>
+							<div class="faq-list-item col-<?php echo $col; ?>"><div class="faq-list-ph"></div></div>		
+								<?php } ?>
 							<?php } ?>
 						</div>
 						<?php } ?>
