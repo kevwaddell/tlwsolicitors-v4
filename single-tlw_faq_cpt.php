@@ -4,10 +4,11 @@
 	<?php 
 	$freephone_num = get_field('freephone_num', 'option');
 	$faq_qestions = get_field('faq_qestions');	
+	$faq_service_id = get_field('faq_service_area');
 	$faq_page_id = get_field('faq_page');
 	$faq_page = get_page($faq_page_id);
-	$color = get_field('page_colour', $faq_page_id);
-	$page_icon = get_field('page_icon', $faq_page_id);
+	$color = get_field('page_colour', $faq_service_id);
+	$page_icon = get_field('page_icon', $faq_service_id);
 	$contact_us_pg = get_page_by_title("Contact us");
 	//echo '<pre>';print_r($contact_us_pg);echo '</pre>';
 	
