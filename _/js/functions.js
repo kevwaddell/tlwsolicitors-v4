@@ -365,6 +365,25 @@
 		
 	});
 	
+	//DOWNLOAD BOOKLET GUIDE BUTTON
+	
+	$('body').on(event_type,'button#booklet-download-btn', function(e){
+		
+		var next = $(this).next();
+		
+		$(next).toggleClass('form-open form-closed');	
+		
+		return false;
+		
+	});
+	
+	$(document).bind('gform_confirmation_loaded', function(event, formId){
+            if(formId == 19 && $('a#download-booklet-btn').length == 1) {
+               $('a#download-booklet-btn').removeClass('hidden');
+               $('html, body').animate({scrollTop: ($("button#booklet-download-btn").offset().top - 20)}, 500);	
+            }
+    });
+	
 	// 	HEADER SEARCH BUTTON
 	
 	$('body').on(event_type,'a#search-btn', function(e){

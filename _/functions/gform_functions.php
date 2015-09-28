@@ -6,4 +6,5 @@ function tgm_io_custom_gforms_spinner( $src ) {
     return get_stylesheet_directory_uri() . '/_/img/ajax-loader.gif';
     
 }
+
 ?>

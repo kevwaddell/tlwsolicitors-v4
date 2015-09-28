@@ -27,9 +27,21 @@
 		.col(white);
 		}
 		
-		
 
 	}	
+	
+	.gform_confirmation_message {
+		h3 {
+		.font-lite;
+		.caps;
+		.txt-col-gray;
+		.mag-top(0);	
+		}
+		p {
+		.mag-bot(2);
+		.col(@grayDk);	
+		}
+	}
 }
 
 .contact-panel {
@@ -375,5 +387,22 @@ form.route-finder {
 		&:hover, &:active, &:focus {
 		.bg-col(@gray);	
 		}
+	}
+}
+
+#booklet-download {
+	.over-hide;
+	
+	.form-wrap {
+	.pad(1;2;2;2);
+	.bg-col(lighten(@gray, 30%));		
+	}
+	
+	&.form-open {
+	height: auto;	
+	}
+	
+	&.form-closed {
+	.h(0);	
 	}
 }
