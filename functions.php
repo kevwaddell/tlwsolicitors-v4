@@ -9,7 +9,7 @@ if ( !function_exists(core_mods) ) {
 	function core_mods() {
 		if ( !is_admin() ) {
 			wp_register_style( 'select-css', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css', false, '1.7.3', 'screen' );
-			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('select-css'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
+			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array('select-css', 'font-awesome-four'), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 			wp_register_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
 			wp_register_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
 			wp_register_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array('jquery'), '1.0.0', true );
