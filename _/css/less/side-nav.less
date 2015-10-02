@@ -6,6 +6,12 @@
 height: 100%;
 .w(35);
 .pad-top(6.4);
+.opacity(0);
+.transition(0.3s, ease);
+
+	&.side-nav-open {
+	.opacity(1);
+	}
 
 	button#close-nav {
 	.no-rounded;

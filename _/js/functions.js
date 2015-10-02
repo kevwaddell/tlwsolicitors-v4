@@ -310,9 +310,10 @@
 	
 		if ( $('.tlw-wrapper').hasClass('nav-closed') ) {
 			
-			$(this).toggleClass('in-active active');
+			$('body').addClass('nav-open');	
 			
 			$('.tlw-wrapper').removeClass('nav-closed').addClass('nav-open');
+			$('#side-nav').addClass('side-nav-open');
 		} 
 		
 		return false;
@@ -322,9 +323,12 @@
 	$('body').on(event_type,'button#close-nav', function(e){
 	
 		if ( $('.tlw-wrapper').hasClass('nav-open') ) {
+			
 			$('.tlw-wrapper').removeClass('nav-open').addClass('nav-closed');
 			$('li.with-sub-nav').removeClass('sl-tl-open').addClass('sl-tl-closed');
-			$('button#nav-btn').toggleClass('active in-active');
+			$('#side-nav').removeClass('side-nav-open');
+			$('body').removeClass('nav-open');
+
 		} 
 		
 		return false;

@@ -45,6 +45,13 @@ min-height: 100%;
 	&.loaded {
 	overflow: auto;	
 	}
+	
+	&.nav-open {
+	overflow: hidden;	
+	.abs;
+	.top(0);
+	.left(0);
+	}
 }
 
 a {
@@ -60,11 +67,13 @@ font-weight: normal;
 }
 
 .nav-overlay {
-.abs;
+.fixed;
 .top(0);
 .left(0);
 .bottom(0);
 .right(0);
+height: 100%;
+width: 100%;
 .trans-bg(white; 0.8);
 z-index: 100;
 .none;
@@ -109,6 +118,7 @@ html.svg {
 .tlw-wrapper {
 .rel;
 .min-w(117);
+min-height: 100%;
 .bg-col(white);
 .bg-img("bg-icon-logo.png");
 .bg-repeat(no-repeat);
@@ -125,9 +135,12 @@ background-position: right bottom;
 	.over-hide;
 	.drop-shadow(5px, 0px, 10px, 0.5);
 	.transform(translateX(-350px));
+	
 		.nav-overlay {
 		.block;	
+		.opacity(1);
 		}
+
 	}
 	
 	&.how-it-works-on, &.links-open {
