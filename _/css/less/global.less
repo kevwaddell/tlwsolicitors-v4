@@ -26,11 +26,20 @@ min-height: 100%;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 .font-size(1.6);	
+
 	&.loading {
 	overflow: hidden;	
 	.abs;
 	.top(0);
 	.left(0);
+	
+		.tlw-wrapper {
+		-webkit-filter: blur(20px);
+		-moz-filter: blur(20px);
+		-o-filter: blur(20px);
+		-ms-filter: blur(20px);
+		filter: blur(20px);	
+		}
 	}
 	
 	&.loaded {
@@ -62,6 +71,7 @@ z-index: 100;
 }
 
 #site-loader {
+//.none;
 .fixed;
 .top(0); .right(0); .left(0); .bottom(0);	
 z-index: 250;
@@ -103,7 +113,7 @@ html.svg {
 .bg-repeat(no-repeat);
 background-position: right bottom;
 .transition(0.3s, ease);
-min-height: 100%;
+
 	&.nav-closed {
 	//.left(0);
 	.transform(translateX(0));
