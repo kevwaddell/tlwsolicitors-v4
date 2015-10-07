@@ -1,11 +1,17 @@
-<?php if (!empty($links)) { ?>
+<?php if (!empty($links)) { 
+	if ($post->post_parent == 0) {
+	$p_page_icon = $page_icon;
+	} else {
+	$p_page_icon = get_field('page_icon', $post->post_parent);	
+	}
+?>
 <div class="links-menu closed">
 	<div class="links-menu-inner">
 		<div class="container">
 			<ul class="list-unstyled">
 				
 				<li class="link-col-<?php echo $color; ?>">
-					<a href="<?php echo get_permalink($post_ID); ?>"><i class="fa <?php echo $page_icon; ?> fa-3x"></i><?php echo get_the_title($post_ID); ?></a>
+					<a href="<?php echo get_permalink($post_ID); ?>"><i class="fa <?php echo $p_page_icon; ?> fa-3x"></i><?php echo get_the_title($post_ID); ?></a>
 				</li>
 				
 				<?php foreach ($links as $link) { 
