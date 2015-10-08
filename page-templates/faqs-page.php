@@ -104,7 +104,7 @@ Template Name: FAQ's page template
 								<a href="<?php echo get_permalink($sb->ID); ?>"><span><?php echo get_the_title($faq_page_id); ?></span></a>
 							</div>
 							<?php } ?>
-							<?php if ($place_holders > 0) { ?>
+							<?php if ($place_holders > 0 && $place_holders < 4) { ?>
 								<?php for ($i = 0; $i < $place_holders; $i++) { ?>
 							<div class="faq-list-item col-<?php echo $col; ?>"><div class="faq-list-ph"></div></div>		
 								<?php } ?>
