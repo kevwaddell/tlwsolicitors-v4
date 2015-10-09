@@ -29,17 +29,12 @@ function register_cpt_tlw_faq_cpt() {
         'menu_position' => 5,
         'menu_icon' => 'dashicons-editor-help',
         'show_in_nav_menus' => false,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
+        'publicly_queryable' => false,
+        'exclude_from_search' => true,
         'has_archive' => false,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => array( 
-            'slug' => 'faqs', 
-            'with_front' => false,
-            'feeds' => false,
-            'pages' => false
-        ),
+        'rewrite' => false,
         'capability_type' => 'post'
     );
 

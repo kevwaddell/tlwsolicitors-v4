@@ -70,6 +70,7 @@ Template Name: FAQ's page template
 									
 				</div>
 				
+<!--
 				<section id="faqs-list">
 					<h3 class="icon-header"><?php the_title(); ?> for <b>You</b> <i class="fa fa-comments fa-lg"></i></h3>
 					<?php foreach ($services_links as $link) { 
@@ -123,6 +124,7 @@ Template Name: FAQ's page template
 					<p><a href="<?php echo get_permalink($contact_us_pg->ID); ?>">Contact us today</a>
 					And we will help you in any way we can</p>
 				</div>
+-->
 
 				
 			</article>
