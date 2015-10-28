@@ -94,9 +94,11 @@ body#login {
 
 .user-links {
 .fixed;
+.top(0);
 .bottom(0);	
 .w(20);
 .transition(0.2s, ease-in-out);
+.bg-col(@red);
 
 	#user-btn {
 	.abs;
@@ -116,7 +118,7 @@ body#login {
 	&.open {
 	.left(0);	
 		#user-btn {
-		.col(@grayDk);
+		.bg-col(@grayDk);
 			&:hover, &:active, &:focus {
 			.col(white);
 			}
@@ -135,19 +137,19 @@ body#login {
 	.pad-all(1);
 	
 		li {
-		.mag-bot(.1);
-		.mag-top(.1);	
+		.mag-bot(.5);	
 		}
 	
 		a {
 		.block;
 		.w(18);
-		.h(3);
-		.line-h(3);
+		.h(5);
+		.line-h(5);
 		.bg-col(@grayDk);
 		.col(white);
 		text-align: center;
 		.no-text-dec;
+		.rounded(4px);
 			&:hover, &:active, &:focus {
 			.col(@grayDk);
 			.bg-col(@grayLt);	
