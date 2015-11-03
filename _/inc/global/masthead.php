@@ -33,9 +33,9 @@
 			
 				<div class="col-xs-4">
 					<?php if (is_front_page()) { ?>
-					<h1 class="text-hide logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+					<h1 class="text-hide logo"><a href="<?php echo get_option('home'); ?>/"><meta itemprop="image" content="http://www.tlwsolicitors.co.uk/wp-content/themes/tlwsolicitors-v4/_/css/img/tlw-logo-wide.svg"><?php bloginfo('name'); ?></a></h1>
 					<?php } else { ?>
-					<p class="text-hide logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
+					<p class="text-hide logo"><a href="<?php echo get_option('home'); ?>/"><meta itemprop="image" content="http://www.tlwsolicitors.co.uk/wp-content/themes/tlwsolicitors-v4/_/css/img/tlw-logo-wide.svg"><?php bloginfo('name'); ?></a></p>
 					<?php } ?>
 				</div>
 				

@@ -39,7 +39,7 @@ $op_script = get_field('on_page_script', $post->ID);
 </nav>
 
 
-<div class="tlw-wrapper nav-closed">
+<div itemscope itemtype="http://schema.org/LocalBusiness" class="tlw-wrapper nav-closed">
 	
 	<!-- HEADER LOGO AND NAVIGATION -->
 	<?php include (STYLESHEETPATH . '/_/inc/global/masthead.php'); ?>	
