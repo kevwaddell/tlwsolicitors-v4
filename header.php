@@ -1,6 +1,13 @@
-<?php include (STYLESHEETPATH . '/_/inc/global/head-html.php'); ?>	
+<?php include (STYLESHEETPATH . '/_/inc/global/head-html.php'); 
 
-<body <?php body_class(array($font_size, 'loading')); ?>>
+$body_classes = array($font_size);	
+
+if ( !isset($_GET['gsdm']) ) {
+array_push($body_classes, 'loading');
+}
+?>	
+
+<body <?php body_class($body_classes); ?>>
 <?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F"

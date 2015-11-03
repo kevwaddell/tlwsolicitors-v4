@@ -58,7 +58,9 @@
 		<?php include (STYLESHEETPATH . '/_/inc/global/search-pop-up.php'); ?>
 		<?php } ?>
 		
+		<?php if ( !isset($_GET['gsdm']) ) : ?>
 		<?php include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
+		<?php endif; ?>
 		
 		<?php wp_footer(); ?>
 
