@@ -42,7 +42,7 @@ $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 		<ul class="contact-list list-unstyled">
 			
 			<?php if (isset($office_tel)) { ?>
-			<li><i class="fa fa-phone fa-lg"></i> Office Tel: <span itemprop="telephone"><?php echo $office_tel; ?></span></li>
+			<li><i class="fa fa-phone fa-lg"></i> Office Tel: <?php echo $office_tel; ?></li>
 			<?php } ?>
 			
 			<?php if (isset($fax)) { ?>
@@ -50,7 +50,7 @@ $map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 			<?php } ?>
 			
 			<?php if (isset($email)) { ?>
-			<li><a href="mailto:<?php echo $email; ?>" onclick="ga('send', 'event', 'Email', 'click to email', 'contact page');" title="Email TLW"><span itemprop="email"><i class="fa fa-envelope fa-lg"></i> <?php echo $email; ?></span></a></li>
+			<li><a href="mailto:<?php echo $email; ?>" onclick="ga('send', 'event', 'Email', 'click to email', 'contact page');" title="Email TLW"><i class="fa fa-envelope fa-lg"></i> <?php echo $email; ?></a></li>
 			<?php } ?>
 			
 		</ul>
