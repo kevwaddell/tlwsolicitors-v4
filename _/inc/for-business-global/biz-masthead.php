@@ -27,11 +27,11 @@
 			
 			<div class="row">
 			
-				<div class="col-xs-5">
+				<div class="col-xs-4">
 					<p class="text-hide logo"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
 				</div>
 				
-				<div class="col-xs-5 text-right">
+				<div class="col-xs-6 text-right">
 					<?php include (STYLESHEETPATH . '/_/inc/global/header-links.php'); ?>
 				</div>
 				
