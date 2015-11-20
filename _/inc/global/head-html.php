@@ -16,7 +16,6 @@
 	<?php 
 	$url = explode('/',$_SERVER['REQUEST_URI']);
 	global $post;
-	$active_scripts = get_field('active_scripts', $post->ID);
 	$global_scripts = get_field('global_scripts', 'options');
 	
 	if ( isset($_COOKIE['font_size']) ) {
@@ -25,12 +24,6 @@
 	$font_size = "txt-sm";	
 	}
 	?>
-	
-	<?php if (in_array("header", $active_scripts)) { 
-	$scripts = get_field('scripts', $post->ID);	
-	?>
-	<?php echo $scripts; ?>
-	<?php } ?>
 	
 	<?php if (!empty($global_scripts)) { ?>
 	<?php echo $global_scripts; ?>
