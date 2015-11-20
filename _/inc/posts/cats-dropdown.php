@@ -1,6 +1,6 @@
 <?php 
 $cats_args = array(
-	'hide_empty'               => 0,
+	'hide_empty'               => 1,
 	'hierarchical'             => 0
 );
 	
