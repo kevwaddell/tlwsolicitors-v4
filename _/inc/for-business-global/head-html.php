@@ -25,7 +25,6 @@
 	} else {
 	$font_size = "txt-sm";	
 	}
-	
 	?>
 	
 	<?php if (!empty($global_scripts)) { ?>

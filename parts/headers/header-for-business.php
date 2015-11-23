@@ -12,12 +12,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PLBR4F');</script>
 <!-- End Google Tag Manager -->
 <?php } ?>
-	
-<?php if (in_array("page", $active_scripts)) {
-$op_script = get_field('on_page_script', $post->ID);	
-?>
-<?php echo $op_script; ?>
-<?php } ?>
 
 <nav id="side-nav">
 	<button id="close-nav" class="btn btn-block"><i class="fa fa-arrow-circle-left fa-3x"></i></button>
