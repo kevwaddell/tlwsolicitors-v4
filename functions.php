@@ -8,7 +8,8 @@ update_option('home','http://tlwsolicitors.dev');
 if ( !function_exists(core_mods) ) {
 	function core_mods() {
 		if ( !is_admin() ) {
-			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', false, filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'all' );
+			wp_register_style( 'print-styles', get_stylesheet_directory_uri().'/_/css/print-styles.css', array(), filemtime( get_stylesheet_directory().'/_/css/print-styles.css' ), 'print' );
+			wp_register_style( 'styles', get_stylesheet_directory_uri().'/_/css/styles.css', array(), filemtime( get_stylesheet_directory().'/_/css/styles.css' ), 'screen' );
 			wp_register_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true );
 			wp_register_script( 'slim-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.6/jquery.slimscroll.min.js', array('jquery'), '1.3.6', true );
 			wp_register_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array('jquery'), '1.0.0', true );
@@ -19,6 +20,7 @@ if ( !function_exists(core_mods) ) {
 			} else {	
 			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'wow-js'), '1.0.1', true );	
 			}
+			wp_enqueue_style('print-styles');
 			wp_enqueue_style('styles');
 			wp_enqueue_script('jquery-cookie');
 			wp_enqueue_script('slim-scroll');
