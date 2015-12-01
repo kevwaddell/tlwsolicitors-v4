@@ -46,10 +46,11 @@ $all_forms_active = get_field('all_forms_active', 'option');
 	
 		
 		<?php 
+		$gallery_active = get_field('gallery_active');
+		
+		
+		if ($gallery_active) { 
 		$gallery_imgs = get_field('gallery_imgs');
-		
-		if ($gallery_imgs) { 
-		
 		//echo '<pre>';print_r($gallery_imgs);echo '</pre>';	
 			
 		?>

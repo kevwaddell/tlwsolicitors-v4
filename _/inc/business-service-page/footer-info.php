@@ -3,7 +3,14 @@
 	<p class="tel-num">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 	<?php } ?>
 	
-	<?php if ($download_active) { ?>
+	<?php if ($download_active) { 
+	$download_extra_txt = get_field('download_extra_txt');
+	?>
+	
+	<?php if (!empty($download_extra_txt)) { ?>
+	<?php echo $download_extra_txt; ?>
+	<?php } ?>
+	
 	<a href="<?php echo $brochure ; ?>" target="_blank" class="btn btn-default btn-block download-link" title="Download our Brochure">Download our Brochure</a>
 	<?php } ?>
 	

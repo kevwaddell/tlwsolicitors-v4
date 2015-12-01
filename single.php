@@ -5,6 +5,7 @@
 		<div class="content">
 
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); 
+			$download_active = get_field('download_active');
 			$freephone_active = get_field('freephone_active');
 			$freephone_num = get_field('freephone_num', 'option');
 			$number_pos = get_field('tel_num_position');
@@ -65,6 +66,8 @@
 							<div class="main-txt">
 								<?php the_content(); ?>
 							</div>
+							
+							<?php include (STYLESHEETPATH . '/_/inc/posts/download-form.php'); ?>
 							
 							<?php if ($freephone_active && $number_pos == 'bottom') { ?>	
 							<?php include (STYLESHEETPATH . '/_/inc/posts/footer-info.php'); ?>

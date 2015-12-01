@@ -386,6 +386,12 @@
                $('a#download-booklet-btn').removeClass('hidden');
                $('html, body').animate({scrollTop: ($("button#booklet-download-btn").offset().top - 20)}, 500);	
             }
+            
+            if(formId == 20 && $('#hidden-download').length == 1) {
+               $('#hidden-download').removeClass('hidden');
+               $('.gform_heading').addClass('hidden');
+               $('html, body').animate({scrollTop: ($("#hidden-download").offset().top - 20)}, 500);	
+            }
     });
 	
 	// 	HEADER SEARCH BUTTON

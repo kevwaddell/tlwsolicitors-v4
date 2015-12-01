@@ -1,10 +1,18 @@
 <?php if ($bk_download_active) { 
 $bk_btn_title = get_field('bk_btn_title');
+$booklet_file = get_field('booklet_file');	
+$booklet_txt = get_field('bk_extra_txt');	
+
 if (empty($bk_btn_title)) {
 $bk_btn_title = "Download booklet";
 }
-$booklet_file = get_field('booklet_file');	
 ?>
+
+<?php if (!empty($booklet_txt)) { ?>
+<div class="main-text" style="padding-top: 20px;">
+	<?php echo $booklet_txt; ?>
+</div>
+<?php } ?>
 
 <button id="booklet-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">Download our guide to services booklet<i class="fa fa-arrow-circle-down fa-lg"></i></button>
 <section id="booklet-download" class="form-closed">
