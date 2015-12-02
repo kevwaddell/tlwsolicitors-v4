@@ -9,7 +9,7 @@ $bk_btn_title = "Download booklet";
 ?>
 
 <?php if (!empty($booklet_txt)) { ?>
-<div class="main-text" style="padding-top: 20px;">
+<div class="main-text">
 	<?php echo $booklet_txt; ?>
 </div>
 <?php } ?>

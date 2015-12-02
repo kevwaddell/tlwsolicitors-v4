@@ -7,4 +7,12 @@ function tgm_io_custom_gforms_spinner( $src ) {
     
 }
 
+add_filter("gform_field_value_src", "populate_affiliate");
+
+function populate_affiliate($value){
+	if ( isset($_COOKIE['src']) ) {
+	return $_COOKIE["src"];	
+	}
+}
+
 ?>
