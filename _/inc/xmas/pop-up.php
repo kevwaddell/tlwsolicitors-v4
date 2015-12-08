@@ -1,12 +1,17 @@
 <?php 
-$xmas_opening_hrs_active = get_field('xmas_hrs_active', 'options');		
+$xmas_opening_hrs_active = get_field('xmas_hrs_active', 'options');	
+$turn_off_date = get_field('turn_off_date', 'options');	
 ?>
 <?php if ($xmas_opening_hrs_active) { 
+$today = date('Ymd');
 $xmas_banner_message = 	get_field('xmas_banner_message', 'options');		
 $xmas_popup_times = get_field('xmas_popup_times', 'options');	
+$turn_off_date = get_field('turn_off_date', 'options');
 $main_email = get_field('main_email', 'option');
 ?>		
 
+<?php if ($today < $turn_off_date) { ?>
+			
 <style>
 button#back-2-top {
 bottom: 110px;
@@ -49,6 +54,8 @@ bottom: 110px;
 <div class="snowflake snowflake_style9 lg"></div>
 
 </div>
+
+<?php } ?>
 
 <?php } ?>
 
