@@ -559,14 +559,16 @@
 	var header_h = $('.header').outerHeight();
 	var h = $(window).height();
 	
+	console.log(scroll > Math.ceil(h/2));
+	
 		if ( scroll > Math.ceil(h/2) ) {
-		$('button#back2top').removeClass('hidden').addClass('visible fadeIn');	
+		$('button#back-2-top').removeClass('hidden').addClass('visible fadeIn');	
 		}
 		
-		if ( scroll <= header_h && $('button#back2top').hasClass('visible') ) {
-		$('button#back2top').removeClass('fadeIn').addClass('fadeOut');	
+		if ( scroll <= header_h && $('button#back-2-top').hasClass('visible') ) {
+		$('button#back-2-top').removeClass('fadeIn').addClass('fadeOut');	
 		
-			$('button#back2top').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('button#back-2-top').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 		
 			$(this).removeClass('visible fadeOut').addClass('hidden');	
 		

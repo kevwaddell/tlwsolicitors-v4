@@ -7,6 +7,12 @@ $xmas_popup_times = get_field('xmas_popup_times', 'options');
 $main_email = get_field('main_email', 'option');
 ?>		
 
+<style>
+button#back-2-top {
+bottom: 110px;
+}	
+</style>
+
 <div id="xmas-popup-btn-wrap" class="pop-up-inactive">
 	<div  class="wrap-inner">
 		<div class="container">
