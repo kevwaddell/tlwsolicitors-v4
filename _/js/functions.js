@@ -1,12 +1,6 @@
 (function($){
 	//var previousScroll = 0;
-	$(document).ready(function (){
-		
 	var event_type;
-	var url = document.location.toString();
-	var window_width = $(window).width();
-	
-	//console.log(sb_top);
 	
 	if (Modernizr.touch){
 	
@@ -17,6 +11,14 @@
 	 event_type = 'click';	
 	 
 	}
+		
+	$(document).ready(function (){
+		
+	var url = document.location.toString();
+	var window_width = $(window).width();
+	
+	//console.log(sb_top);
+	
 
 	var service_select = $('select#service-select');
 	var service_area_select = $('select.service-area-select');
@@ -208,32 +210,6 @@
 		return false;
 		
 	});
-	
-	// 	SIDEBAR MENU BUTTON
-/*
-	$('body').on(event_type,'button.sb-menu-btn', function(e){
-	
-		if ( $(this).parent().hasClass('closed') ) {
-			$(this).parent().removeClass('closed').addClass('open');
-			$('html, body').animate({scrollTop: ($("a#sb-menu-collapse").offset().top - 40)}, 500);	
-		} else {
-			$(this).parent().removeClass('open').addClass('closed');
-			
-			if ( $(this).parent().find('li.page_item_has_children').hasClass('view-children') ) {
-			$(this).parent().find('li.page_item_has_children').removeClass('view-children').addClass('hide-children');	
-			} 
-			
-			if ($("a#main-content").length == 1) {
-			$('html, body').animate({scrollTop: ($("a#main-content").offset().top - 40)}, 500);	
-			} else {
-			$('html, body').animate({scrollTop: ($("html, body").offset().top)}, 500);	
-			}
-		}
-		
-		return false;
-		
-	});
-*/
 	
 	$('body').on(event_type,'li.page_item_has_children > a', function(e){
 		
@@ -490,8 +466,58 @@
 			$('#cookie-law-info-bar').next().remove();
 			
 		}
+		
+		/* XMAS Pop up Function
+	   This function controls the Xmas pop up box
+    */
+    
+    	var xmasBox = function(){
+
+			if ($('#xmas-popup-wrap').length == 1 && $('#xmas-popup-wrap').hasClass('pop-up-inactive')) {
+				
+				$('#xmas-popup-btn-wrap').removeClass('pop-up-inactive').addClass('pop-up-active');
+		
+				$('#xmas-popup-wrap').fadeIn('slow', function(){
+				
+					$('.xmas-popup-inner').removeClass('hidden').addClass('animated slideInUp');
+				
+				});
+			
+			}
+    
+		};
+
+    	//Transition end actions
+	    $('.xmas-popup-inner').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			
+			if ($(this).hasClass('bounceOutDown')) {
+			 $('#xmas-popup-wrap').fadeOut('fast').removeClass('pop-up-active').addClass('pop-up-inactive');	
+			 $('#xmas-popup-btn-wrap').removeClass('pop-up-active').addClass('pop-up-inactive');
+			 $(this).removeClass('animated bounceOutDown').addClass('hidden');
+			}
+		});
+		
+		//Button actions
+		
+		$('body').on(event_type,'button#xmas-popup-btn-open', function(e){
+	    	
+	    	xmasBox();    			
+			return false;
+			
+		});
+	
+	    
+	    $('body').on(event_type,'button#close-xmas-popup', function(e){
+		    
+		   $('.xmas-popup-inner').removeClass('slideInUp').addClass('bounceOutDown');   
+	    	      			
+			return false;
+			
+		});
 
 	});
+
+
 	
 	$(window).on("resize", function(e){
 
