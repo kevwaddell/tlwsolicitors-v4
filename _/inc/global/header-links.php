@@ -21,16 +21,16 @@ $linkedin_url = get_field('linkedin_page', 'options');
 
 	<span class="social-links">
 	<?php if ($twitter_url) { ?>
-	<a href="<?php echo $twitter_url; ?>" class="btn btn-default"><span class="sr-only">Twitter</span><i class="fa fa-twitter fa-lg"></i></a>
+	<a href="<?php echo $twitter_url; ?>" class="btn btn-default" target="_blank"><span class="sr-only">Twitter</span><i class="fa fa-twitter fa-lg"></i></a>
 	<?php } ?>
 	<?php if ($facebook_url) { ?>
-	<a href="<?php echo $facebook_url; ?>" class="btn btn-default"><span class="sr-only">Facebook</span><i class="fa fa-facebook fa-lg"></i></a>
+	<a href="<?php echo $facebook_url; ?>" class="btn btn-default" target="_blank"><span class="sr-only">Facebook</span><i class="fa fa-facebook fa-lg"></i></a>
 	<?php } ?>
 	<?php if ($google_url) { ?>
-	<a href="<?php echo $google_url; ?>" class="btn btn-default"><span class="sr-only">Google+</span><i class="fa fa-google-plus fa-lg"></i></a>
+	<a href="<?php echo $google_url; ?>" class="btn btn-default" target="_blank"><span class="sr-only">Google+</span><i class="fa fa-google-plus fa-lg"></i></a>
 	<?php } ?>
 	<?php if ($linkedin_url) { ?>
-	<a href="<?php echo $linkedin_url; ?>" class="btn btn-default"><span class="sr-only">LinkedIn</span><i class="fa fa-linkedin fa-lg"></i></a>
+	<a href="<?php echo $linkedin_url; ?>" class="btn btn-default" target="_blank"><span class="sr-only">LinkedIn</span><i class="fa fa-linkedin fa-lg"></i></a>
 	<?php } ?>
 	</span>
 	
