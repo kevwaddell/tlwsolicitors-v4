@@ -25,7 +25,7 @@ $img = $img_data['sizes']['large'];
 			<div id="hidden-download" class="hidden">
 				
 				<?php if ($file_type === "file") { ?>
-				<a href="<?php echo $file; ?>" target="_blank" id="download-booklet-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn"><?php echo $$btn_title; ?></a>
+				<a href="<?php echo $file; ?>" target="_blank" id="download-file-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn">Your download is ready</a>
 				<?php } ?>
 				
 				<?php if ($file_type === "img") { ?>
