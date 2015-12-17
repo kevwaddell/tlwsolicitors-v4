@@ -14,13 +14,16 @@ $img = $img_data['sizes']['large'];
 }
 ?>
 
+<?php if (!empty($extra_txt)) { ?>
+<div class="main-text">
+	<?php echo $extra_txt; ?>
+</div>
+<?php } ?>
+
 <button id="booklet-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></button>
 <section id="booklet-download" class="form-closed">
 	<div class="form-wrap">
 		<div class="contact-form">
-			<div class="gform_heading" style="margin-bottom: 20px;">
-              <?php echo $extra_txt; ?>
-            </div>
 			<?php gravity_form(20, false, false, false, false, true); ?>
 			<div id="hidden-download" class="hidden">
 				
