@@ -21,7 +21,7 @@ $img = $img_data['sizes']['full'];
 <?php } ?>
 
 <?php if ($dwnload_hide == 'yes') { ?>
-<button id="booklet-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></button>
+<button id="file-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></button>
 <section id="booklet-download" class="form-closed">
 	<div class="form-wrap">
 		<div class="contact-form">
