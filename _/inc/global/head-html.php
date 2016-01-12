@@ -14,7 +14,11 @@
 	<?php wp_head(); ?>
 	
 	<!--[if IE]>
-	
+	<style type="text/css">
+	.nav-overlay {
+	width: auto;
+	}
+	</style>
 	<![endif]-->
 	
 	<?php 
