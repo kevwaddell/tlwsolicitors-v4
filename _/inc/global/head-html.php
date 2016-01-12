@@ -15,9 +15,11 @@
 	
 	<!--[if IE]>
 	<style type="text/css">
-	.nav-overlay {
-	width: auto;
-	}
+	
+		.nav-overlay {
+		width: auto;
+		}
+		
 	</style>
 	<![endif]-->
 	
