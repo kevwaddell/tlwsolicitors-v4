@@ -2,6 +2,7 @@
 $extra_txt = get_field('download_extra_txt');	
 $btn_title = get_field('btn_title');
 $file_type = get_field('file_type');
+$dwnload_hide = get_field('dwnload_hide');
 
 if ($file_type === "file") {
 $file = get_field('download_file');		
@@ -9,8 +10,7 @@ $file = get_field('download_file');
 
 if ($file_type === "img") {
 $img_data = get_field('download_img');		
-$img = $img_data['sizes']['large'];
-//echo '<pre>';print_r($img);echo '</pre>';
+$img = $img_data['sizes']['full'];
 }
 ?>
 
@@ -20,6 +20,7 @@ $img = $img_data['sizes']['large'];
 </div>
 <?php } ?>
 
+<?php if ($dwnload_hide == 'yes') { ?>
 <button id="booklet-download-btn" class="btn btn-default btn-block icon-btn icon-btn-lg btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></button>
 <section id="booklet-download" class="form-closed">
 	<div class="form-wrap">
@@ -40,4 +41,15 @@ $img = $img_data['sizes']['large'];
 		</div>
 	</div>
 </section>
+<?php } ?>
+
+<?php if ($dwnload_hide == 'no') { ?>
+<?php if ($file_type === "file") { ?>
+<a href="<?php echo $file; ?>" target="_blank" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></a>
+<?php } ?>
+<?php if ($file_type === "img") { ?>
+<a href="<?php echo $img; ?>" target="_blank" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?></a>
+<?php } ?>
+<?php } ?>
+
 <?php } ?>
