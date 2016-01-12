@@ -17,7 +17,7 @@
 	<style type="text/css">
 	
 		.nav-overlay {
-		width: auto;
+		width: auto !important;
 		}
 		
 	</style>
