@@ -13,6 +13,10 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
 	
+	<!--[if IE]>
+	
+	<![endif]-->
+	
 	<?php 
 	$url = explode('/',$_SERVER['REQUEST_URI']);
 	global $post;
