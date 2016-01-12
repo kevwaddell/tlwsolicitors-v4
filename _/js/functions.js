@@ -347,7 +347,7 @@
 	
 	//DOWNLOAD BOOKLET GUIDE BUTTON
 	
-	$('body').on(event_type,'button#booklet-download-btn', function(e){
+	$('body').on(event_type,'button#file-download-btn', function(e){
 		
 		var next = $(this).next();
 		
@@ -358,9 +358,9 @@
 	});
 	
 	$(document).bind('gform_confirmation_loaded', function(event, formId){
-            if(formId == 19 && $('a#download-booklet-btn').length == 1) {
-               $('a#download-booklet-btn').removeClass('hidden');
-               $('html, body').animate({scrollTop: ($("button#booklet-download-btn").offset().top - 20)}, 500);	
+            if(formId == 19 && $('a#download-file-btn').length == 1) {
+               $('a#download-file-btn').removeClass('hidden');
+               $('html, body').animate({scrollTop: ($("button#file-download-btn").offset().top - 20)}, 500);	
             }
             
             if(formId == 20 && $('#hidden-download').length == 1) {
@@ -559,7 +559,7 @@
 	var header_h = $('.header').outerHeight();
 	var h = $(window).height();
 	
-	console.log(scroll > Math.ceil(h/2));
+	//console.log(scroll > Math.ceil(h/2));
 	
 		if ( scroll > Math.ceil(h/2) ) {
 		$('button#back-2-top').removeClass('hidden').addClass('visible fadeIn');	

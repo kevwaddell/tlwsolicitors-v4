@@ -15,11 +15,7 @@ if ( !function_exists(core_mods) ) {
 			wp_register_script( 'bootstrap-select', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js', array('jquery'), '1.0.0', true );
 			wp_register_script( 'wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', false, '1.0.0', true );
 			wp_register_script( 'sticky-js', get_stylesheet_directory_uri() . '/_/js/jquery.hc-sticky.js', array('jquery'), '1.0.0', true );
-			if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') {
-			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions-min.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'wow-js'), '1.0.1', true );
-			} else {	
-			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'wow-js'), '1.0.1', true );	
-			}
+			wp_register_script( 'functions', get_stylesheet_directory_uri() . '/_/js/functions.js', array('jquery', 'jquery-ui-core', 'bootstrap-all-min', 'jquery-cookie', 'slim-scroll', 'wow-js'), '1.0.1', true );
 			wp_enqueue_style('print-styles');
 			wp_enqueue_style('styles');
 			wp_enqueue_script('jquery-cookie');
