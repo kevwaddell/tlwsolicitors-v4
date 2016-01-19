@@ -23,7 +23,11 @@
 					
 					<div class="col-xs-3">
 					<?php wp_nav_menu(array( 'container_class' => 'social-links clearfix', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
-					<div class="headway-logo Y2016"></div>
+					<div class="headway-logo Y2016">
+						<a href="https://www.headway.org.uk" target="_blank" title="Headway The Brain Injury Association">
+						Headway The Brain Injury Association	
+						</a>
+						</div>
 					</div>
 				
 				</div>

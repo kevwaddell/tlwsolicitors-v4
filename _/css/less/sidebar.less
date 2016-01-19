@@ -3,6 +3,48 @@
 	//# Sidebar Styles
 	aside.sidebar {
 	.pad-bot(4);
+	
+		//# Headway logo box
+		.sb-headway {
+		.mag-bot(4);
+			.bg-col-grayLt;
+			.pad-all(1.5);
+			.rounded(8px);
+			.inner-shadow(0, 0, 10px, 0.4);
+			.border(@headwayCol; 0.4);
+			
+			figure {
+			.h(15);	
+			.mag-bot(1);
+			.bg-repeat(no-repeat);
+			.bg-size(contain);
+			background-position: center center;
+			}
+			
+			p {
+			.font-size(1.6);	
+			.col(@gray); 
+				span {
+				.col(@headwayCol);
+				.bold;
+				.font-size(3);
+				.line-h(3);	
+				.font-slab-serif;
+				}
+			}
+			
+			a {
+			.no-text-dec;	
+				&:hover, &:active, &:focus {
+					figure {
+					.opacity(0.6);	
+					}
+					p span {
+					.col(lighten(@headwayCol, 20%));	
+					}
+				}
+			}
+		}
 		
 		//# Sidebar How it works link
 		.how-it-works-link {

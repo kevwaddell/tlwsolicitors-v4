@@ -6,7 +6,10 @@ global $show_feat_img;
 global $feat_img_options;
 $add_form = get_field('add_form');
 $all_forms_active = get_field('all_forms_active', 'option');
-//echo '<pre>';print_r($cats);echo '</pre>';
+
+$hw_box_active = get_field('hw_box_active', 'options');
+$hw_posts = get_field('hw_posts', 'options');
+//echo '<pre>';print_r($hw_posts);echo '</pre>';
 ?>
 <div class="col-xs-4">
 	<aside class="sidebar">
@@ -99,6 +102,20 @@ $all_forms_active = get_field('all_forms_active', 'option');
 		<?php if ($freephone_active && $number_pos == 'sidebar') { ?>
 		<p class="tel-num">Call us <span>free<br><a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
 		<?php } ?>	
-			
+		
+		<?php if ($hw_box_active && in_array(get_the_ID(), $hw_posts)) { 
+		$hw_logo = get_field('hw_logo', 'options');	
+		$hw_link = get_field('hw_link', 'options');
+		$hw_box_text = get_field('hw_box_text', 'options');
+		?>
+		<div class="sb-headway">
+			<a href="<?php echo $hw_link; ?>" target="_blank">
+			<figure class="hw-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>)"></figure>
+			<p class="text-center"><?php echo $hw_box_text; ?></p>
+			</a>
+		</div>
+		<?php } ?>
+
+
 	</aside>
 </div>

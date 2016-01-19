@@ -7,6 +7,9 @@ global $number_pos;
 global $freephone_num;
 global $links;
 
+$hw_box_active = get_field('hw_box_active', 'options');
+$hw_pages = get_field('hw_pages', 'options');
+
 $form_active = get_field('form_activated');
 $all_forms_active = get_field('all_forms_active', 'option');
 
@@ -63,6 +66,19 @@ $radio_stations = get_field('radio_stations', 'option');
 		</div>	
 		<?php } ?>
 		<?php endif; ?>
+		
+		<?php if ($hw_box_active && in_array(get_the_ID(), $hw_pages)) { 
+		$hw_logo = get_field('hw_logo', 'options');	
+		$hw_link = get_field('hw_link', 'options');
+		$hw_box_text = get_field('hw_box_text', 'options');
+		?>
+		<div class="sb-headway">
+			<a href="<?php echo $hw_link; ?>" target="_blank">
+			<figure class="hw-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>)"></figure>
+			<p class="text-center"><?php echo $hw_box_text; ?></p>
+			</a>
+		</div>
+		<?php } ?>
 			
 		<?php if ($number_pos == 'sidebar') { ?>
 		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
