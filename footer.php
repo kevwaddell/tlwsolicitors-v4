@@ -23,25 +23,33 @@
 					
 					<div class="col-xs-3">
 					<?php wp_nav_menu(array( 'container_class' => 'social-links clearfix', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
-					
-					<div id="footer-logo" class="hidden-xs text-hide"><?php bloginfo('name'); ?></div>
-					
-					<div class="compliance-notice">
-						<?php $compliance_notice = get_field('compliance_notice', 'option');?>
-						<?php if (isset($compliance_notice)) { ?>
-						<?php echo $compliance_notice; ?>
-						<?php }  ?>
-					</div>
-					
+					<div class="headway-logo Y2016"></div>
 					</div>
 				
 				</div>
-				
-				<div class="copyright">
-					<p>&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. <br>All rights reserved.</p>
-				</div>
-				
+
 			</footer>
+			
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-5">
+							<p>&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+						</div>
+						<div class="col-xs-2">
+							<div id="footer-logo" class="hidden-xs text-hide"><?php bloginfo('name'); ?></div>
+						</div>
+						<div class="col-xs-5">
+							<div class="compliance-notice">
+							<?php $compliance_notice = get_field('compliance_notice', 'option');?>
+							<?php if (isset($compliance_notice)) { ?>
+							<?php echo $compliance_notice; ?>
+							<?php }  ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			
 		</section>
 		

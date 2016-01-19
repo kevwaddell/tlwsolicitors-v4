@@ -83,27 +83,46 @@ background-position: right bottom;
 	}
 	
 	#footer-logo {
-	.fright;
-	.w(30);
+	.abs;
+	.top(-2.8);
+	left: 50%;
+	.mag-left(-3.5);
+	width: 100%;
 	.h(7);
-	.mag-top(3);
-	.mag-bot(1);
-	.bg-img("tlw-logo-white.png");
+	.w(7);
+	.bg-col(white);
+	.rounded(100%);
+	.bg-img("color-icon.png");
+	.bg-size(85%);
 	.bg-repeat(no-repeat);
-	background-position: right center;	
+	background-position: center center;	
 	}
 	
 	.compliance-notice {	
-	clear: both;
 	text-align: right;
-	.w(30);
-	.fright;
-	.mag-bot(0);
 	}
 	
 	.copyright {
-	.fleft;
-	.mag-top(-3.4);
+	.border-top(white; 0.2);
+	.border-bot(white; 0.2);
+	.mag-top(3);
+	.trans-bg(black; 0.3);
+	.pad-top(1);
+	.pad-bot(1);
+	}
+	
+	.headway-logo {
+	.fright;
+	.w(12);
+	.h(12);
+	.bg-col(white);	
+	.rounded(100%);
+		&.Y2016 {
+		.bg-img("headway-logo-2016.png");
+		.bg-size(90%);
+		.bg-repeat(no-repeat);
+		background-position: center center;	
+		}
 	}
 	
 }
