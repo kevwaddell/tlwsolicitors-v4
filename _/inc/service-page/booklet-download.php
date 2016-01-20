@@ -19,7 +19,7 @@ $bk_btn_title = "Download booklet";
 	<div class="form-wrap">
 		<div class="contact-form">
 			<?php gravity_form(19, false, true, false, false, true); ?>
-			<a href="<?php echo $booklet_file; ?>" target="_blank" id="download-file-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn hidden"><?php echo $bk_btn_title; ?></a>
+			<a href="<?php echo $booklet_file; ?>" id="download-file-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn hidden"><?php echo $bk_btn_title; ?></a>
 		</div>
 	</div>
 </section>

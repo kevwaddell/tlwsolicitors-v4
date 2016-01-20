@@ -29,7 +29,7 @@ $img = $img_data['sizes']['full'];
 			<div id="hidden-download" class="hidden">
 				
 				<?php if ($file_type === "file") { ?>
-				<a href="<?php echo $file; ?>" target="_blank" id="download-file-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn">Your download is ready</a>
+				<a href="<?php echo $file; ?>" id="download-file-btn" class="icon-btn btn btn-default btn-block big-btn caps download-btn">Your download is ready</a>
 				<?php } ?>
 				
 				<?php if ($file_type === "img") { ?>
@@ -45,10 +45,10 @@ $img = $img_data['sizes']['full'];
 
 <?php if ($dwnload_hide == 'no') { ?>
 <?php if ($file_type === "file") { ?>
-<a href="<?php echo $file; ?>" target="_blank" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></a>
+<a href="<?php echo $file; ?>" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?><i class="fa fa-arrow-circle-down fa-lg"></i></a>
 <?php } ?>
 <?php if ($file_type === "img") { ?>
-<a href="<?php echo $img; ?>" target="_blank" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?></a>
+<a href="<?php echo $img; ?>" class="btn btn-default btn-block icon-btn-lg download-btn btn-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"><?php echo $btn_title; ?></a>
 <?php } ?>
 <?php } ?>
 
