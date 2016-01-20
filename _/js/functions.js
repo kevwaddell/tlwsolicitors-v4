@@ -352,6 +352,7 @@
 		var next = $(this).next();
 		
 		$(next).toggleClass('form-open form-closed');	
+		$('html, body').animate({scrollTop: ($("button#file-download-btn").offset().top) - 30}, 500);
 		
 		return false;
 		
