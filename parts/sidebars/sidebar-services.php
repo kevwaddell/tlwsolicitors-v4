@@ -73,7 +73,7 @@ $radio_stations = get_field('radio_stations', 'option');
 		$hw_box_text = get_field('hw_box_text', 'options');
 		?>
 		<div class="sb-headway">
-			<a href="<?php echo $hw_link; ?>" target="_blank">
+			<a href="<?php echo $hw_link; ?>" rel="nofollow" target="_blank">
 			<figure class="hw-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>)"></figure>
 			<p class="text-center"><?php echo $hw_box_text; ?></p>
 			</a>

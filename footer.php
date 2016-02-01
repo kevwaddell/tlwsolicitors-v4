@@ -31,7 +31,7 @@
 						$hw_link = get_field('hw_link', 'options');
 						?>
 						<div class="headway-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>);">
-							<a href="<?php echo $hw_link; ?>" target="_blank" title="Headway The Brain Injury Association">
+							<a href="<?php echo $hw_link; ?>" target="_blank" rel="nofollow" title="Headway The Brain Injury Association">
 							Headway The Brain Injury Association	
 							</a>
 						</div>
