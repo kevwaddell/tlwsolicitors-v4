@@ -9,10 +9,10 @@
 	<meta name="viewport" content ="width=device-width,user-scalable=yes" />
 	<meta name="format-detection" content="telephone=yes">
 	
-	<meta name="geo.region" content="GB" />
-	<meta name="geo.placename" content="North Shields" />
-	<meta name="geo.position" content="55.009452;-1.490004" />
-	<meta name="ICBM" content="55.009452, -1.490004" />
+	<meta name="geo.region" content="GB">
+	<meta name="geo.placename" content="North Shields">
+	<meta name="geo.position" content="55.009452;-1.490004">
+	<meta name="ICBM" content="55.009452, -1.490004">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -20,8 +20,6 @@
 	
 	<?php 
 	$url = explode('/',$_SERVER['REQUEST_URI']);
-	global $post;
-	$global_scripts = get_field('global_scripts', 'options');
 	
 	if ( isset($_COOKIE['font_size']) ) {
     $font_size = $_COOKIE['font_size'];	
@@ -33,8 +31,4 @@
 	setcookie("src",$_GET['src'] , strtotime( '+6 months' ), "/financial-mis-selling/solar-panel-mis-selling" );
 	}
 	?>
-	
-	<?php if (!empty($global_scripts)) { ?>
-	<?php echo $global_scripts; ?>
-	<?php } ?>
 </head>

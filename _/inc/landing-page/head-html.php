@@ -8,13 +8,17 @@
 	<meta name="viewport" content ="width=device-width,user-scalable=yes" />
 	<meta name="format-detection" content="telephone=yes">
 	
+	<meta name="geo.region" content="GB">
+	<meta name="geo.placename" content="North Shields">
+	<meta name="geo.position" content="55.009452;-1.490004">
+	<meta name="ICBM" content="55.009452, -1.490004">
+	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
 	<?php wp_head(); ?>
 	
 	<?php 
-	$global_scripts = get_field('global_scripts', 'options');
 	$color = get_field('page_colour', $post->ID);
 	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 	$bg_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
@@ -29,8 +33,5 @@
 	}
 	?>
 	
-	<?php if (!empty($global_scripts)) { ?>
-	<?php echo $global_scripts; ?>
-	<?php } ?>
 	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>
