@@ -387,6 +387,10 @@ body.loading {
 	#site-loader {
 	.block;
 	}
+	
+	.a2a_vertical_style {
+	.left(-5) !important;
+	}
 }
 
 body.loaded {
@@ -394,12 +398,22 @@ body.loaded {
 	.animated;
 	.fadeOut;	
 	}
+	
+	.a2a_vertical_style {
+	.left(0) !important;
+	}
+}
+
+body.nav-open {	
+	.a2a_vertical_style {
+	.left(-5) !important;	
+	}
 }
 
 .a2a_vertical_style {
-.left(0) !important;
 top: 50% !important;
 .mag-top(-10.4);
+.transition(0.5s, ease-out);
 }
 
 .a2a_floating_style {
