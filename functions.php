@@ -247,9 +247,6 @@ include (STYLESHEETPATH . '/_/functions/tlw_faqs_cpt.php');
 /* REGISTER POSITIONS TAX */
 include (STYLESHEETPATH . '/_/functions/tlw_positions_tax.php');
 
-/* TAXONMY ORDERING */
-include (STYLESHEETPATH . '/_/functions/tax_order.php');
-
 /* AFC OPTIONS FUNCTIONS */
 include (STYLESHEETPATH . '/_/functions/afc_options_functions.php');
 
