@@ -40,7 +40,7 @@ add_filter( 'script_loader_src', 'ewp_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'ewp_remove_script_version', 15, 1 );
 
 function editor_styles() {
-add_editor_style(get_stylesheet_directory_uri().'/_/css/custom-editor-style.css');	
+add_editor_style(get_stylesheet_directory_uri().'/_/css/custom-editor-style.css?v='.filemtime( get_stylesheet_directory().'/_/css/custom-editor-style.css' ) );	
 }
 
 add_theme_support('html5', array('search-form'));
