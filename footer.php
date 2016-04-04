@@ -23,6 +23,7 @@
 					
 					<div class="col-xs-3">
 						<?php wp_nav_menu(array( 'container_class' => 'social-links clearfix', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
+
 						<?php 
 						$hw_box_active = get_field('hw_box_active', 'options');	
 						
@@ -33,6 +34,20 @@
 						<div class="headway-logo" style="background-image: url(<?php echo $hw_logo[url]; ?>);">
 							<a href="<?php echo $hw_link; ?>" target="_blank" rel="nofollow" title="Headway The Brain Injury Association">
 							Headway The Brain Injury Association	
+							</a>
+						</div>
+						<?php } ?>
+						
+						<?php 
+						$lexcel_active = get_field('lexcel_active', 'options');	
+						
+						if ($lexcel_active) { 
+						$lexcel_logo = get_field('lexcel_logo', 'options');	
+						$lexcel_url = get_field('lexcel_url', 'options');
+						?>
+						<div class="lexcel-logo" style="background-image: url(<?php echo $lexcel_logo; ?>);">
+							<a href="<?php echo $lexcel_url; ?>" target="_blank" rel="nofollow" title="Lexcel - Law Society Accredited">
+							Lexcel - Practice management Standard - Law Society Accredited	
 							</a>
 						</div>
 						<?php } ?>
