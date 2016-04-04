@@ -13,13 +13,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <?php } ?>
 
-<?php if (in_array("page", $active_scripts)) {
-$op_script = get_field('on_page_script', $post->ID);	
-?>
-<?php echo $op_script; ?>
-<?php } ?>
-
-
 <div class="tlw-wrapper">
 	<div class="lp-bg-img" style="background-image: url(<?php echo $bg_img_url; ?>)"></div><div class="col-overlay  bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>"></div><div class="striped-overlay"></div>
 	
