@@ -1,5 +1,7 @@
-<header class="header" role="banner">
-<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
+<header class="header<?php echo (is_page_template('page-templates/toolkit-page.php')) ? ' abs-header':''; ?>" role="banner">
+	<?php if (!is_page_template('page-templates/toolkit-page.php')) { ?>
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
+	<?php }  ?>
 	<?php 
 	$freephone_num = get_field('freephone_num', 'option');
 	$main_email = get_field('main_email', 'option');
@@ -23,8 +25,6 @@
 		</div>
 	<?php }  ?>
 
-
-	
 	<div class="header-inner">
 	
 		<div class="container">
