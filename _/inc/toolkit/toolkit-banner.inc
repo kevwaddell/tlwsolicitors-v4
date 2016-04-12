@@ -1,4 +1,4 @@
-<section class="toolkit-banner fixed-bg" style="background-image: url('http://tlwsolicitors.dev/wp-content/uploads/2015/11/serious-injury.jpg')">
+<section class="toolkit-banner fixed-bg" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>)">
 				
 	<div class="tk-title-strip col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container text-center">

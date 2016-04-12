@@ -15,6 +15,7 @@ Template Name: Toolkit page
 		$feedback_active = get_field('feedback_active'); 
 		$how_it_works_active = get_field('hiw_active');
 		$all_forms_active = get_field('all_forms_active', 'option');
+		$slides_active = get_field('tk_slides_active');
 		
 		if ($page_icon == 'null' || !$page_icon) {
 		$parent = get_page($post->post_parent);
@@ -22,6 +23,17 @@ Template Name: Toolkit page
 		$page_icon = get_field('page_icon', $post->post_parent);
 			if ($page_icon == 'null' || !$page_icon) {
 			$page_icon = get_field('page_icon', $grand_parent);	
+			}
+		}
+		
+		if ( has_post_thumbnail() ) {
+		$img_post = get_the_ID();
+		} else {
+		$img_post = $post->post_parent;
+		$parent = get_post($img_post);	
+		
+			if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
+			$img_post = $parent->post_parent;
 			}
 		}
 	?>	
@@ -33,7 +45,9 @@ Template Name: Toolkit page
 		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-banner.inc'); ?>
 		
 		<!-- TOOLKIT SLIDES SECTION -->
-		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-slides.inc'); ?>
+		<?php if ($slides_active) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-slides.inc'); ?>		
+		<?php } ?>
 		
 	</main>
 	<?php endwhile; ?>
