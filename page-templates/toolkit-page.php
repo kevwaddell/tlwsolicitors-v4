@@ -16,6 +16,7 @@ Template Name: Toolkit page
 		$how_it_works_active = get_field('hiw_active');
 		$all_forms_active = get_field('all_forms_active', 'option');
 		$slides_active = get_field('tk_slides_active');
+		$active_sections = get_field('active_sections');
 		
 		if ($page_icon == 'null' || !$page_icon) {
 		$parent = get_page($post->post_parent);
@@ -47,6 +48,23 @@ Template Name: Toolkit page
 		<!-- TOOLKIT SLIDES SECTION -->
 		<?php if ($slides_active) { ?>
 		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-slides.inc'); ?>		
+		<?php } ?>
+		
+		<?php foreach ($active_sections as $section) { ?>
+			<?php 
+			switch($section){
+				case "Downloads": include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc');
+				break;
+				case "Form": include (STYLESHEETPATH . '/_/inc/sections/form-section.inc');
+				break;
+				case "Services": include (STYLESHEETPATH . '/_/inc/sections/services-section.inc');
+				break;
+				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/recent-blog.inc');
+				break;
+				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
+				break;
+			}	
+			?>
 		<?php } ?>
 		
 	</main>
