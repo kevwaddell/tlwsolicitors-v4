@@ -3,4 +3,5 @@
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk">Our specialist services</h2>
 	</div>
+	<div class="overlay"></div>
 </section>

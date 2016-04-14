@@ -1,15 +1,61 @@
-section.page-section {
-	.pad-top(4);
-	.pad-bot(6);
-	
-	&.with-header {
-	.pad-top(6);	
+section.pg-section {
+.pad-bot(4);	
+.rel;
+	.overlay {
+	.abs;
+	width: 100%;
+	height: 100%;
+	.top(0);
+	.left(0);
+	.bg-img("thin-stripe-wht.png");	
+	z-index: 0;
+	.opacity(0.3);
 	}
 	
+	&.with-icon-logo {
+	.bg-img("bg-icon-logo.png");	
+	.bg-repeat(no-repeat);
+	background-position: center center;
+	.bg-size(50%);	
+	}
+	
+	
+
 	h2.section-header {
 	width: 50%;
-	.col(white);
 	margin: -40px auto 40px;
-	.border(white; 0.4);
+	.font-slab-serif;
+	.col(white);
+	.caps;
+	.font-size(3);
+	.border(white, 0.4);
+	.line-h(7.2);
+	.rel;
+	z-index: 1;
+	}
+	
+	&.col-purple {
+	.bg-col-purple;	
+	.inner-shadow(0, 0, 20px, 0.5);
+	}
+	
+	// 	DOWNLOADS SECTION
+	
+	.download-items {
+	.mag-bot(4);	
+	}
+	
+	.download-item {
+	text-align: center;
+		img {
+		.mag-bot(2);	
+		}
+		a, span {
+		.block;	
+		}
+		
+		a span {
+		.col(white);	
+		}
 	}
 }
