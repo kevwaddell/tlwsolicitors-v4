@@ -19,16 +19,7 @@ Template Name: Thank page template
 		} else {
 		$return_id = $post->post_parent;	
 		}
-		
-		if (isset($_GET['first-name'])) {
-		$name = $_GET['first-name'];	
-		}
-		
-		if (isset($_GET['full-name'])) {
-		$split = split(" ", $_GET['full-name']);
-		$name = $split[0];	
-		}
-		 ?>
+		?>
 		
 				
 			<article <?php post_class(); ?>>
@@ -39,7 +30,7 @@ Template Name: Thank page template
 					
 					<div class="col-xs-10">
 					
-					<h1>Thank you for contacting us <?php echo $name; ?>.</h1>
+					<h1>Thank you for contacting us.</h1>
 					<p>A member of our team will contact you shortly.</p>
 					<a href="<?php echo get_permalink($return_id) ; ?>" class="icon-btn" style="padding-left:10px; width: 300px;" id="reload-form">Continue <i class="fa fa-angle-right fa-lg"></i></a>
 											
