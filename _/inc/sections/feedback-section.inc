@@ -1,6 +1,6 @@
 <?php $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 ?>
-<a name="feedback" id="feedback"></a>
 <section id="feedback-section" class="pg-section col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<a name="feedback" id="feedback" class="section-target"></a>
 	<div class="container feedback-quote">
 		<div class="row">
 			<div class="col-xs-2 text-left">

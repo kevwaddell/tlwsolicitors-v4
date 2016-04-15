@@ -6,8 +6,8 @@ $slides_counter = 0;
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
 ?>
 
-<a name="toolkit-slides" id="toolkit-slides"></a>
 <section class="toolkit-slider">
+	<a name="toolkit-slides" id="toolkit-slides" class="section-target"></a>
 	<ul class="list-unstyled tk-slider-nav">
 		<?php foreach ($slides as $k => $link) { ?>
 		<li class="link-<?php echo $link['slide_color']; ?><?php echo ($k == 0) ? ' active':''; ?>"><a href="#tk-slide-<?php echo $k + 1; ?>" title="<?php echo $link['slide_title']; ?>"><i class="fa <?php echo $link['slide_icon']; ?> tk-sn-nav-icon"></i><span class="sr-only"><?php echo $link['slide_title']; ?></span></a></li>

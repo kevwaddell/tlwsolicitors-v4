@@ -2,9 +2,8 @@
 $section_title = get_field('downloads_section_title');	
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'downloads'];	
 ?>
-
-<a name="downloads" id="downloads"></a>
 <section id="downloads-section" class="pg-section with-icon-logo col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<a name="downloads" id="downloads" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		<div class="row download-items">

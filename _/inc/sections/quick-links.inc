@@ -1,7 +1,7 @@
 <?php global $quick_links; ?>
 <!-- INTERNAL PAGE QUICK LINKS -->	
 <?php if (!empty($quick_links)) { ?>
-	<div id="quick-links" class="quick-links-outer open">
+	<div id="quick-links" class="quick-links-outer closed">
 		
 		<div class="quick-links-btns">
 			<button id="quick-links-btn-dwn" class="dir-btn"><i class="fa fa-angle-left"></i><span class="sr-only">Previous section</span></button>

@@ -2,8 +2,8 @@
 $section_title = get_field('blog_section_title');	
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-articles'];	
 ?>
-<a name="recent-blog-articles" id="recent-blog-articles"></a>
 <section id="blog-posts" class="pg-section sub-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		<div class="container">

@@ -4,11 +4,11 @@ top: 50%;
 .mag-top(-15);
 .w(30);
 z-index: 1000;
-.animated;
+.transition(0.3s, ease-in-out);
 
 	&.open {
 	.right(0);	
-	.drop-shadow(-30px, 0px, 20px, 0.7);
+	.drop-shadow(0px, 0px, 10px, 0.7);
 	}
 	
 	&.closed {
@@ -25,6 +25,7 @@ z-index: 1000;
 	.border(white; 0.4);
 	border-bottom: none;
 	.bg-col-grayDk;
+	.drop-shadow(0px, 0px, 10px, 0.7);
 	}
 	.dir-btn, .open-nav-btn {
 	.bg-col(@trans);
@@ -33,6 +34,7 @@ z-index: 1000;
 	.line-h(5);
 	.no-border;
 	.pad-all(0);
+	outline: none;
 		i {
 		.line-h(5);	
 		}
@@ -101,6 +103,12 @@ z-index: 1000;
 				.bg-col(white);
 				.txt-col-grayDk;
 				}
+				
+				&.active {
+				.bg-col(@red);
+				.col(white);
+				pointer-events: none;	
+				}
 			}
 		
 		}
@@ -117,6 +125,7 @@ z-index: 1000;
 		.no-border;
 		.no-text-dec;
 		.rel;	
+		outline: none;
 			
 			&:after {
 			.abs;

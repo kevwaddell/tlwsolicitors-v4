@@ -9,8 +9,8 @@ $section_title = $form->title;
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
 ?>
 <?php if ($form_active && $all_forms_active) { ?>
-<a name="request-a-callback" id="request-a-callback"></a>
 <section id="form-section" class="pg-section with-header">
+<a name="request-a-callback" id="request-a-callback" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		
