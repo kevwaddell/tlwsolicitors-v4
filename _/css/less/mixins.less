@@ -128,6 +128,9 @@ background-color: @col;
 .bg-col-red {
 .bg-col(@red);	
 }
+.bg-col-red-dk {
+.bg-col(@redMid);	
+}
 .bg-col-purple {
 .bg-col(@purple);	
 }
@@ -1012,4 +1015,15 @@ background-blend-mode: multiply;
 			}
 		}
 	}	
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }

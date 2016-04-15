@@ -9,14 +9,13 @@ Template Name: Toolkit page
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
 		$freephone_num = get_field('freephone_num', 'option');
-		$form_active = get_field('form_activated');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
 		$feedback_active = get_field('feedback_active'); 
 		$how_it_works_active = get_field('hiw_active');
-		$all_forms_active = get_field('all_forms_active', 'option');
 		$slides_active = get_field('tk_slides_active');
 		$active_sections = get_field('active_sections');
+		$quick_links = array();
 		
 		if ($page_icon == 'null' || !$page_icon) {
 		$parent = get_page($post->post_parent);
@@ -38,9 +37,8 @@ Template Name: Toolkit page
 			}
 		}
 	?>	
-	<!-- MAIN CONTENT START -->
-
 	
+	<!-- MAIN CONTENT START -->
 	<main>
 		<!-- TOOLKIT BANNER SECTION -->
 		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-banner.inc'); ?>
@@ -59,7 +57,7 @@ Template Name: Toolkit page
 				break;
 				case "Services": include (STYLESHEETPATH . '/_/inc/sections/services-section.inc');
 				break;
-				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/recent-blog.inc');
+				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc');
 				break;
 				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
 				break;
@@ -67,7 +65,7 @@ Template Name: Toolkit page
 			?>
 		<?php } ?>
 		
-	</main>
+	</main>	
 	<?php endwhile; ?>
 	<?php endif; ?>
 

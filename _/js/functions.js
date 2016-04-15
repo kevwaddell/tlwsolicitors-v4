@@ -30,6 +30,11 @@
       size: 5
 	  });
 	  
+	 $('.selectpicker').find('select').selectpicker({
+		'style': 'btn btn-group btn-default', 
+		'width': '100%'
+	});
+	  
 	  $(service_area_select).selectpicker('hide');
 	  $(child_service_area_select).selectpicker('hide');
 	  
