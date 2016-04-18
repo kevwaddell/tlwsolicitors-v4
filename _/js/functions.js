@@ -630,6 +630,9 @@
     		var hash = $(this).attr('href');
     		var scrollTarget = $(hash).offset().top - 40;
     		current_section = hash;
+    		if (current_section == "#toolkit-slides") {
+	    	scrollTarget -= 60;	
+    		}
     		$(this).siblings().removeClass('active');
     		$(this).addClass('active');
     		//console.log(hash);
@@ -655,6 +658,9 @@
 				
 				if ($(prev_section).find('a.section-target')) {
 				var scrollTarget = $(prev_section).offset().top - 40;
+				if ($(prev_section).hasClass('toolkit-slider')) {
+				scrollTarget -= 60;	
+    			}
 				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
 				} else {
 				$('html, body').animate({ scrollTop: 0 }, 500);	

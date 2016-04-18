@@ -3,7 +3,9 @@ $slides_choice = get_field('tk_slides').'_tk_slides';
 $slides = get_field($slides_choice, 'option');
 $slides_total = count($slides);
 $slides_counter = 0;
+$section_title = "Toolkit";	
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
+$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-slides'];	
 ?>
 
 <section class="toolkit-slider">
