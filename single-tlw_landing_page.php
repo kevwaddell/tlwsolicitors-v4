@@ -4,20 +4,13 @@
 <?php 
 $freephone_num = get_field('freephone_num', 'option');
 $number_pos = get_field('tel_num_position');
-//echo '<pre>';print_r($number_pos);echo '</pre>';
 $form = get_field('form');
 $form_active = get_field('form_activated');
 $color = get_field('page_colour');
 $page_icon = get_field('page_icon');
-$on_page_script = get_field('on_page_script');
 $hide_title = get_field('hide_title'); 
 $how_it_works_active = get_field('hiw_active');
-//echo '<pre>';print_r($color);echo '</pre>';
  ?>	
- 
-<?php if (!empty($on_page_script)) { ?>
-<?php echo $on_page_script; ?>
-<?php } ?>
 
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		 	

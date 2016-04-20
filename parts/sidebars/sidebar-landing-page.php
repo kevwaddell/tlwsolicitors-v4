@@ -16,7 +16,8 @@ $all_forms_active = get_field('all_forms_active', 'option');
 	
 		 	<h3>Make your claim today <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
 	
-		 	<?php gravity_form($form->id, false, true, false, null, true); ?>
+		 	<?php //gravity_form($form->id, false, true, false, null, true); ?>
+		 	<?php gravity_form($form->id, false, true, false, array(), true); ?>
 			
 	 	</div>	
 	 	<?php } ?>

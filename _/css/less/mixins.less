@@ -52,6 +52,9 @@ color: @col;
 .txt-col-red {
 .col(@red);
 }
+.txt-col-red-lt {
+.col(lighten(@red, 20%));
+}
 .txt-col-gray {
 .col(@gray);
 }
@@ -952,8 +955,9 @@ background-blend-mode: multiply;
 	.bg-col(darken(@col, 20%));	
 	}
 	
-	input.gform_button {
+	input.gform_button, input.gform_previous_button, input.gform_next_button, .gfield_html a.btn {
 	.bg-col(@col);	
+	.no-border;
 		&:hover, &:active, &:focus {
 		.bg-col(lighten(@col, 10%));
 		}

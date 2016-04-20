@@ -231,6 +231,10 @@ body#landing-page {
 		.rounded(8px);
 		}
 		
+		.gform_body {
+		.col(white);	
+		}
+		
 		.gform_description {
 		.block;
 		.bold;
@@ -238,8 +242,34 @@ body#landing-page {
 		.col(white);
 		}
 		
-		.gfield_label {
-		.none;	
+		.gform_heading {
+		.mag-bot(0) !important;	
+	
+			span.gform_description {
+			.pad-top(0);
+			}	
+		}
+		
+		li.gsection {
+		.mag-top(0);
+			h2 {
+			.col(white);	
+			}	
+			
+			.gsection_description {
+			.mag-all(0);	
+			}
+		}
+		
+		.gfield_label, .gfield_radio label {
+		//.none;
+		.col(white);
+			span.gfield_required {
+			.col(lighten(@red, 40%));
+			.font-size(2);
+			.line-h(1.4);
+			.pad-top(0.5);
+			}	
 		}
 		
 		.gfield {
@@ -316,6 +346,22 @@ body#landing-page {
 			.caps;	
 			.h(6);
 			.font-size(2);
+			}
+		}
+		
+		.gform_page_footer {
+		.over-hide;
+		.mag-bot(0);
+			input.gform_button, input.gform_previous_button, input.gform_next_button {
+			width: 45%;	
+			.caps;	
+			.h(4);
+			.font-size(1.6);
+			}
+			
+			input.gform_next_button, input.gform_button {
+			.fright;	
+			.mag-right(0);
 			}
 		}
 		
