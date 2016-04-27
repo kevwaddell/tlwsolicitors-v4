@@ -10,6 +10,7 @@
 	}
 	
 	.header {
+	position: static;
 	padding: 50px 0px 50px 0px;
 	margin: 0px 100px 50px 100px;
 	border-bottom: 2px solid gray;
@@ -39,7 +40,8 @@
 	#catapult-cookie-bar, #breadcrumbs,
 	#booklet-download-btn, #booklet-download,
 	.feat-img-wide, hr,
-	.user-links {
+	.user-links, .video-banner, 
+	.pg-section, .page-tools, #quick-links {
 	display: none;	
 	}
 	.banner-img-wide {
@@ -73,11 +75,13 @@
 	text-transform: uppercase;	
 	}
 	
-	.content {
+	.content, .content-section {
 	font-family: sans-serif;
+	border: none;
 	
 		h1 {
 		font-size: 60px;	
+		margin-bottom: 40px;
 		}
 		
 		h2 {
@@ -94,9 +98,9 @@
 		
 		p, ul, ol, p.lead, .faq-question {
 		font-weight: normal;
-		font-size: 20px;
-		line-height: 25px;	
-		margin-bottom: 20px;	
+		font-size: 30px;
+		line-height: 45px;	
+		margin-bottom: 30px;	
 		}
 		
 		.faq-question {

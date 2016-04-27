@@ -29,7 +29,7 @@ Template Name: Service Home page
 	?>	
 	
 	<!-- MAIN CONTENT START -->
-<!-- 	<main> -->
+	<main>
 		
 		<!-- BANNER SECTION -->
 		<?php if ($banner_active && $banner_bg == "video") { ?>
@@ -65,7 +65,7 @@ Template Name: Service Home page
 		<?php } ?>
 		<?php } ?>
 		
-<!-- 	</main>	 -->
+	</main>	
 	<?php endwhile; ?>
 	<?php endif; ?>
 

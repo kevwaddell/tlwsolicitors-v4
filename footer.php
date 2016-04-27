@@ -88,6 +88,15 @@
 <!-- 	<button id="back-2-top" class="hidden"><i class="fa fa-chevron-circle-up fa-2x"></i><span class="sr-only">Back to top</span></button> -->	
 			
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('User actions') ) : ?><?php endif; ?>
+		
+	<div id="txt-only-content" class="closed">
+		<div class="container">
+			<button id="close-txt-only-btn" class="btn"><i class="fa fa-times"></i><span class="sr-only">Close</span></button>
+			<div id="txt-only-wrapper">
+			
+			</div>
+		</div>
+	</div>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/no-script.php'); ?>
 	<?php if (!is_home() && !is_single() && !is_archive()) { ?>	

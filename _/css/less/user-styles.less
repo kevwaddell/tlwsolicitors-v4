@@ -96,45 +96,56 @@ body#login {
 .fixed;
 .top(0);
 .bottom(0);	
-.w(20);
+.w(30);
 .transition(0.2s, ease-in-out);
-.bg-col(@red);
+.bg-col(@wht);
 z-index: 9999996;
 
 	#user-btn {
 	.abs;
-	.right(-5);
+	.right(-5.4);
 	.bottom(0);
-	.w(5);
-	.h(5);
+	.w(5.4);
+	.h(5.4);
 	.no-border;
+	.border-right(white; 0.4);
+	.border-top(white; 0.4);
 	.no-rounded;
-	.bg-col(@red);
-	.col(white);
+	.bg-col-grayDk;
+	.col(@wht);
+	.drop-shadow(0, 0, 10px, 0.7);
 		&:hover, &:active, &:focus {
-		.col(@grayDk);	
+		.col(@gray);	
 		}
 	}
 
 	&.open {
 	.left(0);	
+	.drop-shadow(2px, 0, 10px, 0.5);
 		#user-btn {
-		.bg-col(@grayDk);
+		.w(4);
+		.h(4);
+		.right(1);
+		.bottom(1);
+		.rounded(100%);
+		.bg-col-grayLt;
+		.txt-col-grayDk;
+		.no-border;
 			&:hover, &:active, &:focus {
-			.col(white);
+			.bg-col-grayDk;
+			.col(@wht);
 			}
 		}
 	}
 	
 	&.closed {
-	.left(-20);	
+	.left(-30);	
 	}
 
 	ul {
 	padding-left: 0;
 	list-style: none;
 	.mag-bot(0);
-	.bg-col(@red);
 	.pad-all(1);
 	
 		li {
@@ -143,7 +154,6 @@ z-index: 9999996;
 	
 		a {
 		.block;
-		.w(18);
 		.h(5);
 		.line-h(5);
 		.bg-col(@grayDk);

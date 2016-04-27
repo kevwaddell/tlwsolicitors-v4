@@ -3,6 +3,7 @@ $banner_video_mp4 = get_field('banner_video_mp4');
 $banner_video_webm = get_field('banner_video_webm');	
 $banner_video_poster = get_field('banner_video_poster');
 $banner_options = get_field('banner_options');
+$banner_tags = get_field('banner_tags');
 $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
 if ($active_sections) {
 	foreach ($active_sections as $as) {
@@ -27,6 +28,14 @@ if ($active_sections) {
 		</div>
 	</header>
 	<?php } ?>
+	<?php if (!empty($banner_tags)) { ?>
+	<div class="tag-scroller">
+		<?php foreach ($banner_tags as $k => $tag) { ?>
+		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
+		<?php } ?>
+	</div>		
+	<?php } ?>
+	
 	
 	<?php if (in_array("links", $banner_options)) { ?>
 	<nav class ="banner-links text-center">

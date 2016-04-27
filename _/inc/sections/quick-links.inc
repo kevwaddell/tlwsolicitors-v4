@@ -4,9 +4,9 @@
 	<div id="quick-links" class="quick-links-outer closed">
 		
 		<div class="quick-links-btns">
-			<button id="quick-links-btn-dwn" class="dir-btn"><i class="fa fa-angle-left"></i><span class="sr-only">Previous section</span></button>
+			<button id="quick-links-btn-up" class="dir-btn"><i class="fa fa-angle-left"></i><span class="sr-only">Previous section</span></button>
 			<button id="quick-links-btn-show" class="open-nav-btn"><i class="fa fa-anchor"></i>Quick links</button>
-			<button id="quick-links-btn-up" class="dir-btn"><i class="fa fa-angle-right"></i><span class="sr-only">Next section</span></button>
+			<button id="quick-links-btn-dwn" class="dir-btn"><i class="fa fa-angle-right"></i><span class="sr-only">Next section</span></button>
 		</div>
 		
 		<nav class="quick-links-inner">
