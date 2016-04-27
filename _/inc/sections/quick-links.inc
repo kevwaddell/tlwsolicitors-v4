@@ -1,7 +1,10 @@
-<?php global $quick_links; ?>
+<?php 
+global $quick_links;
+global $color; 
+?>
 <!-- INTERNAL PAGE QUICK LINKS -->	
 <?php if (!empty($quick_links)) { ?>
-	<div id="quick-links" class="quick-links-outer closed">
+	<div id="quick-links" class="quick-links-outer closed col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		
 		<div class="quick-links-btns">
 			<button id="quick-links-btn-up" class="dir-btn"><i class="fa fa-angle-left"></i><span class="sr-only">Previous section</span></button>
