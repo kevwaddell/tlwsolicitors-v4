@@ -12,7 +12,7 @@ if ($active_sections) {
 			break;
 			case "Downloads": $banner_quick_links[] = ['link_title' => 'Downloadable Rescourses', 'link_anchor' => 'downloads'];
 			break;
-			case "Toolkit Links": $banner_quick_links[] = ['link_title' => 'TLW Toolkit', 'link_anchor' => 'tlw-toolkit'];
+			case "Toolkit Links": $banner_quick_links[] = ['link_title' => 'TLW Toolkit', 'link_anchor' => 'toolkit-links'];
 			break;
 		}
 	}

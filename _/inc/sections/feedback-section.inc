@@ -21,7 +21,7 @@ $gender = get_field('gender', $feedback_id);
 
 $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
 ?>
-<section id="feedback-section" class="pg-section col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<section id="feedback-section" class="pg-section bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="container feedback-quote">
 		<div class="row">

@@ -4,7 +4,7 @@ $download_section_files = get_field('download_section_files');
 $files_count = count($download_section_files);
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'downloads'];	
 ?>
-<section id="downloads-section" class="pg-section with-icon-logo col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<section id="downloads-section" class="pg-section with-icon-logo bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 <a name="downloads" id="downloads" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
