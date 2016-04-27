@@ -637,8 +637,19 @@
 		$('body').on(event_type, 'button#txt-only-btn', function(e){
 			
 			var main_txt = $('.content-section').find('.main-txt');
+			var title_txt = $('.banner-title .container').text();
 			
-			$(main_txt).clone().appendTo('#txt-only-wrapper');
+			console.log(title_txt);
+
+			var txt_copy = $(main_txt).clone();
+			
+			if (title_txt) {
+			var title_copy = '<div class="title-header">'+ title_txt +'</div>';	
+			$(title_copy).appendTo('#txt-only-wrapper');
+			}
+			
+			$(txt_copy).slimScroll({height: 'auto'}).appendTo('#txt-only-wrapper');
+			
 			$('#txt-only-wrapper').fadeIn('fast');
 			$('body').addClass('txt-only-open');
 			
@@ -676,7 +687,7 @@
 		$(currentTag).fadeToggle(500).removeClass('active');
 		$(nextTag).fadeToggle(1000).addClass('active');
 
-		console.log(nextTag);
+		//console.log(nextTag);
 		};
 		
 		startTagInterval();
