@@ -608,6 +608,19 @@
 			
 		});
 		
+		/* QUICK LINKS IN BANNER SECTION */
+		
+		$('body').on(event_type, 'nav.banner-links a', function(e){
+			
+			var hash = $(this).attr('href');
+    		var scrollTarget = $(hash).offset().top - 40;
+    		current_section = hash;
+    		 
+    		$('html, body').animate({ scrollTop: scrollTarget }, 500);	   
+
+			return false;
+		});
+		
 		/* QUICK LINKS BUTTONS */
 		$('body').on(event_type,'button#quick-links-btn-show', function(e){
     	

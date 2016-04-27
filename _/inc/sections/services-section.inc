@@ -3,6 +3,7 @@ $section_title = get_field('service_section_title');
 $section_pgs = get_field('service_section_pgs');
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'our-specialist-services'];	
 ?>
+<?php if ($section_pgs) { ?>
 <section id="services-section" class="pg-section with-header col-<?php echo (!empty($color)) ? $color : 'red'; ?> with-bg-img" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>);">
 <a name="our-specialist-services" id="our-specialist-services" class="section-target"></a>
 	<div class="container">
@@ -16,3 +17,4 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'our-speciali
 	<div class="col-overlay"></div>
 	<div class="overlay"></div>
 </section>
+<?php } ?>

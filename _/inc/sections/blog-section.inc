@@ -1,5 +1,8 @@
 <?php
 $section_title = get_field('blog_section_title');	
+if (empty($section_title)) {
+$section_title = "Recent blog articles";
+}
 $blog_categories = get_field('blog_section_articles');
 $recent_posts_args = array (
 'posts_per_page' => 3,
@@ -45,7 +48,7 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 				<?php } ?>
 				
 			</div>
-			<div class="row">
+			<div class="row blog-dropdowns">
 				<div class="col-xs-6">
 					<?php if ($cats) { ?>
 					<select id="cats" class="selectpicker" data-width="100%">

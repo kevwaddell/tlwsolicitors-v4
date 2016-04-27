@@ -1,7 +1,9 @@
-<header class="header<?php echo (is_page_template('page-templates/toolkit-page.php')) ? ' abs-header':''; ?>" role="banner">
-	<?php if (!is_page_template('page-templates/toolkit-page.php')) { ?>
+<header class="header<?php echo (is_page_template('page-templates/toolkit-page.php') || is_page_template('page-templates/service-home-page.php')) ? ' abs-header':''; ?>" role="banner">
+<!--
+	<?php if (!is_page_template('page-templates/toolkit-page.php') || !is_page_template('page-templates/service-home-page.php')) { ?>
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
-	<?php }  ?>
+	<?php } ?>
+-->
 	<?php 
 	$freephone_num = get_field('freephone_num', 'option');
 	$main_email = get_field('main_email', 'option');

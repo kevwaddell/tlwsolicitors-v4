@@ -38,6 +38,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<!-- HEADER LOGO AND NAVIGATION -->
 	<?php include (STYLESHEETPATH . '/_/inc/global/masthead.php'); ?>	
 		
-	<?php if (!is_front_page() && !is_page('services-for-you') && !is_page_template('page-templates/service-landing-page.php') && !is_page_template('page-templates/toolkit-page.php')) { ?>
+	<?php if (!is_front_page() && !is_page('services-for-you') 
+		&& !is_page_template('page-templates/service-landing-page.php') 
+		&& !is_page_template('page-templates/toolkit-page.php')
+		&& !is_page_template('page-templates/service-home-page.php')
+		) { ?>
 	<?php include (STYLESHEETPATH . '/_/inc/global/breadcrumbs.php'); ?>	
 	<?php }  ?>
