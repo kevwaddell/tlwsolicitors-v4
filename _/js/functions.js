@@ -532,12 +532,10 @@
    $('body').on('click','button#show-more-links-btn', function(e){
 	   	   
 		var text = $(this).find('span').text();
-	   
-		$(this).find('span').toggleClass('sr-only');
 		
 		$(this).parent().toggleClass('view-all-links');
 		
-		$(this).find('span').addclass('sr-only').text((text == "View More") ? "Close" : "View More");
+		$(this).find('span').toggleClass('sr-only').text((text == "View More") ? "Close" : "View More");
 		
 		return false;
 	});
