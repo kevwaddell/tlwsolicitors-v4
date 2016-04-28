@@ -8,9 +8,12 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'our-speciali
 <a name="our-specialist-services" id="our-specialist-services" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-		<nav class="services-nav">
-			<?php foreach ($section_pgs as $pg) { ?>
-			<a href="<?php echo get_permalink($pg['service_pg']); ?>"><?php echo get_the_title($pg['service_pg']); ?></a>
+		<nav class="services-nav<?php echo (count($section_pgs) > 4) ? ' hide-all-links':''; ?>">
+			<?php foreach ($section_pgs as $k => $pg) { ?>
+			<a href="<?php echo get_permalink($pg['service_pg']); ?>" class="services-nav-link<?php echo ($k > 3) ? ' link-hidden':''; ?>"><?php echo get_the_title($pg['service_pg']); ?></a>
+			<?php } ?>
+			<?php if (count($section_pgs) > 4) { ?>
+				<button id="show-more-links-btn" class="btn btn-default btn-block no-rounded"><span>View More</span></button>	
 			<?php } ?>
 		</nav>
 	</div>

@@ -6,6 +6,7 @@ $banner_options = get_field('banner_options');
 $banner_tags = get_field('banner_tags');
 $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
 if ($active_sections) {
+
 	foreach ($active_sections as $as) {
 		switch($as){
 			case "Form": $banner_quick_links[] = ['link_title' => 'Request a Callback', 'link_anchor' => 'request-a-callback'];
@@ -16,11 +17,15 @@ if ($active_sections) {
 			break;
 		}
 	}
+	
+	if (!in_array("Downloads", $active_sections)) {
+	$banner_quick_links[] = ['link_title' => 'Recent Blog Articles', 'link_anchor' => 'recent-blog-articles'];	
+	}
 }
 
 ?>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
-<section id="top-banner" class="top-banner video-banner">
+<section id="top-banner" class="top-banner-video">
 	<?php if (in_array("title", $banner_options)) { ?>
 	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">

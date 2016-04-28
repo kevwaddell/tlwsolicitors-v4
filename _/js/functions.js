@@ -494,6 +494,55 @@
         height: '300px'
     });
     
+    //POST CONTINUE READING BUTTONS
+	$('body').on('click','button#continue-read-btn', function(e){
+		
+		var inner_h = $('#content-extra-inner').outerHeight();
+			
+		$('button#continue-read-btn').addClass('hidden');
+		
+		$('html, body').animate({scrollTop: ($('#content-extra-inner').offset().top - 20)}, 500);
+		
+		$('#content-extra').animate({height: inner_h+"px"}, 500, function(){
+			$('#content-extra').removeClass('closed').addClass('open').removeAttr('style');
+		});
+
+		return false;
+		
+	});
+	
+	$('body').on('click','button#close-content-extra-btn', function(e){
+		
+		$('button#continue-read-btn').removeClass('hidden');
+		
+		$('html, body').animate({scrollTop: ($('h1').offset().top - 200)}, 500);
+			
+		$('#content-extra').animate({height: "0px"}, 500, function(){
+			$('#content-extra').removeClass('open').addClass('closed').removeAttr('style');	
+		});	
+		
+		return false;
+		
+	});
+	
+	 /* SERVICES SECTION
+	View all links button  
+   */
+   
+   $('body').on('click','button#show-more-links-btn', function(e){
+	   	   
+		var text = $(this).find('span').text();
+	   
+		$(this).find('span').toggleClass('sr-only');
+		
+		$(this).parent().toggleClass('view-all-links');
+		
+		$(this).find('span').addclass('sr-only').text((text == "View More") ? "Close" : "View More");
+		
+		return false;
+	});
+   
+    
      /* TOOLKIT SCROLLER 
 	Adds new styled scroll bars to media feeds   
    */
