@@ -205,6 +205,17 @@ function add_toolkit_banner_img( $post ) {
 	
 }
 
+function add_full_page_banner_img( $post ) {	
+		
+	$post_thumbnail_id = get_post_thumbnail_id( $post );
+	$banner_feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
+	
+	echo $banner_feat_img[0];
+	
+	//echo '<pre>';print_r( $wide_banner_img[0] );echo '</pre>';
+	
+}
+
 function add_banner_feat_img( $post ) {	
 		
 	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
