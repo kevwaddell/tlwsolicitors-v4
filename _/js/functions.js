@@ -512,7 +512,7 @@
 	   Button actions to control the text size
     */
     
-    $('body').on(event_type,'button.access-btn', function(e){
+    $('body').on(event_type,'.type-post button.access-btn', function(e){
     
     	var txt_size = $(this).attr('data-role');
     	
@@ -525,6 +525,34 @@
 		return false;
 		
 	});
+	
+	$('body').on(event_type,'.type-page button.access-btn', function(e){
+    
+    	var txt_size = $(this).attr('data-role');
+    	
+    	$(this).siblings().removeClass('active');
+    	$(this).addClass('active');
+    	
+    	 $('body').removeClass('txt-md txt-lg txt-sm').addClass(txt_size);
+    	 $.cookie('font_size', txt_size, { path: '/' } );  
+	     	     			
+		return false;
+		
+	});
+	
+	$('body').on(event_type,'#txt-only-content button.access-btn', function(e){
+    
+    	var txt_size = $(this).attr('data-role');
+    	
+    	$(this).siblings().removeClass('active');
+    	$(this).addClass('active');
+    	
+    	$('.main-txt').removeClass('txt-md txt-lg txt-sm').addClass(txt_size);
+	     	     			
+		return false;
+		
+	});
+	
 	
 		$('#feedback-carousel').carousel({
 			pause: false,
@@ -638,17 +666,18 @@
 			
 			var main_txt = $('.content-section').find('.main-txt');
 			var title_txt = $('.banner-title .container').text();
-			
-			console.log(title_txt);
 
 			var txt_copy = $(main_txt).clone();
+			var scroller_h = $('#txt-only-content').innerHeight() - 170;
+			
+			console.log(scroller_h);
 			
 			if (title_txt) {
 			var title_copy = '<div class="title-header">'+ title_txt +'</div>';	
 			$(title_copy).appendTo('#txt-only-wrapper');
 			}
 			
-			$(txt_copy).slimScroll({height: 'auto'}).appendTo('#txt-only-wrapper');
+			$(txt_copy).appendTo('#txt-only-wrapper').slimScroll({height: scroller_h+'px'});
 			
 			$('#txt-only-wrapper').fadeIn('fast');
 			$('body').addClass('txt-only-open');
