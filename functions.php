@@ -425,4 +425,36 @@ add_filter('get_archives_link', 'tlw_theme_get_archives_link');
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
+add_filter('ysacf_exclude_fields', function(){
+    return array(
+        'page_colour',
+        'page_icon',
+        'hide_title',
+        'tel_num_position',
+        'form_activated',
+        'feedback_active',
+        'hiw_active',
+        'form',
+        'download_active',
+        'bk_download_active',
+        'faqs_active',
+        'dep_head_active',
+        'head_of_dep',
+        'faqs',
+        'faqs_list_or_link',
+        'bk_btn_title',
+        'active_sections',
+        'form_section_title',
+        'downloads_section_title',
+        'service_section_title',
+        'service_section_pgs',
+        'blog_section_title',
+        'blog_section_articles',
+        'banner_bg',
+        'banner_video_mp4',
+        'banner_video_webm',
+        'banner_options'
+    );
+});
+
  ?>
