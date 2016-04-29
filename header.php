@@ -3,7 +3,7 @@
 $body_classes = array($font_size);	
 
 if ( !isset($_GET['gsdm']) ) {
-array_push($body_classes, 'loading');
+array_push($body_classes, 'poop');
 }
 ?>	
 

@@ -328,6 +328,12 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+if( function_exists('acf_add_options_sub_page') ) {
+
+	acf_add_options_sub_page('Homepage');
+	
+}
+
 add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
 function my_mce_buttons_2( $buttons ) {
 	//echo '<pre>';print_r($buttons);echo '</pre>';

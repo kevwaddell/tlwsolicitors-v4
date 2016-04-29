@@ -794,6 +794,22 @@
 			return false;
 		});
 		
+		/* SCROLL DOWN BUTTON 
+		In the intro section on the home page
+		 */
+		$('body').on(event_type, 'button#intro-scroll-down-btn', function(e){
+			var next = $(this).parents('article.content-section').next().find('a.section-target');
+			var hash = $(next).attr('id');
+    		var scrollTarget = $('#'+hash).offset().top - 40;
+    		current_section = '#'+hash;
+    		
+    		$('html, body').animate({ scrollTop: scrollTarget }, 500);
+    		
+			//console.log(next);
+			
+			return false;
+		});
+		
 		/* QUICK LINKS BUTTONS */
 		$('body').on(event_type,'button#quick-links-btn-show', function(e){
     	
@@ -906,6 +922,7 @@
 			$('i.fa-spinner').hide();
 		}
 		
+/*
 		if ($('body').hasClass('loading') && $('#site-loader').length == 1) {
 			$('body').removeClass('loading').addClass('loaded');	
 		
@@ -914,6 +931,7 @@
 			});
 
 		}
+*/
 		
 		new WOW().init();
 		

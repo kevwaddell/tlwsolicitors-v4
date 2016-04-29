@@ -99,7 +99,7 @@
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.php'); ?>
 	
 	<?php if ( !isset($_GET['gsdm']) ) : ?>
-	<?php include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
+	<?php //include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
 	<?php endif; ?>
 	
 	<?php wp_footer(); ?>
