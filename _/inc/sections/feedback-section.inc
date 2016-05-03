@@ -25,6 +25,7 @@ $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'
 <section id="feedback-section" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="item bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		
 		<div class="container feedback-quote">
 			<div class="row">
 				<div class="col-xs-2 text-left">
@@ -40,6 +41,8 @@ $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'
 				</div>
 			</div>
 		</div>
+		
 		<div class="overlay"></div>
+		
 	</div>
 </section>

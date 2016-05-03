@@ -46,7 +46,6 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-		<div class="container">
 			<div class="row posts-list">
 				<?php foreach ($recent_posts as $rpost) { 
 				$ID = $rpost->ID;
@@ -109,7 +108,6 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 					<?php } ?>
 				</div>
 			</div>
-		</div>
-	</div>
+	</div>Outer
 </section>
 <?php } ?>

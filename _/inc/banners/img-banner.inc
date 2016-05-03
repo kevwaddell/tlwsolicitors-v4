@@ -21,7 +21,7 @@ if ($active_sections) {
 	}
 }		
 ?>
-<section id="top-banner" class="top-banner-img fixed-bg" style="background-image: url(<?php echo $banner_bg_img;?>)">
+<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php echo $banner_bg_img;?>)">
 	<?php if (in_array("title", $banner_options)) { ?>
 	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">

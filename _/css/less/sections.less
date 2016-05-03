@@ -523,8 +523,10 @@ height: 100vh;
 		}
 	}
 	
-	&.video-banner {
-		
+	&.no-title {
+		.top-drk-grad, .tag-scroller {
+		.top(13);	
+		}
 	}	
 }
 // ARTICLE SECTION
@@ -712,6 +714,7 @@ article.content-section {
 .pg-section {
 .pad-bot(4);	
 .rel;
+
 	.overlay {
 	.abs;
 	width: 100%;
@@ -1496,6 +1499,8 @@ article.content-section {
 // -->BLOG SECTION
 
 	&#blog-posts {
+	.pad-bot(0);
+	.bg-col(@wht);
 		
 		.posts-list {
 		.mag-bot(3);	
@@ -1656,6 +1661,7 @@ article.content-section {
 	&#feedback-section {
 		.border-top(@wht; 0.4);
 		.pad-bot(0);
+		.bg-col(@wht);
 		
 		.feedback-quote {
 		z-index: 1;	
@@ -1667,14 +1673,12 @@ article.content-section {
 		.font-size(7);	
 		}	
 		
-		.carousel-inner {
-		overflow: visible;	
-		}
-		
 		.item {
 		.pad-top(4);
 		.pad-bot(4);
 		.min-h(26);	
+		.mag-top(2.5);
+		.rel;
 			
 			&.bg-col-purple {
 			span.gender-icon {

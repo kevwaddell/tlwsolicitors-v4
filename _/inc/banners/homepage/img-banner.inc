@@ -3,7 +3,7 @@ $banner_bg_img = get_field('hp_banner_bg_img', 'option');
 $banner_tags = get_field('hp_banner_tags', 'option');
 $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');	
 ?>
-<section id="top-banner" class="top-banner-img fixed-bg" style="background-image: url(<?php echo $banner_bg_img;?>)">
+<section id="top-banner" class="top-banner-img fixed-bg no-title" style="background-image: url(<?php echo $banner_bg_img;?>)">
 	<?php if (!empty($banner_tags)) { ?>
 	<div class="tag-scroller">
 		<?php foreach ($banner_tags as $k => $tag) { ?>
@@ -22,4 +22,5 @@ $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');
 	<?php } ?>
 	
 	<div class="img-overlay"></div>
+	<div class="top-drk-grad"></div>
 </section>
