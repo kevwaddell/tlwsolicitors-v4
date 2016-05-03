@@ -696,6 +696,7 @@ section.pg-section {
 	.bg-img("thin-stripe-wht.png");	
 	z-index: 0;
 	.opacity(0.3);
+	.inner-shadow(0, 0, 20px, 0.7);
 	}
 	
 	.col-overlay {
@@ -1614,8 +1615,7 @@ section.pg-section {
 // -->FEEDBACK SECTION	
 	&#feedback-section {
 		.border-top(@wht; 0.4);
-		.pad-top(4);
-		.min-h(20);
+		.pad-bot(0);
 		
 		.feedback-quote {
 		z-index: 1;	
@@ -1626,6 +1626,62 @@ section.pg-section {
 		.pad-top(0.5);
 		.font-size(7);	
 		}	
+		
+		.carousel-inner {
+		overflow: visible;	
+		}
+		
+		.item {
+		.pad-top(4);
+		.pad-bot(4);
+		.min-h(26);	
+			
+			&.bg-col-purple {
+			span.gender-icon {
+			.bg-col-purple-dk;	
+			}
+			i.quote-icon, span.quote-name {
+			.txt-col-purple-dk;		
+			}
+			}
+			
+			&.bg-col-green {
+				span.gender-icon {
+				.bg-col-green-dk;	
+				}
+				i.quote-icon, span.quote-name {
+				.txt-col-green-dk;		
+				}
+			}
+			
+			&.bg-col-pink {
+				span.gender-icon {
+				.bg-col-pink-dk;	
+				}
+				i.quote-icon, span.quote-name {
+				.txt-col-pink-dk;		
+				}
+			}
+			
+			&.bg-col-orange {
+				span.gender-icon {
+				.bg-col-orange-dk;	
+				}
+				i.quote-icon, span.quote-name {
+				.txt-col-orange-dk;		
+				}
+			}
+			
+			&.bg-col-blue {
+				span.gender-icon {
+				.bg-col-blue-dk;	
+				}
+				i.quote-icon, span.quote-name {
+				.txt-col-blue-dk;		
+				}
+			}
+
+		}
 		
 		span {
 		.rel;
@@ -1667,50 +1723,6 @@ section.pg-section {
 		.rel;
 		}
 		
-		&.bg-col-purple {
-			span.gender-icon {
-			.bg-col-purple-dk;	
-			}
-			i.quote-icon, span.quote-name {
-			.txt-col-purple-dk;		
-			}
-		}
-		
-		&.bg-col-green {
-			span.gender-icon {
-			.bg-col-green-dk;	
-			}
-			i.quote-icon, span.quote-name {
-			.txt-col-green-dk;		
-			}
-		}
-		
-		&.bg-col-pink {
-			span.gender-icon {
-			.bg-col-pink-dk;	
-			}
-			i.quote-icon, span.quote-name {
-			.txt-col-pink-dk;		
-			}
-		}
-		
-		&.bg-col-orange {
-			span.gender-icon {
-			.bg-col-orange-dk;	
-			}
-			i.quote-icon, span.quote-name {
-			.txt-col-orange-dk;		
-			}
-		}
-		
-		&.bg-col-blue {
-			span.gender-icon {
-			.bg-col-blue-dk;	
-			}
-			i.quote-icon, span.quote-name {
-			.txt-col-blue-dk;		
-			}
-		}
 	}
 }
 

@@ -1,5 +1,6 @@
 <?php
 global $feedback_active;
+global $color;
 if ($feedback_active) {
 	$feedback_id = get_field('client_feedback');	
 } else {
@@ -21,22 +22,24 @@ $gender = get_field('gender', $feedback_id);
 
 $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
 ?>
-<section id="feedback-section" class="pg-section bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<section id="feedback-section" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>
-	<div class="container feedback-quote">
-		<div class="row">
-			<div class="col-xs-2 text-left">
-				<i class="fa fa-quote-left quote-icon"></i>
-			</div>
-			<div class="col-xs-8">
-				<span class="gender-icon fa fa-<?php echo ($gender == 'm') ? 'male':'female'; ?>"></span>
-				<blockquote class="no-border text-center"><?php echo $quote_txt; ?></blockquote>
-				<span class="quote-name"><?php echo $client_name; ?>, <?php echo $location; ?></span>
-			</div>
-			<div class="col-xs-2 text-right">
-				<i class="fa fa-quote-right quote-icon"></i>
+	<div class="item bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<div class="container feedback-quote">
+			<div class="row">
+				<div class="col-xs-2 text-left">
+					<i class="fa fa-quote-left quote-icon"></i>
+				</div>
+				<div class="col-xs-8">
+					<span class="gender-icon fa fa-<?php echo ($gender == 'm') ? 'male':'female'; ?>"></span>
+					<blockquote class="no-border text-center"><?php echo $quote_txt; ?></blockquote>
+					<span class="quote-name"><?php echo $client_name; ?>, <?php echo $location; ?></span>
+				</div>
+				<div class="col-xs-2 text-right">
+					<i class="fa fa-quote-right quote-icon"></i>
+				</div>
 			</div>
 		</div>
+		<div class="overlay"></div>
 	</div>
-	<div class="overlay"></div>
 </section>
