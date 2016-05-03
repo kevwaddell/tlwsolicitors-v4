@@ -56,5 +56,6 @@ if ($active_sections) {
 		<source src="<?php echo get_stylesheet_directory_uri(); ?>/_/videos/serious-injury-video.mp4" type="video/mp4" />
 	</video>
 	<div class="video-overlay"></div>
-
+	<div class="top-drk-grad"></div>
+	
 </section>

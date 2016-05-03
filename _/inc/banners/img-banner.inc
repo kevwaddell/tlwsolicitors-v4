@@ -47,4 +47,5 @@ if ($active_sections) {
 	<?php } ?>
 	
 	<div class="img-overlay"></div>
+	<div class="top-drk-grad"></div>
 </section>

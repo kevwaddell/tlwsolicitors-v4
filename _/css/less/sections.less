@@ -373,7 +373,7 @@ height: 100vh;
 
 	header.banner-title {
 	.abs;
-	.top(12);
+	.top(13);
 	.left(0);
 	width: 100%;
 	.h(5);
@@ -388,7 +388,7 @@ height: 100vh;
 	
 	.tag-scroller {
 	.abs;
-	.top(17);	
+	.top(18);	
 	.left(0);
 	width: 100%;
 	text-align: center;
@@ -436,6 +436,21 @@ height: 100vh;
 	
 	.img-overlay {
 	.trans-bg(@grayDk; 0.7);
+	}
+	
+	.top-drk-grad {
+	.abs;
+	.left(0);
+	.top(13);		
+	width: 100%;
+	height: 50%;
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#00333333',GradientType=0 ); /* IE6-9 */
+	.opacity(0.7);
+	z-index: 0;
+	//.none;
 	}
 	
 	nav.banner-links {

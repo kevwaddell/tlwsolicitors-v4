@@ -36,31 +36,18 @@ header[role="banner"] {
 	//.border-bot(white; 0.1);
 	}
 	
-	span.tag-line {
-	width: 40%;	
+	span.tag-line {	
 	text-align: center;
-	.fleft;
-	.font-size(1.6);
-	.line-h(4);	
+	.font-size(2.2);
+	.line-h(8);	
 	.caps;
-	.col(white);
+	.txt-col-grayDk;
+	.font-slab-serif;
 	}
 	
-	span.contact-link {
-	.block;
-	.font-size(2);
-	.line-h(4);	
-	//.border-bot(white; 0.1);
-	.fleft;
-	width: 30%;
-	
-		&.rs {
-		text-align: right;
-		}
-		
-		&.ls {
-		text-align: left;
-		}
+	.contact-link {
+	.font-size(2.4);
+	.line-h(5);	
 				
 		i {
 		.col(@red);	
@@ -69,38 +56,70 @@ header[role="banner"] {
 		a {
 		.col(white);
 			&:hover, &:active, &:focus {
-			.col(@red);
+			.txt-col-red-lt;
 			}
 		}
 		
 	}
 	
-	.nav-action {
+	.header-action-btns {
 	.pad-top(1.8);
-		span {
-		.caps;
-		.col(@gray);
-		.line-h(4.5);
-		.pad-right(1);	
-		}	
-		
-		#nav-btn {
+	.fright;
+	
+		.btn {
 		.rounded(0px);
-		.no-border;
-		.col(white);
-		.bg-col(@red);	
-		.w(4.5);
+		.border(@grayDk; 0.4);
+		.col(@grayDk);
+		.bg-col(@trans);	
 		.h(4.5);
 		.pad-all(0);
+		.pad-left(1);
+		.pad-right(1);
 		outline: none;
+		.caps;
+		.font-size(1.6);
+		.mag-left(2);
+		
+			i {
+			.pad-left(1);	
+			}
 			
 			&:hover, &:active, &:focus {
-			.bg-col(@redMid);
+			.bg-col(@grayDk);
+			.col(@wht);
 			}
 		}
 
 	}
 	
+	.info-links {
+		ul {
+		.pad-top(1.5);
+		text-align: center;	
+		}
+		li {
+		.in-block;	
+		.border-right(@wht; 0.1);
+		.line-h(1.4);
+			&:last-child {
+			border-right: none;	
+			}
+		}
+		
+		a {
+		.col(@wht);
+		.no-text-dec;
+		.pad-left(1.5);
+		.pad-right(1.5);	
+		.font-size(1.4);
+			&:hover, &:active, &:focus {
+			.txt-col-red-lt;
+			.bold;
+			}
+		}
+	}
+	
+/*
 	.header-links {
 	.pad-top(2.3);
 		a {
@@ -136,24 +155,27 @@ header[role="banner"] {
 			}
 
 		}
-		
-		.social-links {
-		.pad-left(2);	
-			
-			a {
-			.pad-all(0);
-			.no-border;	
-			.in-block;
-			.h(3.5);
-			.w(3.5);
-			.line-h(3.5);
-			.bg-col(@grayDk);
-			.col(white);
-			.rounded(23px);
-		
-				&:hover, &:active, &:focus {
-				.bg-col(@gray);
-				}
+	}
+*/
+	
+	.social-links {	
+	text-align: right;
+		a {
+		.pad-all(0);
+		.no-border;	
+		.in-block;
+		.h(3);
+		.w(3);
+		.line-h(2.8);
+		.border(@wht; 0.1);
+		.bg-col(@trans);
+		.col(@wht);
+		.rounded(100%);
+		.mag-top(1);
+	
+			&:hover, &:active, &:focus {
+			.bg-col(@wht);
+			.txt-col-grayDk;
 			}
 		}
 	}

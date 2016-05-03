@@ -53,7 +53,8 @@ if ( function_exists( 'register_nav_menus' ) ) {
 			  'legal_links_menu' => 'Legal Menu',
 			  'social_links_menu' => 'Footer Social Links',
 			  'footer_menu_business' => 'Footer Menu Business',
-			  'footer_menu_general' => 'Footer Menu General'
+			  'footer_menu_general' => 'Footer Menu General',
+			  'top_bar_menu' => 'Top Bar Navigation'
 			)
 		);
 }

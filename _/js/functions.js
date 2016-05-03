@@ -440,7 +440,7 @@
 	
 	// 	HEADER SEARCH BUTTON
 	
-	$('body').on(event_type,'a#search-btn', function(e){
+	$('body').on(event_type,'button#search-btn', function(e){
 	
 		if ( $('#search-pop-up').hasClass('off') ) {
 			
