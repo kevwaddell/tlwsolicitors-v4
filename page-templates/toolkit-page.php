@@ -48,6 +48,7 @@ Template Name: Toolkit page
 		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-slides.inc'); ?>		
 		<?php } ?>
 		
+		<?php if ($active_sections) { ?>
 		<?php foreach ($active_sections as $section) { ?>
 			<?php 
 			switch($section){
@@ -63,6 +64,7 @@ Template Name: Toolkit page
 				break;
 			}	
 			?>
+		<?php } ?>
 		<?php } ?>
 		
 	</main>	

@@ -23,7 +23,7 @@ $quick_links[] = ['link_title' => "TLW ".$toolkit_title, 'link_anchor' => 'toolk
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
 	
 	<div class="container">
-		<span class="tk-icon fa <?php echo $page_icon; ?> fa-4x"></span>
+		<span class="tk-icon"></span>
 		<div class="tk-parent-pg-title font-slab-serif caps"><?php bloginfo('name'); ?></div>		
 		<div class="tk-pg-title font-slab-serif caps"><?php echo $toolkit_title; ?></div>	
 		<div class="tk-pg-intro font-slab-serif"><?php echo $toolkit_intro; ?></div>
@@ -32,9 +32,11 @@ $quick_links[] = ['link_title' => "TLW ".$toolkit_title, 'link_anchor' => 'toolk
 		
 			<?php foreach ($links as $link) { 
 			$page = get_page($link['page']);
+			$pg_col = get_field('page_colour', $link['page']);
+			$pg_icon = get_field('page_icon', $link['page']);
 			?>
-			<a href="<?php echo get_permalink($link['page']); ?>" class="toolkit-link">
-					<i class="fa fa-heartbeat link-icon"></i>
+			<a href="<?php echo get_permalink($link['page']); ?>toolkit/" class="toolkit-link link-col-<?php echo $pg_col; ?>">
+					<i class="fa <?php echo $pg_icon; ?> link-icon"></i>
 					<?php echo get_the_title($link['page']); ?>
 			</a>
 			<?php } ?>
@@ -43,10 +45,12 @@ $quick_links[] = ['link_title' => "TLW ".$toolkit_title, 'link_anchor' => 'toolk
 		<div class="row">
 			<?php foreach ($links as $link) { 
 			$page = get_page($link['page']);
+			$pg_col = get_field('page_colour', $link['page']);
+			$pg_icon = get_field('page_icon', $link['page']);
 			?>
 			<div class="col-xs-6">
-				<a href="<?php echo get_permalink($link['page']); ?>" class="toolkit-link">
-					<i class="fa fa-heartbeat link-icon"></i>
+				<a href="<?php echo get_permalink($link['page']); ?>toolkit/" class="toolkit-link link-col-<?php echo $pg_col; ?>">
+					<i class="fa <?php echo $pg_icon; ?> link-icon"></i>
 					<?php echo get_the_title($link['page']); ?>
 				</a>
 			</div>
