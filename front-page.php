@@ -53,8 +53,8 @@
 			<?php include (STYLESHEETPATH . '/_/inc/banners/homepage/img-banner.inc'); ?>		
 		<?php } ?>
 		
-		
 		<!-- MAIN TEXT SECTION -->
+		
 		<?php include (STYLESHEETPATH . '/_/inc/sections/homepage/main-content-section.inc'); ?>
 		
 		<?php if ($hp_sections) { ?>		

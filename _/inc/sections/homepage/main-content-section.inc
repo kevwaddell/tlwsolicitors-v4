@@ -7,11 +7,16 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'service-info
 ?>
 <article <?php post_class("content-section"); ?>>
 	<a name="service-info-txt" id="service-info-txt" class="section-target"></a>
+					
+	<?php if (!empty($freephone_num)) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	<?php } ?>
+	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	
 	<div class="container">
 		<div class="entry wide-entry">
-			<div class="main-txt">
+			<div class="main-txt home">
 			<?php the_content(); ?>
 			</div>	
 			<?php if ($related_pages) { 

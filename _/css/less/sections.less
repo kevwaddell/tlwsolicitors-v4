@@ -1,3 +1,4 @@
+//TEXT ONLY VIEW
 #txt-only-content {
 .fixed;
 .left(0);
@@ -143,6 +144,7 @@ z-index: 9999996;
 	}
 }
 
+//QUICK LINKS FLOATING SIDE NAVIGATION
 #quick-links {
 .fixed;
 .bottom(0);
@@ -578,6 +580,14 @@ article.content-section {
 	}
 
 	.main-txt {	
+		
+		&.home {
+			h2 {
+			.font-size(7);
+			.line-h(8);	
+			text-transform: none;
+			}	
+		}
 			
 		h1 {
 		.font-size(7);
@@ -684,7 +694,7 @@ article.content-section {
 
 }
 
-section.pg-section {
+.pg-section {
 .pad-bot(4);	
 .rel;
 	.overlay {
@@ -1738,6 +1748,112 @@ section.pg-section {
 		.rel;
 		}
 		
+	}
+}
+
+//GLOBAL FREEPHONE TELEPHONE NUMBER STYLE
+#global-tel-num {
+.border-bot(@wht; 0.4);
+.pad-top(1.5);
+.pad-bot(1.5);
+
+	.container {
+	.pad-top(0);	
+	.pad-bot(0);
+	}
+	
+	.overlay {
+	.abs;
+	width: 100%;
+	height: 100%;
+	.top(0);
+	.left(0);
+	.bg-img("thin-stripe-wht.png");	
+	z-index: 0;
+	.opacity(0.3);
+	.inner-shadow(0, 0, 20px, 0.7);
+	}
+
+	i {
+	.block;
+	.w(9);
+	.h(9);
+	.line-h(8.2);
+	.border(@wht; 0.4);
+	.rounded(100%);	
+	text-align: center;
+	.col(@wht);	
+	.bg-col-red;
+	.drop-shadow(0, 3px, 10px, 0.8);
+	.rel;
+	z-index: 2;
+	.animated;
+		&.fa-phone {
+		.bounceInLeft;	
+		}
+		
+		&.fa-mobile-phone {
+		.bounceInRight;	
+		}
+	}
+	
+	.number {
+	.rel;
+	z-index: 2;
+	.font-size(6.5);
+	.line-h(9);	
+	.col(@wht);	
+	text-shadow: 0px 3px 5px rgba(50, 50, 50, 0.8);
+	text-align: center;
+		span {
+		.txt-col-green;	
+		}
+		a {
+		.txt-col-orange;	
+		.bold;
+		.no-text-dec;
+			&:hover, &:active, &:focus {
+			.txt-col-red;
+			}
+		}
+	}
+	
+	&.bg-col-purple-dk {
+		i {
+		.bg-col-purple;
+		.txt-col-purple-lt;	
+		}
+	}
+	&.bg-col-green-dk {
+		i {
+		.bg-col-green-dk;	
+		}
+		span {
+		.txt-col-pink;	
+		}
+	}
+	&.bg-col-pink-dk {
+		i {
+		.bg-col-pink-dk;	
+		}
+	}
+	&.bg-col-orange-dk {
+		i {
+		.bg-col-orange-dk;	
+		}
+		
+		a {
+		.txt-col-blue;	
+			&:hover, &:active, &:focus {
+			.txt-col-red;
+			}
+		}
+	}
+	&.bg-col-blue-dk {
+		i {
+		.bg-col-blue;
+		.txt-col-blue-lt;	
+		}
 	}
 }
 
