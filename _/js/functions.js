@@ -903,6 +903,9 @@
     		if (current_section == "#toolkit-slides") {
 	    	scrollTarget -= 60;	
     		}
+    		if (current_section == "#service-info-txt") {
+			scrollTarget = $(hash).offset().top - 4;
+    		}
     		$(this).siblings().removeClass('active');
     		$(this).addClass('active');
     		//console.log(hash);
