@@ -1,4 +1,4 @@
-<div id="global-tel-num" class="bg-col-<?php echo (!empty($color)) ? $color.'-dk' : 'grayDk'; ?>">
+<div id="global-tel-num">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-1">

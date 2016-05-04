@@ -33,15 +33,15 @@ if ($active_sections) {
 		</div>
 	</header>
 	<?php } ?>
-	<?php if (!empty($banner_tags)) { ?>
+
 	<div class="tag-scroller">
+		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
 		<?php } ?>
+		<?php } ?>
 	</div>		
-	<?php } ?>
-	
-	
+
 	<?php if (in_array("links", $banner_options)) { ?>
 	<nav class ="banner-links text-center">
 		<?php foreach ($banner_quick_links as $bl) { ?>
@@ -52,8 +52,8 @@ if ($active_sections) {
 	<?php } ?>
 	
 	<video autoplay loop muted id="bgvid" poster="<?php echo $banner_video_poster;?>">
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/_/videos/serious-injury-video.webm" type="video/webm" />
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/_/videos/serious-injury-video.mp4" type="video/mp4" />
+		<source src="<?php echo $banner_video_webm ?>" type="video/webm" />
+		<source src="<?php echo $banner_video_mp4; ?>" type="video/mp4" />
 	</video>
 	<div class="video-overlay"></div>
 	<div class="top-drk-grad"></div>

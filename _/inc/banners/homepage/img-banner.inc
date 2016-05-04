@@ -4,13 +4,14 @@ $banner_tags = get_field('hp_banner_tags', 'option');
 $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');	
 ?>
 <section id="top-banner" class="top-banner-img fixed-bg no-title" style="background-image: url(<?php echo $banner_bg_img;?>)">
-	<?php if (!empty($banner_tags)) { ?>
+	
 	<div class="tag-scroller">
+		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
 		<?php } ?>
-	</div>		
-	<?php } ?>
+		<?php } ?>
+	</div>	
 	
 	<?php if ($hp_banner_quick_links) { ?>
 	<nav class ="banner-links text-center">

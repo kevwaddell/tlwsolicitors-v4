@@ -9,14 +9,13 @@ $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' =>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
 <section id="top-banner" class="top-banner-video no-title">
 
-	<?php if (!empty($banner_tags)) { ?>
 	<div class="tag-scroller">
+		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
 		<?php } ?>
+		<?php } ?>
 	</div>		
-	<?php } ?>
-	
 	
 	<?php if ($hp_banner_quick_links) { ?>
 	<nav class ="banner-links text-center">

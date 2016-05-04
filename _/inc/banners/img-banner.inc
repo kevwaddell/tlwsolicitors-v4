@@ -29,13 +29,14 @@ if ($active_sections) {
 		</div>
 	</header>
 	<?php } ?>
-	<?php if (!empty($banner_tags)) { ?>
+	
 	<div class="tag-scroller">
+		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
 		<?php } ?>
+		<?php } ?>
 	</div>		
-	<?php } ?>
 	
 	<?php if (in_array("links", $banner_options)) { ?>
 	<nav class ="banner-links text-center">
