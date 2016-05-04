@@ -35,15 +35,6 @@
 	    var elemTop = $elem.offset().top;
 	    var elemBottom = elemTop + $elem.height();
 	    
-/*
-	    console.log(elem);
-	    console.log("Elem top = "+elemTop);
-	    console.log("Doc top = "+docViewTop);
-	    
-	    console.log("Elem bottom = "+elemBottom);
-	    console.log("Doc bottom = "+docViewBottom);
-*/
-	    
 	    if (docViewTop == 0) {
 		false;  
 	    } else {
@@ -56,9 +47,6 @@
 	var url = document.location.toString();
 	var window_width = $(window).width();
 	
-	//console.log($(window).scrollTop());
-	
-
 	var service_select = $('select#service-select');
 	var service_area_select = $('select.service-area-select');
 	var child_service_area_select = $('select.child-service-area-select');
@@ -212,7 +200,7 @@
 	$('body').on(event_type,'a.scroll-to', function(e){
 		
 		var id = $(this).attr('href');
-		//console.log( $("#radio-player"));
+
 		$('html, body').animate({scrollTop: ($("a"+id).offset().top)}, 500);	
 		
 		return false;
@@ -222,8 +210,6 @@
 	// VIEW RADIO FILES BUTTON 
 	
 	$('body').on(event_type,'a#call-2-action-radio', function(e){
-		
-		//console.log( $("#radio-player"));
 	
 		if ( $('.audio-files').hasClass('closed') ) {
 			$('html, body').animate({scrollTop: ($("#radio-player").offset().top - 20)}, 500);	
@@ -256,6 +242,11 @@
 	return false;
 		
 	});
+	
+	/* END OF AUDIO FILES FUNCTIONS */
+	
+	
+	/* USER SIDEBAR BUTTON */
 	
 	$('body').on(event_type,'button#user-btn', function(e){
 	
@@ -292,7 +283,10 @@
 		
 	});
 	
-	// 	POP UP LINKS MENU BUTTONS
+	
+	/* POP UP LINKS MENU BUTTONS 
+	Button to close the service menu links	
+	*/
 	
 	$('body').on(event_type,'div.links-menu > button.close-btn', function(e){
 		
@@ -312,6 +306,9 @@
 		
 	});
 	
+	/*  SERVICE DROP-DOWN LINKS
+		This link will show and hide hiden links in the services pop-up links
+	 */
 	
 	$('body').on(event_type,'a.dropdown-link', function(e){
 		
@@ -328,6 +325,10 @@
 		return false;
 		
 	});
+	
+	/*  SERVICE MENU BUTTON 
+		Button to activate the services pop-up menu
+	*/
 	
 	$('body').on(event_type,'button.service-menu-btn', function(e){
 		
@@ -799,6 +800,7 @@
 		
 		startTagInterval();
 		
+		/* PAGE FEEDBACK SCROLLER */
 		function startFeedbackInterval() {
 		tagInterval = setInterval(changeQuote, 7000);
 		}
@@ -830,8 +832,6 @@
 		if ($('.feedback-section-wrapper').length == 1) {
 		startFeedbackInterval();
 		}
-				
-		/* FEEDBACK SLIDER */
 		
 		/* QUICK LINKS IN BANNER SECTION */
 		
@@ -850,6 +850,9 @@
 			var next = $(this).parent().next().find('a.section-target');
 			var hash = $(next).attr('id');
     		var scrollTarget = $('#'+hash).offset().top - 40;
+    		if (hash == 'service-info-txt') {
+	    	scrollTarget = $('#'+hash).offset().top - 4;	
+    		}
     		current_section = '#'+hash;
     		
     		$('html, body').animate({ scrollTop: scrollTarget }, 500);
