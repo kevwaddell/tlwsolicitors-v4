@@ -108,6 +108,6 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 					<?php } ?>
 				</div>
 			</div>
-	</div>Outer
+	</div>
 </section>
 <?php } ?>

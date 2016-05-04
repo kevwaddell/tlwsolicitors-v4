@@ -1668,17 +1668,34 @@ article.content-section {
 		.rel;
 		}
 		
+		.feedback-section-wrapper {
+		.over-hide;
+		}
+		
+		.feedback-section-wrapper, .feedback-section-inner {
+		.h(29);	
+		.rel;
+		width: 100%;
+		}
+		
 		i.quote-icon {
 		.pad-top(0.5);
 		.font-size(7);	
 		}	
 		
 		.item {
+		.abs;
+		.top(0);
+		left: 100%;
 		.pad-top(4);
 		.pad-bot(4);
-		.min-h(26);	
-		.mag-top(2.5);
-		.rel;
+		.h(26);	
+		.mag-top(3);
+		width: 100%;
+		
+			&.active {
+			left: 0%;	
+			}
 			
 			&.bg-col-purple {
 			span.gender-icon {

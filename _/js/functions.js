@@ -768,6 +768,40 @@
 		
 		startTagInterval();
 		
+		function startFeedbackInterval() {
+		tagInterval = setInterval(changeQuote, 7000);
+		}
+		
+		function changeQuote() {
+			
+		var currentQuote = $('.feedback-section-inner').find('.item.active');
+		var nextQuote = $(currentQuote).next();
+		
+		if ($(nextQuote).length == 0) {
+		var nextQuote = $('.feedback-section-inner').find('.item').eq(0);	
+		}
+		
+		$(currentQuote).animate({left: '-100%'}, 500, function(){
+			
+			$(this).removeClass('active').css('left', '100%');
+			
+		});
+		
+		$(nextQuote).animate({left: '0%'}, 500, function(){
+			
+			$(this).addClass('active');
+			
+		});
+		
+		//console.log(nextTag);
+		};
+		
+		if ($('.feedback-section-wrapper').length == 1) {
+		startFeedbackInterval();
+		}
+				
+		/* FEEDBACK SLIDER */
+		
 		/* QUICK LINKS IN BANNER SECTION */
 		
 		$('body').on(event_type, 'nav.banner-links a', function(e){
@@ -903,8 +937,7 @@
 		return false;
 		
 		});
-		
-		
+
 
 	});
 
