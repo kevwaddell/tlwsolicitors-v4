@@ -19,24 +19,25 @@
 		}
 		
 		//echo '<pre class="debug">';print_r($related_pages);echo '</pre>';
-		
-		foreach ($hp_sections as $s) { 
-			
-			switch($s){
-				case "Downloads": $downloads_active = true;
-				break;
-				case "Form": $form_active = true;
-				break;
-				case "Services": $services_active = true;
-				break;
-				case "Blog posts": $blog_posts_active = true;
-				break;
-				case "Feedback": $feedback_active = true;
-				break;
-				case "Toolkit Links": $toolkit_active = true;
-				break;
-			}	
-			
+		if (!empty($hp_sections)) {
+			foreach ($hp_sections as $s) { 
+				
+				switch($s){
+					case "Downloads": $downloads_active = true;
+					break;
+					case "Form": $form_active = true;
+					break;
+					case "Services": $services_active = true;
+					break;
+					case "Blog posts": $blog_posts_active = true;
+					break;
+					case "Feedback": $feedback_active = true;
+					break;
+					case "Toolkit Links": $toolkit_active = true;
+					break;
+				}	
+				
+			}
 		}
 		
 	?>	
