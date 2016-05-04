@@ -451,15 +451,21 @@ z-index: 2;
 	.none;	
 	}
 	
+	&.turn-on {
+	.fadeIn;
+		.office-location-pop-up-inner {
+		.slideInDown;	
+		}	
+	}
+	
 	&.turn-off {
 	.fadeOut;
-		.search-pop-up-inner {
+		.office-location-pop-up-inner {
 		.slideOutUp;	
 		}	
 	}
 	
 	&.on {
-	.fadeIn;
 	z-index: 2000;	
 		.office-location-pop-up-inner {
 		.slideInDown;
