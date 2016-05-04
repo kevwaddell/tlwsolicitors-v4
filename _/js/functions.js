@@ -931,6 +931,9 @@
 				if ($(prev_section).hasClass('toolkit-slider')) {
 				scrollTarget -= 60;	
     			}
+    			if ($(prev_section).hasClass('content-section')) {
+				scrollTarget = $(prev_section).offset().top;
+    			}
 				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
 				} else {
 				$('html, body').animate({ scrollTop: 0 }, 500);	
