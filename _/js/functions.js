@@ -472,7 +472,13 @@
 	
 	$('body').on(event_type,'li.office-location-link a', function(e){
 	
-		$('#office-location-pop-up').removeClass('off').addClass('on');
+		$('#office-location-pop-up').removeClass('off').addClass('turn-on');
+		
+		$('.turn-on').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	
+			$(this).removeClass('turn-on').addClass('on');	
+			
+		});
 		
 		location_map_init();
 		
