@@ -42,7 +42,7 @@ $archives = wp_get_archives($archives_args);
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-articles'];	
 ?>
 <?php if ($blog_posts_active) { ?>
-<section id="blog-posts" class="pg-section sub-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<section id="blog-posts" class="pg-section no-pad-bot sub-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>

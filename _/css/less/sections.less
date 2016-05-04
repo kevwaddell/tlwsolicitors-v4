@@ -1511,8 +1511,12 @@ article.content-section {
 // -->BLOG SECTION
 
 	&#blog-posts {
-	.pad-bot(0);
+	//.pad-bot(0);
 	.bg-col(@wht);
+	
+		&.no-pad-bot {
+		.pad-bot(0);	
+		}
 		
 		.posts-list {
 		.mag-bot(3);	
@@ -1689,8 +1693,8 @@ article.content-section {
 		.rel;
 		.pad-top(4);
 		.pad-bot(4);
-		.h(26);	
-		.mag-top(3);
+		//.h(26);	
+		//.mag-top(0);
 			
 			&.bg-col-purple {
 			span.gender-icon {
@@ -1742,10 +1746,12 @@ article.content-section {
 		.feedback-section-wrapper {
 		.over-hide;
 			.item {
+			.mag-top(3);
 			.abs;
 			.top(0);
 			left: 100%;
 			width: 100%;
+			.h(26);
 				&.active {
 				left: 0%;	
 				}
