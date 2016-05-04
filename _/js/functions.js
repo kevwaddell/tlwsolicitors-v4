@@ -472,7 +472,7 @@
 	
 	$('body').on(event_type,'li.office-location-link a', function(e){
 	
-		$('#office-location-pop-up').toggleClass('off on');
+		$('#office-location-pop-up').removeClass('off').addClass('on');
 		
 		location_map_init();
 		
@@ -482,11 +482,11 @@
 	
 	$('body').on(event_type,'button#close-office-location', function(e){
 	
-		$('#office-location-pop-up').toggleClass('on turn-off');
+		$('#office-location-pop-up').removeClass('on').addClass('turn-off');
 		
 		$('.turn-off').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	
-			$(this).toggleClass('turn-off off');	
+			$(this).removeClass('turn-off').addClass('off');	
 			
 		});
 		
