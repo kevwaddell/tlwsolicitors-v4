@@ -17,7 +17,7 @@ $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' =>
 		<?php } ?>
 	</div>		
 	
-	<?php if ($hp_banner_quick_links) { ?>
+	<?php if (!empty($hp_banner_quick_links)) { ?>
 	<nav class ="banner-links text-center">
 		<?php foreach ($hp_banner_quick_links as $bl) { ?>
 		<a href="#<?php echo $bl['link_anchor']; ?>" class="block bold font-slab-serif caps"><?php echo $bl['link_title']; ?></a>
