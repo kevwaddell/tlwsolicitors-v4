@@ -468,6 +468,31 @@
 		
 	});
 	
+	/* POP UP LOCATION MAP */
+	
+	$('body').on(event_type,'li.office-location-link a', function(e){
+	
+		$('#office-location-pop-up').toggleClass('off on');
+		
+		location_map_init();
+		
+		return false;
+		
+	});
+	
+	$('body').on(event_type,'button#close-office-location', function(e){
+	
+		$('#office-location-pop-up').toggleClass('on turn-off');
+		
+		$('.turn-off').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	
+			$(this).toggleClass('turn-off off');	
+			
+		});
+		
+		return false;
+		
+	});
 	
 	//-------------------------------
 	

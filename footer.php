@@ -95,6 +95,8 @@
 
 	<?php include (STYLESHEETPATH . '/_/inc/global/search-pop-up.php'); ?>
 	
+	<?php include (STYLESHEETPATH . '/_/inc/global/office-location-pop-up.php'); ?>
+	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.php'); ?>
 	
 	<?php if ( !isset($_GET['gsdm']) ) : ?>
