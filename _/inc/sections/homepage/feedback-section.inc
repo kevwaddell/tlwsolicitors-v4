@@ -4,10 +4,6 @@ $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'
 ?>
 <?php if ($hp_feedback_active) { 
 $hp_testimonials = get_field('hp_testimonials', 'option');	
-$feedback_count = count($hp_testimonials);
-$feedback_inner_width = $feedback_count * 100;
-$item_width = 100 / $feedback_count;
-echo '<pre class="debug">';print_r($item_width);echo '</pre>';
 ?>
 <section id="feedback-section" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>
