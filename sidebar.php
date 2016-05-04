@@ -75,17 +75,6 @@ $hw_posts = get_field('hw_posts', 'options');
 		</div>
 	
 		<?php } ?>
-	
-		
-		<div id="search-form">
-			<?php get_search_form(); ?>
-		</div>
-		
-		<div class="cats-drop-down">
-		<?php include (STYLESHEETPATH . '/_/inc/posts/cats-dropdown.php'); ?>
-		</div>
-		
-		<?php include (STYLESHEETPATH . '/_/inc/sidebar/sb-btns.php'); ?>
 		
 		<?php if ($add_form && $all_forms_active) { 
 		$form = get_field('form');
@@ -115,7 +104,11 @@ $hw_posts = get_field('hw_posts', 'options');
 			</a>
 		</div>
 		<?php } ?>
-
+		
+				
+		<div class="cats-drop-down">
+		<?php include (STYLESHEETPATH . '/_/inc/posts/cats-dropdown.php'); ?>
+		</div>
 
 	</aside>
 </div>

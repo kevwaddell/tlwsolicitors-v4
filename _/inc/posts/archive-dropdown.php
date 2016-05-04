@@ -21,13 +21,13 @@ $archives = wp_get_archives($archives_args);
 </div>
 <script type="text/javascript">
 	<!--
-	var dropdown = document.getElementById("archive-dd");
+	var archive_dropdown = document.getElementById("archive-dd");
 	function onArchiveChange() {
-		if ( dropdown.options[dropdown.selectedIndex].value != 0 ) {
-			location.href = dropdown.options[dropdown.selectedIndex].value;
+		if ( archive_dropdown.options[archive_dropdown.selectedIndex].value != 0 ) {
+			location.href = archive_dropdown.options[archive_dropdown.selectedIndex].value;
 		}
 	}
-	dropdown.onchange = onArchiveChange;
+	archive_dropdown.onchange = onArchiveChange;
 	-->
 </script>
 <?php } ?>

@@ -6,13 +6,13 @@
 					<div class="row">
 					
 						<div class="col-xs-3">
-						<h3>Services for You</h3>
+						<h3>Main service areas</h3>
 						<?php wp_nav_menu(array( 'container_class' => 'footer-nav', 'theme_location' => 'footer_menu', 'fallback_cb' => false ) ); ?>
 						</div>
 						
 						<div class="col-xs-3">
-						<h3>Services for Business</h3>
-						<?php wp_nav_menu(array( 'container_class' => 'footer-nav', 'theme_location' => 'footer_menu_business', 'fallback_cb' => false ) ); ?>
+						<h3>Other Services</h3>
+						<?php wp_nav_menu(array( 'container_class' => 'footer-nav', 'theme_location' => 'footer_menu_middle', 'fallback_cb' => false ) ); ?>
 						</div>
 						
 						<div class="col-xs-3">
@@ -92,9 +92,8 @@
 	<?php include (STYLESHEETPATH . '/_/inc/sections/text-only.inc'); ?>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/no-script.php'); ?>
-	<?php if (!is_home() && !is_single() && !is_archive()) { ?>	
+
 	<?php include (STYLESHEETPATH . '/_/inc/global/search-pop-up.php'); ?>
-	<?php } ?>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.php'); ?>
 	

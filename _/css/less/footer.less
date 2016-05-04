@@ -11,9 +11,11 @@ background-position: right bottom;
 	}
 
 	h3 {
-	.col(lighten(@red, 10%));
+	.txt-col-green;
 	.font-size(1.6);
-	.normal;
+	.bold;
+	.caps;
+	.font-slab-serif;
 	.mag-top(0);	
 	}
 	
@@ -21,7 +23,7 @@ background-position: right bottom;
 	.col(white);
 	.no-text-dec;	
 		&:hover, &:active, &:focus {
-		.col(lighten(@red, 10%));	
+		.txt-col-red-lt;	
 		}	
 	}	
 	
@@ -58,9 +60,9 @@ background-position: right bottom;
 		.bg-col(white);
 		.col(@grayDk);
 		.block;
-		.w(4);
-		.h(4);
-		.rounded(20px);
+		.w(3.5);
+		.h(3.3);
+		.rounded(100%);
 		.no-text-dec;
 			
 			span {
@@ -69,10 +71,10 @@ background-position: right bottom;
 			
 			i {
 			.block;
-			.w(4);
-			.h(4);	
-			.line-h(4);
-			font-size: 1.8em;
+			.w(3.5);
+			.h(3.5);	
+			.line-h(3.5);
+			font-size: 1.5em;
 			text-align: center;
 			}	
 			

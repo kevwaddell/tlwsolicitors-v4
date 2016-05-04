@@ -23,9 +23,6 @@ $page_icon = get_field('page_icon', $news_page->ID);
 			
 			<!-- ARCHIVE LIST -->
 			<?php include (STYLESHEETPATH . '/_/inc/posts/archive-post-list.php'); ?>
-			
-			<!-- CATEGORIES LIST -->
-			<?php include (STYLESHEETPATH . '/_/inc/posts/index-cats-list.php'); ?>		
 					
 			<!-- SOCIAL FEED LARGE -->
 			<?php include (STYLESHEETPATH . '/_/inc/posts/social-feed-lrg.php'); ?>	

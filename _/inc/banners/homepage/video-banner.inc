@@ -7,14 +7,8 @@ $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');
 $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
 ?>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
-<section id="top-banner" class="top-banner-video">
-	<?php if (in_array("title", $banner_options)) { ?>
-	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<div class="container">
-			<?php the_title(); ?>
-		</div>
-	</header>
-	<?php } ?>
+<section id="top-banner" class="top-banner-video no-title">
+
 	<?php if (!empty($banner_tags)) { ?>
 	<div class="tag-scroller">
 		<?php foreach ($banner_tags as $k => $tag) { ?>
@@ -34,8 +28,8 @@ $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' =>
 	<?php } ?>
 	
 	<video autoplay loop muted id="bgvid" poster="<?php echo $banner_video_poster;?>">
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/_/videos/serious-injury-video.webm" type="video/webm" />
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/_/videos/serious-injury-video.mp4" type="video/mp4" />
+		<source src="<?php echo $banner_video_webm ?>" type="video/webm" />
+		<source src="<?php echo $banner_video_mp4; ?>" type="video/mp4" />
 	</video>
 	<div class="video-overlay"></div>
 	<div class="top-drk-grad"></div>
