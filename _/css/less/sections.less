@@ -455,6 +455,122 @@ height: 100vh;
 	//.none;
 	}
 	
+	.hp-banner-links {
+	.rel;	
+	z-index: 2;
+	text-align: center;
+	.pad(8;0;0;0);
+	.mag-top(5);
+	.mag-bot(10);
+		a {
+		.block;
+		.pad(12;2;2;2);
+		.font-size(4);
+		.line-h(4);
+		.caps;
+		.col(white);
+		.font-slab-serif;
+		.mag-bot(2);
+		.border(white; 0.4);
+		.no-text-dec;
+		.drop-shadow(0, 3px, 10px, 0.8);
+		.animated;
+		.rel;
+			
+			i {
+			.abs;
+			.top(-8);
+			left: 50%;
+			.mag-left(-8);
+			.line-h(16);
+			.w(16);
+			.h(16);
+			text-align: center;	
+			.rounded(100%);
+			.border(@wht; 0.4);
+			.font-size(9);
+			.drop-shadow(0, 3px, 10px, 0.8)
+			}
+			
+			&:active, &:focus {
+			.drop-shadow(0, 3px, 10px, 0.0);
+				i {
+				.drop-shadow(0, 3px, 10px, 0.0);	
+				}
+			}
+			
+			
+			&.link-hidden {
+			display: none;	
+			}
+			
+			&.col-purple {
+				.trans-bg(@purple; 0.8);	
+					i {
+					.bg-col-purple-dk;	
+					}
+				&:hover, &:active, &:focus {
+				.bg-col-purple-dk;
+					i {
+					.txt-col-purple;
+					.bg-col(@wht);	
+					}
+				}	
+			}
+			
+			&.col-green {
+				.trans-bg(@green; 0.8);	
+					i {
+					.bg-col-green-dk;	
+					}
+				&:hover, &:active, &:focus {
+					.bg-col-green-dk;
+					i {
+					.txt-col-green;	
+					.bg-col(@wht);
+					}
+				}	
+			}
+			
+			&.col-pink {
+				.trans-bg(@pink; 0.8);	
+				&:hover, &:active, &:focus {
+					.bg-col-pink-dk;
+					i {
+					.txt-col-pink;	
+					.bg-col(@wht);
+					}
+				}	
+			}
+			
+			&.col-orange {
+				.trans-bg(@orange; 0.8);	
+				&:hover, &:active, &:focus {
+					.bg-col-orange-dk;
+					i {
+					.txt-col-orange;	
+					.bg-col(@wht);
+					}
+				}	
+			}
+			
+			&.col-blue {
+				.trans-bg(@blue; 0.8);	
+					i {
+					.bg-col-blue-dk;	
+					}
+				&:hover, &:active, &:focus {
+					.bg-col-blue-dk;
+					i {
+					.txt-col-blue;
+					.bg-col(@wht);	
+					}
+				}	
+			}
+		}	
+
+	}
+	
 	nav.banner-links {
 	//.abs;
 	//left: 50%;
