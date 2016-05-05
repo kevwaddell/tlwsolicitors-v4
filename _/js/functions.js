@@ -60,7 +60,7 @@
 			if ( isScrolledIntoView($(elem)) ) {
 			current_section_id = $(elem).attr('id')
 			current_section = "#"+current_section_id;
-			console.log(current_section);
+			//console.log(current_section);
 			}	
 			
 		});
@@ -72,8 +72,29 @@
 	  });
 	  
 	 $('.selectpicker').find('select').selectpicker({
-		'style': 'btn btn-group btn-default', 
-		'width': '100%'
+		style: 'btn btn-group btn-default', 
+		width: '100%'
+	});
+	
+	$('#services-dd').selectpicker({
+      size: 6,
+      showContent: false
+	  });
+
+	
+	$('#services-dd').on('changed.bs.select', function (event, clickedIndex) {
+		
+		var url = $('#services-dd').find('option').eq(clickedIndex).val();
+		
+		if (url.indexOf("#") == 0) {
+
+		var scrollTarget = $(url).offset().top - 40;
+		$('html, body').animate({ scrollTop: scrollTarget }, 500);	
+		$(this).selectpicker('refresh');
+		} else {
+		window.location = url;	
+		}
+		
 	});
 	  
 	  $(service_area_select).selectpicker('hide');
@@ -989,7 +1010,13 @@
 	});
 	
 	$(window).load(function(e){
-
+		
+/*
+		if ($('#services-dd').length == 1) {
+		$('#services-dd').selectpicker('refresh');
+		}
+*/
+		
 		if ($('a#call-2-action-radio').length == 1) {
 			$('#call-2-action-radio').removeAttr('disabled');
 			$('i.fa-spinner').hide();

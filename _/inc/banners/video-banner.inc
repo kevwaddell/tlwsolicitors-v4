@@ -35,7 +35,7 @@ if ($active_sections) {
 	</header>
 	<?php } ?>
 
-	<div class="tag-scroller">
+	<div class="tag-scroller<?php echo (in_array("services", $banner_options) && !in_array("links", $banner_options)) ? " service-select-active":"" ; ?>">
 		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
@@ -52,16 +52,22 @@ if ($active_sections) {
 	<?php } ?>
 	
 	<?php if (in_array("services", $banner_options) && !in_array("links", $banner_options)) { ?>
-	<nav class ="services-banner-links text-center col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<?php foreach ($banner_service_links as $bl) { ?>
-		<a href="<?php echo get_the_permalink($bl['link_page']); ?>" class="block bold font-slab-serif caps">
-			<?php echo get_the_title($bl['link_page']); ?>
-		</a>
-		<?php } ?>
-	</nav>
+	<div id="services-select" class="services-dropdown col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<div class="container">				
+			<select id="services-dd" class="selectpicker" data-width="100%">
+				<option value="0" data-hidden="true">Our Specialist Areas</option>
+				<?php foreach ($banner_service_links as $bl_option) { ?>
+				<option value="<?php echo get_the_permalink($bl_option['link_page']); ?>"><?php echo get_the_title($bl_option['link_page']); ?></option>
+				<?php } ?>
+				<?php if ($active_sections && in_array("Services", $active_sections)) { ?>
+				<option value="#our-specialist-services">More specialist services</option>
+				<?php } ?>
+			</select>
+		</div>
+	</div>
 	<?php } ?>
 	
-	<button id="scroll-down-btn"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
+	<button id="scroll-down-btn" class="btn<?php echo (in_array("services", $banner_options) && !in_array("links", $banner_options)) ? " abs-bottom":"" ; ?>"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 	
 	<video autoplay loop muted id="bgvid" poster="<?php echo $banner_video_poster;?>">
 		<source src="<?php echo $banner_video_webm ?>" type="video/webm" />

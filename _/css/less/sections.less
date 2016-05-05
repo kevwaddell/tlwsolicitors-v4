@@ -401,6 +401,7 @@ height: 100vh;
 	z-index: 2;
 	text-shadow: 0px 3px 5px rgba(50, 50, 50, 0.8);
 	white-space: nowrap;
+		
 		.tag-scroller-txt {
 		.abs;
 		.top(0);
@@ -410,6 +411,13 @@ height: 100vh;
 		.none;	
 			&.active {
 			.block;	
+			}	
+		}
+		
+		&.service-select-active {
+		.h(40);
+			.tag-scroller-txt {
+			.pad-top(22.5);		
 			}	
 		}
 	}
@@ -623,7 +631,8 @@ height: 100vh;
 		}
 	}
 	
-	nav.services-banner-links {
+	/*
+nav.services-banner-links {
 	//.abs;
 	//left: 50%;
 	//.bottom(0);
@@ -729,6 +738,343 @@ height: 100vh;
 			}
 		}
 	}
+*/
+	
+	.services-dropdown {
+	.rel;
+	z-index: 12;	
+	.pad-top(5);
+	.mag-auto;
+	//.mag-bot(10);
+		.btn-group {
+			.font-slab-serif;
+			.btn {
+			.pad-all(0);
+			.h(12);
+			.font-size(4);	
+			.col(@wht);
+			.caps;
+			outline: none;
+			.no-rounded;
+			.border(@wht; 0.4);
+			.drop-shadow(0, 3px, 10px, 0.7);
+			.bg-img('bg-icon-logo-mini.png');
+			.bg-repeat(no-repeat);
+			background-position: center center;
+			.bg-size(auto 90%);
+				span {
+				text-align: center;	
+				}
+				
+				&:hover, &:active, &:focus {
+				outline: none !important;
+				}
+				
+				.caret {
+				.top(0);
+				.right(0);
+				.mag-top(0);
+				.no-border;
+				.h(11.2);
+				.w(11.2);
+					&:after {
+					content: "\f107";	
+					font-family: FontAwesome;
+					text-align: center;
+					.line-h(6);
+					.bg-col(@wht);
+					.abs;
+					.right(2.6);
+					.top(2.6);
+					.w(6);
+					.h(6);
+					.rounded(100%);
+					}
+				}
+			}	
+			
+			div.dropdown-menu {
+			.no-rounded;
+			.mag-top(2);
+			left: 50%;
+			margin-left: -40%;
+			.pad-all(0);
+			.bg-col(@trans);
+			.drop-shadow(0, 0, 0px, @alpha: 0.0);
+			.no-border;
+			width: 80%;
+			min-width: 80%;
+				&:after {
+				content: "";
+				.abs;
+				.top(-3);
+				left: 50%;
+				.w(3);
+				.h(4);
+				.mag-left(-2);
+				.border-top(@wht; 3);	
+				.border-left(@trans; 2);
+				.border-right(@trans; 2);
+				.rounded(100%);
+				}
+				ul {
+				.border(@wht; 0.4);
+				border-top: none;
+				.drop-shadow(0, 3px, 10px, 0.7);
+				}
+				li {
+				text-align: center;
+				.font-size(2);	
+				.caps;
+				.border-top(@wht; 0.4);
+					a {
+					.line-h(5);	
+					.pad-all(0);
+					.col(@wht);
+					font-weight: normal;
+					.rel ;
+						&:after {
+						content: "\f105";	
+						font-family: FontAwesome;
+						text-align: center;
+						.line-h(3);
+						.bg-col(@wht);
+						.abs;
+						.right(4);
+						.top(1);
+						.w(3);
+						.h(3);
+						.rounded(100%);
+						}
+					}
+				}
+			}
+		}
+		
+		&.col-purple {
+			.btn {
+			.trans-bg(@purple; 0.7);
+				.caret:after {
+				.txt-col-purple;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col-purple;
+					.caret:after {
+					.bg-col-purple-dk;
+					.col(@wht);
+					}
+				}
+			}
+			
+			.btn-group.open {
+				.btn {
+				.bg-col-purple;
+					.caret:after {
+					.txt-col-purple;	
+					.col(@wht);
+					}
+				}	
+				
+				div.dropdown-menu {
+					ul {
+					.bg-col-purple-dk;	
+					}
+					
+					a:after {
+					.txt-col-purple;	
+					}
+					
+					a:hover, a:active, a:focus {
+					.txt-col-purple-dk;	
+						&:after {
+						.col(@wht);
+						.bg-col-purple;	
+						}
+					}	
+				}
+			}
+		}
+		
+		&.col-green {
+			.btn {
+			.trans-bg(@green; 0.7);
+				.caret:after {
+				.txt-col-green;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col-green;
+					.caret:after {
+					.bg-col-green-dk;
+					.col(@wht);
+					}
+				}
+			}
+			
+			.btn-group.open {
+				.btn {
+				.bg-col-green;
+					.caret:after {
+					.bg-col-green-dk;
+					.col(@wht);
+					}
+				}	
+				
+				div.dropdown-menu {
+					ul {
+					.bg-col-green-dk;	
+					}
+					
+					a:after {
+					.txt-col-green;	
+					}
+					
+					a:hover, a:active, a:focus {
+					.txt-col-green-dk;	
+						&:after {
+						.col(@wht);
+						.bg-col-green;	
+						}
+					}	
+				}
+			}
+		}
+		
+		&.col-pink {
+			.btn {
+			.trans-bg(@pink; 0.7);
+				.caret:after {
+				.txt-col-pink;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col-pink;
+					.caret:after {
+					.bg-col-pink-dk;
+					.col(@wht);
+					}
+				}
+			}
+			
+			.btn-group.open {
+				.btn {
+				.bg-col-pink;
+					.caret:after {
+					.bg-col-pink-dk;
+					.col(@wht);
+					}
+				}	
+				
+				div.dropdown-menu {
+					ul {
+					.bg-col-pink-dk;	
+					}
+					
+					a:after {
+					.txt-col-pink;	
+					}
+					
+					a:hover, a:active, a:focus {
+					.txt-col-pink-dk;	
+						&:after {
+						.col(@wht);
+						.bg-col-pink;	
+						}
+					}	
+				}
+			}
+		}
+		
+		&.col-orange {
+			.btn {
+			.trans-bg(@orange; 0.7);
+				.caret:after {
+				.txt-col-orange;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col-orange;
+					.caret:after {
+					.bg-col-orange-dk;
+					.col(@wht);
+					}
+				}
+			}
+			
+			.btn-group.open {
+				.btn {
+				.bg-col-orange;
+					.caret:after {
+					.bg-col-orange-dk;
+					.col(@wht);
+					}
+				}	
+				
+				div.dropdown-menu {
+					ul {
+					.bg-col-orange-dk;	
+					}
+					
+					a:after {
+					.txt-col-orange;	
+					}
+					
+					a:hover, a:active, a:focus {
+					.txt-col-orange-dk;	
+						&:after {
+						.col(@wht);
+						.bg-col-orange;	
+						}
+					}	
+				}
+			}
+		}
+		
+		&.col-blue {
+			.btn {
+			.trans-bg(@blue; 0.7);	
+				.caret:after {
+				.txt-col-blue;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col-blue;
+					.caret:after {
+					.bg-col-blue-dk;
+					.col(@wht);
+					}
+				}
+			}
+			.btn-group.open {
+				.btn {
+				.bg-col-blue;
+					.caret:after {
+					.bg-col-blue-dk;
+					.col(@wht);
+					}
+				}	
+				
+				div.dropdown-menu {
+					ul {
+					.bg-col-blue-dk;
+					}
+					
+					a:after {
+					.txt-col-blue;	
+					}
+					
+					a:hover, a:active, a:focus {
+					.txt-col-blue-dk;	
+						&:after {
+						.col(@wht);
+						.bg-col-blue;	
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	#scroll-down-btn {
 	.block;
@@ -749,6 +1095,12 @@ height: 100vh;
 	text-align: center;
 	.drop-shadow(0, 3px, 10px, 0.7);
 	z-index: 10;
+		&.abs-bottom {
+		.abs;
+		left: 50%;
+		.bottom(5);
+		.mag-left(-3.5);	
+		}
 		&:hover, &:active, &:focus {
 		.bg-col(@wht);
 		}
