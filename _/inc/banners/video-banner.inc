@@ -3,6 +3,7 @@ $banner_video_mp4 = get_field('banner_video_mp4');
 $banner_video_webm = get_field('banner_video_webm');	
 $banner_video_poster = get_field('banner_video_poster');
 $banner_options = get_field('banner_options');
+$banner_service_links = get_field('banner_service_links');
 $banner_tags = get_field('banner_tags');
 $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
 if ($active_sections) {
@@ -42,14 +43,25 @@ if ($active_sections) {
 		<?php } ?>
 	</div>		
 
-	<?php if (in_array("links", $banner_options)) { ?>
+	<?php if (in_array("links", $banner_options) && !in_array("services", $banner_options)) { ?>
 	<nav class ="banner-links text-center">
 		<?php foreach ($banner_quick_links as $bl) { ?>
 		<a href="#<?php echo $bl['link_anchor']; ?>" class="block bold font-slab-serif caps"><?php echo $bl['link_title']; ?></a>
 		<?php } ?>
 	</nav>
-	<button id="scroll-down-btn"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 	<?php } ?>
+	
+	<?php if (in_array("services", $banner_options) && !in_array("links", $banner_options)) { ?>
+	<nav class ="services-banner-links text-center col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<?php foreach ($banner_service_links as $bl) { ?>
+		<a href="<?php echo get_the_permalink($bl['link_page']); ?>" class="block bold font-slab-serif caps">
+			<?php echo get_the_title($bl['link_page']); ?>
+		</a>
+		<?php } ?>
+	</nav>
+	<?php } ?>
+	
+	<button id="scroll-down-btn"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 	
 	<video autoplay loop muted id="bgvid" poster="<?php echo $banner_video_poster;?>">
 		<source src="<?php echo $banner_video_webm ?>" type="video/webm" />

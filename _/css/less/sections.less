@@ -623,6 +623,113 @@ height: 100vh;
 		}
 	}
 	
+	nav.services-banner-links {
+	//.abs;
+	//left: 50%;
+	//.bottom(0);
+	.rel;
+	//margin-left: -30%;
+	.mag-auto;
+	width: 60%;	
+	.pad-top(6);
+	//.pad-bot(15);
+	z-index: 2;
+		a {
+		.border(@wht; 0.4);
+		.mag-bot(2);
+		.trans-bg(@red; 0.7);	
+		.h(7);
+		.font-size(2.5);
+		.line-h(6.4);
+		.col(@wht);
+		.no-text-dec;
+		.drop-shadow(0, 3px, 10px, 0.7);
+		.rel;
+			&:last-child {
+			.mag-bot(0);	
+			}
+			
+			&:after {
+			content: "\f105";	
+			font-family: FontAwesome;
+			text-align: center;
+			.line-h(5);
+			.bg-col(@wht);
+			.txt-col-red;
+			.abs;
+			.right(1);
+			.top(0.7);
+			.w(5);
+			.h(5);
+			.rounded(100%);
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@wht);
+			.col(@red);
+				&:after {
+				.col(@wht);
+				.bg-col-red;	
+				}
+			}
+			
+		}
+		
+		&.col-purple {
+			a {
+			.trans-bg(@purple; 0.7);
+				&:after {
+				.txt-col-purple;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col(@wht);
+				.txt-col-purple;
+					&:after {
+					.col(@wht);
+					.bg-col-purple;	
+					}
+				}
+			}
+		}
+		
+		&.col-green {
+			a {
+			.trans-bg(@green; 0.7);
+				&:after {
+				.txt-col-green;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col(@wht);
+				.txt-col-green;
+					&:after {
+					.col(@wht);
+					.bg-col-green;	
+					}
+				}
+			}
+		}
+		
+		&.col-blue {
+			a {
+			.trans-bg(@blue; 0.7);
+				&:after {
+				.txt-col-blue;	
+				}
+				
+				&:hover, &:active, &:focus {
+				.bg-col(@wht);
+				.txt-col-blue;
+					&:after {
+					.col(@wht);
+					.bg-col-blue;	
+					}
+				}
+			}
+		}
+	}
+	
 	#scroll-down-btn {
 	.block;
 	.pad-all(0);
