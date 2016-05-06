@@ -71,9 +71,9 @@
 	.tk-banner-panel {
 	.min-h(25);
 	.pad-all(1.5);
-	.border(white; 0.4);
+	//.border(white; 0.4);
 	.rounded(15px);	
-	.bg-col-grayDk;
+	.bg-col(@wht);
 	.drop-shadow(0, 3px, 20px, 0.7);
 		i.txt-icon {
 		.block;
@@ -101,30 +101,28 @@
 		}
 		
 		p {
-		.col(white);	
+		.txt-col-grayDk;	
 		}
 		
 		&.col-purple {
-		.bg-col-purple;	
 			i {
 			.bg-col(darken(@purple, 20%));
 			.txt-col-purple-lt;	
 			}
 			
 			h2 {
-			.col(lighten(@purple, 20%));	
+			.txt-col-purple-dk;
 			}
 		}
 		
 		&.col-blue {
-		.bg-col-blue;	
 			i {
 			.bg-col(darken(@blue, 20%));
 			.txt-col-blue-lt;	
 			}
 			
 			h2 {
-			.col(lighten(@blue, 20%));	
+			.txt-col-blue-dk;
 			}
 		}
 	}
