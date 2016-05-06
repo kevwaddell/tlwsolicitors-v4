@@ -12,7 +12,7 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-slid
 	<a name="toolkit-slides" id="toolkit-slides" class="section-target"></a>
 	<ul class="list-unstyled tk-slider-nav">
 		<?php foreach ($slides as $k => $link) { ?>
-		<li class="link-<?php echo $link['slide_color']; ?><?php echo ($k == 0) ? ' active':''; ?>"><a href="#tk-slide-<?php echo $k + 1; ?>" title="<?php echo $link['slide_title']; ?>"><i class="fa <?php echo $link['slide_icon']; ?> tk-sn-nav-icon"></i><span class="sr-only"><?php echo $link['slide_title']; ?></span></a></li>
+		<li class="link-<?php echo $link['slide_color']; ?><?php echo ($k == 0) ? ' active':''; ?>"><a href="#tk-slide-<?php echo $k + 1; ?>" title="<?php echo $link['slide_title']; ?>"><i class="fa <?php echo $link['slide_icon']; ?> tk-sn-nav-icon"></i><span><?php echo $link['slide_title']; ?></span></a></li>
 		<?php } ?>
 	</ul>
 	<div class="tk-slides-outer">
@@ -20,7 +20,7 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-slid
 			<?php foreach ($slides as $k => $slide) { ?>
 			
 			<article id="tk-slide-<?php echo $k + 1; ?>" class="tk-slide slide-<?php echo $slide['slide_color']; ?><?php echo ($k == 0) ? ' tk-slide-active':''; ?>">
-				<h2 class="slide-banner-header text-center bg-col-<?php echo $slide['slide_color']; ?> caps font-slab-serif"><?php echo $slide['slide_title']; ?></h2>
+				<h2 class="slide-banner-header text-center bg-col-<?php echo $slide['slide_color']; ?>-dk caps font-slab-serif"><?php echo $slide['slide_title']; ?></h2>
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-8">

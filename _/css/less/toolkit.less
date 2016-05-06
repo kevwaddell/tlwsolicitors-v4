@@ -172,36 +172,50 @@ z-index: 2;
 .rel;	
 	
 	ul.tk-slider-nav {
-	.h(12.4);
+	.h(16.4);
 	.mag-bot(0);
 	.border-bot(white; 0.4);
 		li {
 		width: 20%;
-		.h(12);
+		.h(16);
 		.fleft;	
 		.border-right(white; 0.4);
 		.rel;
 		.transition(0.3s, ease-in-out);
+			span {
+			.block;
+			text-align: center;
+			.font-slab-serif;
+			.caps;
+			.col(@wht);	
+			.font-size(1.6);
+			.line-h(1.6);
+			.pad-top(1.5);
+			.bold;
+			}
 			&:last-child {
 			.no-border;
 			}
 			
-			:after {
+			&:after {
 			.abs;
 			left: 50%;
-			.bottom(-1);
-			.mag-left(-0.5);
+			.bottom(-0.2);
+			.mag-left(-2);
 			content: "";
-			.w(1);
-			.h(6);	
-			.bg-col(@trans);
+			.w(4);
+			.h(2);	
+			border-left: 20px solid @trans;
+			border-right: 20px solid @trans;
+			border-bottom: 20px solid @trans;
 			.animated;
 			}
 			
 			&.active {
 			
-				:after {
+				&:after {
 				.fadeIn;
+				border-bottom-color: @wht;
 				}
 			}
 		}
@@ -217,13 +231,15 @@ z-index: 2;
 		.font-size(10);
 		.drop-shadow(0, 3px, 10px, 0.7);
 		.transition(0.3s, ease-in-out);
+		.mag-auto;
 		}
 		
 				
 		a {
 		.block;	
 		.no-text-dec;
-		.w(18);
+		//.w(18);
+		.pad(0;2;0;2);
 		.h(18);
 		margin: -90px auto 0px;
 		}
@@ -248,10 +264,6 @@ z-index: 2;
 					.txt-col-purple;
 					}
 				}
-				
-				:after {
-				.bg-col-purple-dk;
-				}	
 			}
 		}
 		
@@ -274,10 +286,6 @@ z-index: 2;
 					.bg-col-green-dk;
 					.txt-col-green;
 					}
-				}
-				
-				:after {
-				.bg-col-green-dk;
 				}	
 			}
 		}
@@ -301,10 +309,6 @@ z-index: 2;
 					.bg-col-pink-dk;
 					.txt-col-pink;
 					}
-				}
-				
-				:after {
-				.bg-col-pink-dk;
 				}	
 			}
 
@@ -330,10 +334,6 @@ z-index: 2;
 					.txt-col-orange;
 					}
 				}
-				
-				:after {
-				.bg-col-orange-dk;
-				}	
 			}
 		}
 		
@@ -357,10 +357,6 @@ z-index: 2;
 					.txt-col-blue;
 					}
 				}
-				
-				:after {
-				.bg-col-blue-dk;
-				}	
 			}
 
 		}
@@ -422,18 +418,62 @@ z-index: 2;
 		.line-h(5);
 		.mag-bot(4);
 		.mag-top(0);
+			br {
+			.none;	
+			}
 		}
 		
 		h3 {
-		.font-size(5);
-		.line-h(5.5);	
+		.font-size(4);
+		.line-h(4.5);	
 		.mag-bot(3);
 		.mag-top(0);
 		}
 		
-		p {
+		p, ul, ol {
 		.font-size(2);
 		.line-h(3);		
+		}
+		
+		//Unordered list
+		ul {
+		list-style: none;
+		.pad-left(2);
+		.mag-bot(2);
+			
+			li {
+			.pad-left(2);
+			.rel;
+			}
+			li:before {
+			.abs;
+			.left(0);
+			content: "\00BB";
+			.col(@gray);
+			.bold;		
+			.mag-right(1);
+			}
+			
+		}
+		
+		//Ordered list
+		ol {
+		list-style: none;
+		.pad-left(2);
+		.mag-bot(2);
+		list-style-position: inside;
+		counter-reset: item;
+			li {
+			//counter-increment: list-counter;
+			//.pad-left(2);
+			.rel;
+				&:before {
+				content: counters(item, ".") " - ";
+				counter-increment: item;
+				.col(@gray);
+				.bold;
+				}
+			}
 		}
 		
 		figure.tk-slide-img {
@@ -457,7 +497,7 @@ z-index: 2;
 		.w(36);
 		.h(47);
 		.rounded(12px);	
-		.opacity(0.5);	
+		.opacity(0.3);	
 		.bg-img("thin-stripe-wht.png");	
 		background-blend-mode: color;
 		}
@@ -465,37 +505,68 @@ z-index: 2;
 	}
 	
 	.slide-purple {
-	.border-top(@purple-dk, 1);	
+	//.border-top(@purple-dk, 1);	
 		.overlay {
 		.trans-bg(@purple; 0.7);
+		}
+		
+		a.col-link {
+		.txt-col-purple;
+			&:hover, &:active, &:focus {
+			.txt-col-purple-dk;
+			}	
 		}
 	}
 	
 	.slide-green {
-	.border-top(@green-dk, 1);	
+	//.border-top(@green-dk, 1);	
 		.overlay {
 		.trans-bg(@green; 0.7);
+		}
+		a.col-link {
+		.txt-col-green;
+			&:hover, &:active, &:focus {
+			.txt-col-green-dk;
+			}	
 		}
 	}
 	
 	.slide-pink {
-	.border-top(@pink-dk, 1);	
+	//.border-top(@pink-dk, 1);	
 		.overlay {
 		.trans-bg(@pink; 0.7);	
+		}
+		a.col-link {
+		.txt-col-pink;
+			&:hover, &:active, &:focus {
+			.txt-col-pink-dk;
+			}	
 		}
 	}
 	
 	.slide-orange {
-	.border-top(@orange-dk, 1);	
+	//.border-top(@orange-dk, 1);	
 		.overlay {
 		.trans-bg(@orange; 0.7);
+		}
+		a.col-link {
+		.txt-col-orange;
+			&:hover, &:active, &:focus {
+			.txt-col-orange-dk;
+			}	
 		}
 	}
 	
 	.slide-blue {
-	.border-top(@blue-dk, 1);	
+	//.border-top(@blue-dk, 1);	
 		.overlay {
 		.trans-bg(@blue; 0.7);	
+		}
+		a.col-link {
+		.txt-col-blue;
+			&:hover, &:active, &:focus {
+			.txt-col-blue-dk;
+			}	
 		}
 	}
 }
