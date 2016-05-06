@@ -369,6 +369,10 @@
 	
 	// 	SIDENAV MENU BUTTONS
 	$('body').on(event_type,'button#nav-btn', function(e){
+		
+		if ($('#wpadminbar').length == 1) {
+			$('#wpadminbar').animate({top: '-32px'}, 'fast');	
+		}
 	
 		if ( $('.tlw-wrapper').hasClass('nav-closed') ) {
 			
@@ -395,6 +399,14 @@
 			$('#quick-links').show();
 
 		} 
+		
+		if ($('#wpadminbar').length == 1) {
+			
+			$('#wpadminbar').animate({top: '0px'}, 'slow', function(){
+				$('#wpadminbar').attr('style');
+			});	
+			
+		}
 		
 		return false;
 		
@@ -1022,7 +1034,6 @@
 			$('i.fa-spinner').hide();
 		}
 		
-/*
 		if ($('body').hasClass('loading') && $('#site-loader').length == 1) {
 			$('body').removeClass('loading').addClass('loaded');	
 		
@@ -1031,7 +1042,6 @@
 			});
 
 		}
-*/
 		
 		new WOW().init();
 		
