@@ -369,9 +369,9 @@
 		return false;
 		
 	});
-
 	
-	// 	SIDENAV MENU BUTTONS
+	/* 	SIDENAV MENU BUTTONS */
+	
 	$('body').on(event_type,'button#nav-btn', function(e){
 		
 		if ($('#wpadminbar').length == 1) {
@@ -391,7 +391,6 @@
 		return false;
 		
 	});
-	
 	$('body').on(event_type,'button#close-nav', function(e){
 	
 		if ( $('.tlw-wrapper').hasClass('nav-open') ) {
@@ -416,7 +415,7 @@
 		
 	});
 	
-	// 	FAQ's
+	/* 	FAQ's */
 	$('body').on(event_type,'div.faq-question', function(e){
 		
 		var parent = $(this).parent();
@@ -433,7 +432,6 @@
 		return false;
 		
 	});
-	
 	$('body').on(event_type,'div.faq-header', function(e){
 		
 		var next = $(this).next();
@@ -450,7 +448,7 @@
 		
 	});
 	
-	//DOWNLOAD BOOKLET GUIDE BUTTON
+	/* DOWNLOAD BOOKLET GUIDE BUTTON */
 	
 	$('body').on(event_type,'button#file-download-btn', function(e){
 		
@@ -462,7 +460,6 @@
 		return false;
 		
 	});
-	
 	$(document).bind('gform_confirmation_loaded', function(event, formId){
             if(formId == 19 && $('a#download-file-btn').length == 1) {
                $('a#download-file-btn').removeClass('hidden');
@@ -476,7 +473,7 @@
             }
     });
 	
-	// 	HEADER SEARCH BUTTON
+	/* 	HEADER SEARCH BUTTON */
 	
 	$('body').on(event_type,'button#search-btn', function(e){
 	
@@ -488,7 +485,6 @@
 		return false;
 		
 	});
-	
 	$('body').on(event_type,'button#close-search', function(e){
 	
 		if ( $('#search-pop-up').hasClass('on') ) {
@@ -523,7 +519,6 @@
 		return false;
 		
 	});
-	
 	$('body').on(event_type,'button#close-office-location', function(e){
 	
 		$('#office-location-pop-up').removeClass('on').addClass('turn-off');
@@ -555,13 +550,25 @@
 	return false;	
 	});
 	
-	 /* FEED SCROLLER 
+	 /* SLIM SCROLL AREAS 
 	Adds new styled scroll bars to media feeds   
    */
    	
 	$('.feed-wrap').slimScroll({
         height: '300px'
     });
+	
+	/*
+ $('.lp-scrollable-txt').slimScroll({
+        height: '600px',
+        size: '15px',
+        position: 'right',
+        alwaysVisible: true,
+        railVisible: true,
+        railColor: '#D7D7D7',
+        color: '#4b4b4b'
+    });
+*/
     
     //POST CONTINUE READING BUTTONS
 	$('body').on('click','button#continue-read-btn', function(e){

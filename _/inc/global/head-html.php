@@ -1,9 +1,8 @@
-<!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head id="www-tlwsolicitors-co-uk" data-template-set="tlw-solicitors-theme">
-	<meta charset="<?php bloginfo('charset'); ?>">
 	
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	
 	<meta name="viewport" content ="width=device-width,user-scalable=yes" />
