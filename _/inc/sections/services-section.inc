@@ -1,10 +1,11 @@
 <?php 
+$service_section_bg_img = get_field('service_section_bg_img');
 $section_title = get_field('service_section_title');
 $section_pgs = get_field('service_section_pgs');
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'our-specialist-services'];	
 ?>
 <?php if ($section_pgs) { ?>
-<section id="services-section" class="pg-section with-header col-<?php echo (!empty($color)) ? $color : 'red'; ?> with-bg-img" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>);">
+<section id="services-section" class="pg-section with-header col-<?php echo (!empty($color)) ? $color : 'red'; ?> with-bg-img" style="background-image: url(<?php echo $service_section_bg_img;?>);">
 <a name="our-specialist-services" id="our-specialist-services" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>

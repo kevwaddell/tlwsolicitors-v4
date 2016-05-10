@@ -89,6 +89,11 @@
 		if (url.indexOf("#") == 0) {
 
 		var scrollTarget = $(url).offset().top - 40;
+		
+		if ($('body').hasClass('admin-bar')) {
+		scrollTarget = scrollTarget + 32;	
+		}
+		
 		$('html, body').animate({ scrollTop: scrollTarget }, 500);	
 		$(this).selectpicker('refresh');
 		} else {
@@ -141,7 +146,7 @@
 		
 	 }); 
 	 
-	  $(child_service_area_select).on("change", function(){
+	 $(child_service_area_select).on("change", function(){
 		var val = $(this).val();
 		
 		if ($('.submit-btn').hasClass('hidden')) {
@@ -364,7 +369,6 @@
 		return false;
 		
 	});
-
 
 	
 	// 	SIDENAV MENU BUTTONS
@@ -932,15 +936,23 @@
     		 
     		var hash = $(this).attr('href');
     		var scrollTarget = $(hash).offset().top - 40;
+    		
     		current_section = hash;
+    		
     		if (current_section == "#toolkit-slides") {
-	    	scrollTarget -= 60;	
-    		}
-    		if (current_section == "#service-info-txt") {
-			scrollTarget = $(hash).offset().top - 4;
-    		}
-    		$(this).siblings().removeClass('active');
-    		$(this).addClass('active');
+				scrollTarget -= 60;	
+			}
+					
+			if (current_section == "#service-info-txt") {
+				scrollTarget = $(hash).offset().top - 4;
+			}
+    		
+			if ($('body').hasClass('admin-bar')) {
+				scrollTarget = scrollTarget - 32;	
+			}
+				
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
     		//console.log(hash);
     		 
     		$('html, body').animate({ scrollTop: scrollTarget }, 500);	   
@@ -963,17 +975,26 @@
 				var prev_section = $(current_section).parent().prev();
 				
 				if ($(prev_section).find('a.section-target')) {
-				var scrollTarget = $(prev_section).offset().top - 40;
-				if ($(prev_section).hasClass('toolkit-slider')) {
-				scrollTarget -= 60;	
-    			}
-    			if ($(prev_section).hasClass('content-section')) {
-				scrollTarget = $(prev_section).offset().top;
-    			}
-				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
+					
+					var scrollTarget = $(prev_section).offset().top - 40;
+				
+					if ($(prev_section).hasClass('toolkit-slider')) {
+					scrollTarget -= 60;	
+					}
+    			
+					if ($(prev_section).hasClass('content-section')) {
+					scrollTarget = $(prev_section).offset().top;
+					}
+    			
+					if ($('body').hasClass('admin-bar')) {
+					scrollTarget = scrollTarget - 32;	
+					}
+				
+					$('html, body').animate({ scrollTop: scrollTarget }, 500);
+						
 				} else {
-				$('html, body').animate({ scrollTop: 0 }, 500);	
-				current_section = "#top";	
+					$('html, body').animate({ scrollTop: 0 }, 500);	
+					current_section = "#top";	
 				}
 			 
 			}
@@ -989,6 +1010,10 @@
 				
 				if ($(next_section).find('a.section-target')) {
 				var scrollTarget = $(next_section).offset().top - 40;
+				
+				if ($('body').hasClass('admin-bar')) {
+				scrollTarget = scrollTarget - 32;	
+				}
 				
 				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
 				}

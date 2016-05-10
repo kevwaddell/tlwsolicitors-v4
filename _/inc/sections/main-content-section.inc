@@ -22,6 +22,9 @@ $more_btn_text = "Continue Reading";
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	
 	<div class="container">
+		<?php if ($post->post_parent != 0) { ?>
+			<div class="service-label text-center font-slab-serif caps txt-col-wht <?php echo (!empty($color)) ? 'bg-col-'.$color : 'bg-col-red'; ?>"><?php the_title(); ?></div>		
+		<?php } ?>
 		<div class="row">
 			
 			<div class="col-xs-11">

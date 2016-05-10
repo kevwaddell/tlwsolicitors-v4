@@ -1,5 +1,4 @@
 <?php  
-$banner_bg_img = get_field('banner_bg_img');
 $banner_options = get_field('banner_options');
 $banner_tags = get_field('banner_tags');
 $banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
@@ -22,7 +21,7 @@ if ($active_sections) {
 	}
 }		
 ?>
-<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php echo $banner_bg_img;?>)">
+<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>)">
 	<?php if (in_array("title", $banner_options)) { ?>
 	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
