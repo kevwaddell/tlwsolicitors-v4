@@ -23,6 +23,7 @@ $tag_line = get_field('tag_line', 'options');
 	
 <div class="tlw-wrapper">
 	<div class="lp-bg-img" style="background-image: url(<?php echo $bg_img_url; ?>)"></div>
+	<div class="col-overlay"></div>
 	<div class="striped-overlay"></div>
 	
 	<!-- HEADER LOGO AND NAVIGATION -->

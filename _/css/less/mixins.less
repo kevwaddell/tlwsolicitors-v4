@@ -155,11 +155,17 @@ background-color: @col;
 .bg-col-red-dk {
 .bg-col(@redMid);	
 }
+.bg-col-red-lt {
+.bg-col(lighten(@red, 20%));	
+}
 .bg-col-purple {
 .bg-col(@purple);	
 }
 .bg-col-purple-dk {
 .bg-col(darken(@purple, 20%));	
+}
+.bg-col-purple-lt {
+.bg-col(lighten(@purple, 20%));	
 }
 .bg-col-green {
 .bg-col(@green);	
@@ -167,11 +173,17 @@ background-color: @col;
 .bg-col-green-dk {
 .bg-col(darken(@green, 20%));	
 }
+.bg-col-green-lt {
+.bg-col(lighten(@green, 20%));	
+}
 .bg-col-pink {
 .bg-col(@pink);	
 }
 .bg-col-pink-dk {
 .bg-col(darken(@pink, 20%));	
+}
+.bg-col-pink-lt {
+.bg-col(lighten(@pink, 20%));	
 }
 .bg-col-orange {
 .bg-col(@orange);	
@@ -179,11 +191,17 @@ background-color: @col;
 .bg-col-orange-dk {
 .bg-col(darken(@orange, 20%));	
 }
+.bg-col-orange-lt {
+.bg-col(lighten(@orange, 20%));	
+}
 .bg-col-blue {
 .bg-col(@blue);	
 }
 .bg-col-blue-dk {
 .bg-col(darken(@blue, 20%));	
+}
+.bg-col-blue-lt {
+.bg-col(lighten(@blue, 20%));	
 }
 .bg-size(@size: cover){
 @bgsize: @size;	
@@ -959,28 +977,6 @@ background-blend-mode: multiply;
 		
 		i {
 		.bg-col(@col);		
-		}
-	}
-}
-
-.lp-form-col(@col) {
-	
-	h3 {
-	.bg-col(@col);
-		i {
-		.col(darken(@col, 20%));	
-		}		
-	}
-	
-	.gform_wrapper {
-	.bg-col(darken(@col, 20%));	
-	}
-	
-	input.gform_button, input.gform_previous_button, input.gform_next_button, .gfield_html a.btn {
-	.bg-col(@col);	
-	.no-border;
-		&:hover, &:active, &:focus {
-		.bg-col(lighten(@col, 10%));
 		}
 	}
 }
