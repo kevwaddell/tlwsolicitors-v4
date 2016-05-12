@@ -11,6 +11,18 @@ global $color;
 		<?php if (is_home()) { ?>
 		latest from <?php bloginfo('name'); ?>
 		<?php } ?>
+		<?php if (is_category()) { ?>
+		<?php single_cat_title(); ?>
+		<?php } ?>
+		<?php if (is_day()) { ?>
+		<small>Archives: <?php echo get_the_date('M - j - Y'); ?></small>
+		<?php } ?>
+		<?php if (is_month()) { ?>
+		<small>Archives: <?php echo get_the_date('F - Y'); ?></small>
+		<?php } ?>
+		<?php if (is_year()) { ?>
+		<small>Archives: <?php echo get_the_date('Y'); ?></small>
+		<?php } ?>
 	</header>
 	
 	<div class="img-overlay"></div>

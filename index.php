@@ -1,22 +1,18 @@
 <?php get_header(); ?>
 	<!-- MAIN CONTENT START -->
 	
-		<main class="page-col-red">
+		<?php
+		$freephone_num = get_field('freephone_num', 'option');
+		$news_page_id = get_option('page_for_posts');
+		$news_page = get_page($news_page_id);
+		$page_icon = get_field('page_icon', $news_page->ID);
 		
-			<?php
-			$freephone_num = get_field('freephone_num', 'option');
-			$news_page_id = get_option('page_for_posts');
-			$news_page = get_page($news_page_id);
-			//echo '<pre>';print_r($news_page);echo '</pre>';
-			$page_icon = get_field('page_icon', $news_page->ID);
-			$paged = (get_query_var('paged') != 0) ? get_query_var('paged'):1;
-			
-			if ( has_post_thumbnail($news_page_id) ) {
-			$img_post = $news_page_id;
-			}
-			
-			//echo '<pre>';print_r($paged);echo '</pre>';
-			?>
+		if ( has_post_thumbnail($news_page_id) ) {
+		$img_post = $news_page_id;
+		}
+		?>
+	
+		<main class="page-col-red">
 			
 			<?php if ($img_post) { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
