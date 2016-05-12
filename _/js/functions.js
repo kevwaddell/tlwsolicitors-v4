@@ -793,8 +793,6 @@
 			var txt_copy = $(main_txt).clone();
 			var scroller_h = $('#txt-only-content').innerHeight() - 170;
 			
-			console.log(scroller_h);
-			
 			if (title_txt) {
 			var title_copy = '<div class="title-header">'+ title_txt +'</div>';	
 			$(title_copy).appendTo('#txt-only-wrapper');
@@ -894,7 +892,7 @@
 			var next = $(this).parent().next().find('a.section-target');
 			var hash = $(next).attr('id');
     		var scrollTarget = $('#'+hash).offset().top - 40;
-    		if (hash == 'service-info-txt') {
+    		if (hash == 'service-info-txt' || hash == 'article-txt') {
 	    	scrollTarget = $('#'+hash).offset().top - 4;	
     		}
     		current_section = '#'+hash;
@@ -950,7 +948,7 @@
 				scrollTarget -= 60;	
 			}
 					
-			if (current_section == "#service-info-txt") {
+			if (current_section == "#service-info-txt" || current_section == "#article-txt") {
 				scrollTarget = $(hash).offset().top - 4;
 			}
     		

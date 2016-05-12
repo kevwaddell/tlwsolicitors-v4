@@ -4,7 +4,7 @@
 
 body {
 .font-normal;
-.max-w(68);	
+.max-w(104.3);	
 }
 
 h1, h2, h3, h4, h5 {
@@ -12,9 +12,25 @@ h1, h2, h3, h4, h5 {
 .col(@gray);
 }
 
+h1 {
+.font-size(7);
+.line-h(8);	
+.font-lite;
+.txt-col-grayDk;
+.mag-bot(3);
+}
+
+h3 {
+.font-size(3.5);
+.line-h(4.5);
+.mag-bot(2);	
+.font-lite;
+.caps;	
+}
+
 p, ul, ol {
-.font-size(1.6);
-.line-h(2);	
+.font-size(2);
+.line-h(3);	
 }
 
 p {
@@ -40,6 +56,8 @@ p {
 	}
 	
 	&.lead {
+	.font-size(3.5);
+	.line-h(4.5);	
 	.col(@gray);	
 	}
 }
@@ -99,28 +117,13 @@ blockquote {
 .caps;	
 }
 
-h1, h2 {
-.font-size(2.5);
-.font-lite;	
-.col(@grayDk);
-}
-
-h3 {
-.font-size(2.5);
-.font-lite;	
-.caps;
-}
-
-h4, h5 {
-.font-size(1.8);
-}
-
 hr {
 .border-col(lighten(@gray, 20%));	
 }
 
 a {
 .col(@red);
+.bold;
 text-decoration: underline;
 	&:hover, &:active, &:focus {
 	.col(@redMid);
