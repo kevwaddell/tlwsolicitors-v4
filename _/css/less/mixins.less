@@ -203,6 +203,19 @@ background-color: @col;
 .bg-col-blue-lt {
 .bg-col(lighten(@blue, 20%));	
 }
+
+.bg-col-facebook {
+.bg-col(@facebook_blue);	
+}
+
+.bg-col-twitter {
+.bg-col(@twitter_blue);	
+}
+
+.bg-col-google-plus {
+.bg-col(@google_orange);	
+}
+
 .bg-size(@size: cover){
 @bgsize: @size;	
  -webkit-background-size: ~"@{bgsize}";
@@ -404,6 +417,10 @@ border: none;
 .border-col(@col) {
 @borderCol: @col;
 border-color:  ~"@{borderCol}"; 
+}
+
+.wht-border-bottom {
+.border-bot(@wht; 0.4); 	
 }
 
 .shadow-inset-none {

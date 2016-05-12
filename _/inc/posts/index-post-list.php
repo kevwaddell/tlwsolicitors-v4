@@ -1,47 +1,45 @@
-<section class="page-content post-grid">
+<section class="page-content post-grid">	
+		
+		<?php if ( have_posts() ): ?>
+		<?php
+		$cols = array("purple", "green", "pink", "orange", "blue");	
+		$post_counter = 0;
+		?>
+		<div class="page-links">
+			<div class="container">	
+			<?php wp_pagenavi(); ?>
+			</div>
+		</div>	
+		<?php while ( have_posts() ) : the_post();
+		$date = get_the_date('l - jS F - Y');
+		?>	
+			<article <?php post_class("col-".$cols[$post_counter]); ?> style="background-image: url(<?php add_full_page_banner_img(get_the_id());?>)">
+			<div class="overlay"></div>
+			<div class="stripes-overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-10 col-xs-offset-1">
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php echo $date; ?></time>
+							<h4><a href="<?php esc_url( the_permalink() ); ?>" title="View: <?php the_title_attribute(); ?> article" rel="bookmark"><?php the_title(); ?></a></h4>
+							<?php the_excerpt(); ?>
+							<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-default" title="View: <?php the_title_attribute(); ?> article" rel="bookmark">View article</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		<?php $post_counter++; ?>
+		<?php endwhile; ?>
+		
+		<div class="page-links">
+			<div class="container">	
+			<?php wp_pagenavi(); ?>
+			</div>
+		</div>					
+					
+		
+		<?php else: ?>
+		<h3 class="text-center">Sorry</h3>
+		<p class="text-center">There is no news at the moment.</p>	
+		<?php endif; ?>
 			
-	<h3 class="icon-header red mag-bot-0">Latest from <?php bloginfo('name'); ?><i class="fa fa-bullhorn fa-lg"></i></h3>
-	
-	<?php 
-	//echo '<pre>';print_r($exclude);echo '</pre>';
-	
-	if (!empty($exclude)) {
-	$args = array (
-	'post__not_in'	=> $exclude,
-	'paged'	=> $paged
-	);	
-	$wp_query = new WP_Query( $args );	
-	//echo '<pre>';print_r($wp_query);echo '</pre>';
-	}
-	
-	if ( have_posts() ): ?>
-	
-	<div class="row">		
-	<?php while ( have_posts() ) : the_post();
-	$date = get_the_date('F jS Y');
-	 ?>	
-	<div class="col-xs-4">
-		<article <?php post_class(); ?>>
-			<a href="<?php esc_url( the_permalink() ); ?>" title="View: <?php the_title_attribute(); ?> article" rel="bookmark">
-				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><i class="fa fa-calendar"></i> <?php echo $date; ?></time>
-				<h4><?php the_title(); ?></h4>
-				<?php the_excerpt(); ?>
-			</a>
-		</article>
-	</div>
-	<?php endwhile; ?>
-	</div>
-	
-	<div class="page-links">
-		<?php wp_pagenavi(); ?>
-	</div>					
-				
-	
-	<?php else: ?>
-	<h3 class="text-center">Sorry</h3>
-	<p class="text-center">There is no news at the moment.</p>	
-	<?php endif; ?>
-					
-	<div class="rule"></div>
-					
 </section>

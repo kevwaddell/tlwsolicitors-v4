@@ -19,7 +19,7 @@ $page_icon = get_field('page_icon', $news_page->ID);
 			
 			<article class="page">
 				
-			<?php include (STYLESHEETPATH . '/_/inc/posts/archive-top-bar.php'); ?>
+			<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.php'); ?>	
 			
 			<!-- ARCHIVE LIST -->
 			<?php include (STYLESHEETPATH . '/_/inc/posts/archive-post-list.php'); ?>
