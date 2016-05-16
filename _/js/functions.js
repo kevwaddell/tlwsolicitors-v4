@@ -373,10 +373,6 @@
 	/* 	SIDENAV MENU BUTTONS */
 	
 	$('body').on(event_type,'button#nav-btn', function(e){
-		
-		if ($('#wpadminbar').length == 1) {
-			$('#wpadminbar').animate({top: '-32px'}, 'fast');	
-		}
 	
 		if ( $('.tlw-wrapper').hasClass('nav-closed') ) {
 			
@@ -391,6 +387,7 @@
 		return false;
 		
 	});
+	
 	$('body').on(event_type,'button#close-nav', function(e){
 	
 		if ( $('.tlw-wrapper').hasClass('nav-open') ) {
@@ -402,14 +399,6 @@
 			$('#quick-links').show();
 
 		} 
-		
-		if ($('#wpadminbar').length == 1) {
-			
-			$('#wpadminbar').animate({top: '0px'}, 'slow', function(){
-				$('#wpadminbar').attr('style');
-			});	
-			
-		}
 		
 		return false;
 		
