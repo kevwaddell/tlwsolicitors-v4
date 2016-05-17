@@ -35,12 +35,12 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 		<div class="container">
-			<div class="row posts-list">
+			<div class="posts-list">
 				<?php foreach ($recent_posts as $rpost) { 
 				$ID = $rpost->ID;
 				$date = get_the_date('F jS Y', $ID);
 				?>
-				<div class="col-xs-4 recent-post">
+				<div class="recent-post">
 					<time class="article-date" datetime="<?php get_the_date( 'Y-m-d',  $ID); ?>"><?php echo $date; ?></time>
 					<h3><a href="<?php echo get_permalink($ID); ?>"><?php echo get_the_title($ID); ?></a></h3>
 					<a href="<?php echo get_permalink($ID); ?>" class="view-post-btn">View Article</a>
