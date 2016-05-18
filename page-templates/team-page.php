@@ -13,8 +13,8 @@ Template Name: Team Page
 		<div class="content">
 			<?php
 			$position_args = array(
-				'orderby'       => 'meta_value', 
-				'order'			=>	'DESC',
+				'orderby'       => 'term_id', 
+				'order'			=>	'ASC',
 			    'hide_empty'    => true
 			    ); 
 			$positions = get_terms( 'tlw_positions_tax', $position_args );
