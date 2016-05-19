@@ -1,8 +1,12 @@
 <?php 
+global $active_sections;
 $office_location = get_field('global_location', 'options');
 $office_map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png"; 
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<?php if (!in_array("Location Map", $active_sections)) { ?>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		
+<?php } ?>
+
 <script>
 	var TLW_MAP_ID = 'TLW_style';
 	

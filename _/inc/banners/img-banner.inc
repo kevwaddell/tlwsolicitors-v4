@@ -21,7 +21,7 @@ if ($active_sections) {
 	}
 }		
 ?>
-<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_toolkit_banner_img($img_post);?>)">
+<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
 	<?php if (in_array("title", $banner_options)) { ?>
 	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">

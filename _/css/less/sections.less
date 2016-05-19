@@ -1268,6 +1268,108 @@ nav.services-banner-links {
 	}	
 }
 
+section.contact-links {
+.rel;
+.pad-top(7);
+.pad-bot(7);
+.bg-repeat(no-repeat);
+.bg-size;
+background-position: center center;
+background-attachment: fixed;	
+
+	.img-overlay {
+	.abs;
+	width: 100%;
+	height: 100%;
+	.top(0);
+	.left(0);
+	.trans-bg(@grayDk; 0.6);
+	.bg-img("thin-stripe-wht.png");	
+	z-index: 0;
+	.opacity(0.5);
+	.trans-bg(@grayDk; 0.7);
+	//.none;
+	}
+	
+	.top-drk-grad {
+	.abs;
+	.left(0);
+	.top(0);		
+	width: 100%;
+	height: 50%;
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#00333333',GradientType=0 ); /* IE6-9 */
+	.opacity(0.7);
+	z-index: 0;
+	//.none;
+	}
+	
+	.intro {
+	.rel;
+	z-index: 2;
+	.col(@wht);
+	.mag-bot(5);
+	
+			p {
+			.font-size(3);	
+			}
+			
+			p.header {
+			.font-slab-serif;
+			.font-size(6);
+			.line-h(6);
+			.caps;
+			.txt-col-wht;
+			.mag-bot(2);	
+			}
+			
+
+	}
+
+	.contact-info {
+	.rel;
+	z-index: 2;
+		.contact-info-label, a.contact-info-link {
+		.bg-col-red;
+		.col(@wht);
+		text-align: center;	
+		.font-size(2.8);
+		.font-slab-serif;
+		.h(7);
+		.line-h(7);
+		.rel;
+		.mag-bot(2);
+		.pad-left(6);
+		.drop-shadow(0, 3px, 10px, 1);
+			i {
+			.abs;
+			.top(1);
+			.left(1);
+			.w(5);
+			.h(5);
+			.line-h(4.2);
+			.rounded(100%);
+			.border(@wht; 0.4);
+			.font-size(2);
+			}
+		}	
+		
+		a.contact-info-link {
+		.block;	
+		.no-text-dec;
+			&:hover, &:active, &:focus {
+			.bg-col-grayDk;
+				i {
+				.bg-col-red;	
+				}
+			}
+		}
+		
+	}
+
+}
 
 // ARTICLE SECTION
 article.content-section {
@@ -1377,6 +1479,9 @@ article.content-section {
 		}
 		
 		h4, h5 {
+		.caps;
+		.bold;
+		.txt-col-gray;
 		.font-size(2.5);
 		}
 
@@ -1457,6 +1562,7 @@ article.content-section {
 
 }
 
+// GENERAL PAGE SECTION STYLES
 .pg-section {
 .pad-bot(4);	
 .rel;
@@ -2588,6 +2694,166 @@ article.content-section {
 		.rel;
 		}
 		
+	}
+}
+
+// LOCATION MAP SECTION
+#wide-map {
+.bg-col(@wht);
+.rel;
+.border-top(@wht; 0.4);
+.h(44.4);
+.pad-top(0);
+.pad-bot(0);	
+
+	#wide-map-canvas {
+	.abs;
+	.top(0);
+	.left(0);
+	width: 100%;
+	.h(44);	
+	width: 100%;
+	}
+	
+	.google-maps {
+	width: 100%;	
+	}
+	
+	.location-box {
+	.trans-bg(@wht; 0.8);
+	.drop-shadow(0, 0, 20px, 0.5);
+	
+		address {
+		.pad-all(2);
+		.font-size(2);	
+		.line-h(2.5);
+		.mag-bot(0);
+		.rel;
+		}
+		
+		button.btn {
+		.no-rounded;
+		.pad(0;8.5;0;2);
+		.h(7);
+		.bg-col(@red);
+		.col(@wht);
+		.rel;
+		.font-size(2.5);
+		text-align: left;
+		outline: none;
+		.caps;
+		.font-slab-serif;
+			i {
+			.abs;
+			.right(2);
+			.top(1);
+			.h(5);
+			.w(5);
+			.border(@wht; 0.4);
+			.font-size(2);
+			.rounded(100%);	
+			text-align: center;
+			.line-h(4.2);
+			}	
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@grayDk);
+				i {
+				.bg-col-red;
+				}
+			}
+		}
+	}
+	
+}
+
+#route-finder-modal {
+	.modal-header {
+	.bg-col-grayDk;
+	.rel;
+		h4 {
+		.col(@wht);
+		.pad-left(4);	
+		.rel;
+		.caps;
+		.font-slab-serif;
+			i {
+			.abs;
+			.left(-0.5);
+			.top(-0.5);
+			.h(3.6);
+			.w(3.6);
+			.line-h(2.8);
+			.rounded(100%);
+			.border(@wht; 0.4);
+			.font-size(1.4);
+			text-align: center;
+			}
+		}	
+		
+		button.close-btn {
+		.abs;
+		.pad-all(0);
+		.right(1);
+		.top(1);
+		.h(3.6);
+		.w(3.6);
+		.font-size(2.4);
+		.line-h(3.6);
+		text-align: center;
+		.trans-bg(@wht; 0.3);
+		.col(@grayDk);
+		.rounded(100%);	
+		.transition(0.2s);
+		.no-border;
+			i {
+			.font-size(2);	
+			.line-h(3.6);
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@gray);
+			.col(@wht);
+			}
+		}
+	}
+	
+	.modal-body {
+		
+		.btn {
+		.pad-all(0);
+		.pad-left(2);
+		.h(7);
+		.bg-col(@red);
+		.col(@wht);
+		.rel;
+		.font-size(2);
+		text-align: left;
+		outline: none;	
+		.no-border;
+		.caps;
+		.font-slab-serif;
+			i {
+			.abs;
+			.right(1);
+			.top(1);
+			.h(5);
+			.w(5);
+			.border(@wht; 0.4);
+			.rounded(100%);	
+			text-align: center;
+			.line-h(4.2);
+			.font-size(2);
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col(@grayDk);
+				i {
+				.bg-col-red;
+				}
+			}
+			
+		}
 	}
 }
 

@@ -546,18 +546,6 @@
 	$('.feed-wrap').slimScroll({
         height: '300px'
     });
-	
-	/*
- $('.lp-scrollable-txt').slimScroll({
-        height: '600px',
-        size: '15px',
-        position: 'right',
-        alwaysVisible: true,
-        railVisible: true,
-        railColor: '#D7D7D7',
-        color: '#4b4b4b'
-    });
-*/
     
     //POST CONTINUE READING BUTTONS
 	$('body').on('click','button#continue-read-btn', function(e){
@@ -940,10 +928,6 @@
 			if (current_section == "#service-info-txt" || current_section == "#article-txt") {
 				scrollTarget = $(hash).offset().top - 4;
 			}
-    		
-			if ($('body').hasClass('admin-bar')) {
-				scrollTarget = scrollTarget - 32;	
-			}
 				
 			$(this).siblings().removeClass('active');
 			$(this).addClass('active');
@@ -979,10 +963,6 @@
 					if ($(prev_section).hasClass('content-section')) {
 					scrollTarget = $(prev_section).offset().top;
 					}
-    			
-					if ($('body').hasClass('admin-bar')) {
-					scrollTarget = scrollTarget - 32;	
-					}
 				
 					$('html, body').animate({ scrollTop: scrollTarget }, 500);
 						
@@ -1005,10 +985,6 @@
 				if ($(next_section).find('a.section-target')) {
 				var scrollTarget = $(next_section).offset().top - 40;
 				
-				if ($('body').hasClass('admin-bar')) {
-				scrollTarget = scrollTarget - 32;	
-				}
-				
 				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
 				}
 			 
@@ -1030,7 +1006,22 @@
 		
 		});
 
-
+		/* SCROLL TO SECTION BUTTON */
+		
+		$('body').on(event_type,'a.jump-2-link', function(e){
+			
+			console.log($(this));
+    		 
+    		var hash = $(this).attr('href');
+    		var scrollTarget = $(hash).offset().top - 40;
+    		
+    		current_section = hash;
+    		 
+    		$('html, body').animate({ scrollTop: scrollTarget }, 500);	   
+    		  			
+			return false;
+		
+		});
 	});
 
 	/* END DOC READY FUNCTION */
