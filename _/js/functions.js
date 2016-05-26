@@ -996,6 +996,11 @@
 				
 				if ($(next_section).find('a.section-target')) {
 				var scrollTarget = $(next_section).offset().top - 40;
+				
+					if ($(next_section).hasClass('content-section')) {
+					scrollTarget = $(next_section).offset().top;
+					}
+					
 				$('html, body').animate({ scrollTop: scrollTarget }, 500);		
 				}
 			}
