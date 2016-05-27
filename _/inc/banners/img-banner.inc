@@ -30,7 +30,7 @@ if ($active_sections) {
 	</header>
 	<?php } ?>
 	
-	<div class="tag-scroller">
+	<div class="tag-scroller<?php echo (in_array("title", $banner_options)) ? " with-banner-title":""; ?>">
 		<?php if (!empty($banner_tags)) { ?>
 		<?php foreach ($banner_tags as $k => $tag) { ?>
 		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>

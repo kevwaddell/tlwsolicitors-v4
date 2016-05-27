@@ -16,16 +16,12 @@ $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');
 	<?php if ($hp_banner_quick_links) { ?>
 	<nav class ="hp-banner-links text-center">
 		<div class="container">
-			<div class="row">
-				<?php foreach ($hp_banner_quick_links as $bl) { 
-				$icon = get_field( 'page_icon', $bl['link_page']);	
-				$color = get_field( 'page_colour', $bl['link_page']);
-				?>
-				<div class="col-xs-6">
-					<a href="<?php echo get_permalink($bl['link_page']); ?>" class="services-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i> <?php echo get_the_title($bl['link_page']); ?></a>
-				</div>
-				<?php } ?>
-			</div>
+			<?php foreach ($hp_banner_quick_links as $bl) { 
+			$icon = get_field( 'page_icon', $bl['link_page']);	
+			$color = get_field( 'page_colour', $bl['link_page']);
+			?>
+				<a href="<?php echo get_permalink($bl['link_page']); ?>" class="services-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i> <?php echo get_the_title($bl['link_page']); ?></a>
+			<?php } ?>
 		</div>
 	</nav>
 	<?php } ?>
