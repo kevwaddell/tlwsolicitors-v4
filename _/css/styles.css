@@ -15924,7 +15924,7 @@ figure.alignnone {
 .gform_wrapper .gform_footer input.gform_button,
 .gform_wrapper .gform_footer input[type=submit] {
   display: block;
-  width: 100%;
+  width: 100% !important;
   background-color: #4b4b4b;
   color: #ffffff;
   height: 50px;
