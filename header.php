@@ -34,6 +34,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <div class="tlw-wrapper nav-closed">
+	<?php
+	$awards_active = get_field('awards_active', 'options');	
+	if ($awards_active) {
+	$award_title = get_field('award_title', 'options');
+	$award_year = get_field('award_year', 'options');
+	$award_category = get_field('award_category', 'options');
+	?>
+	<div id="awards-pop-up" class="open">
+		<div id="awards-pop-up-inner">
+			<div class="inner-left">
+				<div id="nla-logo" style="background-image: url('http://tlwsolicitors.dev/wp-content/uploads/2016/07/Northern-Law-Awards-logo.png');"></div>
+			</div>
+			<div class="inner-right">
+				<div class="title in-block"><?php echo $award_title; ?></div><div class="year in-block"><?php echo $award_year; ?></div>
+				<div class="description"><?php echo $award_category; ?></div>
+			</div>
+		</div>
+		
+		<button id="close-awards-btn" class="btn btn-default"><span class="sr-only">Close pop up</span><i class="fa fa-times"></i></button>
+	</div>
+	<?php } ?>
 	
 	<!-- HEADER LOGO AND NAVIGATION -->
 	<?php include (STYLESHEETPATH . '/_/inc/global/masthead.php'); ?>	

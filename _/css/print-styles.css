@@ -1,1 +1,115 @@
-@media print{.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{width:100%;float:none}.container{padding-left:100px;padding-right:100px}.header{padding:50px 0 50px 0;margin:0 100px 50px 100px;border-bottom:2px solid #808080}.header .logo{font-family:sans-serif;font-weight:300;text-indent:0;font-size:50px}.header .container{padding-left:0;padding-right:0}a[href]:after{content:none !important}#side-nav,.header-links,.banner-form,.nav-action,.contact-links,.footer-pg-info,.sidebar,.access-btns,.links-menu,#footer-info,#search-pop-up,#catapult-cookie-bar,#breadcrumbs,#booklet-download-btn,#booklet-download,.feat-img-wide,hr,.user-links{display:none}.banner-img-wide{height:auto}.title-banner,.lp-header{font-family:sans-serif;font-size:30px;line-height:50px;text-transform:uppercase;text-align:left}.service-tag{font-family:sans-serif;font-size:30px;line-height:50px;text-transform:uppercase}.banner-img{font-family:sans-serif}.banner-img h1{font-size:60px}time.date{font-size:20px;text-transform:uppercase}.content{font-family:sans-serif}.content h1{font-size:60px}.content h2{font-size:40px;color:#808080;margin-bottom:30px}.content h3{font-size:30px;color:#808080;text-transform:uppercase}.content p,.content ul,.content ol,.content p.lead,.content .faq-question{font-weight:normal;font-size:20px;line-height:25px;margin-bottom:20px}.content .faq-question{font-weight:bold}}
+@media print {
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
+    width: 100%;
+    float: none;
+  }
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .header {
+    padding: 50px 0px 50px 0px;
+    margin: 0px 100px 50px 100px;
+    border-bottom: 2px solid gray;
+  }
+  .header .logo {
+    font-family: sans-serif;
+    font-weight: 300;
+    text-indent: 0px;
+    font-size: 50px;
+  }
+  .header .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  #side-nav,
+  .header-links,
+  .banner-form,
+  .nav-action,
+  .contact-links,
+  .footer-pg-info,
+  .sidebar,
+  .access-btns,
+  .links-menu,
+  #footer-info,
+  #search-pop-up,
+  #catapult-cookie-bar,
+  #breadcrumbs,
+  #booklet-download-btn,
+  #booklet-download,
+  .feat-img-wide,
+  hr,
+  .user-links {
+    display: none;
+  }
+  .banner-img-wide {
+    height: auto;
+  }
+  .title-banner,
+  .lp-header {
+    font-family: sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .service-tag {
+    font-family: sans-serif;
+    font-size: 30px;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+  .banner-img {
+    font-family: sans-serif;
+  }
+  .banner-img h1 {
+    font-size: 60px;
+  }
+  time.date {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .content {
+    font-family: sans-serif;
+  }
+  .content h1 {
+    font-size: 60px;
+  }
+  .content h2 {
+    font-size: 40px;
+    color: grey;
+    margin-bottom: 30px;
+  }
+  .content h3 {
+    font-size: 30px;
+    color: grey;
+    text-transform: uppercase;
+  }
+  .content p,
+  .content ul,
+  .content ol,
+  .content p.lead,
+  .content .faq-question {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  .content .faq-question {
+    font-weight: bold;
+  }
+}
