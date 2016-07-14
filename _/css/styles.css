@@ -15498,30 +15498,25 @@ body.logged-in #xmas-popup-btn-wrap .holly.left {
 }
 #awards-pop-up #awards-pop-up-inner .inner-right {
   float: right;
-  padding: 15px 20px 0px 20px;
+  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/law-awards-text-right-2016.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 #awards-pop-up #awards-pop-up-inner #nla-logo {
   float: right;
   height: 100%;
   width: 300px;
+  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/northern-Law-Awards-logo.png);
   background-repeat: no-repeat;
   background-position: right center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
-}
-#awards-pop-up #awards-pop-up-inner .title,
-#awards-pop-up #awards-pop-up-inner .year {
-  font-size: 45px;
-  line-height: 45px;
-}
-#awards-pop-up #awards-pop-up-inner .year {
-  color: #75bd69;
-  padding-left: 10px;
-}
-#awards-pop-up #awards-pop-up-inner .description {
-  font-size: 20px;
 }
 #awards-pop-up button#close-awards-btn {
   position: absolute;

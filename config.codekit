@@ -258,6 +258,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_\/css\/img\/northern-Law-Awards-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/_\/css\/img\/northern-Law-Awards-logo.png",
+		"outputAbbreviatedPath": "\/_\/css\/img\/northern-Law-Awards-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_\/css\/img\/snowflake-1.png": {
 		"fileType": 32768,
 		"ignore": 0,

@@ -44,11 +44,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div id="awards-pop-up" class="open">
 		<div id="awards-pop-up-inner">
 			<div class="inner-left">
-				<div id="nla-logo" style="background-image: url('http://tlwsolicitors.dev/wp-content/uploads/2016/07/Northern-Law-Awards-logo.png');"></div>
+				<div id="nla-logo"></div>
 			</div>
 			<div class="inner-right">
-				<div class="title in-block"><?php echo $award_title; ?></div><div class="year in-block"><?php echo $award_year; ?></div>
-				<div class="description"><?php echo $award_category; ?></div>
+				<div class="title sr-only"><?php echo $award_title; ?></div><div class="year sr-only"><?php echo $award_year; ?></div>
+				<div class="description sr-only"><?php echo $award_category; ?></div>
 			</div>
 		</div>
 		
