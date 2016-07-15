@@ -108,10 +108,22 @@ z-index: 10000;
 	}
 }
 
+html.no-svg {
+	#site-loader .loader {
+	.animated;
+	.animated.infinite;
+	.animated.flip;
+	}
+}
+
 html.svg {
 	#site-loader {
 		.loader {
-		.bg-img("tlw-logo-icon.svg");
+		.mag-top(-25);
+		.mag-left(-25);
+		.w(50);
+		.h(50);	
+		.bg-img("tlw-animated-icon.svg");
 		}
 	}
 }

@@ -5433,8 +5433,24 @@ h5 {
   -o-background-size: cover;
   background-size: cover;
 }
+html.no-svg #site-loader .loader {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
 html.svg #site-loader .loader {
-  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/tlw-logo-icon.svg);
+  margin-top: -250px;
+  margin-left: -250px;
+  width: 500px;
+  height: 500px;
+  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/tlw-animated-icon.svg);
 }
 .tlw-wrapper {
   position: relative;
