@@ -24,11 +24,12 @@ $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 <!-- 		<div class="tk-pg-intro font-slab-serif"><?php echo $toolkit_intro; ?></div> -->
 		<?php echo $toolkit_content; ?>
 	</div>	
-	
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	<div class="links-wrapper links-1">
 		<a href="<?php echo get_permalink($toolkit_page->ID); ?>" class="toolkit-link link-col-<?php echo $color; ?>">	
 			<i class="fa <?php echo $page_icon; ?> link-icon"></i>
 			<span>View Our <?php echo get_the_title($toolkit_page->post_parent); ?> Toolkit</span>
 		</a>
 	</div>
+
 </section>

@@ -16037,6 +16037,10 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   position: relative;
   z-index: 2;
 }
+.pg-section#toolkit-section .col-strip {
+  border-top: 4px solid white;
+  border-bottom: none;
+}
 .pg-section#toolkit-section .tk-pg-intro,
 .pg-section#toolkit-section p.lead {
   background-color: white;
