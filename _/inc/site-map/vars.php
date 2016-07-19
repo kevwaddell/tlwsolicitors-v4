@@ -1,34 +1,15 @@
 <?php 
-$for_you_pg = get_field('for_you_pg', 'options');
-$for_biz_pg = get_field('for_biz_pg', 'options');
-
-$services_for_you_pg = get_page($for_you_pg);
-$for_you_page_icon = get_field('page_icon', $services_for_you_pg->ID);
-$services_for_you_pgs = get_field('services_for_you', 'options');
+$services_pgs = get_field('global_main_services', 'options');
 //echo '<pre>';print_r($services_for_you_pgs);echo '</pre>';
 
-$services_for_biz_pg = get_page($for_biz_pg);
-$for_biz_page_icon = get_field('page_icon', $services_for_biz_pg->ID);
-$services_for_biz_pgs = get_field('services_for_biz', 'options');
-
-$for_u_args = array(
+$services_args = array(
 'post_type'		=> 'page',
 'orderby'		=> 'menu_order',
-'include'		=> $services_for_you_pgs,
+'include'		=> $services_pgs,
 'order'			=> 'ASC'
 );
 
-$services_for_you = get_posts($for_u_args);
-
-$for_biz_args = array(
-'post_type'		=> 'page',
-'orderby'		=> 'menu_order',
-'include'		=> $services_for_biz_pgs,
-'order'			=> 'ASC'
-);
-
-$services_for_biz = get_posts($for_biz_args);
-//echo '<pre>';print_r($services_for_biz);echo '</pre>';
+$services = get_posts($services_args);
 
 //echo '<pre>';print_r($practices);echo '</pre>';
 $company_page = get_post(12);

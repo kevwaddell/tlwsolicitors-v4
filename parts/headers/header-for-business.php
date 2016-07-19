@@ -1,6 +1,14 @@
-<?php include (STYLESHEETPATH . '/_/inc/for-business-global/head-html.php'); ?>	
+<?php include (STYLESHEETPATH . '/_/inc/for-business-global/head-html.php'); 
 
-<body id="<?php echo $dir ?>" <?php body_class(array($font_size, 'loading')); ?>>
+$body_classes = array();	
+
+if ( !isset($_GET['gsdm']) ) {
+array_push($body_classes, 'loading');
+}	
+	
+?>			
+
+<body <?php body_class($body_classes); ?>>
 <?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F"

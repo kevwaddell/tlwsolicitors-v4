@@ -1,6 +1,13 @@
-<?php include (STYLESHEETPATH . '/_/inc/landing-page/head-html.php'); ?>	
+<?php include (STYLESHEETPATH . '/_/inc/landing-page/head-html.php'); 
+	
+$body_classes = array();	
 
-<body id="landing-page" <?php body_class($font_size); ?>>
+if ( !isset($_GET['gsdm']) ) {
+array_push($body_classes, 'loading');
+}		
+?>	
+
+<body id="landing-page" <?php body_class($body_classes); ?>>
 <?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F"

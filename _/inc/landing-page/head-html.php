@@ -19,11 +19,9 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
 	
-	<?php
-	if ( isset($_COOKIE['font_size']) ) {
-    $font_size = $_COOKIE['font_size'];	
-	} else {
-	$font_size = "txt-sm";	
+	<?php 
+	if ( isset($_GET['src']) && $_GET['src'] == "mis-sold-solar-co-uk" ) {
+	setcookie("src",$_GET['src'] , strtotime( '+6 months' ), "/financial-mis-selling/solar-panel-mis-selling" );
 	}
 	?>
 	

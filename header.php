@@ -1,6 +1,6 @@
 <?php include (STYLESHEETPATH . '/_/inc/global/head-html.php'); 
 
-$body_classes = array($font_size);	
+$body_classes = array();	
 
 if ( !isset($_GET['gsdm']) ) {
 array_push($body_classes, 'loading');
