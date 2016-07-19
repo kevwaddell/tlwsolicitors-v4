@@ -32,6 +32,7 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 ?>
 <section id="blog-posts" class="pg-section">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
+	<div class="overlay"></div>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 	</div>

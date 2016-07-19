@@ -12,7 +12,7 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-slid
 	<a name="toolkit-slides" id="toolkit-slides" class="section-target"></a>
 	<ul class="list-unstyled tk-slider-nav">
 		<?php foreach ($slides as $k => $link) { ?>
-		<li class="link-<?php echo $link['slide_color']; ?><?php echo ($k == 0) ? ' active':''; ?>"><a href="#tk-slide-<?php echo $k + 1; ?>" title="<?php echo $link['slide_title']; ?>"><i class="fa <?php echo $link['slide_icon']; ?> tk-sn-nav-icon"></i><span><?php echo $link['slide_title']; ?></span></a></li>
+		<li class="link-<?php echo $link['slide_color']; ?><?php echo ($k == 0) ? ' active':''; ?>"><a href="#tk-slide-<?php echo $k + 1; ?>" title="<?php echo $link['slide_title']; ?>"><i class="tk-sn-nav-icon" style="background-image: url(<?php echo $link['slide_icon']; ?>)"></i><span><?php echo $link['slide_title']; ?></span></a></li>
 		<?php } ?>
 	</ul>
 	<div class="tk-slides-outer">

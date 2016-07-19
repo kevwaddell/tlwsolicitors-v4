@@ -241,6 +241,9 @@ z-index: 2;
 		.drop-shadow(0, 3px, 10px, 0.7);
 		.transition(0.3s, ease-in-out);
 		.mag-auto;
+		.bg-repeat(no-repeat);
+		background-position: center center;
+		.bg-size(contain);
 		}
 		
 				
@@ -251,73 +254,67 @@ z-index: 2;
 		.pad(0;1;0;1);
 		.h(18);
 		margin: -90px auto 0px;
+			&:hover, &:active, &:focus {
+			 	i {
+				.animated;
+				.bounce;	
+				}
+			}
 		}
 		
 		li.link-purple {
 		.bg-col-purple;	
-			i {
-			.bg-col-purple;	
-			.txt-col-purple-dk;
+			
+			&:hover, &:active, &:focus {
+			.bg-col-purple-dk;
 			}
 			
-			a:hover i , a:active i , a:focus i {
-			.bg-col-purple-dk;
-			.txt-col-purple;
+			i {
+			.bg-col-purple-dk;	
 			}
 			
 			&.active {
+			.bg-col-purple-dk;
 				a {
 				pointer-events: none;
-					i {
-					.bg-col-purple-dk;
-					.txt-col-purple;
-					}
 				}
 			}
 		}
 		
 		li.link-green {
 		.bg-col-green;
-			i {
-			.bg-col-green;	
-			.txt-col-green-dk;
-			}
 			
-			a:hover i, a:active i, a:focus i {
+			&:hover, &:active, &:focus {
 			.bg-col-green-dk;
-			.txt-col-green;
+			}
+
+			i {
+			.bg-col-green-dk;	
 			}
 			
 			&.active {
+			.bg-col-green-dk;
 				a {
 				pointer-events: none;
-					i {
-					.bg-col-green-dk;
-					.txt-col-green;
-					}
 				}	
 			}
 		}
 		
 		li.link-pink {
 		.bg-col-pink;	
-			a i {
-			.bg-col-pink;	
-			.txt-col-pink-dk;
+			
+			&:hover, &:active, &:focus {
+			.bg-col-pink-dk;
 			}
 			
-			a:hover i, a:active i, a:focus i {
-			.bg-col-pink-dk;
-			.txt-col-pink;
+			a i {
+			.bg-col-pink-dk;	
 			}
 			
 			&.active {
+			.bg-col-pink-dk;
 				a {
 				pointer-events: none;
-					i {
-					.bg-col-pink-dk;
-					.txt-col-pink;
-					}
 				}	
 			}
 
@@ -325,40 +322,36 @@ z-index: 2;
 		
 		li.link-orange {
 		.bg-col-orange;	
-			a i {
-			.bg-col-orange;	
-			.txt-col-orange-dk;
+			
+			&:hover, &:active, &:focus {
+			.bg-col-orange-dk;
 			}
 			
-			a:hover i, a:active i, a:focus i {
-			.bg-col-orange-dk;
-			.txt-col-orange;
+			a i {
+			.bg-col-orange-dk;	
 			}
 			
 			&.active {
+			.bg-col-orange-dk;
 				a {
 				pointer-events: none;
-					i {
-					.bg-col-orange-dk;
-					.txt-col-orange;
-					}
 				}
 			}
 		}
 		
 		li.link-blue {
 		.bg-col-blue;	
-			a i {
-			.bg-col-blue;	
-			.txt-col-blue-dk;
-			}
 			
-			a:hover i, a:active i, a:focus i {
+			&:hover, &:active, &:focus {
 			.bg-col-blue-dk;
-			.txt-col-blue;
+			}
+
+			a i {
+			.bg-col-blue-dk;
 			}
 			
 			&.active {
+			.bg-col-blue-dk;
 				a {
 				pointer-events: none;
 					i {
