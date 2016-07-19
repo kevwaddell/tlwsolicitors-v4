@@ -1,9 +1,10 @@
 <?php 
-global $active_sections;
+global $post;
+$contact_pg = get_page_by_title("Contact us");
 $office_location = get_field('global_location', 'options');
 $office_map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png"; 
 ?>
-<?php if (!$active_sections && !in_array("Location Map", $active_sections)) { ?>
+<?php if ($post->ID != $contact_pg->ID) { ?>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		
 <?php } ?>
 

@@ -1,8 +1,9 @@
 <?php 
-global $active_sections;	
+global $post;	
+$contact_pg = get_page_by_title("Contact us");
 ?>
 
-<?php if (in_array("Location Map", $active_sections)) { ?>
+<?php if ($post->ID === $contact_pg->ID) { ?>
 
 <div class="modal fade" id="route-finder-modal" tabindex="-1" role="dialog">
 	
