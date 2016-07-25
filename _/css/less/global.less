@@ -46,7 +46,7 @@ min-height: 100%;
 	overflow: auto;	
 	}
 	
-	&.nav-open, &.txt-only-open {
+	&.txt-only-open {
 	overflow: hidden;	
 	.abs;
 	.top(0);
@@ -137,13 +137,15 @@ min-height: 100%;
 //.bg-repeat(no-repeat);
 //background-position: right bottom;
 .transition(0.3s, ease);
+.transform(translateX(0));
+/*
 
 	&.nav-closed {
-	//.left(0);
+	.left(0);
 	.transform(translateX(0));
 	}
 	&.nav-open {
-	//.left(-35);
+	.left(-35);
 	height: 100%;
 	.over-hide;
 	.drop-shadow(5px, 0px, 10px, 0.5);
@@ -155,6 +157,7 @@ min-height: 100%;
 		}
 
 	}
+*/
 	
 	&.how-it-works-on, &.links-open {
 	height: 100%;

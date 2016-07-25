@@ -79,7 +79,7 @@
 				
 			</section>
 			
-			<div class="nav-overlay"></div>
+<!-- 			<div class="nav-overlay"></div> -->
 			
 	</div><!-- MAIN WRAPPER END -->
 
