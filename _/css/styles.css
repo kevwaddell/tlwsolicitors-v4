@@ -20110,16 +20110,15 @@ figure.alignnone {
   line-height: 50px;
 }
 .gform_wrapper .gform_footer input.gform_button {
-  display: block;
-  width: 100%;
+  display: block !important;
+  width: 100% !important;
   background-color: #4b4b4b;
   color: white;
   height: 50px;
   line-height: 50px;
-  padding: 0px !important;
+  padding: 0px 20px 0px 20px !important;
   font-size: 16px;
   text-decoration: none;
-  text-indent: 20px;
   border: none;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'open_sanslight', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
