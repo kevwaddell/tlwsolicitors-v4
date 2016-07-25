@@ -67,14 +67,14 @@
 							<?php the_content(); ?>
 						</div>
 						
-						<?php if ( isset($departments) ) { ?>
+						<?php if ( !empty($departments) ) { ?>
 						<div class="btns-wrap">
 						
 							<?php foreach ($departments as $dep) { 
-							$department = get_post($dep);	
+							//$department = get_post($dep);	
 							?>
-							<a href="<?php echo get_permalink($department->ID); ?>" class="icon-btn btn btn-default btn-block" title="<?php echo $department->post_title; ?> Services">
-							<?php echo $department->post_title; ?> Services 
+							<a href="<?php echo get_permalink($dep->ID); ?>" class="icon-btn btn btn-default btn-block" title="<?php echo $dep->post_title; ?> Services">
+							<?php echo $dep->post_title; ?> Services 
 							</a>
 							<?php } ?>
 						

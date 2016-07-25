@@ -1,3 +1,57 @@
+section.social-feed {
+.min-h(17.5);	
+	ul {
+	list-style: none;
+	.pad-left(0);
+	.mag-bot(0);
+	}
+	
+	.item {
+	.pad-top(4);
+	.pad-bot(1);
+	.font-size(3);
+	.line-h(3.5);
+	
+		ul {
+		.font-size(3);
+		.line-h(3.5);	
+		}
+		
+		&.twitter span.date {
+		.col(@twitter_blue);	
+		}
+		
+		&.google-plus span.date {
+		.col(@google_orange);	
+		}
+		
+		&.facebook span.date {
+		.col(@facebook_blue);	
+		}	
+	}
+	
+	i {
+	.block;
+	.w(7.8);
+	.h(7.8);
+	.line-h(7);
+	text-align: center;
+	.txt-col-wht;
+	.border(@wht; 0.4);
+	.drop-shadow(0px, 3px, 10px, 0.7);
+	.rounded(100%);
+	.font-size(5);
+	}
+	
+	span.date {
+	.block;	
+	.caps;
+	.font-size(2);
+	.line-h(3);
+	.bold;
+	}
+}
+
 .social-feed-lrg {
 	h3.icon-header {
 	.mag-bot(0);

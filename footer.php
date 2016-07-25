@@ -79,15 +79,11 @@
 				
 			</section>
 			
-			<div class="nav-overlay"></div>
+<!-- 			<div class="nav-overlay"></div> -->
 			
 	</div><!-- MAIN WRAPPER END -->
 
 	<?php include (STYLESHEETPATH . '/_/inc/sections/quick-links.inc'); ?>
-
-<!-- 	<button id="back-2-top" class="hidden"><i class="fa fa-chevron-circle-up fa-2x"></i><span class="sr-only">Back to top</span></button> -->	
-			
-	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('User actions') ) : ?><?php endif; ?>
 	
 	<?php include (STYLESHEETPATH . '/_/inc/sections/text-only.inc'); ?>
 	
@@ -97,10 +93,12 @@
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/office-location-pop-up.php'); ?>
 	
+	<?php include (STYLESHEETPATH . '/_/inc/contact-us/route-finder-modal.inc'); ?>
+	
 	<?php include (STYLESHEETPATH . '/_/inc/xmas/pop-up.php'); ?>
 	
 	<?php if ( !isset($_GET['gsdm']) ) : ?>
-	<?php //include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
+	<?php include (STYLESHEETPATH . '/_/inc/global/site-loader.php'); ?>
 	<?php endif; ?>
 	
 	<?php wp_footer(); ?>

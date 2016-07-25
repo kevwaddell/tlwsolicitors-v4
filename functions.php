@@ -330,9 +330,13 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 if( function_exists('acf_add_options_sub_page') ) {
-
+	
+	acf_add_options_sub_page('Site footer');
+	acf_add_options_sub_page('Office location');
 	acf_add_options_sub_page('Homepage');
 	acf_add_options_sub_page('Toolkits');
+	acf_add_options_sub_page('Campaigns');
+	acf_add_options_sub_page('Sitemap');
 	
 }
 

@@ -1,10 +1,8 @@
 <div class="col-xs-6">
 	
-	<?php if ($services_for_you) { ?>
-				
-	<h3><a href="<?php echo get_permalink($for_you_pg); ?>"><?php echo ($for_you_page_icon) ? '<i class="icon fa '.$for_you_page_icon.' f-lg"></i>': ''; ?><?php echo get_the_title($for_you_pg); ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
+	<?php if ($services) { ?>
 	
-		<?php foreach ($services_for_you as $service) { ?>
+	<?php foreach ($services as $service) { ?>
 	
 	<?php 
 	$icon = get_field('page_icon', $service->ID);
@@ -25,7 +23,7 @@
 	 ?>
 	
 		<div class="list-block">
-			<h4><a href="<?php echo get_permalink($service->ID); ?>"><?php echo ($icon_tag) ? $icon_tag: ''; ?><?php echo $service->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h4>
+			<h3><a href="<?php echo get_permalink($service->ID); ?>"><?php echo ($icon_tag) ? $icon_tag: ''; ?><?php echo $service->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
 			
 		<?php if ($service_children) { ?>
 			
@@ -60,6 +58,7 @@
 
 	<?php } ?>
 	
+<!--
 	<?php if ($subjects) { ?>
 		<h3><?php echo ($news_page_icon) ? '<i class="icon fa '.$news_page_icon.' f-lg"></i>': ''; ?><?php echo $news_page->post_title; ?><i class="fa fa-angle-right fa-lg"></i>: Tags</h3>
 		
@@ -68,5 +67,6 @@
 		</div>
 			
 	<?php } ?>
+-->
 					
 </div>

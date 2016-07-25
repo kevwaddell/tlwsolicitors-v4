@@ -14,6 +14,45 @@
 		.mag-left(0.4);
 		.mag-right(0.4);
 		.mag-bot(1);
+		.rel;
+		
+		span.sr-only {
+		.transition(0.2s, ease-out);
+		.h(3);
+		.top(0.5);
+		.mag(0);
+		}
+		
+			&:hover, &:active, &:focus {
+			.bg-col-gray;
+				span.sr-only {
+				.w(10);
+				.h(3);
+				.left(-12);
+				.top(0.5);
+				.bg-col-grayDk;
+				.col(@wht);
+				clip: inherit;
+				.font-size(1.4);
+				.line-h(3);
+				.mag(0);
+				overflow: visible;
+				.rounded(4px);
+					&:after {
+					content: "";
+					.abs;
+					.right(-2);
+					top: 50%;
+					.mag-top(-0.5);
+					.w(2);
+					.h(1);
+					border-top: 5px solid @trans;
+					border-bottom: 5px solid @trans;
+					border-left: 20px solid @grayDk;
+					}
+				}
+
+			}
 		}
 	}
 }

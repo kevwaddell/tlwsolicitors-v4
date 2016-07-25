@@ -9,7 +9,6 @@
 		$quick_links = array();
 		$downloads_active = false;
 		$form_active = false;
-		$services_active = false;
 		$blog_posts_active = false;
 		$feedback_active = false;
 		$toolkit_active = false;
@@ -26,8 +25,6 @@
 					case "Downloads": $downloads_active = true;
 					break;
 					case "Form": $form_active = true;
-					break;
-					case "Services": $services_active = true;
 					break;
 					case "Blog posts": $blog_posts_active = true;
 					break;
@@ -65,8 +62,6 @@
 					case "Downloads": include (STYLESHEETPATH . '/_/inc/sections/homepage/downloads-section.inc');
 					break;
 					case "Form": include (STYLESHEETPATH . '/_/inc/sections/homepage/form-section.inc');
-					break;
-					case "Services": include (STYLESHEETPATH . '/_/inc/sections/homepage/services-section.inc');
 					break;
 					case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/homepage/blog-section.inc');
 					break;

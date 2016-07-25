@@ -1,31 +1,29 @@
 <?php
-global $form_active; 
-global $form;
-global $number_pos;
-global $color;
-global $freephone_num;
+global $form_active;
+global $all_forms_active;
 global $how_it_works_active;
-$all_forms_active = get_field('all_forms_active', 'option');
+global $color;
+$sb_plug_text_active = get_field('sb_plug_text_active');
+$sb_plug_txt = get_field('sb_plug_txt');
 ?>
 <div class="col-xs-4">
 	<aside class="scroll-sidebar sidebar lp-sidebar">
-		<?php if ($form_active && $all_forms_active) : ?>
-		<?php if ($form->is_active == 1) { ?>
-		<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
-	 	<div class="lp-form lp-form-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-	
-		 	<h3>Make your claim today <i class="fa fa-arrow-circle-down fa-lg"></i></h3>
-	
-		 	<?php //gravity_form($form->id, false, true, false, null, true); ?>
-		 	<?php gravity_form($form->id, false, true, false, array(), true); ?>
-			
-	 	</div>	
-	 	<?php } ?>
-		<?php endif; ?>
-			<?php if ($number_pos == 'sidebar') { ?>
-			<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
-	<?php } ?>
-	
+		
+		<?php if ($sb_plug_text_active) { 
+		$sb_plug_txt = get_field('sb_plug_txt');	
+		?>
+		<div class="sb-plug text-center font-slab-serif bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>-dk">
+			<?php echo $sb_plug_txt; ?>
+		</div>
+		<?php } ?>
+		
+		<?php if ($form_active && $all_forms_active) { ?>
+		<div class="sb-plug-btn">
+			<div class="plug-label">Fill in our simple form</div>
+			<button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#contact-form-modal"><i class="fa fa-check-square fa-lg"></i> Claim Today</a>
+		</div>
+		<?php } ?>
+		
 		<?php if ($how_it_works_active) { ?>	
 		<div class="how-it-works-link">
 			<a href="#how-it-works" class="hiw-link">
@@ -35,5 +33,6 @@ $all_forms_active = get_field('all_forms_active', 'option');
 			</a>
 		</div>
 		<?php } ?>
+		
 	</aside>
 </div>

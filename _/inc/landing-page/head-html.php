@@ -13,25 +13,16 @@
 	<meta name="geo.position" content="55.009452;-1.490004">
 	<meta name="ICBM" content="55.009452, -1.490004">
 	
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'start' ); } ?>
 	<?php wp_head(); ?>
 	
 	<?php 
-	$color = get_field('page_colour', $post->ID);
-	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
-	$bg_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
-	$bg_img_url = $bg_img[0];
-	
-	//echo '<pre>';print_r($wide_banner_img);echo '</pre>';
-	
-	if ( isset($_COOKIE['font_size']) ) {
-    $font_size = $_COOKIE['font_size'];	
-	} else {
-	$font_size = "txt-sm";	
+	if ( isset($_GET['src']) && $_GET['src'] == "mis-sold-solar-co-uk" ) {
+	setcookie("src",$_GET['src'] , strtotime( '+6 months' ), "/financial-mis-selling/solar-panel-mis-selling" );
 	}
 	?>
 	
-	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>

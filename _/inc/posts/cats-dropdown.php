@@ -1,7 +1,8 @@
 <?php 
 $cats_args = array(
-	'hide_empty'               => 1,
-	'hierarchical'             => 0
+	'exclude'		=> 1,
+	'hide_empty'    => 1,
+	'hierarchical'  => 0
 );
 	
 $cats = get_categories($cats_args);

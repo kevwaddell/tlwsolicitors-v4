@@ -1,9 +1,9 @@
 <?php
-global $feedback_active;
 global $color;
-if ($feedback_active) {
-	$feedback_id = get_field('client_feedback');	
-} else {
+$feedback_id = get_field('client_feedback');
+$feedback_color = get_field('feedback_color');
+
+if (empty($feedback_id)) {
 	$feedback_args = array(
 	'posts_per_page'   => 1,
 	'post_type' => 'tlw_testimonial_cpt',
@@ -13,6 +13,10 @@ if ($feedback_active) {
 	
 	$feedback_id = $feedback_quote[0]->ID;
 } 
+
+if (empty($feedback_color)) {
+$feedback_color = $color;	
+}
 $quote_txt = get_field('quote', $feedback_id);	
 $client_name = get_field('client_name', $feedback_id);		
 $location = get_field('location', $feedback_id);	
@@ -24,7 +28,7 @@ $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'
 ?>
 <section id="feedback-section" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>
-	<div class="item bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+	<div class="item bg-col-<?php echo (!empty($feedback_color)) ? $feedback_color : 'red'; ?>">
 		
 		<div class="container feedback-quote">
 			<div class="row">

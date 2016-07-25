@@ -74,16 +74,19 @@ header[role="banner"] {
 		.h(4.5);
 		.pad-all(0);
 		.pad-left(1);
-		.pad-right(1);
+		.pad-right(3.7);
 		outline: none;
 		.caps;
 		.font-size(1.6);
 		.line-h(3.7);
 		.mag-left(2);
+		.rel;
 		
 			i {
-			.fright;
-			.pad-left(1);	
+			.abs;
+			.right(0);
+			.top(0);
+			.pad-right(1);	
 			.line-h(3.7);
 			}
 			
@@ -102,10 +105,10 @@ header[role="banner"] {
 		}
 		li {
 		.in-block;	
-		.border-right(@wht; 0.1);
+		.border-left(@wht; 0.1);
 		.line-h(1.4);
-			&:last-child {
-			border-right: none;	
+			&:first-child {
+			border-left: none;	
 			}
 		}
 		

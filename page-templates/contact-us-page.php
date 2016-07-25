@@ -6,59 +6,44 @@ Template Name: Contact Us Page
 
 <?php get_header(); ?>
 
-	<!-- MAIN CONTENT START -->
-	<div class="container">
+
+<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
+<?php 
+$color = get_field('page_colour');
+$freephone_num = get_field('freephone_num', 'option');
+$form = get_field('form');
+$active_sections = get_field('active_sections');
+
+if ( has_post_thumbnail() ) {
+$img_post = get_the_ID();
+}
+
+ ?>	
+
+<main <?php post_class('page-col-red'); ?>>
+ 	<?php if (in_array("Page banner", $active_sections)) { ?>
+		<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
+	<?php } ?>
 	
-		<div class="content">
-
-			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
-			<?php 
-			$form = get_field('form');
-			$all_forms_active = get_field('all_forms_active', 'option');
-			//echo '<pre>';print_r($_GET);echo '</pre>';
-			 ?>	
-			
-			<main <?php post_class('page-col-red'); ?>>
-			 
-			<?php the_content(); ?>
-			 	
-			 	<div class="row">
-				
-					<div class="col-xs-8">
-						
-						<a id="make-a-claim" name="make-a-claim"></a>
-						
-						<div class="contact-form">
-						<?php if ($form) { 
-						//echo '<pre>';print_r($form->is_active);echo '</pre>';	
-						?>
-						<h3 class="icon-header" style="margin-bottom: 0px;"><?php echo $form->title; ?> <i class="fa fa-cog fa-lg"></i></h3>
-					
-						<?php if ($form->is_active == 1 && $all_forms_active) { ?>
-						
-						<?php include (STYLESHEETPATH . '/_/inc/global/forms-script-cap-name.php'); ?>
-						
-						<?php gravity_form($form->id, false, true, false, null, true); ?>
-						
-						<?php } else { ?>
-						<br>
-						<?php include (STYLESHEETPATH . '/_/inc/global/contact-form-offline.php'); ?>	
-						<?php } ?>
-						
-						<?php }  ?>
-						</div>
-						
-					</div>
-					
-					<?php get_template_part( 'parts/sidebars/sidebar', 'contact-us' ); ?>			
-					
-			</main>
-					
-			<?php endwhile; ?>
-<?php endif; ?>
-
-		</div><!-- CONTENT END -->
+	<!-- MAIN TEXT SECTION -->
+	<?php include (STYLESHEETPATH . '/_/inc/contact-us/main-content-section.inc'); ?>
+	
+ 	<?php if ($active_sections) { ?>		
+	<?php foreach ($active_sections as $section) { ?>
+		<?php 
+		switch($section){
+			case "Form": include (STYLESHEETPATH . '/_/inc/contact-us/form-section.inc');
+			break;
+			case "Location Map": include (STYLESHEETPATH . '/_/inc/sections/location-section.inc');
+			break; 
+		}	
+		?>
+	<?php } ?>
+	<?php } ?>	
 		
-	</div><!-- MAIN CONTENT CONTAINER END -->
+</main>
+		
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

@@ -3,13 +3,13 @@
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 <?php 
 $freephone_num = get_field('freephone_num', 'option');
-$number_pos = get_field('tel_num_position');
 $form = get_field('form');
 $form_active = get_field('form_activated');
 $color = get_field('page_colour');
 $page_icon = get_field('page_icon');
 $hide_title = get_field('hide_title'); 
 $how_it_works_active = get_field('hiw_active');
+$all_forms_active = get_field('all_forms_active', 'option');
  ?>	
 
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
@@ -39,23 +39,29 @@ $how_it_works_active = get_field('hiw_active');
 	</div>
 	
 	</article> 	
-	
-	<?php if ($number_pos == 'bottom') { ?>
-		<p class="tel-num tel-num-<?php echo (!empty($color)) ? $color : 'red'; ?>">Call us <span>free <a href="tel:<?php echo str_replace(' ', '', $freephone_num); ?>" onclick="ga('send', 'event','Freephone click', 'tap', '<?php echo $post->post_title; ?> - Call back')" title="Call us now"><?php echo $freephone_num; ?></a></span></p>
-	<?php } ?>
 
 	
 </main>
+
+<?php if ($form_active && $all_forms_active) { ?>
+<?php include (STYLESHEETPATH . '/_/inc/landing-page/contact-form-modal.inc'); ?>	
+<?php } ?>
 		
 <?php endwhile; ?>
 <?php endif; ?>
 
 </div>
-
-</div>
 <!-- MAIN CONTENT END -->
 
+<?php if (!empty($freephone_num)) { ?>
+	<div class="contact-details">
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
+	</div>
+<?php } ?>
+
 </div>
+
 
 <?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
 

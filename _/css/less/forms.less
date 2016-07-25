@@ -168,7 +168,7 @@ max-width: 100% !important;
 	}
 	
 	.gform_heading {
-	.mag-bot(1) !important;	
+	.mag-bot(1);	
 
 		span.gform_description {
 		.block;
@@ -259,16 +259,16 @@ max-width: 100% !important;
 		}
 		
 		input.gform_button {
-		.block;
-		width: 100%;
+		.block !important;
+		width: 100% !important;
 		.bg-col(@grayDk);
 		.col(white);
 		.h(5);
 		.line-h(5);
-		.pad-all(0) !important;
+		.pad(0;2;0;2) !important;
 		.font-size(1.6);
 		.no-text-dec;
-		.indent(2);
+		//.indent(2);
 		.no-border;	
 		.font-lite;
 		.caps;
@@ -334,18 +334,18 @@ max-width: 100% !important;
 	}	
 	
 	.search-submit {
-	.border-radius(0, 0, 8px, 8px);
-	font-family: FontAwesome;
 	.no-border;
-	.bg-col(@gray);
+	.bg-col-grayDk;
 	.col(white);
 	.h(5);
 	.w(5);
 	.pad-all(0);
 	.mag-all(0);
+	.indent(2);	
+	text-align: left;
 	
 		&:hover, &:active, &:focus {
-		.bg-col(@red);	
+		.bg-col-gray;
 		}
 		
 	}
@@ -421,9 +421,10 @@ form.route-finder {
 	.line-h(6);
 	.pad-top(0);
 	.font-size(2);
+	.mag-bot(0);
 	}
 	
-	.gform_heading {
+	.gform_wrapper .gform_heading {
 	.mag-bot(0);	
 	}
 	
@@ -442,7 +443,7 @@ form.route-finder {
 
 	
 	.bootstrap-select.btn-group .dropdown-menu li.selected a {
-	.bg-col(@red);	
+	.bg-col-grayDk;
 	.col(white);
 	}
 	

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head id="www-tlwsolicitors-co-uk" data-template-set="tlw-solicitors-theme">
+	
 	<meta charset="<?php bloginfo('charset'); ?>">
-
 	<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
 	
 	<meta name="viewport" content ="width=device-width,user-scalable=yes" />
@@ -14,20 +14,14 @@
 	<meta name="ICBM" content="55.009452, -1.490004">
 	
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/_/img/favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php wp_head(); ?>
 	
 	<?php 
-	$url = explode('/',$_SERVER['REQUEST_URI']);
-	$dir = $url[1] ? $url[1] : 'home';
-	
-	global $post;
-	
-	if ( isset($_COOKIE['font_size']) ) {
-    $font_size = $_COOKIE['font_size'];	
-	} else {
-	$font_size = "txt-sm";	
+	if ( isset($_GET['src']) && $_GET['src'] == "mis-sold-solar-co-uk" ) {
+	setcookie("src",$_GET['src'] , strtotime( '+6 months' ), "/financial-mis-selling/solar-panel-mis-selling" );
 	}
 	?>
 </head>
