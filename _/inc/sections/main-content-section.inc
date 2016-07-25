@@ -1,7 +1,7 @@
 <?php  
 global $hide_title;
 global $post;
-$section_title = "Service information";	
+$section_title = "Main information";	
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'service-info-txt'];
 $post_content = get_extended( $post->post_content );
 $content_main = apply_filters('the_content', $post_content['main'] );
