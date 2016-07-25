@@ -18993,6 +18993,9 @@ body#login .login .tml-action-links a:focus {
   height: 100%;
   text-indent: -9990px;
 }
+body.logged-in #footer-info {
+  padding-bottom: 70px;
+}
 /** --------------------------- /
 /* Accessability */
 /* --------------------------- */
@@ -20033,7 +20036,7 @@ figure.alignnone {
   width: 100% !important;
 }
 .gform_wrapper .gform_heading {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
 }
 .gform_wrapper .gform_heading span.gform_description {
   display: block;
@@ -20265,8 +20268,9 @@ form.route-finder input.btn:focus {
   line-height: 60px;
   padding-top: 0px;
   font-size: 20px;
+  margin-bottom: 0px;
 }
-#form-section .gform_heading {
+#form-section .gform_wrapper .gform_heading {
   margin-bottom: 0px;
 }
 #form-section .gform_wrapper .gfield_required {
