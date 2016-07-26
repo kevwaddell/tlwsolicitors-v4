@@ -5460,6 +5460,9 @@ body.loading .tlw-wrapper {
 body.loaded {
   overflow: auto;
 }
+body.modal-open {
+  overflow: hidden;
+}
 body.txt-only-open {
   overflow: hidden;
   position: absolute;
@@ -12015,6 +12018,7 @@ body#landing-page header[role="banner"] .addtoany_list {
 body#landing-page .lp-bg-img {
   background-repeat: no-repeat;
   background-position: center top;
+  background-attachment: fixed;
   position: fixed;
   top: 0px;
   left: 0px;

@@ -60,6 +60,3 @@ $tag_line = get_field('tag_line', 'options');
 		</div>
 				
 	</header>
-		
-	<!-- MAIN CONTENT START -->
-	<div class="container">

@@ -20,7 +20,7 @@ $sb_plug_txt = get_field('sb_plug_txt');
 		<?php if ($form_active && $all_forms_active) { ?>
 		<div class="sb-plug-btn">
 			<div class="plug-label">Fill in our simple form</div>
-			<button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#contact-form-modal"><i class="fa fa-check-square fa-lg"></i> Claim Today</a>
+			<button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#contact-form-modal"><i class="fa fa-check-square fa-lg"></i> Claim Today</button>
 		</div>
 		<?php } ?>
 		

@@ -480,4 +480,6 @@ add_filter('ysacf_exclude_fields', function(){
     );
 });
 
+show_admin_bar(false);
+
  ?>

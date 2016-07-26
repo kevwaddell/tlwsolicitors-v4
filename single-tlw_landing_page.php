@@ -10,8 +10,10 @@ $page_icon = get_field('page_icon');
 $hide_title = get_field('hide_title'); 
 $how_it_works_active = get_field('hiw_active');
 $all_forms_active = get_field('all_forms_active', 'option');
- ?>	
-
+ ?>			
+<!-- MAIN CONTENT START -->
+<div class="container">
+	
 <main id="main-content" class="page-wrapper page-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		 	
  	<article <?php post_class(); ?>>
@@ -42,10 +44,6 @@ $all_forms_active = get_field('all_forms_active', 'option');
 
 	
 </main>
-
-<?php if ($form_active && $all_forms_active) { ?>
-<?php include (STYLESHEETPATH . '/_/inc/landing-page/contact-form-modal.inc'); ?>	
-<?php } ?>
 		
 <?php endwhile; ?>
 <?php endif; ?>
@@ -62,6 +60,9 @@ $all_forms_active = get_field('all_forms_active', 'option');
 
 </div>
 
+<?php if ($form_active && $all_forms_active) { ?>
+<?php include (STYLESHEETPATH . '/_/inc/landing-page/contact-form-modal.inc'); ?>	
+<?php } ?>
 
 <?php include (STYLESHEETPATH . '/_/inc/service-page/how-it-works.php'); ?>
 
