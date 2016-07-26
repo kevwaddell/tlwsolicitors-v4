@@ -533,13 +533,34 @@
 		var parent = $(this).parent();
 		$(parent).siblings().removeClass('sl-tl-open').addClass('sl-tl-closed');
 		
+		if ($(parent).hasClass('top-level') && $(parent).hasClass('sl-tl-closed')) {
+			$('#menu-main-navigation').removeClass('top-closed').addClass('top-open');
+			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
+		}
+		
+		if ($(parent).hasClass('top-level') && $(parent).hasClass('sl-tl-open')) {
+			$('#menu-main-navigation').removeClass('top-open').addClass('top-closed');
+			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
+		}
+		
+		if ($(parent).hasClass('mid-level') && $(parent).hasClass('sl-tl-closed')) {
+			$('#menu-main-navigation').removeClass('mid-closed').addClass('mid-open');
+		}
+		
+		if ($(parent).hasClass('mid-level') && $(parent).hasClass('sl-tl-open')) {
+			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
+		}
+		
 		if ($(parent).hasClass('top-level')) {
 			$(parent).find('.sl-tl-open').removeClass('sl-tl-open').addClass('sl-tl-closed');
 		}
 		
+		if ($(parent).hasClass('mid-level')) {
+			$(parent).find('.sl-tl-open').removeClass('sl-tl-open').addClass('sl-tl-closed');
+		}
+		
 		$(parent).toggleClass('sl-tl-open sl-tl-closed');
-		
-		
+
 	return false;	
 	});
 	

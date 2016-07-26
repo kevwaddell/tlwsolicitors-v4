@@ -4,7 +4,7 @@
 		<?php wp_nav_menu(array( 
 		'container' => 'false', 
 		'menu' => 'Main Navigation', 
-		'menu_class'  => 'menu clearfix list-unstyled',
+		'menu_class'  => 'menu clearfix list-unstyled top-closed mid-closed',
 		'fallback_cb' => false ) ); 
 		?>
 	</div>

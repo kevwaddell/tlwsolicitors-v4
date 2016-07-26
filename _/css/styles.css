@@ -6418,8 +6418,33 @@ html.svg header[role="banner"] .logo a {
   margin-bottom: 0px;
 }
 #top-nav li {
-  width: 33.33333333%;
   margin-bottom: 10px;
+}
+#top-nav #menu-main-navigation {
+  margin-left: auto;
+  margin-right: auto;
+  width: 33.33333333%;
+}
+#top-nav #menu-main-navigation.top-open {
+  width: 60%;
+}
+#top-nav #menu-main-navigation.top-open li.top-level {
+  width: 50%;
+}
+#top-nav #menu-main-navigation.top-open li.top-level > ul.sub-menu {
+  left: 50%;
+  width: 50%;
+}
+#top-nav #menu-main-navigation.mid-open {
+  margin-left: 0px;
+  width: 100%;
+}
+#top-nav #menu-main-navigation.mid-open li.top-level {
+  width: 33.33333333%;
+}
+#top-nav #menu-main-navigation.mid-open li.top-level > ul.sub-menu {
+  left: 33.33333333%;
+  width: 33.33333333%;
 }
 #top-nav a {
   display: block;
@@ -6463,8 +6488,6 @@ html.svg header[role="banner"] .logo a {
   position: absolute;
 }
 #top-nav li.top-level > ul.sub-menu {
-  width: 33.33333333%;
-  left: 33.33333333%;
   top: 0px;
   margin-left: 30px;
   -moz-opacity: 0;
@@ -6474,6 +6497,10 @@ html.svg header[role="banner"] .logo a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   filter: alpha(opacity=0);
   display: none;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 #top-nav li.top-level > ul.sub-menu li {
   width: 100%;
@@ -6506,6 +6533,10 @@ html.svg header[role="banner"] .logo a {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   filter: alpha(opacity=0);
   display: none;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 #top-nav li.mid-level > ul.sub-menu li {
   width: 100%;
@@ -8608,7 +8639,7 @@ time.date-today i {
 .feat-img-wide img.bw {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  filter: url(desaturate.svg#greyscale);
+  filter: url('/wp-content/themes/tlwsolicitors-v4/_/css/desaturate.svg#greyscale');
 }
 .feat-img-wide .img-caption {
   width: 100%;
@@ -13803,7 +13834,25 @@ section#faqs-single .faq-a p {
   position: relative;
   -webkit-filter: grayscale(80%);
   filter: grayscale(80%);
-  filter: url(desaturate.svg#greyscale);
+  filter: url('/wp-content/themes/tlwsolicitors-v4/_/css/desaturate.svg#greyscale');
+}
+.toolkit-slider .tk-slide figure.tk-slide-img:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/thin-stripe-wht.png);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  -webkit-opacity: 0.3;
+  opacity: 0.3;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+  filter: alpha(opacity=30);
 }
 .toolkit-slider .tk-slide .overlay {
   position: absolute;
@@ -13814,18 +13863,10 @@ section#faqs-single .faq-a p {
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
-  -moz-opacity: 0.3;
-  -khtml-opacity: 0.3;
-  -webkit-opacity: 0.3;
-  opacity: 0.3;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
-  filter: alpha(opacity=30);
-  background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/thin-stripe-wht.png);
-  background-blend-mode: color;
 }
 .toolkit-slider .slide-purple .overlay {
   background-color: #A677B4;
-  background-color: rgba(166, 119, 180, 0.7);
+  background-color: rgba(166, 119, 180, 0.5);
 }
 .toolkit-slider .slide-purple a.col-link {
   color: #A677B4;
@@ -13837,7 +13878,7 @@ section#faqs-single .faq-a p {
 }
 .toolkit-slider .slide-green .overlay {
   background-color: #ACD15C;
-  background-color: rgba(172, 209, 92, 0.7);
+  background-color: rgba(172, 209, 92, 0.5);
 }
 .toolkit-slider .slide-green a.col-link {
   color: #ACD15C;
@@ -13849,7 +13890,7 @@ section#faqs-single .faq-a p {
 }
 .toolkit-slider .slide-pink .overlay {
   background-color: #EA5677;
-  background-color: rgba(234, 86, 119, 0.7);
+  background-color: rgba(234, 86, 119, 0.5);
 }
 .toolkit-slider .slide-pink a.col-link {
   color: #EA5677;
@@ -13861,7 +13902,7 @@ section#faqs-single .faq-a p {
 }
 .toolkit-slider .slide-orange .overlay {
   background-color: #FBAD4F;
-  background-color: rgba(251, 173, 79, 0.7);
+  background-color: rgba(251, 173, 79, 0.5);
 }
 .toolkit-slider .slide-orange a.col-link {
   color: #FBAD4F;
@@ -13873,7 +13914,7 @@ section#faqs-single .faq-a p {
 }
 .toolkit-slider .slide-blue .overlay {
   background-color: #2D7EA9;
-  background-color: rgba(45, 126, 169, 0.7);
+  background-color: rgba(45, 126, 169, 0.5);
 }
 .toolkit-slider .slide-blue a.col-link {
   color: #2D7EA9;

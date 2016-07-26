@@ -2411,7 +2411,7 @@
 		},
 	"\/_\/js\/functions-min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/js\/functions-min.js",
 		"outputAbbreviatedPath": "\/_\/js\/min\/functions-min-min.js",
@@ -2425,9 +2425,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/js\/functions.js",
-		"outputAbbreviatedPath": "\/_\/js\/min\/functions-min.js",
+		"outputAbbreviatedPath": "\/_\/js\/functions-min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},

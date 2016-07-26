@@ -489,7 +489,18 @@ z-index: 2;
 		.rel;
 		-webkit-filter: grayscale(80%);
 		filter: grayscale(80%);
-		filter: url(desaturate.svg#greyscale);	
+		filter: url('/wp-content/themes/tlwsolicitors-v4/_/css/desaturate.svg#greyscale');	
+			&:after {
+			content: "";
+			.abs;
+			.top(0);
+			.left(0);	
+			width: 100%;
+			height: 100%;
+			.rounded(12px);	
+			.bg-img("thin-stripe-wht.png");	
+			.opacity(@opacity: 0.3);
+			}
 		}
 		
 		.overlay {
@@ -499,9 +510,6 @@ z-index: 2;
 		.w(36);
 		.h(47);
 		.rounded(12px);	
-		.opacity(0.3);	
-		.bg-img("thin-stripe-wht.png");	
-		background-blend-mode: color;
 		}
 
 	}
@@ -509,7 +517,7 @@ z-index: 2;
 	.slide-purple {
 	//.border-top(@purple-dk, 1);	
 		.overlay {
-		.trans-bg(@purple; 0.7);
+		.trans-bg(@purple; 0.5);
 		}
 		
 		a.col-link {
@@ -523,7 +531,7 @@ z-index: 2;
 	.slide-green {
 	//.border-top(@green-dk, 1);	
 		.overlay {
-		.trans-bg(@green; 0.7);
+		.trans-bg(@green; 0.5);
 		}
 		a.col-link {
 		.txt-col-green;
@@ -536,7 +544,7 @@ z-index: 2;
 	.slide-pink {
 	//.border-top(@pink-dk, 1);	
 		.overlay {
-		.trans-bg(@pink; 0.7);	
+		.trans-bg(@pink; 0.5);	
 		}
 		a.col-link {
 		.txt-col-pink;
@@ -549,7 +557,7 @@ z-index: 2;
 	.slide-orange {
 	//.border-top(@orange-dk, 1);	
 		.overlay {
-		.trans-bg(@orange; 0.7);
+		.trans-bg(@orange; 0.5);
 		}
 		a.col-link {
 		.txt-col-orange;
@@ -562,7 +570,7 @@ z-index: 2;
 	.slide-blue {
 	//.border-top(@blue-dk, 1);	
 		.overlay {
-		.trans-bg(@blue; 0.7);	
+		.trans-bg(@blue; 0.5);	
 		}
 		a.col-link {
 		.txt-col-blue;
