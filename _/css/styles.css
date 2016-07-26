@@ -16708,7 +16708,12 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   border-color: #184358;
 }
 .pg-section#blog-posts {
-  background-color: #c4c2c2;
+  background: #c4c2c2;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c4c2c2), color-stop(1, #918F8F));
+  background: -ms-linear-gradient(bottom, #c4c2c2, #918F8F);
+  background: -moz-linear-gradient(center bottom, #c4c2c2 0%, #918F8F 100%);
+  background: -o-linear-gradient(#918F8F, #c4c2c2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#918F8F', endColorstr='#c4c2c2', GradientType=0);
   border-top: 4px solid white;
 }
 .pg-section#blog-posts.no-pad-bot {
