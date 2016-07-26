@@ -1243,6 +1243,79 @@ height: 100vh;
 		}
 	}
 	
+		
+	#services-banner-links {
+	.border(@wht; 0.4);
+	.pad(3;3;1;3);
+	.mag-top(6);
+	.rel;
+	z-index: 2;
+	.drop-shadow(0, 3px, 10px, 0.7);
+
+		.banner-links-header {
+		width: 50%;
+		.bg-col(@wht);
+		.font-slab-serif;
+		.caps;
+		text-align: center;
+		.line-h(7);
+		.font-size(3);
+		margin: -69px auto 20px;	
+		}
+		
+		a {
+		.in-block;	
+		.pad-left(2);
+		.pad-right(2);
+		text-align: center;
+		.txt-col-wht;
+		.mag-bot(2);
+		.no-text-dec;
+		}
+		
+		.main-services {
+		text-align: center;
+		.font-size(3);
+		.line-h(3);	
+		.font-slab-serif;
+		.clearfix;
+			a {
+			width: 48%;	
+			}
+		}
+		
+		.sub-services {
+		text-align: center;
+		.pad-top(2);
+		.border-top(@wht; 0.1);
+		.font-size(2);
+		.line-h(2);	
+		.clearfix;
+			a {
+			width: 30%;	
+			}
+		}
+		
+		&.col-purple {
+		.trans-bg(@purple-dk; 0.8);
+			.banner-links-header {
+			.txt-col-purple-dk;	
+			}
+			a:hover, a:active, a:focus {
+			.txt-col-purple-lt;
+			}
+		}
+		&.col-blue {
+		.trans-bg(@blue-dk; 0.8);
+			.banner-links-header {
+			.txt-col-blue-dk;	
+			}
+			a:hover, a:active, a:focus {
+			.txt-col-blue-lt;
+			}
+		}
+	}
+	
 	#scroll-down-btn {
 	.block;
 	.pad-all(0);

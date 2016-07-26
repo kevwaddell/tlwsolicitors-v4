@@ -52,8 +52,6 @@ Template Name: Service Home page
 				break;
 				case "Form": include (STYLESHEETPATH . '/_/inc/sections/form-section.inc');
 				break;
-				case "Services": include (STYLESHEETPATH . '/_/inc/sections/services-section.inc');
-				break;
 				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc');
 				break;
 				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
