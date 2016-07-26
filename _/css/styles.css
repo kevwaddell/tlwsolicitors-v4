@@ -15296,6 +15296,42 @@ section#top-banner #services-banner-links.col-purple a:active,
 section#top-banner #services-banner-links.col-purple a:focus {
   color: #d1b9d8;
 }
+section#top-banner #services-banner-links.col-green {
+  background-color: #698037;
+  background-color: rgba(105, 128, 55, 0.8);
+}
+section#top-banner #services-banner-links.col-green .banner-links-header {
+  color: #698037;
+}
+section#top-banner #services-banner-links.col-green a:hover,
+section#top-banner #services-banner-links.col-green a:active,
+section#top-banner #services-banner-links.col-green a:focus {
+  color: #d5e7ac;
+}
+section#top-banner #services-banner-links.col-pink {
+  background-color: #B8445D;
+  background-color: rgba(184, 68, 93, 0.8);
+}
+section#top-banner #services-banner-links.col-pink .banner-links-header {
+  color: #B8445D;
+}
+section#top-banner #services-banner-links.col-pink a:hover,
+section#top-banner #services-banner-links.col-pink a:active,
+section#top-banner #services-banner-links.col-pink a:focus {
+  color: #f5b1c0;
+}
+section#top-banner #services-banner-links.col-orange {
+  background-color: #AA7A39;
+  background-color: rgba(170, 122, 57, 0.8);
+}
+section#top-banner #services-banner-links.col-orange .banner-links-header {
+  color: #AA7A39;
+}
+section#top-banner #services-banner-links.col-orange a:hover,
+section#top-banner #services-banner-links.col-orange a:active,
+section#top-banner #services-banner-links.col-orange a:focus {
+  color: #fddbb3;
+}
 section#top-banner #services-banner-links.col-blue {
   background-color: #184358;
   background-color: rgba(24, 67, 88, 0.8);
