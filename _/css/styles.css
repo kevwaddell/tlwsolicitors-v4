@@ -6402,7 +6402,7 @@ html.svg header[role="banner"] .logo a {
 }
 #top-nav .nav-wrapper {
   border-bottom: 4px solid white;
-  padding: 50px 75px 50px 75px;
+  padding: 20px 75px 15px 75px;
   background-image: url(/wp-content/themes/tlwsolicitors-v4/_/css/img/bg-icon-logo.png);
   background-repeat: no-repeat;
   background-position: right bottom;
