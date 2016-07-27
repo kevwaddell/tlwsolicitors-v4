@@ -3,6 +3,7 @@ $banner_bg_img = get_field('hp_banner_bg_img', 'option');
 $banner_tags = get_field('hp_banner_tags', 'option');
 $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');	
 $hp_other_service_links = get_field('hp_other_service_links', 'option');
+$extra_links_cols = 4;
 ?>
 <section id="top-banner" class="top-banner-img fixed-bg no-title" style="background-image: url(<?php echo $banner_bg_img;?>)">
 	
@@ -42,7 +43,7 @@ $hp_other_service_links = get_field('hp_other_service_links', 'option');
 				}
 				
 				?>
-				<div class="col-xs-3">
+				<div class="col-xs-<?php echo $extra_links_cols; ?>">
 				<a href="<?php echo get_permalink($sl['page']); ?>" class="services-extra-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i><?php echo $title; ?></a>
 				</div>
 				<?php } ?>

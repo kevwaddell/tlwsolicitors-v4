@@ -5,6 +5,7 @@ $banner_video_poster = get_field('hp_banner_video_poster', 'option');
 $banner_tags = get_field('hp_banner_tags', 'option');
 $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');
 $hp_other_service_links = get_field('hp_other_service_links', 'option');
+$extra_links_cols = 4;
 ?>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
 <section id="top-banner" class="top-banner-video no-title">
@@ -39,13 +40,13 @@ $hp_other_service_links = get_field('hp_other_service_links', 'option');
 				$color = get_field( 'page_colour', $sl['page']);	
 				$title = $page->post_title;
 				$count_sp = substr_count($page->post_title, ' ');
-				
+
 				if ($count_sp === 1) {
 				$title = str_replace(' ', '<br />', $page->post_title);
 				}
 				
 				?>
-				<div class="col-xs-3">
+				<div class="col-xs-<?php echo $extra_links_cols; ?>">
 				<a href="<?php echo get_permalink($sl['page']); ?>" class="services-extra-nav-link col-<?php echo $color; ?>"><i class="fa <?php echo $icon; ?> fa-lg"></i><?php echo $title; ?></a>
 				</div>
 				<?php } ?>
