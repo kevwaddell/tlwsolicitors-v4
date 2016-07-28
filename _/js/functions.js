@@ -360,7 +360,7 @@
 		
 	});
 	
-	/* 	SIDENAV MENU BUTTONS */
+	/* 	MAIN TOP NAVIGATION FUNCTIONS */
 	
 	$('body').on(event_type,'button#nav-btn', function(){
 		
@@ -388,24 +388,40 @@
 			
 		} 
 		
-		
-		
 		return false;
 		
 	});
 	
-	$('body').on(event_type,'button#close-nav', function(){
+	$('#top-nav').on(event_type,'button#close-nav', function(){
 		
 		$('#top-nav').animate({height: "0px"}, 500, function(){
 			
 			$(this).toggleClass('nav-open nav-closed').removeAttr('style');	
-			$('li.with-sub-nav').removeClass('sl-tl-open');
+			$('li.with-sub-nav').removeClass('sub-open').addClass('sub-closed');
 			$('#quick-links').show();
 			
 		});
 		
 		return false;
 		
+	});
+	
+	
+	$('#top-nav').on('click', "li.with-sub-nav > a", function(){
+		var parent = $(this).parent();
+		var siblings = $(parent).siblings();
+		
+		$(parent).siblings().removeClass('sub-open').addClass('sub-closed');
+		
+		if ($(siblings).find('.sub-open').length > 0) {
+		$(siblings).find('.sub-open').removeClass('sub-open').addClass('sub-closed');		
+		}
+		
+		//console.log($(siblings).find('.sub-open').length);
+		
+		$(parent).toggleClass('sub-open sub-closed');
+
+	return false;	
 	});
 	
 	/* 	FAQ's */
@@ -528,42 +544,7 @@
 	
 	//-------------------------------
 	
-	
-	$('body').on('click', "li.with-sub-nav > a", function(){
-		var parent = $(this).parent();
-		$(parent).siblings().removeClass('sl-tl-open').addClass('sl-tl-closed');
 		
-		if ($(parent).hasClass('top-level') && $(parent).hasClass('sl-tl-closed')) {
-			$('#menu-main-navigation').removeClass('top-closed').addClass('top-open');
-			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
-		}
-		
-		if ($(parent).hasClass('top-level') && $(parent).hasClass('sl-tl-open')) {
-			$('#menu-main-navigation').removeClass('top-open').addClass('top-closed');
-			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
-		}
-		
-		if ($(parent).hasClass('mid-level') && $(parent).hasClass('sl-tl-closed')) {
-			$('#menu-main-navigation').removeClass('mid-closed').addClass('mid-open');
-		}
-		
-		if ($(parent).hasClass('mid-level') && $(parent).hasClass('sl-tl-open')) {
-			$('#menu-main-navigation').removeClass('mid-open').addClass('mid-closed');
-		}
-		
-		if ($(parent).hasClass('top-level')) {
-			$(parent).find('.sl-tl-open').removeClass('sl-tl-open').addClass('sl-tl-closed');
-		}
-		
-		if ($(parent).hasClass('mid-level')) {
-			$(parent).find('.sl-tl-open').removeClass('sl-tl-open').addClass('sl-tl-closed');
-		}
-		
-		$(parent).toggleClass('sl-tl-open sl-tl-closed');
-
-	return false;	
-	});
-	
 	 /* SLIM SCROLL AREAS 
 	Adds new styled scroll bars to media feeds   
    */
