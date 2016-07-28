@@ -6687,8 +6687,7 @@ html.svg header[role="banner"] .logo a {
   background-color: white;
   color: #4b4b4b;
   padding: 10px 70px 10px 20px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 15px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -6723,7 +6722,7 @@ html.svg header[role="banner"] .logo a {
   color: #C60751;
 }
 #top-nav ul.menu li.top-level > ul.sub-menu > li.sub-open ul.sub-menu {
-  padding: 20px;
+  padding: 5px 20px 5px 20px;
 }
 #top-nav ul.menu li.top-level > ul.sub-menu > li.sub-closed ul.sub-menu {
   height: 0px;
