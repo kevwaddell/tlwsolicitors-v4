@@ -8,8 +8,9 @@
 		$page_icon = get_field('page_icon', $news_page->ID);
 		
 		if ( has_post_thumbnail($news_page_id) ) {
-		$img_post = $news_page_id;
+		$img_post = get_page($news_page_id);
 		}
+		
 		?>
 	
 		<main class="page-col-red">

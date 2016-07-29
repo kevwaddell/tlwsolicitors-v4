@@ -3,6 +3,10 @@
 	var tagInterval;
 	var current_section = "#top";
 	var current_section_id;
+	var ot_target = 0;
+	var ot_wrapper_pos = parseInt($('#our-team-wrapper-inner').css('left'));
+	var ot_outer_w = $('.our-team-wrapper').outerWidth();
+	var ot_inner_w = $('#our-team-wrapper-inner').outerWidth();
 	
 	var event_type = 'click';	
 
@@ -34,6 +38,11 @@
 		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));   
 	    }
 	}
+	
+		
+	$(window).on("resize", function(){
+	ot_outer_w = $('.our-team-wrapper').outerWidth();
+	});
 		
 	$(document).ready(function (){
 	
@@ -469,6 +478,7 @@
 		return false;
 		
 	});
+	
 	$(document).bind('gform_confirmation_loaded', function(event, formId){
             if(formId === 19 && $('a#download-file-btn').length === 1) {
                $('a#download-file-btn').removeClass('hidden');
@@ -1034,14 +1044,126 @@
 			return false;
 		
 		});
+		
+		/*
+		OUR TEAM FUNCTIONS
+		Button to show profile biog.
+		Team section scrolling functions
+		*/
+		
+		$('.team-profile').on(event_type, 'button.profile-info-btn', function(){
+			
+			$(this).parents('.team-profile').siblings().find('.profile-txt').removeClass('txt-view').addClass('txt-hide');
+			
+			$(this).parent().toggleClass('txt-hide txt-view');
+			
+			return false;
+		});
+		
+		function teamScroll(dir) {
+			var direction = dir;
+			var move = Math.abs(ot_outer_w / 4);
+			
+			if (direction === 'end') {
+			ot_target = (ot_outer_w - ot_inner_w);
+			
+				$('#scroll-left-btn').removeClass('disabled');
+				$('#scroll-start-btn').removeClass('disabled');
+				$('#scroll-right-btn').addClass('disabled');
+				$('#scroll-end-btn').addClass('disabled');	
+				
+				$('#our-team-wrapper-inner').animate({left: ot_target + "px"}, 500, function(){
+				ot_wrapper_pos = parseInt($('#our-team-wrapper-inner').css('left'));		
+				});
+			}
+						
+			if (direction === 'left') {
+			ot_target = (ot_wrapper_pos - move);
+			
+				if ($('#scroll-start-btn').hasClass('disabled') && $('#scroll-left-btn').hasClass('disabled')) {
+					$('#scroll-left-btn').removeClass('disabled');
+					$('#scroll-start-btn').removeClass('disabled');	
+				}
+				
+				if ( Math.abs(ot_target) > ( ot_inner_w - ot_outer_w ) ) {
+				ot_target = Math.round( ot_outer_w - ot_inner_w );	
+				$('#scroll-right-btn').addClass('disabled');
+				$('#scroll-end-btn').addClass('disabled');
+				}
+			
+				$('#our-team-wrapper-inner').animate({left: ot_target + "px"}, 500, function(){
+				ot_wrapper_pos = parseInt($('#our-team-wrapper-inner').css('left'));	
+				});
+			}
+			
+			if (direction === 'right') {
+			ot_target = (ot_wrapper_pos + move);
+			
+				if ($('#scroll-end-btn').hasClass('disabled') && $('#scroll-right-btn').hasClass('disabled')) {
+					$('#scroll-right-btn').removeClass('disabled');
+					$('#scroll-end-btn').removeClass('disabled');	
+				}
+				
+				if ( ot_target >= 0 ) {
+					ot_target = 0;	
+					$('#scroll-left-btn').addClass('disabled');
+					$('#scroll-start-btn').addClass('disabled');
+				}
+			
+				$('#our-team-wrapper-inner').animate({left: ot_target + "px"}, 500, function(){
+					ot_wrapper_pos = parseInt($('#our-team-wrapper-inner').css('left'));		
+				});
+			}
+			
+			if (direction === 'start') {
+			ot_target = 0;
+			
+				$('#scroll-left-btn').addClass('disabled');
+				$('#scroll-start-btn').addClass('disabled');
+				$('#scroll-right-btn').removeClass('disabled');
+				$('#scroll-end-btn').removeClass('disabled');	
+			
+				$('#our-team-wrapper-inner').animate({left: ot_target + "px"}, 500, function(){
+					ot_wrapper_pos = parseInt($('#our-team-wrapper-inner').css('left'));		
+				});
+			}
+		}
+		
+		$('.scroll-btns').on(event_type, 'button.btn', function(){
+			
+			var id = $(this).attr('id');
+			
+			if (!$(this).hasClass('disabled')) {
+				
+				if ($('.team-profile').find('.profile-txt').hasClass('txt-view')) {
+					$('.team-profile').find('.profile-txt').removeClass('txt-view').addClass('txt-hide');
+				}
+			
+				if (id === 'scroll-start-btn') {
+					teamScroll("start");
+				}
+				
+				if (id === 'scroll-left-btn') {
+					teamScroll("right");
+				}
+				
+				if (id === 'scroll-right-btn') {
+					teamScroll("left");	
+				}
+				
+				if (id === 'scroll-end-btn') {	
+					teamScroll("end");
+				}
+			
+			}
+
+			return false;
+		});
+		
+		
 	});
 
 	/* END DOC READY FUNCTION */
-	
-	$(window).on("resize", function(){
-
-
-	});
 	
 	$(window).load(function(){
 		

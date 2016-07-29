@@ -3,7 +3,7 @@ global $page_icon;
 global $img_post;
 global $color;
 ?>
-<section id="slim-top-banner" class="top-banner-img-slim fixed-bg wht-border-bottom" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
+<section id="slim-top-banner" class="top-banner-img-slim wht-border-bottom" style="background-image: url(<?php add_banner_feat_img($img_post);?>)">
 	<header class ="banner-title text-center bold">
 		<?php if ($page_icon) { ?>
 		<i class="fa <?php echo $page_icon; ?> <?php echo (!empty($color)) ? 'bg-col-'.$color.'-dk' : 'bg-col-red-dk'; ?>"></i>			
