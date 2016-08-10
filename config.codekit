@@ -2761,6 +2761,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/page-templates\/testimonials-page.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-templates\/testimonials-page.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-templates\/thank-you-page.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -3038,7 +3047,7 @@
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
-	"animateCSSInjections": 1,
+	"animateCSSInjections": 0,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoSyncProjectSettingsFile": 1,

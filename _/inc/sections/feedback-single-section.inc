@@ -1,7 +1,7 @@
 <?php
 global $color;
-$feedback_id = get_field('client_feedback');
-$feedback_color = get_field('feedback_color');
+$feedback_id = $section['client_feedback'];
+$feedback_color = $section['feedback_color'];
 
 if (empty($feedback_id)) {
 	$feedback_args = array(
@@ -26,7 +26,7 @@ $gender = get_field('gender', $feedback_id);
 
 $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
 ?>
-<section id="feedback-section" class="pg-section">
+<section id="feedback-section" class="pg-section feedback-single">
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="item bg-col-<?php echo (!empty($feedback_color)) ? $feedback_color : 'red'; ?>">
 		

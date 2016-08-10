@@ -1,9 +1,14 @@
+<?php  
+$blog_posts_active = $section['blog_posts_active'];		
+?>
+<?php if ($blog_posts_active) { ?>
+			
 <?php
-$section_title = get_field('blog_section_title');	
+$section_title = $section['section_title'];	
 if (empty($section_title)) {
 $section_title = "Recent blog articles";
 }
-$blog_categories = get_field('blog_section_articles');
+$blog_categories = $section['blog_section_articles'];
 $recent_posts_args = array (
 'posts_per_page' => 3,
 'category__in'	=> $blog_categories
@@ -30,7 +35,8 @@ $archives = wp_get_archives($archives_args);
 
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-articles'];	
 ?>
-<section id="blog-posts" class="pg-section">
+
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 	<div class="overlay"></div>
 	<div class="container">
@@ -106,3 +112,5 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-
 			</div>
 	</div>
 </section>
+
+<?php } ?>

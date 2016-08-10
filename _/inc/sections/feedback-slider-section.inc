@@ -8,7 +8,7 @@ $feedback_args = array(
 $testimonials = get_posts($feedback_args); 	
 $colors = ['purple','green','pink','orange','blue'];
 ?>
-<section id="feedback-section" class="pg-section">
+<section id="feedback-section" class="pg-section feedback-slider">
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="feedback-section-wrapper">
 			

@@ -12,7 +12,7 @@ Template Name: Contact Us Page
 $color = get_field('page_colour');
 $freephone_num = get_field('freephone_num', 'option');
 $form = get_field('form');
-$active_sections = get_field('active_sections');
+$sections_active = get_field('sections_active');
 
 if ( has_post_thumbnail() ) {
 $img_post = get_the_ID();
@@ -21,25 +21,31 @@ $img_post = get_the_ID();
  ?>	
 
 <main <?php post_class('page-col-red'); ?>>
- 	<?php if (in_array("Page banner", $active_sections)) { ?>
-		<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
-	<?php } ?>
+		
+	<?php include (STYLESHEETPATH . '/_/inc/contact-us/top-banner-intro.inc'); ?>		
 	
 	<!-- MAIN TEXT SECTION -->
 	<?php include (STYLESHEETPATH . '/_/inc/contact-us/main-content-section.inc'); ?>
+		
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+				<?php include (STYLESHEETPATH . '/_/inc/contact-us/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'location-map') { ?>
+				<!-- LOCATION SECTION -->
+				<?php include (STYLESHEETPATH . '/_/inc/sections/location-section.inc'); ?>		
+				<?php } ?>
 	
- 	<?php if ($active_sections) { ?>		
-	<?php foreach ($active_sections as $section) { ?>
-		<?php 
-		switch($section){
-			case "Form": include (STYLESHEETPATH . '/_/inc/contact-us/form-section.inc');
-			break;
-			case "Location Map": include (STYLESHEETPATH . '/_/inc/sections/location-section.inc');
-			break; 
-		}	
-		?>
-	<?php } ?>
-	<?php } ?>	
+			<?php } ?>
+		
+		<?php } ?>
 		
 </main>
 		

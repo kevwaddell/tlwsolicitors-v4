@@ -1,5 +1,4 @@
 <?php 
-global $active_sections;
 $img = wp_get_attachment_image_src($post_thumbnail, 'full');
 $freephone_num = get_field('freephone_num', 'options');
 $office_tel = get_field('office_num', 'options');
@@ -20,9 +19,7 @@ $form_title = get_field('form_section_title');
 			<div class="col-xs-6"><div class="contact-info-label"><i class="fa fa-fax"></i>Fax: <?php echo $fax; ?></div></div>
 			<div class="col-xs-6"><a href="tel:<?php echo str_replace(" ", "", $office_tel); ?>" class="contact-info-link"><i class="fa fa-building-o"></i>Office: <?php echo $office_tel; ?></a></div>
 			<div class="col-xs-6"><a href="mailto:<?php echo $email; ?>" class="contact-info-link"><i class="fa fa-envelope-o"></i><?php echo $email; ?></a></div>
-			<?php if (in_array("Form", $active_sections)) { ?>
-			<div class="col-xs-12"><a href="#request-a-callback" class="contact-info-link jump-2-link"><i class="fa fa-paper-plane-o"></i><?php echo $form_title; ?></a></div>			
-			<?php } ?>
+			<div class="col-xs-12"><a href="#request-a-callback" class="contact-info-link jump-2-link"><i class="fa fa-paper-plane-o"></i><?php echo $form_title; ?></a></div>		
 		</div>
 	</div>		
 	<div class="img-overlay"></div>

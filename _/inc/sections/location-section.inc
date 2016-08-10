@@ -1,3 +1,8 @@
+<?php  
+$map_active = $section['map_active'];		
+?>
+<?php if ($map_active) { ?>
+
 <?php
 	$location = get_field('global_location', 'options');	
 	$address = get_field('global_address', 'options');
@@ -10,7 +15,6 @@
 	$map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
 	$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'find-us'];	
 ?>
-<?php if ($location) { ?>
 <style>
 	li.office-location-link {
 	display: none !important;	
