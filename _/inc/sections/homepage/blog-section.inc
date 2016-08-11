@@ -1,22 +1,29 @@
 <?php
-global $blog_posts_active;
-$section_title = get_field('hp_blog_section_title', 'option');	
+$posts_active = $section['posts_active'];
+?>
+
+<?php if ($posts_active) { ?>
+<?php
+$section_title = $section['section_title'];	
+
 if (empty($section_title)) {
 $section_title = "Recent blog articles";
 }
 
-$hp_number_of_posts = get_field('hp_number_of_posts', 'option');
+$number_of_posts = $section['number_of_posts'];
 
-if (empty($hp_number_of_posts)) {
-$hp_number_of_posts = 3;	
+if (empty($number_of_posts)) {
+$number_of_posts = 3;	
 }
 
 $recent_posts_args = array (
-'posts_per_page' => $hp_number_of_posts,
+'posts_per_page' => $number_of_posts,
 );
 
-if ($hp_blog_section_from_category) {
-$blog_categories = get_field('hp_blog_section_categories', 'option');	
+$from_category_active = $section['from_category'];
+
+if ($from_category_active) {
+$blog_categories = $section['blog_categories'];	
 $recent_posts_args['category__in'] = $blog_categories;
 }
 
@@ -41,8 +48,7 @@ $archives = wp_get_archives($archives_args);
 
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'recent-blog-articles'];	
 ?>
-<?php if ($blog_posts_active) { ?>
-<section id="blog-posts" class="pg-section">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="recent-blog-articles" id="recent-blog-articles" class="section-target"></a>
 		<div class="overlay"></div>
 		<div class="container">

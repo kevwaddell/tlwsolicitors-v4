@@ -1,27 +1,35 @@
 <?php  
-$banner_options = get_field('banner_options');
-$banner_tags = get_field('banner_tags');
-$banner_service_links = get_field('banner_service_links');	
-$banner_sub_service_links = get_field('banner_sub_service_links');
+$banner_parts = get_field('banner_parts');
+$banner_title_active = get_field('banner_title_active');
+$banner_tags = $banner_parts['tags'];
 ?>
-<section id="top-banner" class="top-banner-img fixed-bg<?php echo (in_array("title", $banner_options)) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
-	<?php if (in_array("title", $banner_options)) { ?>
-	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<section id="top-banner" class="top-banner-img fixed-bg<?php echo ($banner_title_active) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
+	<?php if ($banner_title_active) { ?>
+	<header class="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			<?php the_title(); ?>
 		</div>
 	</header>
 	<?php } ?>
 	
-	<div class="tag-scroller<?php echo (in_array("title", $banner_options)) ? " with-banner-title":""; ?>">
-		<?php if (!empty($banner_tags)) { ?>
-		<?php foreach ($banner_tags as $k => $tag) { ?>
-		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
-		<?php } ?>
-		<?php } ?>
-	</div>		
+	<?php foreach ($banner_parts as $bp) { ?>
 	
-	<?php if ( in_array("services", $banner_options) ) { ?>
+	<?php if ($bp['acf_fc_layout'] == "banner-tags") { 
+	$banner_tags = $bp['tags'];	
+	?>
+	<div id="<?php echo $bp['acf_fc_layout']; ?>" class="tag-scroller<?php echo ($banner_title_active) ? " with-banner-title":""; ?>">
+		
+		<?php foreach ($banner_tags as $k => $tag) { ?>
+		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['tag']; ?></div>
+		<?php } ?>
+		
+	</div>		
+	<?php } ?>
+	
+	<?php if ( $bp['acf_fc_layout'] == "banner-links" ) { 
+	$banner_service_links = $bp['banner_service_links'];	
+	$banner_sub_service_links = $bp['banner_sub_service_links'];	
+	?>
 	<div class="container">	
 		<div id="services-banner-links" class="banner-links col-<?php echo (!empty($color)) ? $color : 'red'; ?>">	
 			<div class="banner-links-header">Our Specialist Areas</div>	
@@ -40,8 +48,10 @@ $banner_sub_service_links = get_field('banner_sub_service_links');
 		</div>
 	</div>
 	<?php } ?>
-	
-	<button id="scroll-down-btn" class="btn<?php echo (in_array("services", $banner_options) && !in_array("links", $banner_options)) ? " abs-bottom":"" ; ?>"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
+
+	<?php } ?>
+
+	<button id="scroll-down-btn" class="btn abs-bottom"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 	
 	<div class="img-overlay"></div>
 	<div class="top-drk-grad"></div>

@@ -1,17 +1,25 @@
-<?php 
-global $downloads_active;
-$section_title = get_field('downloads_section_title');	
-$download_section_files = get_field('download_section_files');
-$files_count = count($download_section_files);
-$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'downloads'];	
+<?php
+$downloads_active = $section['downloads_active'];
 ?>
 <?php if ($downloads_active) { ?>
-<section id="downloads-section" class="pg-section with-icon-logo bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+<?php 
+$section_title = $section['section_title'];	
+$download_files = $section['files'];
+$bg_col = $section['bg_color'];
+
+if (empty($bg_col)) {
+$bg_col = "grayDk";	
+}
+
+$files_count = count($download_files);
+$quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'downloads'];	
+?>
+<section id="downloads-section" class="pg-section with-icon-logo bg-col-<?php echo $bg_col; ?>">
 <a name="downloads" id="downloads" class="section-target"></a>
 	<div class="container">
 		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
 			
-			<?php if ($files_count > 0) { ?>
+			<?php if (!empty($download_files)) { ?>
 			<div class="row download-items">
 			<?php 
 			$offset_num = 4;

@@ -31,15 +31,15 @@ Template Name: Why Choose TLW page template
 			<?php include (STYLESHEETPATH . '/_/inc/banners/testimonial-slider.inc'); ?>			
 			<?php } ?>
 			
-			<?php if ($banner_bg == 'slim-img') { ?>
+			<?php if ($banner_type == 'slim-img') { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
 			<?php } ?>	
 			
-			<?php if ($banner_bg == "video") { ?>
+			<?php if ($banner_type == "video") { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
 			<?php } ?>
 			
-			<?php if ($banner_bg == "img") { ?>
+			<?php if ($banner_type == "img") { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
 			<?php } ?>	
 			

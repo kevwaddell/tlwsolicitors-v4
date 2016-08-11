@@ -1,26 +1,25 @@
 <?php
-$hp_feedback_active = get_field('hp_feedback_active', 'option');
+$feedback_active = $section['feedback_active'];
+?>
+<?php if ($feedback_active) { 
+$testimonials = $section['testimonials'];	
 $quick_links[] = ['link_title' => "Client feedback", 'link_anchor' => 'feedback'];	 
 ?>
-<?php if ($hp_feedback_active) { 
-$hp_testimonials = get_field('hp_testimonials', 'option');	
-?>
-<section id="feedback-section" class="pg-section">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
 <a name="feedback" id="feedback" class="section-target"></a>
 	<div class="feedback-section-wrapper">
 			
 		<div class="feedback-section-inner">
 		
-		<?php foreach ($hp_testimonials as $quote) { 
-		$feedback_counter++;
-		$quote_id = $quote['hp_feedback'];
+		<?php foreach ($testimonials as $k => $quote) { 
+		$quote_id = $quote['testimonial'];
 		$quote_txt = get_field('quote', $quote_id);	
 		$client_name = get_field('client_name', $quote_id);		
 		$location = get_field('location', $quote_id);	
 		$gender = get_field('gender', $quote_id);
-		$col = $quote['hp_feedback_col'];
+		$col = $quote['color'];
 		?>
-			<div class="item bg-col-<?php echo $col; ?><?php echo ($feedback_counter == 1) ? " active":""; ?>">
+			<div class="item bg-col-<?php echo $col; ?><?php echo ($k == 0) ? " active":""; ?>">
 				<div class="container feedback-quote">
 					<div class="row">
 						<div class="col-xs-2 text-left">

@@ -1,26 +1,26 @@
+<?php
+$toolkits_active = $section['toolkits_active'];
+?>
+<?php if ($toolkits_active) { ?>
+
 <?php 
-global $toolkit_active;
-$toolkit_title = get_field('hp_toolkit_section_title', 'option');
-$toolkit_intro = get_field('hp_toolkit_section_intro', 'option');
-$color = get_field('hp_toolkit_section_bg_col', 'option');
-$links = get_field('hp_toolkit_links', 'option');
+$section_title = $section['section_title'];
+$section_intro = $section['section_intro'];
+$links = $section['links'];
 
 if ( empty($toolkit_title) ) {
 $toolkit_title = "Toolkit";
 }
 
-$section_title = "TLW ".$toolkit_title;
-
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
-$quick_links[] = ['link_title' => "TLW ".$toolkit_title, 'link_anchor' => 'toolkit-links'];	
+$quick_links[] = ['link_title' => "TLW ".$section_title, 'link_anchor' => 'toolkit-links'];	
 ?>
-<?php if ($toolkit_active) { ?>
 <section id="toolkit-section" class="pg-section <?php echo(count($links) > 1) ? "links-2":"links-1"; ?>">
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
 	
 	<div class="container">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-		<div class="tk-pg-intro font-slab-serif"><?php echo $toolkit_intro; ?></div>
+		<h2 class="text-center section-header bg-col-grayDk">TLW <?php echo $section_title; ?></h2>
+		<div class="tk-pg-intro font-slab-serif"><?php echo $section_intro; ?></div>
 	</div>	
 	
 	<div class="links-wrapper">

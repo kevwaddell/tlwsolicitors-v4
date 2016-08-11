@@ -11,20 +11,13 @@ Template Name: Service Home page
 		$freephone_num = get_field('freephone_num', 'option');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
-		$feedback_active = get_field('feedback_active'); 
-		$how_it_works_active = get_field('hiw_active');
-		$active_sections = get_field('active_sections');
-		$banner_active = false;	
+		$feedback_active = get_field('feedback_active');
+		$sections_active = get_field('sections_active');
+		$banner_active = get_field('banner_active');	
 		$quick_links = array();
 		
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();
-		}
-		
-		if (in_array("Page banner", $active_sections)) {
-		$banner_active = true;	
-		$banner_bg = get_field('banner_bg');
-		$banner_quick_links = array();
 		}
 	?>	
 	
@@ -32,35 +25,65 @@ Template Name: Service Home page
 	<main>
 		
 		<!-- BANNER SECTION -->
-		<?php if ($banner_active && $banner_bg == "video") { ?>
-			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
-		<?php } ?>
+		<?php if ($banner_active) { 
+		$banner_type = get_field('banner_type');	
+		?>
 		
-		<?php if ($banner_active && $banner_bg == "img") { ?>
+			<?php if ($banner_type == 'slider') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/testimonial-slider.inc'); ?>			
+			<?php } ?>
+			
+			<?php if ($banner_type == 'slim-img') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
+			<?php } ?>	
+			
+			<?php if ($banner_type == 'video') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
+			<?php } ?>
+			
+			<?php if ($banner_type == 'img') { ?>
 			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
-		<?php } ?>
+			<?php } ?>	
+			
+		<?php } ?>		
 		
 		
 		<!-- MAIN TEXT SECTION -->
 		<?php include (STYLESHEETPATH . '/_/inc/sections/main-content-section.inc'); ?>
 		
-		<?php if ($active_sections) { ?>		
-		<?php foreach ($active_sections as $section) { ?>
-			<?php 
-			switch($section){
-				case "Downloads": include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc');
-				break;
-				case "Form": include (STYLESHEETPATH . '/_/inc/sections/form-section.inc');
-				break;
-				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc');
-				break;
-				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
-				break;
-				case "Toolkit Links": include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc');
-				break;
-			}	
-			?>
-		<?php } ?>
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+			
+				<?php if ($section['acf_fc_layout'] == 'feedback-section') { ?>
+				<!-- FEEDBACK SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'blog-posts') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'downloads-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'toolkit-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc'); ?>		
+				<?php } ?>
+	
+			<?php } ?>
+		
 		<?php } ?>
 		
 	</main>	

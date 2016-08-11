@@ -1,7 +1,13 @@
 <?php  
 global $hide_title;
 global $post;
-global $related_pages;
+$about_pg = get_page_by_title('About TLW Solicitors');
+$about_pg_icon = get_field('page_icon', $about_pg->ID);
+$team_pg = get_page_by_title('Our Team');
+$team_pg_icon = get_field('page_icon', $team_pg->ID);
+$feedback_pg = get_page_by_title('Why Choose TLW');
+$feedback_pg_icon = get_field('page_icon', $feedback_pg->ID);
+
 $section_title = "Service information";	
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'service-info-txt'];
 ?>
@@ -19,44 +25,18 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'service-info
 			<div class="main-txt home">
 			<?php the_content(); ?>
 			</div>	
-			<?php if ($related_pages) { 
-			$related_pages_total = count($related_pages);
-			$col_span = 4;
-			if ($related_pages_total > 1 ) {
-				
-				if ( $related_pages_total % 2 == 0 ) {
-				$col_span = 6;	
-				}
-				
-				if ( $related_pages_total % 4 == 0 ) {
-				$col_span = 3;	
-				}
-				
-				if ( $related_pages_total % 6 == 0 ) {
-				$col_span = 4;	
-				}
-				
-				if ( ($related_pages_total % 2 != 0) && ($related_pages_total > 3) ) {
-				$col_span = 12;	
-				}
-			}
-			?>
 			<div class="info-links">
-				<?php if ($related_pages_total > 1) { ?>
-					<div class="row">		
-				<?php } ?>
-				<?php foreach ($related_pages as $rp) { 
-				$icon = get_field('page_icon', $rp['page']->ID);
-				?>
-					<div class="col-xs-<?php echo $col_span; ?>">
-						<a href="<?php echo get_permalink($rp['page']->ID); ?>" class="btn btn-default btn-block"><i class="fa <?php echo $icon; ?> fa-lg"></i> <?php echo $rp['link_title']; ?></a>	
-					</div>
-				<?php } ?>	
-				<?php if ($related_pages_total > 1) { ?>
-					</div>		
-				<?php } ?>
+			<div class="row">		
+				<div class="col-xs-4">
+					<a href="<?php echo get_permalink($about_pg->ID); ?>" class="btn btn-default btn-block"><i class="fa <?php echo $about_pg_icon; ?> fa-lg"></i> About us</a>	
+				</div>
+				<div class="col-xs-4">
+					<a href="<?php echo get_permalink($team_pg->ID); ?>" class="btn btn-default btn-block"><i class="fa <?php echo $team_pg_icon; ?> fa-lg"></i> Our Team</a>	
+				</div>
+				<div class="col-xs-4">
+					<a href="<?php echo get_permalink($feedback_pg->ID); ?>" class="btn btn-default btn-block"><i class="fa <?php echo $feedback_pg_icon; ?> fa-lg"></i> Client Feedback</a>	
+				</div>
 			</div>
-			<?php } ?>	
 			
 			<button id="intro-scroll-down-btn"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
 												
