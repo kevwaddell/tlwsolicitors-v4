@@ -17364,7 +17364,7 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   width: 100%;
   height: 600px;
 }
-.pg-section#toolkit-section .links-wrapper a {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link {
   height: 100%;
   display: block;
   text-decoration: none;
@@ -17374,9 +17374,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   animation-fill-mode: both;
   position: relative;
 }
-.pg-section#toolkit-section .links-wrapper a i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link i {
   position: absolute;
-  bottom: 120px;
+  bottom: 150px;
   left: 50%;
   margin-left: -50px;
   line-height: 95px;
@@ -17394,12 +17394,12 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   z-index: 2;
   color: white;
 }
-.pg-section#toolkit-section .links-wrapper a span {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link span {
   left: 0px;
   bottom: 0px;
   position: absolute;
   width: 100%;
-  padding: 60px 30px 80px 30px;
+  padding: 70px 30px 100px 30px;
   font-size: 30px;
   line-height: 30px;
   font-family: "aleoreg", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -17409,98 +17409,78 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   text-transform: uppercase;
   border-top: 4px solid white;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-purple {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple i {
   background-color: #6C4480;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-purple span {
-  background-color: #A677B4;
-  background-color: rgba(166, 119, 180, 0.7);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-purple i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:hover,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:active,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:focus {
   background-color: #6C4480;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:hover,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:active,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:focus {
-  background-color: #A677B4;
-  background-color: rgba(166, 119, 180, 0.5);
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:hover span,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:active span,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:focus span {
+  background-color: #6C4480;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:hover span,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:active span,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:focus span {
-  background-color: #A677B4;
-  background-color: rgba(166, 119, 180, 0.9);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:hover i,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:active i,
-.pg-section#toolkit-section .links-wrapper a.link-col-purple:focus i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:hover i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:active i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple:focus i {
   color: #A677B4;
   background-color: white;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-green {
-  background-color: #ACD15C;
-  background-color: rgba(172, 209, 92, 0.8);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-green i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green i {
   background-color: #698037;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-green:hover i,
-.pg-section#toolkit-section .links-wrapper a.link-col-green:active i,
-.pg-section#toolkit-section .links-wrapper a.link-col-green:focus i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:hover,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:active,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:focus {
+  background-color: #698037;
+}
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:hover i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:active i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:focus i {
   color: #ACD15C;
   background-color: white;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-pink {
-  background-color: #EA5677;
-  background-color: rgba(234, 86, 119, 0.8);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-pink i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink i {
   background-color: #B8445D;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-pink:hover i,
-.pg-section#toolkit-section .links-wrapper a.link-col-pink:active i,
-.pg-section#toolkit-section .links-wrapper a.link-col-pink:focus i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:hover,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:active,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:focus {
+  background-color: #B8445D;
+}
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:hover i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:active i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink:focus i {
   color: #EA5677;
   background-color: white;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-orange {
-  background-color: #FBAD4F;
-  background-color: rgba(251, 173, 79, 0.8);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-orange i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange i {
   background-color: #AA7A39;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-orange:hover i,
-.pg-section#toolkit-section .links-wrapper a.link-col-orange:active i,
-.pg-section#toolkit-section .links-wrapper a.link-col-orange:focus i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:hover,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:active,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:focus {
+  background-color: #AA7A39;
+}
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:hover i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:active i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:focus i {
   color: #FBAD4F;
   background-color: white;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-blue {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue i {
   background-color: #184358;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-blue span {
-  background-color: #2D7EA9;
-  background-color: rgba(45, 126, 169, 0.7);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-blue i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:hover,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:active,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:focus {
   background-color: #184358;
 }
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:hover,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:active,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:focus {
-  background-color: #2D7EA9;
-  background-color: rgba(45, 126, 169, 0.5);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:hover span,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:active span,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:focus span {
-  background-color: #2D7EA9;
-  background-color: rgba(45, 126, 169, 0.9);
-}
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:hover i,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:active i,
-.pg-section#toolkit-section .links-wrapper a.link-col-blue:focus i {
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:hover i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:active i,
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue:focus i {
   color: #2D7EA9;
   background-color: white;
 }

@@ -2698,7 +2698,7 @@ article.content-section {
 		.top(0);
 		width: 100%;
 		.h(60);
-			a {
+			a.toolkit-link {
 			height: 100%;
 			.block;
 			.no-text-dec;
@@ -2707,7 +2707,7 @@ article.content-section {
 				
 				i {
 				.abs;
-				.bottom(12);
+				.bottom(15);
 				left: 50%;
 				.mag-left(-5);
 				.line-h(9.5);
@@ -2727,28 +2727,30 @@ article.content-section {
 				.bottom(0);
 				.abs;	
 				width: 100%;
-				.pad(6;3;8;3);
+				.pad(7;3;10;3);
 				.font-size(3);
 				.line-h(3);
 				.font-slab-serif;
 				.col(@wht);
 				.caps;
 				.border-top(@wht; 0.4);
+				//.bg-col-red-lt;
+					
 				}
 								
-				&.link-col-purple {
-				.bg-col-purple-dk;	
+				&.link-col-purple {	
+					
+					i {
+					.bg-col-purple-dk;	
+					}
+					
+					&:hover, &:active, &:focus {
+					.bg-col-purple-dk;	
+					
 						span {
-						.trans-bg(@purple; 0.7);		
-						}
-						i {
 						.bg-col-purple-dk;	
 						}
-					&:hover, &:active, &:focus {
-					.trans-bg(@purple; 0.5);
-						span {
-						.trans-bg(@purple; 0.9);	
-						}
+
 						i {
 						.txt-col-purple;
 						.bg-col(@wht);	
@@ -2757,11 +2759,13 @@ article.content-section {
 				}
 				
 				&.link-col-green {
-					.trans-bg(@green; 0.8);	
-						i {
-						.bg-col-green-dk;	
-						}
+					
+					i {
+					.bg-col-green-dk;	
+					}
+					
 					&:hover, &:active, &:focus {
+					.bg-col-green-dk;
 						i {
 						.txt-col-green;	
 						.bg-col(@wht);
@@ -2770,11 +2774,13 @@ article.content-section {
 				}
 				
 				&.link-col-pink {
-					.trans-bg(@pink; 0.8);	
-						i {
-						.bg-col-pink-dk;	
-						}
+					
+					i {
+					.bg-col-pink-dk;	
+					}
+					
 					&:hover, &:active, &:focus {
+					.bg-col-pink-dk;
 						i {
 						.txt-col-pink;	
 						.bg-col(@wht);
@@ -2783,11 +2789,13 @@ article.content-section {
 				}
 				
 				&.link-col-orange {
-					.trans-bg(@orange; 0.8);	
-						i {
-						.bg-col-orange-dk;	
-						}
+					
+					i {
+					.bg-col-orange-dk;	
+					}
+					
 					&:hover, &:active, &:focus {
+					.bg-col-orange-dk;	
 						i {
 						.txt-col-orange;	
 						.bg-col(@wht);
@@ -2796,20 +2804,14 @@ article.content-section {
 				}
 				
 				&.link-col-blue {
-				.bg-col-blue-dk;
-					
-					span {
-					.trans-bg(@blue; 0.7);	
-					}
+	
 					i {
 					.bg-col-blue-dk;	
 					}
 					
 					&:hover, &:active, &:focus {
-					.trans-bg(@blue; 0.5);
-						span {
-						.trans-bg(@blue; 0.9);	
-						}
+					.bg-col-blue-dk;
+
 						i {
 						.txt-col-blue;
 						.bg-col(@wht);	

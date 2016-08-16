@@ -15,7 +15,7 @@ $toolkit_title = "Toolkit";
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
 $quick_links[] = ['link_title' => "TLW ".$section_title, 'link_anchor' => 'toolkit-links'];	
 ?>
-<section id="toolkit-section" class="pg-section <?php echo(count($links) > 1) ? "links-2":"links-1"; ?>">
+<section id="toolkit-section" class="pg-section links-2">
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
 	
 	<div class="container">
@@ -41,7 +41,7 @@ $quick_links[] = ['link_title' => "TLW ".$section_title, 'link_anchor' => 'toolk
 				</div>
 				
 				<i class="fa <?php echo $pg_icon; ?> link-icon"></i>
-				<span><?php echo get_the_title($link['page']); ?> <?php echo get_the_title($tk_page->ID); ?></span>
+				<span class="bg-col-<?php echo $pg_col; ?>"><?php echo get_the_title($link['page']); ?> <?php echo get_the_title($tk_page->ID); ?></span>
 		</a>
 		<?php } ?>
 		
