@@ -18,7 +18,7 @@ $post_thumbnail_id = get_post_thumbnail_id( $pg->ID );
 $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 ?>
 
-<section id="<?php echo $section['acf_fc_layout']; ?>" class="links-1 pg-section link-col-<?php echo $color; ?>">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="links-1 pg-section bg-col-<?php echo $color; ?>">
 	
 	<a name="toolkit-links" id="toolkit-links" class="section-target"></a>
 	

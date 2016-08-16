@@ -17409,6 +17409,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   text-transform: uppercase;
   border-top: 4px solid white;
 }
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple {
+  background-color: #A677B4;
+}
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-purple i {
   background-color: #6C4480;
 }
@@ -17428,6 +17431,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   color: #A677B4;
   background-color: white;
 }
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green {
+  background-color: #ACD15C;
+}
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green i {
   background-color: #698037;
 }
@@ -17441,6 +17447,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-green:focus i {
   color: #ACD15C;
   background-color: white;
+}
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink {
+  background-color: #EA5677;
 }
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-pink i {
   background-color: #B8445D;
@@ -17456,6 +17465,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
   color: #EA5677;
   background-color: white;
 }
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange {
+  background-color: #FBAD4F;
+}
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange i {
   background-color: #AA7A39;
 }
@@ -17469,6 +17481,9 @@ article.content-section #content-extra #close-content-extra-btn:focus i {
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-orange:focus i {
   color: #FBAD4F;
   background-color: white;
+}
+.pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue {
+  background-color: #2D7EA9;
 }
 .pg-section#toolkit-section .links-wrapper a.toolkit-link.link-col-blue i {
   background-color: #184358;
