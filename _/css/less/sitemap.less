@@ -47,15 +47,44 @@ text-align: center;
 #site-map-lists {
 .pad-top(4);
 	h3 {
-	.h(4);
-	.line-h(4);
+	.h(5);
+	.line-h(5);
 	.bg-col(@red);
 	.col(white);
-	.font-size(2);
+	.font-size(2.5);
 	
 		a {
 		.block;
 		.bg-col(@red);
+		.col(white);	
+		.no-text-dec;
+			&:hover, &:active, &:focus {
+			.bg-col(@gray);	
+			}
+		}	
+		
+		i {
+		.h(5);
+		.w(5);
+		.line-h(5);	
+		.fright;
+		text-align: center;
+		
+			&.icon {
+			.fleft;	
+			}
+		}
+	}
+	
+	h4 {
+	.h(4);
+	.line-h(4);
+	.col(white);
+	.font-size(2);
+		
+		a {
+		.block;
+		.bg-col(@redMid);
 		.col(white);	
 		.no-text-dec;
 			&:hover, &:active, &:focus {
@@ -74,34 +103,12 @@ text-align: center;
 			.fleft;	
 			}
 		}
-	}
-	
-	h4 {
-	.h(3);
-	.line-h(3);
-	.col(white);
-	.font-size(1.6);
-		
-		a {
-		.block;
-		.bg-col(@redMid);
-		.col(white);	
-		.no-text-dec;
-			&:hover, &:active, &:focus {
-			.bg-col(@gray);	
-			}
-		}	
-		
-		i {
-		.h(3);
-		.w(3);
-		.line-h(3);	
-		.fright;
-		text-align: center;
-		
-			&.icon {
-			.fleft;	
-			}
-		}
 	}	
+	
+	.list-block ul {
+		a {
+		.font-size(2);	
+		.line-h(3);	
+		}
+	}
 }

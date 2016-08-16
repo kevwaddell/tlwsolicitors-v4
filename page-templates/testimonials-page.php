@@ -16,7 +16,6 @@ Template Name: Why Choose TLW page template
 		$banner_active = get_field('banner_active');	
 		$quick_links = array();
 		$exclude_quotes = array();
-		$colors = array('purple','green','pink', 'orange', 'blue');
 	?>	
 	
 	<!-- MAIN CONTENT START -->

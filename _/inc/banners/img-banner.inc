@@ -1,7 +1,6 @@
 <?php  
 $banner_parts = get_field('banner_parts');
 $banner_title_active = get_field('banner_title_active');
-$banner_tags = $banner_parts['tags'];
 ?>
 <section id="top-banner" class="top-banner-img fixed-bg<?php echo ($banner_title_active) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
 	<?php if ($banner_title_active) { ?>

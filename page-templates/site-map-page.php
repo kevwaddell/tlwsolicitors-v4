@@ -30,9 +30,10 @@ Template Name: Sitemap page
 						<section id="site-map-lists">
 				
 							<div class="row">
-						
+							<!-- Left -->
 							<?php include (STYLESHEETPATH . '/_/inc/site-map/site-map-list-left-col.php'); ?> 
-						
+							
+							<!-- Right -->
 							<?php include (STYLESHEETPATH . '/_/inc/site-map/site-map-list-right-col.php'); ?>
 							
 							</div>

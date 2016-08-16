@@ -5,15 +5,16 @@ $toolkit_active = $section['toolkit_active'];
 
 <?php 
 $toolkit_page = $section['toolkit_page'];
-$pg = get_page($toolkit_page);
+$toolkit_page_parent = get_page($toolkit_page);
+$pg = get_page_by_path($toolkit_page_parent->post_name."/toolkit");
 $color = get_field('page_colour', $toolkit_page);
-$toolkit_content = apply_filters('the_content', $pg ->post_content );
+$toolkit_content = apply_filters('the_content', $pg->post_content );
 $section_title = "TLW Toolkit";	
 //echo '<pre class="debug">';print_r($slides);echo '</pre>';
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'toolkit-links'];	
-$page_icon = get_field('page_icon', $toolkit_page);
+$page_icon = get_field('page_icon', $pg->ID);
 
-$post_thumbnail_id = get_post_thumbnail_id( $toolkit_page );
+$post_thumbnail_id = get_post_thumbnail_id( $pg->ID );
 $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 ?>
 
@@ -31,9 +32,9 @@ $feat_img = wp_get_attachment_image_src($post_thumbnail_id, 'full' );
 	</div>	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	<div class="links-wrapper links-1">
-		<a href="<?php echo get_permalink($toolkit_page); ?>" class="toolkit-link link-col-<?php echo $color; ?>">	
+		<a href="<?php echo get_permalink($pg->ID); ?>" class="toolkit-link link-col-<?php echo $color; ?>">	
 			<i class="fa <?php echo $page_icon; ?> link-icon"></i>
-			<span>View Our <?php echo get_the_title($pg->post_parent); ?> Toolkit</span>
+			<span>View Our <?php echo get_the_title($toolkit_page); ?> Toolkit</span>
 		</a>
 	</div>
 

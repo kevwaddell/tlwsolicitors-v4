@@ -10,7 +10,7 @@ $section_title = $form->title;
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
 ?>
 <?php if ($form_active && $all_forms_active) { ?>
-<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-header<?php echo (!empty($col_bg) && !empty($color)) ? ' with-icon-logo bg-col-'.$color : ''; ?>">
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-header<?php echo (!empty($col_bg) && !empty($color)) ? ' bg-col-'.$color : ''; ?>">
 <a name="request-a-callback" id="request-a-callback" class="section-target"></a>
 		
 	<?php if (!empty($col_bg) && !empty($color)) { ?>

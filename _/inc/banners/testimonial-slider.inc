@@ -1,10 +1,24 @@
 <?php 
+$colors = array('purple','green','pink', 'orange', 'blue');
 $slider_testimonials = get_field('slider_testimonials', 'options');	
-
+$banner_title_active = get_field('banner_title_active');
 if (!empty($slider_testimonials)) { ?>
 		
 <section id="testimonial-slider" class="carousel slide" data-ride="carousel">
-  	
+	<?php if ($banner_title_active) { 
+	$title_id = $post->post_parent;
+	if ($title_id == 0) {
+	$title_id = $post->ID;	
+	}	
+	?>
+	<header class="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+		<div class="container">
+			<?php echo get_the_title($title_id); ?>
+		</div>
+	</header>			
+	<?php } ?>
+	
+
   	 <div class="carousel-inner" role="listbox">
 	  	 
 	  	 <?php foreach ($slider_testimonials as $k => $item) { 

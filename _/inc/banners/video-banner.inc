@@ -1,79 +1,72 @@
 <?php 
-$banner_video_mp4 = get_field('banner_video_mp4');	
-$banner_video_webm = get_field('banner_video_webm');	
-$banner_video_poster = get_field('banner_video_poster');
+$banner_parts = get_field('banner_parts');
 $banner_options = get_field('banner_options');
-$banner_service_links = get_field('banner_service_links');
-$banner_tags = get_field('banner_tags');
-$banner_quick_links[] = ['link_title' => 'Service Information', 'link_anchor' => 'service-info-txt'];
-if ($active_sections) {
-
-	foreach ($active_sections as $as) {
-		switch($as){
-			case "Form": $banner_quick_links[] = ['link_title' => 'Request a Callback', 'link_anchor' => 'request-a-callback'];
-			break;
-			case "Downloads": $banner_quick_links[] = ['link_title' => 'Downloadable Rescourses', 'link_anchor' => 'downloads'];
-			break;
-			case "Toolkit Links": $banner_quick_links[] = ['link_title' => 'TLW Toolkit', 'link_anchor' => 'toolkit-links'];
-			break;
-		}
-	}
-	
-	if (!in_array("Downloads", $active_sections)) {
-	$banner_quick_links[] = ['link_title' => 'Recent Blog Articles', 'link_anchor' => 'recent-blog-articles'];	
-	}
-}
-
 ?>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
 <section id="top-banner" class="top-banner-video">
-	<?php if (in_array("title", $banner_options)) { ?>
-	<header class ="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+	<div class="video-overlay"></div>
+	<div class="top-drk-grad"></div>
+	
+	<?php if ($banner_title_active) { ?>
+	<header class="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			<?php the_title(); ?>
 		</div>
 	</header>
 	<?php } ?>
-
-	<div class="tag-scroller<?php echo (in_array("services", $banner_options) && !in_array("links", $banner_options)) ? " service-select-active":"" ; ?>">
-		<?php if (!empty($banner_tags)) { ?>
+	
+	
+	<?php foreach ($banner_parts as $bp) { ?>
+	
+	<?php if ($bp['acf_fc_layout'] == "banner-tags") { 
+	$banner_tags = $bp['tags'];	
+	?>
+	<div id="<?php echo $bp['acf_fc_layout']; ?>" class="tag-scroller<?php echo ($banner_title_active) ? " with-banner-title":""; ?>">
+		
 		<?php foreach ($banner_tags as $k => $tag) { ?>
-		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['banner_tag']; ?></div>
+		<div class="tag-scroller-txt<?php echo ($k == 0) ? ' active':'' ; ?>"><?php echo $tag['tag']; ?></div>
 		<?php } ?>
-		<?php } ?>
+		
 	</div>		
-
-	<?php if (in_array("links", $banner_options) && !in_array("services", $banner_options)) { ?>
-	<nav class ="banner-links text-center">
-		<?php foreach ($banner_quick_links as $bl) { ?>
-		<a href="#<?php echo $bl['link_anchor']; ?>" class="block bold font-slab-serif caps"><?php echo $bl['link_title']; ?></a>
-		<?php } ?>
-	</nav>
 	<?php } ?>
 	
-	<?php if (in_array("services", $banner_options) && !in_array("links", $banner_options)) { ?>
-	<div id="services-select" class="services-dropdown col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
-		<div class="container">				
-			<select id="services-dd" class="selectpicker" data-width="100%">
-				<option value="0" data-hidden="true">Our Specialist Areas</option>
-				<?php foreach ($banner_service_links as $bl_option) { ?>
-				<option value="<?php echo get_the_permalink($bl_option['link_page']); ?>"><?php echo get_the_title($bl_option['link_page']); ?></option>
+	<?php if ( $bp['acf_fc_layout'] == "banner-links" ) { 
+	$banner_service_links = $bp['banner_service_links'];	
+	$banner_sub_service_links = $bp['banner_sub_service_links'];	
+	?>
+	<div class="container">	
+		<div id="services-banner-links" class="banner-links col-<?php echo (!empty($color)) ? $color : 'red'; ?>">	
+			<div class="banner-links-header">Our Specialist Areas</div>	
+			<div class="main-services">
+				<?php foreach ($banner_service_links as $bl) { ?>
+				<a href="<?php echo get_the_permalink($bl['link_page']); ?>"><?php echo get_the_title($bl['link_page']); ?></a>
 				<?php } ?>
-				<?php if ($active_sections && in_array("Services", $active_sections)) { ?>
-				<option value="#our-specialist-services">More specialist services</option>
+			</div>
+			<?php if (!empty($banner_sub_service_links)) { ?>
+			<div class="sub-services">
+				<?php foreach ($banner_sub_service_links as $sbl_pgs) { ?>
+				<a href="<?php echo get_the_permalink($sbl_pgs['link_page']); ?>"><?php echo get_the_title($sbl_pgs['link_page']); ?></a>
 				<?php } ?>
-			</select>
+			</div>
+			<?php } ?>
 		</div>
 	</div>
 	<?php } ?>
 	
-	<button id="scroll-down-btn" class="btn<?php echo (in_array("services", $banner_options) && !in_array("links", $banner_options)) ? " abs-bottom":"" ; ?>"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
-	
-	<video autoplay loop muted id="bgvid" poster="<?php echo $banner_video_poster;?>">
-		<source src="<?php echo $banner_video_webm ?>" type="video/webm" />
-		<source src="<?php echo $banner_video_mp4; ?>" type="video/mp4" />
+	<?php if ($bp['acf_fc_layout'] == "banner-video") { 
+	$video_mp4 = $bp['video_mp4'];	
+	$video_webm = $bp['video_webm'];	
+	$video_poster = $bp['video_img'];
+	?>
+	<video autoplay loop muted id="bgvid" poster="<?php echo $video_poster;?>">
+		<source src="<?php echo $video_webm ?>" type="video/webm" />
+		<source src="<?php echo $video_mp4; ?>" type="video/mp4" />
 	</video>
-	<div class="video-overlay"></div>
-	<div class="top-drk-grad"></div>
+	<?php } ?>
+
+	<?php } ?>
+	
+	<button id="scroll-down-btn" class="btn abs-bottom"><i class="fa fa-angle-down"></i><span class="sr-only">Go down to next section</span></button>
+	
 	
 </section>
