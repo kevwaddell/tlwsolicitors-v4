@@ -93,6 +93,22 @@ add_theme_support( 'post-thumbnails', array( 'page', 'post', 'tlw_landing_page' 
 add_post_type_support( 'page', 'excerpt' );
 add_theme_support( 'custom-background' );
 
+// change size of admin featured image size in edit screen 
+function change_featured_image_size_in_admin_28512( $downsize, $id, $size ) {
+if ( ! is_admin() || ! get_current_screen() || 'edit' !==   get_current_screen()->parent_base ) {
+return $downsize;
+}
+
+remove_filter( 'image_downsize', __FUNCTION__, 10, 3 );
+
+// settings can be thumbnail, medium, large, full 
+$image = image_downsize( $id, 'medium' ); 
+add_filter( 'image_downsize', __FUNCTION__, 10, 3 );
+
+return $image;
+}
+add_filter( 'image_downsize', 'change_featured_image_size_in_admin_28512', 10, 3 );
+
 /* POST THUMBNAIL FUNCTIONS */
 
 function add_feat_img ( $post ) {	
