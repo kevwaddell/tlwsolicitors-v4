@@ -11,60 +11,84 @@ Template Name: Toolkit page
 		$freephone_num = get_field('freephone_num', 'option');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
-		$feedback_active = get_field('feedback_active'); 
-		$how_it_works_active = get_field('hiw_active');
+		$banner_active = get_field('banner_active');
 		$slides_active = get_field('tk_slides_active');
-		$active_sections = get_field('active_sections');
+		$sections_active = get_field('sections_active');
 		$quick_links = array();
-		
-		if ($page_icon == 'null' || !$page_icon) {
-		$parent = get_page($post->post_parent);
-		$grand_parent = $parent->post_parent;
-		$page_icon = get_field('page_icon', $post->post_parent);
-			if ($page_icon == 'null' || !$page_icon) {
-			$page_icon = get_field('page_icon', $grand_parent);	
-			}
-		}
-		
+
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();
-		} else {
-		$img_post = $post->post_parent;
-		$parent = get_post($img_post);	
-		
-			if (!has_post_thumbnail($img_post) && $parent->post_parent != 0) {
-			$img_post = $parent->post_parent;
-			}
 		}
 	?>	
 	
 	<!-- MAIN CONTENT START -->
 	<main>
-		<!-- TOOLKIT BANNER SECTION -->
-		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-banner.inc'); ?>
+		
+		<!-- BANNER SECTION -->
+		<?php if ($banner_active) { 
+		$banner_type = get_field('banner_type');	
+		?>
+		
+			<?php if ($banner_type == 'slider') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/testimonial-slider.inc'); ?>			
+			<?php } ?>
+			
+			<?php if ($banner_type == 'slim-img') { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner-slim.inc'); ?>			
+			<?php } ?>	
+			
+			<?php if ($banner_type == "video") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/video-banner.inc'); ?>		
+			<?php } ?>
+			
+			<?php if ($banner_type == "img") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/banners/img-banner.inc'); ?>		
+			<?php } ?>	
+			
+			<?php if ($banner_type == "toolkit") { ?>
+			<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-banner.inc'); ?>		
+			<?php } ?>
+			
+		<?php } ?>		
 		
 		<!-- TOOLKIT SLIDES SECTION -->
 		<?php if ($slides_active) { ?>
 		<?php include (STYLESHEETPATH . '/_/inc/toolkit/toolkit-slides.inc'); ?>		
 		<?php } ?>
 		
-		<?php if ($active_sections) { ?>
-		<?php foreach ($active_sections as $section) { ?>
-			<?php 
-			switch($section){
-				case "Downloads": include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc');
-				break;
-				case "Form": include (STYLESHEETPATH . '/_/inc/sections/form-section.inc');
-				break;
-				case "Services": include (STYLESHEETPATH . '/_/inc/sections/services-section.inc');
-				break;
-				case "Blog posts": include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc');
-				break;
-				case "Feedback": include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc');
-				break;
-			}	
-			?>
-		<?php } ?>
+		<?php if ($sections_active) { 
+		$sections = get_field('sections'); 
+		?>		
+		
+			<?php foreach ($sections as $section) { ?>
+			
+				<?php if ($section['acf_fc_layout'] == 'feedback-section') { ?>
+				<!-- FEEDBACK SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/feedback-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'form-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/form-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'blog-posts') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/blog-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'downloads-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/downloads-section.inc'); ?>		
+				<?php } ?>
+				
+				<?php if ($section['acf_fc_layout'] == 'toolkit-section') { ?>
+				<!-- FORM SECTION -->
+					<?php include (STYLESHEETPATH . '/_/inc/sections/toolkit-section.inc'); ?>		
+				<?php } ?>
+	
+			<?php } ?>
+		
 		<?php } ?>
 		
 	</main>	

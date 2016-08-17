@@ -9,7 +9,6 @@ Template Name: Why Choose TLW page template
 	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
-		$freephone_num = get_field('freephone_num', 'option');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
 		$sections_active = get_field('sections_active');

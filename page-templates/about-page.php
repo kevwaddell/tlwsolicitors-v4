@@ -8,22 +8,14 @@ Template Name: About page template
 	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
-		$freephone_num = get_field('freephone_num', 'option');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
-		$how_it_works_active = get_field('hiw_active');
 		$sections_active = get_field('sections_active');
 		$banner_active = get_field('banner_active');
 		$quick_links = array();
 		
 		if ( has_post_thumbnail() ) {
 		$img_post = get_the_ID();
-		}
-		
-		if ($active_sections && in_array("Page banner", $active_sections)) {
-		$banner_active = true;	
-		$banner_bg = get_field('banner_bg');
-		$banner_quick_links = array();
 		}
 	?>	
 	

@@ -2,10 +2,7 @@
 
 			<?php if ( have_posts() ): while ( have_posts() ) : the_post(); 
 			$download_active = get_field('download_active');
-			$freephone_num = get_field('freephone_num', 'option');
 			$date = get_the_date('l - jS F - Y');	
-			$gallery_imgs = get_field('gallery_imgs');	
-			$show_feat_img = get_field('show_feat_img');
 			$show_author = get_field('show_author');
 			$all_forms_active = get_field('all_forms_active', 'option');
 			$form_active = get_field('add_form');	

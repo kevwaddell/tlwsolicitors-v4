@@ -15,9 +15,8 @@ $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'article-txt'
 ?>
 <article <?php post_class("content-section"); ?>>
 	<a name="article-txt" id="article-txt" class="section-target"></a>
-	<?php if (!empty($freephone_num)) { ?>
-		<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
-	<?php } ?>
+	
+	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
 	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>	
 	

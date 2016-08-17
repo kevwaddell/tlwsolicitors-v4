@@ -1,6 +1,6 @@
 <?php 
 $banner_parts = get_field('banner_parts');
-$banner_options = get_field('banner_options');
+$banner_title_active = get_field('banner_title_active');
 ?>
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
 <section id="top-banner" class="top-banner-video">
@@ -8,7 +8,7 @@ $banner_options = get_field('banner_options');
 	<div class="top-drk-grad"></div>
 	
 	<?php if ($banner_title_active) { ?>
-	<header class="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+	<header class="banner-title text-center bold mid-gradient-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			<?php the_title(); ?>
 		</div>

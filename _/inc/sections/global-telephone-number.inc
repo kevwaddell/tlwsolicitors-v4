@@ -1,3 +1,7 @@
+<?php 
+$freephone_num = get_field('freephone_num', 'option');	
+?>
+<?php if (!empty($freephone_num)) { ?>
 <div id="global-tel-num">
 	<div class="container">
 		<div class="row">
@@ -16,3 +20,4 @@
 	</div>
 	<div class="overlay"></div>
 </div>
+<?php } ?>

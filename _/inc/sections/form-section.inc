@@ -4,9 +4,11 @@ $form_active = $section['form_activated'];
 $form = $section['form'];	
 $section_title = $section['section_title'];	
 $col_bg = $section['section_bg_col_active'];
-if (!empty($section_title)) {
+
+if (empty($section_title)) {
 $section_title = $form->title;
 }
+
 $quick_links[] = ['link_title' => $section_title, 'link_anchor' => 'request-a-callback'];	
 ?>
 <?php if ($form_active && $all_forms_active) { ?>

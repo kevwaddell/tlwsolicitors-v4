@@ -508,10 +508,35 @@ background-position: center center;
 	.opacity(0.9);
 	z-index: 0;
 	//.none;	
+		&.col-red {
+		background: -moz-linear-gradient(top,  fade(@redMid, 100%) 0%, fade(@red, 0%) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade(@redMid, 100%) 0%, fade(@red, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(top bottom,  fade(@redMid, 100%) 0%, fade(@red, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
 		&.col-purple {
 		background: -moz-linear-gradient(top,  fade(@purple-dk, 100%) 0%, fade(@purple, 0%) 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(top,  fade(@purple-dk, 100%) 0%, fade(@purple, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(top bottom,  fade(@purple-dk, 100%) 0%, fade(@purple, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+		&.col-green {
+		background: -moz-linear-gradient(top,  fade(@green-dk, 100%) 0%, fade(@green, 0%) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade(@green-dk, 100%) 0%, fade(@green, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(top bottom,  fade(@green-dk, 100%) 0%, fade(@green, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+		&.col-pink {
+		background: -moz-linear-gradient(top,  fade(@pink-dk, 100%) 0%, fade(@pink, 0%) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade(@pink-dk, 100%) 0%, fade(@pink, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(top bottom,  fade(@pink-dk, 100%) 0%, fade(@pink, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+		&.col-orange {
+		background: -moz-linear-gradient(top,  fade(@orange-dk, 100%) 0%, fade(@orange, 0%) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade(@orange-dk, 100%) 0%, fade(@orange, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(top bottom,  fade(@orange-dk, 100%) 0%, fade(@orange, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+		&.col-blue {
+		background: -moz-linear-gradient(top,  fade(@blue-dk, 100%) 0%, fade(@blue, 0%) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade(@blue-dk, 100%) 0%, fade(@blue, 0%) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(top bottom,  fade(@blue-dk, 100%) 0%, fade(@blue, 0%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		}
 	}
 }
@@ -552,6 +577,7 @@ height: 100vh;
 	//.left(0);
 	//width: 100%;
 	.h(36);
+	.mag-bot(2);
 	.rel;
 	text-align: center;
 	.font-slab-serif;
@@ -1740,6 +1766,15 @@ article.content-section {
 	.font-size(2.5);	
 	.line-h(5);
 	.mag-bot(4);
+	.rel;
+		i {
+		.w(5);
+		.line-h(5);
+		text-align: center;
+		.abs;
+		.left(0);
+		.top(0);	
+		}
 	}
 	
 	.entry.wide-entry {
@@ -1876,6 +1911,38 @@ article.content-section {
 		}
 	}
 	
+	.child-page-links {
+
+		a.btn {
+		.font-slab-serif;
+		.caps;
+		.font-size(2);	
+		.pad(0;6;0;2);
+		.line-h(4);
+		.bg-col-grayDk;
+		.txt-col-wht;
+		.rel;
+		.mag-right(1);
+		.mag-bot(1);
+			&:after {
+			content: "\f0a9";	
+			font-family: FontAwesome;	
+			.abs;
+			.right(0);
+			.top(0);
+			.line-h(4);
+			.pad-right(2);	
+			}
+			
+			&:hover, &:active, &:focus {
+			.bg-col-gray;
+				&:after {
+				.txt-col-grayDk;	
+				}
+			}
+		}
+	}
+	
 	#content-extra {
 	
 		&.closed {
@@ -1987,7 +2054,7 @@ article.content-section {
 	}
 
 	h2.section-header {
-	width: 50%;
+	width: 70%;
 	margin: -40px auto 40px;
 	.font-slab-serif;
 	.col(white);
@@ -2592,7 +2659,7 @@ article.content-section {
 		.font-size(3);
 		.line-h(3.5);	
 		.pad-all(1.5);
-		width: 50%;
+		width: 70%;
 		.mag-auto;
 		.font-slab-serif;
 		.txt-col-grayDk;
@@ -2767,6 +2834,11 @@ article.content-section {
 					
 					&:hover, &:active, &:focus {
 					.bg-col-green-dk;
+					
+						span {
+						.bg-col-green-dk;
+						}
+						
 						i {
 						.txt-col-green;	
 						.bg-col(@wht);
@@ -2783,6 +2855,11 @@ article.content-section {
 					
 					&:hover, &:active, &:focus {
 					.bg-col-pink-dk;
+					
+						span {
+						.bg-col-pink-dk;
+						}
+						
 						i {
 						.txt-col-pink;	
 						.bg-col(@wht);
@@ -2799,6 +2876,11 @@ article.content-section {
 					
 					&:hover, &:active, &:focus {
 					.bg-col-orange-dk;	
+					
+						span {
+						.bg-col-orange-dk;
+						}
+						
 						i {
 						.txt-col-orange;	
 						.bg-col(@wht);
@@ -2815,6 +2897,10 @@ article.content-section {
 					
 					&:hover, &:active, &:focus {
 					.bg-col-blue-dk;
+					
+						span {
+						.bg-col-blue-dk;
+						}
 
 						i {
 						.txt-col-blue;

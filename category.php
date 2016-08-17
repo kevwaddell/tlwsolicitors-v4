@@ -3,13 +3,12 @@
 	<!-- MAIN CONTENT START -->
 
 <?php
-$freephone_num = get_field('freephone_num', 'option');
 $news_page_id = get_option('page_for_posts');
 $news_page = get_page($news_page_id);
 $page_icon = get_field('page_icon', $news_page->ID);
 	
 	if ( has_post_thumbnail($news_page_id) ) {
-	$img_post = $news_page_id;
+	$img_post = get_page($news_page_id);
 	}
 ?>
 
@@ -20,10 +19,9 @@ $page_icon = get_field('page_icon', $news_page->ID);
 	<?php include (STYLESHEETPATH . '/_/inc/banners/blog/img-banner-index-pg.inc'); ?>		
 	<?php } ?>
 	
-	<?php if (!empty($freephone_num)) { ?>
 	<?php include (STYLESHEETPATH . '/_/inc/sections/global-telephone-number.inc'); ?>		
+	
 	<?php include (STYLESHEETPATH . '/_/inc/global/col-strip.php'); ?>
-	<?php } ?>
 		
 	<?php include (STYLESHEETPATH . '/_/inc/posts/index-top-bar.php'); ?>
 	

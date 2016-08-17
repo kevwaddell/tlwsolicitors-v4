@@ -2,7 +2,6 @@
 	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
-		$freephone_num = get_field('freephone_num', 'option');
 		$hp_sections = get_field('hp_sections', 'option');
 		$banner_active = get_field('hp_top_banner_active', 'option');	
 		$quick_links = array();

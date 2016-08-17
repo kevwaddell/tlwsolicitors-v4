@@ -2,7 +2,6 @@
 	
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 	<?php 
-		$freephone_num = get_field('freephone_num', 'option');
 		$color = get_field('page_colour');
 		$page_icon = get_field('page_icon');
 		$how_it_works_active = get_field('hiw_active');

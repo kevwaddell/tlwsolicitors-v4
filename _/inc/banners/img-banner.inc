@@ -4,7 +4,7 @@ $banner_title_active = get_field('banner_title_active');
 ?>
 <section id="top-banner" class="top-banner-img fixed-bg<?php echo ($banner_title_active) ? '' : ' no-title'; ?>" style="background-image: url(<?php add_full_page_banner_img($img_post);?>)">
 	<?php if ($banner_title_active) { ?>
-	<header class="banner-title text-center bold bg-col-<?php echo (!empty($color)) ? $color : 'red'; ?>">
+	<header class="banner-title text-center bold mid-gradient-<?php echo (!empty($color)) ? $color : 'red'; ?>">
 		<div class="container">
 			<?php the_title(); ?>
 		</div>

@@ -10,8 +10,6 @@ Template Name: Contact Us Page
 <?php if ( have_posts() ): while ( have_posts() ) : the_post(); ?>	
 <?php 
 $color = get_field('page_colour');
-$freephone_num = get_field('freephone_num', 'option');
-$form = get_field('form');
 $sections_active = get_field('sections_active');
 
 if ( has_post_thumbnail() ) {
