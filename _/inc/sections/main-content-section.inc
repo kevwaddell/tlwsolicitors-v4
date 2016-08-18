@@ -30,24 +30,26 @@ $more_btn_text = "Continue Reading";
 		<div class="row">
 			
 			<div class="col-xs-11">
-			<div class="entry wide-entry">
-				
-				<div class="main-txt">
-					<?php if (!empty($post_content['extended'])) { ?>
-					<?php echo $content_main;  ?>
-					<div id="content-extra" class="closed">
-						<div id="content-extra-inner">
-							<?php echo $content_extended;  ?>
-							<button id="close-content-extra-btn" class="btn btn-default"><i class="fa fa-times-circle"></i><span class="sr-only">Close</span></button>
-						</div>
-					</div>
+		
+				<div class="entry wide-entry">
 					
-					<?php } else { ?>
-					<?php the_content(); ?>
-					<?php } ?>
+					<div class="main-txt">
+						<?php if (!empty($post_content['extended'])) { ?>
+						<?php echo $content_main;  ?>
+						<div id="content-extra" class="closed">
+							<div id="content-extra-inner">
+								<?php echo $content_extended;  ?>
+								<button id="close-content-extra-btn" class="btn btn-default"><i class="fa fa-times-circle"></i><span class="sr-only">Close</span></button>
+							</div>
+						</div>
+						
+						<?php } else { ?>
+						<?php the_content(); ?>
+						<?php } ?>
+					</div>
+																
 				</div>
-															
-			</div>
+			
 			</div>
 			
 			<?php include (STYLESHEETPATH . '/_/inc/global/page-tools.php'); ?>
