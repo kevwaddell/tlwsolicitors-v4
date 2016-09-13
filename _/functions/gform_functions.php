@@ -15,4 +15,12 @@ function populate_affiliate($value){
 	}
 }
 
+add_filter("gform_field_value_gclid", "populate_gclid");
+
+function populate_gclid($value){
+	if ( isset($_COOKIE['gclid']) ) {
+	return $_COOKIE["gclid"];	
+	}
+}
+
 ?>
