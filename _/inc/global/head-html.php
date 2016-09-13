@@ -19,8 +19,6 @@
 	<?php wp_head(); ?>
 	
 	<?php 
-	$url = explode('/',$_SERVER['REQUEST_URI']);
-	
 	if ( isset($_COOKIE['font_size']) ) {
     $font_size = $_COOKIE['font_size'];	
 	} else {
@@ -35,4 +33,10 @@
 	setcookie("gclid",$_GET['gclid'] ,0, '/' );
 	}
 	?>
+	
+	<?php 
+	$global_scripts = get_field('global_scripts', 'options');	
+	if (!empty($global_scripts)) { ?>
+	<?php echo $global_scripts; ?>
+	<?php } ?>
 </head>
