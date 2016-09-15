@@ -31,7 +31,18 @@
 	} else {
 	$font_size = "txt-sm";	
 	}
+	
+	
+	if ( isset($_GET['gclid']) ) {
+	setcookie("gclid",$_GET['gclid'] ,0, '/' );
+	}
 	?>
+	
+	<?php 
+	$global_scripts = get_field('global_scripts', 'options');	
+	if (!empty($global_scripts)) { ?>
+	<?php echo $global_scripts; ?>
+	<?php } ?>
 	
 	<?php if (function_exists('orderStyleJS')) { orderStyleJS( 'end' ); } ?>
 </head>
