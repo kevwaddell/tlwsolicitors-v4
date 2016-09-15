@@ -11840,6 +11840,9 @@ body#landing-page .lp-form .bootstrap-select a:active,
 body#landing-page .lp-form .bootstrap-select a:focus {
   font-weight: bold;
 }
+body#landing-page .lp-form h2.gsection_title {
+  color: #FFFFFF;
+}
 body#landing-page .lp-form h3 {
   color: white;
   position: relative;
