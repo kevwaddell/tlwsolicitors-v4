@@ -1,5 +1,5 @@
 <section id="location-map" class="directions-closed">
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo&callback=wide_map_init"></script>
 <script>
 	var TLW_MAP_ID = 'TLW_style';
 	
