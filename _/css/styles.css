@@ -8369,6 +8369,23 @@ article.tlw_landing_page hr:after {
   background-image: -moz-linear-gradient(left, #918F8F, transparent);
   background-image: -o-linear-gradient(left, #918F8F, transparent);
 }
+article.page .main-txt .with-icon-img,
+article.post .main-txt .with-icon-img,
+article.tlw_landing_page .main-txt .with-icon-img {
+  position: relative;
+}
+article.page .main-txt .with-icon-img img,
+article.post .main-txt .with-icon-img img,
+article.tlw_landing_page .main-txt .with-icon-img img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+article.page .main-txt .with-icon-img .icon-left-txt,
+article.post .main-txt .with-icon-img .icon-left-txt,
+article.tlw_landing_page .main-txt .with-icon-img .icon-left-txt {
+  padding-left: 115px;
+}
 article.page .main-txt .well,
 article.post .main-txt .well,
 article.tlw_landing_page .main-txt .well {
