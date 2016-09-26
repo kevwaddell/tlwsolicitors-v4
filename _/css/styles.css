@@ -8374,17 +8374,19 @@ article.post .main-txt .with-icon-img,
 article.tlw_landing_page .main-txt .with-icon-img {
   position: relative;
 }
-article.page .main-txt .with-icon-img img,
-article.post .main-txt .with-icon-img img,
-article.tlw_landing_page .main-txt .with-icon-img img {
+article.page .main-txt .with-icon-img .icon-img,
+article.post .main-txt .with-icon-img .icon-img,
+article.tlw_landing_page .main-txt .with-icon-img .icon-img {
   position: absolute;
   left: 0px;
   top: 0px;
+  width: 100px;
+  height: 100px;
 }
 article.page .main-txt .with-icon-img .icon-left-txt,
 article.post .main-txt .with-icon-img .icon-left-txt,
 article.tlw_landing_page .main-txt .with-icon-img .icon-left-txt {
-  padding-left: 115px;
+  padding-left: 130px;
 }
 article.page .main-txt .well,
 article.post .main-txt .well,
